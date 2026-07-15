@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrollment_Packet_Sent_Email_Alert</fullName>
+    <active>true</active>
+    <description>Warn user when Email is missing</description>
+    <errorConditionFormula>ISBLANK(SuppliedEmail) &amp;&amp; TEXT(Status) = &quot;Enrollment Packet Sent&quot;</errorConditionFormula>
+    <errorDisplayField>SuppliedEmail</errorDisplayField>
+    <errorMessage>This onboarding does not have a value on the Email field. To send the Enrollment Packet to the Beneficiary, a value must be entered.</errorMessage>
+</ValidationRule>

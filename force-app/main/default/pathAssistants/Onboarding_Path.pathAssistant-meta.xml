@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Onboarding Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Onboarding_Pending_Start_Date__c</fieldNames>
+        <picklistValueName>Awaiting Funding</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Congrats, the beneficiary is fully enrolled in the Arcare Trust Program.&lt;/p&gt;</info>
+        <picklistValueName>Closed - Converted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Comments</fieldNames>
+        <info>&lt;p&gt;If you select &amp;#39;Unqualified&amp;#39; please add a comment to explain the reason why this beneficiary is not qualified.&lt;/p&gt;</info>
+        <picklistValueName>Closed - Unqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Applicant_Benefits__c</fieldNames>
+        <fieldNames>SuppliedEmail</fieldNames>
+        <fieldNames>SuppliedPhone</fieldNames>
+        <picklistValueName>Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>All_Enrollment_Packet_Received__c</fieldNames>
+        <info>&lt;p&gt;Check this box if all required documentation has been received. This will automatically send the &amp;#39;Arcare Enrollment - Everything Received&amp;#39; email.&lt;/p&gt;</info>
+        <picklistValueName>Enrollment Packet Received - Missing Documents</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Date_of_Enrollment_Packet_Sent__c</fieldNames>
+        <info>&lt;p&gt;Please upload all documents.&lt;/p&gt;</info>
+        <picklistValueName>Enrollment Packet Sent</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Beneficiary_First_Name__c</fieldNames>
+        <fieldNames>Beneficiary_Middle_Name__c</fieldNames>
+        <fieldNames>Beneficiary_Last_Name__c</fieldNames>
+        <fieldNames>SuppliedName</fieldNames>
+        <fieldNames>Applicant_Benefits__c</fieldNames>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

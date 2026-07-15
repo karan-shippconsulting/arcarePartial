@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Homeless</fullName>
+        <default>false</default>
+        <label>Homeless</label>
+    </customValue>
+    <customValue>
+        <fullName>Incarcerated</fullName>
+        <default>false</default>
+        <label>Incarcerated</label>
+    </customValue>
+    <customValue>
+        <fullName>Lives Independently</fullName>
+        <default>false</default>
+        <label>Lives Independently</label>
+    </customValue>
+    <customValue>
+        <fullName>Lives in Facility or Hospital</fullName>
+        <default>false</default>
+        <label>Lives in Facility or Hospital</label>
+    </customValue>
+    <customValue>
+        <fullName>Lives in Vehicle</fullName>
+        <default>false</default>
+        <label>Lives in Vehicle</label>
+    </customValue>
+    <customValue>
+        <fullName>Lives with Family</fullName>
+        <default>false</default>
+        <label>Lives with Family</label>
+    </customValue>
+    <customValue>
+        <fullName>Lives with Roommates</fullName>
+        <default>false</default>
+        <label>Lives with Roommates</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Group care facility</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Group care facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Skilled nursing facility</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Skilled nursing facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Assisted living facility</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Assisted living facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Hospital</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hospital</label>
+    </customValue>
+    <customValue>
+        <fullName>Independent</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Independent</label>
+    </customValue>
+    <customValue>
+        <fullName>Institution, hospital, or nursing home</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Institution, hospital, or nursing home</label>
+    </customValue>
+    <customValue>
+        <fullName>Someone else&apos;s household</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Someone else&apos;s household</label>
+    </customValue>
+    <masterLabel>Living Situation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

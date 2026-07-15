@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mail_Import_Document_Type__c</fullName>
+    <label>Mail Import Document Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>us_cheque</fullName>
+                <default>false</default>
+                <label>Check</label>
+            </value>
+            <value>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+                <label>Contracts</label>
+            </value>
+            <value>
+                <fullName>Court Documents</fullName>
+                <default>false</default>
+                <label>Court Documents</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Statements - Banks</fullName>
+                <default>false</default>
+                <label>Statements - Banks</label>
+            </value>
+            <value>
+                <fullName>Statements - SSA</fullName>
+                <default>false</default>
+                <label>Statements - SSA</label>
+            </value>
+            <value>
+                <fullName>Tax Document</fullName>
+                <default>false</default>
+                <label>Tax Document</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gender_Pronoun_For_Templates__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(GenderIdentity),
+&quot;Male&quot;, &quot;his&quot;,  
+&quot;Female&quot;, &quot;her&quot;,
+&quot;their&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Gender Pronoun (For Templates)</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

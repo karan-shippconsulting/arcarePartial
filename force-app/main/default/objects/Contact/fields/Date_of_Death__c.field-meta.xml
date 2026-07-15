@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Death__c</fullName>
+    <inlineHelpText>Automatically fills in when Date of Death is entered on the Closing record</inlineHelpText>
+    <label>Date of Death</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

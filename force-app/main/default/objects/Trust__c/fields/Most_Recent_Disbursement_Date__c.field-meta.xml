@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Recent_Disbursement_Date__c</fullName>
+    <label>Most Recent Disbursement Date</label>
+    <summarizedField>Transaction__c.Cleared_Date__c</summarizedField>
+    <summaryForeignKey>Transaction__c.Trust__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

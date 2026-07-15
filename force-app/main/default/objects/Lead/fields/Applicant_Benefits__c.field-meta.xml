@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Benefits__c</fullName>
+    <label>Applicant Benefits</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Supplemental Security Income (SSI)</fullName>
+                <default>false</default>
+                <label>Supplemental Security Income (SSI)</label>
+            </value>
+            <value>
+                <fullName>Social Security Disability Insurance (SSDI)</fullName>
+                <default>false</default>
+                <label>Social Security Disability Insurance (SSDI)</label>
+            </value>
+            <value>
+                <fullName>SSA</fullName>
+                <default>false</default>
+                <label>SSA</label>
+            </value>
+            <value>
+                <fullName>HUD/Section 8 Housing</fullName>
+                <default>false</default>
+                <label>HUD/Section 8 Housing</label>
+            </value>
+            <value>
+                <fullName>Food Stamps/Vision Card</fullName>
+                <default>false</default>
+                <label>Food Stamps/Vision Card</label>
+            </value>
+            <value>
+                <fullName>Medicare</fullName>
+                <default>false</default>
+                <label>Medicare</label>
+            </value>
+            <value>
+                <fullName>Medicaid or Working Healthy</fullName>
+                <default>false</default>
+                <label>Medicaid or Working Healthy</label>
+            </value>
+            <value>
+                <fullName>Preneed</fullName>
+                <default>false</default>
+                <label>Preneed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

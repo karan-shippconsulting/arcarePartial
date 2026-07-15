@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Invoiced_Time_Entries_Last_Month</fullName>
+    <columns>NAME</columns>
+    <columns>Service_Enrollment__c</columns>
+    <columns>Client__c</columns>
+    <columns>Approved__c</columns>
+    <columns>Approved_By__c</columns>
+    <columns>Charge_Date__c</columns>
+    <columns>Period__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>INVOICED</value>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>My Invoiced Time Entries Last Month</label>
+</ListView>

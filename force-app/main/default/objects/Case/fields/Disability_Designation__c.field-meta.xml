@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disability_Designation__c</fullName>
+    <label>Disability Designation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amputation</fullName>
+                <default>false</default>
+                <label>Amputation</label>
+            </value>
+            <value>
+                <fullName>Attention deficit hyperactivity disorder (ADHD)</fullName>
+                <default>false</default>
+                <label>Attention deficit hyperactivity disorder (ADHD)</label>
+            </value>
+            <value>
+                <fullName>Autism spectrum</fullName>
+                <default>false</default>
+                <label>Autism spectrum</label>
+            </value>
+            <value>
+                <fullName>Autoimmune</fullName>
+                <default>false</default>
+                <label>Autoimmune</label>
+            </value>
+            <value>
+                <fullName>Behavior disorder</fullName>
+                <default>false</default>
+                <label>Behavior disorder</label>
+            </value>
+            <value>
+                <fullName>Bipolar</fullName>
+                <default>false</default>
+                <label>Bipolar</label>
+            </value>
+            <value>
+                <fullName>Cancer</fullName>
+                <default>false</default>
+                <label>Cancer</label>
+            </value>
+            <value>
+                <fullName>Cerebral palsy</fullName>
+                <default>false</default>
+                <label>Cerebral palsy</label>
+            </value>
+            <value>
+                <fullName>Cystic fibrosis</fullName>
+                <default>false</default>
+                <label>Cystic fibrosis</label>
+            </value>
+            <value>
+                <fullName>Deaf or hard of hearing</fullName>
+                <default>false</default>
+                <label>Deaf or hard of hearing</label>
+            </value>
+            <value>
+                <fullName>Developmental disability</fullName>
+                <default>false</default>
+                <label>Developmental disability</label>
+            </value>
+            <value>
+                <fullName>Down syndrome</fullName>
+                <default>false</default>
+                <label>Down syndrome</label>
+            </value>
+            <value>
+                <fullName>Epilepsy</fullName>
+                <default>false</default>
+                <label>Epilepsy</label>
+            </value>
+            <value>
+                <fullName>Fibromyalgia</fullName>
+                <default>false</default>
+                <label>Fibromyalgia</label>
+            </value>
+            <value>
+                <fullName>Intellectual and developmental disability (IDD)</fullName>
+                <default>false</default>
+                <label>Intellectual and developmental disability (IDD)</label>
+            </value>
+            <value>
+                <fullName>Mental health</fullName>
+                <default>false</default>
+                <label>Mental health</label>
+            </value>
+            <value>
+                <fullName>Multiple sclerosis (MS)</fullName>
+                <default>false</default>
+                <label>Multiple sclerosis (MS)</label>
+            </value>
+            <value>
+                <fullName>Muscular dystrophy</fullName>
+                <default>false</default>
+                <label>Muscular dystrophy</label>
+            </value>
+            <value>
+                <fullName>Musculoskeletal</fullName>
+                <default>false</default>
+                <label>Musculoskeletal</label>
+            </value>
+            <value>
+                <fullName>Neurological</fullName>
+                <default>false</default>
+                <label>Neurological</label>
+            </value>
+            <value>
+                <fullName>Obsessive compulsive disorder (OCD)</fullName>
+                <default>false</default>
+                <label>Obsessive compulsive disorder (OCD)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Physical disability</fullName>
+                <default>false</default>
+                <label>Physical disability</label>
+            </value>
+            <value>
+                <fullName>Post-traumatic stress disorder (PTSD)</fullName>
+                <default>false</default>
+                <label>Post-traumatic stress disorder (PTSD)</label>
+            </value>
+            <value>
+                <fullName>Schizophrenia</fullName>
+                <default>false</default>
+                <label>Schizophrenia</label>
+            </value>
+            <value>
+                <fullName>Speech or language impairment</fullName>
+                <default>false</default>
+                <label>Speech or language impairment</label>
+            </value>
+            <value>
+                <fullName>Spinal cord injury</fullName>
+                <default>false</default>
+                <label>Spinal cord injury</label>
+            </value>
+            <value>
+                <fullName>Tourette syndrome</fullName>
+                <default>false</default>
+                <label>Tourette syndrome</label>
+            </value>
+            <value>
+                <fullName>Traumatic brain injury (TBI)</fullName>
+                <default>false</default>
+                <label>Traumatic brain injury (TBI)</label>
+            </value>
+            <value>
+                <fullName>Visual impairment</fullName>
+                <default>false</default>
+                <label>Visual impairment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

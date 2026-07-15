@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_of_Real_Property__c</fullName>
+    <label>Status of Real Property</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>The property is currently occupied by someone other than the applicant</fullName>
+                <default>false</default>
+                <label>The property is currently occupied by someone other than the applicant</label>
+            </value>
+            <value>
+                <fullName>The property is being used as rental income</fullName>
+                <default>false</default>
+                <label>The property is being used as rental income</label>
+            </value>
+            <value>
+                <fullName>The property is vacant pending its sale</fullName>
+                <default>false</default>
+                <label>The property is vacant pending its sale</label>
+            </value>
+            <value>
+                <fullName>Other (please explain)</fullName>
+                <default>false</default>
+                <label>Other (please explain)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

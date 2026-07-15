@@ -1,0 +1,18 @@
+<!-- toast.html -->
+<template>
+    <div class="toast toast_hide" style="height:4rem" data-id="toast">
+        <div class="slds-notify_container slds-is-relative">
+            <div class={notifyClasses} role="status">
+                <span class="slds-assistive-text">error</span>
+                <lightning-icon icon-name={iconName} alternative-text={type}></lightning-icon>
+                <div class="slds-notify__content">
+                    <h2>{title}</h2>
+                    <p>{message}</p>
+                </div>
+                <div class="slds-notify__close">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close"></lightning-button-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

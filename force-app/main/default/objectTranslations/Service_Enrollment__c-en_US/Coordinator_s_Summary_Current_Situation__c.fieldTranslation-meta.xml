@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Coordinator&apos;s Summary Current Situation --></label>
+    <name>Coordinator_s_Summary_Current_Situation__c</name>
+</CustomFieldTranslation>

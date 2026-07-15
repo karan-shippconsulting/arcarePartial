@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_People_Who_Support__c</fullName>
+    <inlineHelpText>In addition to the Primary and Alternate Representatives, are there indiiduals that are an important part of the beneificary&apos;s community and support system?</inlineHelpText>
+    <label>Other People Who Support</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

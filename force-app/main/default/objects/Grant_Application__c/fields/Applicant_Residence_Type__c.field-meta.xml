@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Residence_Type__c</fullName>
+    <label>Applicant Residence Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Public Housing</fullName>
+                <default>false</default>
+                <label>Public Housing</label>
+            </value>
+            <value>
+                <fullName>Private Housing</fullName>
+                <default>false</default>
+                <label>Private Housing</label>
+            </value>
+            <value>
+                <fullName>Group Home</fullName>
+                <default>false</default>
+                <label>Group Home</label>
+            </value>
+            <value>
+                <fullName>Specialized Foster Care</fullName>
+                <default>false</default>
+                <label>Specialized Foster Care</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>Nursing Home</label>
+            </value>
+            <value>
+                <fullName>Assisted Living Facility</fullName>
+                <default>false</default>
+                <label>Assisted Living Facility</label>
+            </value>
+            <value>
+                <fullName>Rest Home</fullName>
+                <default>false</default>
+                <label>Rest Home</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

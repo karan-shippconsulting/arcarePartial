@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XProfessional_Relationship_to_Bene__c</fullName>
+    <label>XProfessional Relationship to Bene</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+                <label>Attorney</label>
+            </value>
+            <value>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+                <label>Guardian</label>
+            </value>
+            <value>
+                <fullName>Power of Attorney</fullName>
+                <default>false</default>
+                <label>Power of Attorney</label>
+            </value>
+            <value>
+                <fullName>Representative Payee</fullName>
+                <default>false</default>
+                <label>Representative Payee</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

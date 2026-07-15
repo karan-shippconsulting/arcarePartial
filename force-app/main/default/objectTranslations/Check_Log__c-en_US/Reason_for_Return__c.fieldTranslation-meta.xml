@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason for Return --></label>
+    <name>Reason_for_Return__c</name>
+    <picklistValues>
+        <masterLabel>A completed Joinder Agreement – the application to enroll in the Master Pooled Trust - has not been received.</masterLabel>
+        <translation><!-- A completed Joinder Agreement – the application to enroll in the Master Pooled Trust - has not been received. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attempts to reach you have been unsuccessful.</masterLabel>
+        <translation><!-- Attempts to reach you have been unsuccessful. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Beneficiary’s Trust sub-account is closed.</masterLabel>
+        <translation><!-- The Beneficiary’s Trust sub-account is closed. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The check has passed the “void after” or &quot;void by&quot; date.</masterLabel>
+        <translation><!-- The check has passed the “void after” or &quot;void by&quot; date. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The check is not signed or is incomplete.</masterLabel>
+        <translation><!-- The check is not signed or is incomplete. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The check was issued “payable to” incorrectly.</masterLabel>
+        <translation><!-- The check was issued “payable to” incorrectly. --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

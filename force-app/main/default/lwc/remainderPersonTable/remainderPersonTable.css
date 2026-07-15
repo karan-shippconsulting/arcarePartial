@@ -1,0 +1,21 @@
+/* Allow picklist dropdowns to escape table clipping */
+.slds-table,
+.slds-table tbody,
+.slds-table tr,
+.slds-table td {
+    overflow: visible !important;
+}
+
+.slds-card,
+.slds-card__body,
+.slds-card__body_inner {
+    overflow: visible !important;
+}
+
+/* Word wrap for Address column */
+.wrapCell {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 320px; /* adjust if you want wider/narrower */
+}

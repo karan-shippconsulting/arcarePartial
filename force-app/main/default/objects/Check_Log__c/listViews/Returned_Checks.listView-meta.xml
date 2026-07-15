@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Returned_Checks</fullName>
+    <columns>NAME</columns>
+    <columns>Potential_Beneficiary__c</columns>
+    <columns>Return_To_Name__c</columns>
+    <columns>Return_To_Street__c</columns>
+    <columns>Return_to_City__c</columns>
+    <columns>Return_To_State__c</columns>
+    <columns>Return_To_Zip_Code__c</columns>
+    <columns>Check_Number__c</columns>
+    <columns>Check_Date__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Returned_Date__c</columns>
+    <columns>Reason_for_Return__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Returned_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2015</value>
+    </filters>
+    <label>Returned Checks</label>
+</ListView>

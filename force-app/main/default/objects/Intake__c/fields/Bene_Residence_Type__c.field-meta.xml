@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bene_Residence_Type__c</fullName>
+    <label>Bene Residence Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Apartment/Duplex</fullName>
+                <default>false</default>
+                <label>Apartment/Duplex</label>
+            </value>
+            <value>
+                <fullName>Assisted Living Center</fullName>
+                <default>false</default>
+                <label>Assisted Living Center</label>
+            </value>
+            <value>
+                <fullName>Group Home</fullName>
+                <default>false</default>
+                <label>Group Home</label>
+            </value>
+            <value>
+                <fullName>HCS Host Home</fullName>
+                <default>false</default>
+                <label>HCS Host Home</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>Nursing Home</label>
+            </value>
+            <value>
+                <fullName>Private Home</fullName>
+                <default>false</default>
+                <label>Private Home</label>
+            </value>
+            <value>
+                <fullName>Rehab Center/Hospital</fullName>
+                <default>false</default>
+                <label>Rehab Center/Hospital</label>
+            </value>
+            <value>
+                <fullName>State Supported Living Center</fullName>
+                <default>false</default>
+                <label>State Supported Living Center</label>
+            </value>
+            <value>
+                <fullName>Other (specify)</fullName>
+                <default>false</default>
+                <label>Other (specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

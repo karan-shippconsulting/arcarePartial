@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Funded_Trusts</fullName>
+    <columns>NAME</columns>
+    <columns>Trust_Type__c</columns>
+    <columns>Internal_Account_Number__c</columns>
+    <columns>Enrollment_Date__c</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>True_Link_Balance__c</columns>
+    <columns>Primary_Rep_Name__c</columns>
+    <columns>Grantor__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Internal_Account_Number__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>True_Link_Balance__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <label>Active Funded Trusts</label>
+</ListView>

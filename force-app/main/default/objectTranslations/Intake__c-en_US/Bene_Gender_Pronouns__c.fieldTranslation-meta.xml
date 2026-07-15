@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bene Gender Pronouns --></label>
+    <name>Bene_Gender_Pronouns__c</name>
+    <picklistValues>
+        <masterLabel>He/His</masterLabel>
+        <translation><!-- He/His --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>She/Her/Hers</masterLabel>
+        <translation><!-- She/Her/Hers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>They/Their</masterLabel>
+        <translation><!-- They/Their --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

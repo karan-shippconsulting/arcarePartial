@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Set Up Fee --></label>
+    <name>Set_Up_Fee__c</name>
+    <picklistValues>
+        <masterLabel>$1,000</masterLabel>
+        <translation><!-- $1,000 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$1,250</masterLabel>
+        <translation><!-- $1,250 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$250</masterLabel>
+        <translation><!-- $250 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$500</masterLabel>
+        <translation><!-- $500 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$750</masterLabel>
+        <translation><!-- $750 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waived</masterLabel>
+        <translation><!-- Waived --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

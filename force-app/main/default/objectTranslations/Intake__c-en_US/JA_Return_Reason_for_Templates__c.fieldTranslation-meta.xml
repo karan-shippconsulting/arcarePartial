@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is populated via a flow with either the JA Return Reason or the Other JA Return Reason, if that field is populated --></help>
+    <label><!-- JA Return Reason for Templates --></label>
+    <name>JA_Return_Reason_for_Templates__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trigger_PR_Request_for_Updated_Bene_Info__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Trigger PR Request for Updated Bene Info</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

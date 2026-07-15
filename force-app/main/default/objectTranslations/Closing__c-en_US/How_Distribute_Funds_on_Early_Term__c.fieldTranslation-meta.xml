@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How should the funds be distributed upon early termination of the beneficiary&apos;s Sub-Account (3rd party trust)? --></help>
+    <label><!-- How Distribute Funds on Early Term --></label>
+    <name>How_Distribute_Funds_on_Early_Term__c</name>
+    <picklistValues>
+        <masterLabel>To the Donor (if then living)</masterLabel>
+        <translation><!-- To the Donor (if then living) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To the Primary Remainderpersons/Organizations</masterLabel>
+        <translation><!-- To the Primary Remainderpersons/Organizations --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

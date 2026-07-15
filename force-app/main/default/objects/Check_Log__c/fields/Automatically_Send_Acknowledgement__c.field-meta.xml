@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Automatically_Send_Acknowledgement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>DO NOT CHECK! - Used for automation testing</inlineHelpText>
+    <label>Automatically Send Acknowledgement</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

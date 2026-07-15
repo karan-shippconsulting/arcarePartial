@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Final Remainder 3 Sent Date --></label>
+    <name>Final_Remainder_3_Sent_Date__c</name>
+</CustomFieldTranslation>

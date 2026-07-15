@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Related Contact Account ID --></label>
+    <name>Related_Contact_Account_ID__c</name>
+</CustomFieldTranslation>

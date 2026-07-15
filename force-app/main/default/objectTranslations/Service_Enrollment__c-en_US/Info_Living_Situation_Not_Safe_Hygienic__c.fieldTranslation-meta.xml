@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Info Living Situation Not Safe/Hygienic --></label>
+    <name>Info_Living_Situation_Not_Safe_Hygienic__c</name>
+</CustomFieldTranslation>

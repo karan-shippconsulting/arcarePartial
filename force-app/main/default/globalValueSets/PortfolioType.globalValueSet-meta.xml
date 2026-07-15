@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Arcare Trust I - Conservative</fullName>
+        <default>false</default>
+        <label>Arcare Trust I - Conservative</label>
+    </customValue>
+    <customValue>
+        <fullName>Arcare Trust II - Conservative</fullName>
+        <default>false</default>
+        <label>Arcare Trust II - Conservative</label>
+    </customValue>
+    <customValue>
+        <fullName>Arcare Trust II - Conservative Growth</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Arcare Trust II - Conservative Growth</label>
+    </customValue>
+    <customValue>
+        <fullName>Arcare Trust II - Moderate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Arcare Trust II - Moderate</label>
+    </customValue>
+    <customValue>
+        <fullName>Arcare Trust II - Cash</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Arcare Trust II - Cash</label>
+    </customValue>
+    <customValue>
+        <fullName>Arcare Trust II - MSA Portfolio</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Arcare Trust II - MSA Portfolio</label>
+    </customValue>
+    <masterLabel>PortfolioType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

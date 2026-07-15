@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- % Retained by Trust After Death-3rd Pty --></label>
+    <name>Retained_by_Trust_After_Death_3rd_Pty__c</name>
+    <picklistValues>
+        <masterLabel>25%</masterLabel>
+        <translation><!-- 25% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50%</masterLabel>
+        <translation><!-- 50% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other % (please specify)</masterLabel>
+        <translation><!-- Other % (please specify) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

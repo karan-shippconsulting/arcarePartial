@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The amount unclaimed by the beneficiary divided by $25 for the months in remainder.  Subtract $25 per month that the amount is held in the remainder. --></help>
+    <label><!-- Months in Reserve --></label>
+    <name>Months_in_Reserve__c</name>
+</CustomFieldTranslation>

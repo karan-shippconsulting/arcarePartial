@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>DTG Arcare Referral Layout</layout>
+        <sections>
+            <label><!-- Beneficiary --></label>
+            <section>Beneficiary</section>
+        </sections>
+        <sections>
+            <label><!-- Email Details --></label>
+            <section>Email Details</section>
+        </sections>
+        <sections>
+            <label><!-- Refer From --></label>
+            <section>Refer From</section>
+        </sections>
+        <sections>
+            <label><!-- Refer To --></label>
+            <section>Refer To</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

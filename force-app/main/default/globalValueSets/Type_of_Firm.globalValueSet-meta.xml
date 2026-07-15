@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Legal Firm</fullName>
+        <default>false</default>
+        <label>Legal Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Easte Planning</fullName>
+        <default>false</default>
+        <label>Easte Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Injury</fullName>
+        <default>false</default>
+        <label>Personal Injury</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Type of Firm</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

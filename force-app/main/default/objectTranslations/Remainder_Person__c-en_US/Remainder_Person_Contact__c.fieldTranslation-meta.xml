@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This should link to the Remainderperson&apos;s Contact record, not the Beneficiary&apos;s Contact record --></help>
+    <label><!-- Remainder Person Contact --></label>
+    <name>Remainder_Person_Contact__c</name>
+    <relationshipLabel><!-- Remainder Persons --></relationshipLabel>
+</CustomFieldTranslation>

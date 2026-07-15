@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensure_MSA_Type_Is_Selected</fullName>
+    <active>true</active>
+    <description>Ensure that MSA Type is selected when Trust Type is set to &apos;MSA&apos;.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Trust_Type__pc, &quot;MSA&quot;),
+    ISBLANK(TEXT(MSA_Type__pc))
+)</errorConditionFormula>
+    <errorDisplayField>MSA_Type__pc</errorDisplayField>
+    <errorMessage>Please select a value for MSA Type when Trust Type is MSA.</errorMessage>
+</ValidationRule>

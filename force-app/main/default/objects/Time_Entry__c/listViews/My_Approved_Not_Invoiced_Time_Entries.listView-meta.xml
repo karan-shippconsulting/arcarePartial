@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Approved_Not_Invoiced_Time_Entries</fullName>
+    <columns>Service_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>Service_Enrollment__c</columns>
+    <columns>Client__c</columns>
+    <columns>Time_Entry_Category__c</columns>
+    <columns>Approved__c</columns>
+    <columns>Charge_Date__c</columns>
+    <columns>Period__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>Total__c</columns>
+    <columns>Status__c</columns>
+    <columns>Entry_Date__c</columns>
+    <columns>Start_Time__c</columns>
+    <columns>Date_Invoiced__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Period__c</field>
+        <operation>equals</operation>
+        <value>12/1/2024 TO 12/31/2024</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>APPROVED</value>
+    </filters>
+    <label>Ready To Invoice</label>
+</ListView>

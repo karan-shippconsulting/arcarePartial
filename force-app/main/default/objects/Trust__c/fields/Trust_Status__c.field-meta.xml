@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trust_Status__c</fullName>
+    <label>Trust Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Intake</fullName>
+                <default>true</default>
+                <label>Intake</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Future Funded</fullName>
+                <default>false</default>
+                <label>Future Funded</label>
+            </value>
+            <value>
+                <fullName>Closing</fullName>
+                <default>false</default>
+                <label>Closing</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Active-Pending</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active-Pending</label>
+            </value>
+            <value>
+                <fullName>Closing requested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closing requested</label>
+            </value>
+            <value>
+                <fullName>Materials Received-Complete</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Materials Received-Complete</label>
+            </value>
+            <value>
+                <fullName>Pending-Active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending-Active</label>
+            </value>
+            <value>
+                <fullName>Pending-Inactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending-Inactive</label>
+            </value>
+            <value>
+                <fullName>Received</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Received</label>
+            </value>
+            <value>
+                <fullName>Returning</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Returning</label>
+            </value>
+            <value>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reviewed</label>
+            </value>
+            <value>
+                <fullName>Waiting/Hold</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Waiting/Hold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

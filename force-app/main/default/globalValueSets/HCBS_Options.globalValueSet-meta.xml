@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Children’s Home and Community Based Services Waiver (CHCBS)</fullName>
+        <default>false</default>
+        <label>Children’s Home and Community Based Services Waiver (CHCBS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Children’s Extensive Support Waiver (CES)</fullName>
+        <default>false</default>
+        <label>Children’s Extensive Support Waiver (CES)</label>
+    </customValue>
+    <customValue>
+        <fullName>Children’s Habilitation Residential Program Waiver</fullName>
+        <default>false</default>
+        <label>Children’s Habilitation Residential Program Waiver</label>
+    </customValue>
+    <customValue>
+        <fullName>Brain Injury Waiver (BI)</fullName>
+        <default>false</default>
+        <label>Brain Injury Waiver (BI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mental Illness Waiver</fullName>
+        <default>false</default>
+        <label>Mental Illness Waiver</label>
+    </customValue>
+    <customValue>
+        <fullName>Persons living with Aids</fullName>
+        <default>false</default>
+        <label>Persons living with Aids</label>
+    </customValue>
+    <customValue>
+        <fullName>Elderly, Blind, and Disabled Waiver (EBD)</fullName>
+        <default>false</default>
+        <label>Elderly, Blind, and Disabled Waiver (EBD)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatric Hospice Waiver (PHW)</fullName>
+        <default>false</default>
+        <label>Pediatric Hospice Waiver (PHW)</label>
+    </customValue>
+    <customValue>
+        <fullName>Supported Living Services Waiver (SLS)</fullName>
+        <default>false</default>
+        <label>Supported Living Services Waiver (SLS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Developmental Disabilities Waiver (DD)</fullName>
+        <default>false</default>
+        <label>Developmental Disabilities Waiver (DD)</label>
+    </customValue>
+    <customValue>
+        <fullName>Spinal Cord Injury Waiver</fullName>
+        <default>false</default>
+        <label>Spinal Cord Injury Waiver</label>
+    </customValue>
+    <masterLabel>HCBS Options</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

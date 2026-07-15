@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Not_Change_From_Approved</fullName>
+    <active>true</active>
+    <errorConditionFormula>ischanged(Status)&amp;&amp;text(PriorValue(Status))=&quot;Approved&quot;&amp;&amp;text(Status)!=&quot;Approved&quot;&amp;&amp; $Profile.Name !=&quot;System Administrator&quot;</errorConditionFormula>
+    <errorMessage>Only the System Administrator can change the status from Approved to any other value.
+Validation Rule on Document Checklist Item (03dPY00000SMFDC)</errorMessage>
+</ValidationRule>

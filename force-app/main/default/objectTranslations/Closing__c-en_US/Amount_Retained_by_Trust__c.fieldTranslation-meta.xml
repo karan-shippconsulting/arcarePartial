@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- For Trusts with Enrollment Dates on or after 10/1/2023, where the TMHP Amount Owed is greater than the balance after The Arc receives its percentage, this is the balance. If the Enrollment Date is before 10/1/2023 and the TMHP Amount Owed is greater than what is left, this value is $0. --></help>
+    <label><!-- Amount Retained by Trust --></label>
+    <name>Amount_Retained_by_Trust__c</name>
+</CustomFieldTranslation>

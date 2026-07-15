@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This value will be populated automatically after the related Lead is converted into an Account (Beneficiary Profile). --></help>
+    <label><!-- Beneficiary ID --></label>
+    <name>Beneficiary_ID__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,3951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingObjectListSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityAmount</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityRevenue</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityQuantity</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>SPLITAMOUNT</field>
+            <label>Forecasted Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>SPLITAMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityLineItemRevenue</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityLineItemQuantity</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>SPLITAMOUNT</field>
+            <label>Forecasted Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>SPLITAMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityRevenueProductDate</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>OpportunityQuantityProductDate</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>SPLITAMOUNT</field>
+            <label>Forecasted Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>SPLITAMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>LineItemRevenueProductDate</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+    <forecastingTypeObjectListSettings>
+        <forecastingObjectListLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Created By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Close Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Expected Revenue</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probability (%)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Fund Development Owner Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Fiscal Quarter</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJk</field>
+            <label>Service Enrollment</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJj</field>
+            <label>Quickbooks Invoice ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJi</field>
+            <label>Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJh</field>
+            <label>Payment Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJg</field>
+            <label>Payment Batch</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJf</field>
+            <label>Original System ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <label>Recent Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJe</field>
+            <label>Order Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJd</field>
+            <label>Main Competitor(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJc</field>
+            <label>Mail To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Next Step</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJb</field>
+            <label>Mail To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Last Modified By Alias</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJa</field>
+            <label>Is Complete</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqb4</field>
+            <label>Product Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Contract Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Fund Development Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <label>Important</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLO</field>
+            <label>Tracking Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqLN</field>
+            <label>Sync Error</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Account Site</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Private</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Contract Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc7</field>
+            <label>Invoice Billing Street 2</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc6</field>
+            <label>Invoice Billing Street 1</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc5</field>
+            <label>Invoice Billing State</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc4</field>
+            <label>Invoice Billing City</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc3</field>
+            <label>Invoice Attention To</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc2</field>
+            <label>Internal Billing</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Created Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Last Modified Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc1</field>
+            <label>Days Aging</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Lead Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc0</field>
+            <label>Days Aging Range</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Closed</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Won</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <label>Days In Stage</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Last Activity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Description</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Fiscal Period</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Owner Full Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBuf7</field>
+            <label>Trust Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJZ</field>
+            <label>Invoice Printed Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJY</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJX</field>
+            <label>Invoice Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJW</field>
+            <label>Integration Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJV</field>
+            <label>Export ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Quantity</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJU</field>
+            <label>Delivery/Installation Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJT</field>
+            <label>Date/Time Synced</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJS</field>
+            <label>Current Generator(s)</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <label>Age</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Owner Last Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJR</field>
+            <label>Copy2 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJQ</field>
+            <label>Copy2 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJP</field>
+            <label>Copy1 Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBh3b</field>
+            <label>Trust Portfolio Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJO</field>
+            <label>Copy1 Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Fiscal Year</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Fund Development Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJN</field>
+            <label>Contact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJM</field>
+            <label>Completed By</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJL</field>
+            <label>Bill To Print Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJK</field>
+            <label>Bill To Email Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcD</field>
+            <label>True Link ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Owner First Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqJJ</field>
+            <label>Bill Date</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcC</field>
+            <label>Status</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcB</field>
+            <label>Account Number</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Account Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqcA</field>
+            <label>Quickbooks Display Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Forecast Category</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc9</field>
+            <label>Quickbooks Account ID</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>OPPORTUNITY.SOURCE</field>
+            <label>Source</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NPY00000UBqc8</field>
+            <label>Invoice Billing Zip</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </forecastingObjectListSelectedSettings>
+        <forecastingObjectListUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00NPY00000UBqcB</field>
+            <field>00NPY00000UBqJJ</field>
+            <field>00NPY00000UBqJK</field>
+            <field>00NPY00000UBqJL</field>
+            <field>00NPY00000UBqJM</field>
+            <field>00NPY00000UBqJN</field>
+            <field>00NPY00000UBqJO</field>
+            <field>00NPY00000UBqJP</field>
+            <field>00NPY00000UBqJQ</field>
+            <field>00NPY00000UBqJR</field>
+            <field>00NPY00000UBqJS</field>
+            <field>00NPY00000UBqJT</field>
+            <field>00NPY00000UBqc1</field>
+            <field>00NPY00000UBqc0</field>
+            <field>00NPY00000UBqJU</field>
+            <field>00NPY00000UBqJV</field>
+            <field>00NPY00000UBqJW</field>
+            <field>00NPY00000UBqc2</field>
+            <field>00NPY00000UBqc3</field>
+            <field>00NPY00000UBqc4</field>
+            <field>00NPY00000UBqc5</field>
+            <field>00NPY00000UBqc6</field>
+            <field>00NPY00000UBqc7</field>
+            <field>00NPY00000UBqc8</field>
+            <field>00NPY00000UBqJX</field>
+            <field>00NPY00000UBqJY</field>
+            <field>00NPY00000UBqJZ</field>
+            <field>00NPY00000UBqJa</field>
+            <field>00NPY00000UBqJb</field>
+            <field>00NPY00000UBqJc</field>
+            <field>00NPY00000UBqJd</field>
+            <field>00NPY00000UBqJe</field>
+            <field>00NPY00000UBqJf</field>
+            <field>00NPY00000UBqJg</field>
+            <field>00NPY00000UBqJh</field>
+            <field>00NPY00000UBqJi</field>
+            <field>00NPY00000UBqb4</field>
+            <field>00NPY00000UBqc9</field>
+            <field>00NPY00000UBqcA</field>
+            <field>00NPY00000UBqJj</field>
+            <field>00NPY00000UBqJk</field>
+            <field>00NPY00000UBqcC</field>
+            <field>00NPY00000UBqLN</field>
+            <field>00NPY00000UBqLO</field>
+            <field>00NPY00000UBqcD</field>
+            <field>00NPY00000UBh3b</field>
+            <field>00NPY00000UBuf7</field>
+            <field>OPPORTUNITY.ISPRIORITYRECORD</field>
+            <field>OPPORTUNITY.LAST_STG_CHG_DAYS</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY_DAYS</field>
+            <field>OPPORTUNITY.AGE_IN_DAYS</field>
+            <field>OPPORTUNITY.SOURCE</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+        </forecastingObjectListUnselectedSettings>
+        <forecastingTypeDeveloperName>LineItemQuantityProductDate</forecastingTypeDeveloperName>
+    </forecastingTypeObjectListSettings>
+</ForecastingObjectListSettings>

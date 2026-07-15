@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Arcare_Trust</fullName>
+    <fields>True_Link_Balance__c</fields>
+    <fields>Trust_Status__c</fields>
+    <fields>Trust_Type__c</fields>
+    <fields>Case_Manager__c</fields>
+    <label>Arcare Trust</label>
+</CompactLayout>

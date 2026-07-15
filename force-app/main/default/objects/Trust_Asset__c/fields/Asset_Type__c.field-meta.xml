@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Type__c</fullName>
+    <label>Asset Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cell Phone</fullName>
+                <default>false</default>
+                <label>Cell Phone</label>
+            </value>
+            <value>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+                <label>Desktop Computer</label>
+            </value>
+            <value>
+                <fullName>Funeral Plan</fullName>
+                <default>false</default>
+                <label>Funeral Plan</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Game Console</fullName>
+                <default>false</default>
+                <label>Game Console</label>
+            </value>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Investment</fullName>
+                <default>false</default>
+                <label>Investment</label>
+            </value>
+            <value>
+                <fullName>IRA</fullName>
+                <default>false</default>
+                <label>IRA</label>
+            </value>
+            <value>
+                <fullName>Laptop/Tablet</fullName>
+                <default>false</default>
+                <label>Laptop/Tablet</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Television</fullName>
+                <default>false</default>
+                <label>Television</label>
+            </value>
+            <value>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+                <label>Vehicle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

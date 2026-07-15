@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>HistoricalTransactionNameFormula</name>
+        <dataType>String</dataType>
+        <expression>left({!$Record.Transaction_Type__c}+&quot; (&quot;+text(month({!$Record.Transaction_Date__c}))+&quot;/&quot;+text(Day({!$Record.Transaction_Date__c}))+&quot;/&quot;+text(Year({!$Record.Transaction_Date__c}))+&quot;)&quot;,80)</expression>
+    </formulas>
+    <interviewLabel>Historical Transactions on Create and Edit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Historical Transactions on Create and Edit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Historical_Transaction</name>
+        <label>Update Historical Transaction</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Beneficiary__c</field>
+            <value>
+                <elementReference>$Record.Trust__r.Beneficiary__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>HistoricalTransactionNameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Historical_Transaction</targetReference>
+        </connector>
+        <object>Historical_Transaction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>PricebookEntry</baseObject>
+    <category>products</category>
+    <deployed>true</deployed>
+    <description>Pricebook Entries</description>
+    <label>Pricebook Entries</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IsActive</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IsArchived</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>UnitPrice</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Original_System_ID__c</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>UseStandardPrice</field>
+            <table>PricebookEntry</table>
+        </columns>
+        <masterLabel>Price Book Entries</masterLabel>
+    </sections>
+</ReportType>

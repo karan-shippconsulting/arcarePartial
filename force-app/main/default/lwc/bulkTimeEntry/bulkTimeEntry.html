@@ -1,0 +1,186 @@
+<template>
+	<lightning-card>
+		<div class="slds-align_absolute-center slds-text-heading_medium">Bulk Time Entry</div>
+		<div class="slds-m-around_large">
+			<template if:true={timeCategoryOptions}>
+				<lightning-combobox label="Time Category" lwc:ref="timeCategory"
+					value={selectedCharge.Time_Entry_Category__c} placeholder="Select Time Category"
+					options={timeCategoryOptions} onchange={handleTimeCatChange}>
+				</lightning-combobox>
+			</template>
+			<lightning-textarea label="Description" lwc:ref="description" value={selectedCharge.description}>
+			</lightning-textarea>
+			<lightning-layout multiple-rows="true">
+				<lightning-layout-item padding="horizontal-small" size="6">
+					<div>
+						<template if:false={isAdmin}>
+							<c-searchable-combobox picklist-ordered={clientList} required="true"
+								selected-data-id={selectedCharge.Client__c} label="Select Client"
+								onselect={handleClientChange}></c-searchable-combobox>
+						</template>
+						<template if:true={hasBillingCodes}>
+							<c-searchable-combobox picklist-ordered={billingCodes} required="true"
+								selected-data-id={selectedCharge.Service_Code__c} label="Select Billing Code"
+								onselect={handleBillingCodeChange}></c-searchable-combobox>
+						</template>
+						<template if:true={isTime}>
+							<br>
+							<lightning-button class="slds-float_right" variant="brand" label="Start Timer"
+								onclick={startTimer} disabled={disableStart}></lightning-button>
+							<span class="slds-float_right slds-m-horizontal--medium slds-m-top--x-small">{formattedTime}</span>
+							</br>
+							<lightning-combobox class="slds-m-top_medium" label="Hours" disabled={disableStart}
+								lwc:ref="hours" onchange={handleHourChange} value="0" placeholder="Select Hour"
+								options={hoursOptions}>
+							</lightning-combobox>
+
+							Calculated Hours:
+							<b>{displayHours}</b>
+						</template>
+						<template if:false={isTime}>
+							<lightning-input type="number" label="Quantity" value={selectedCharge.Quantity__c}
+								lwc:ref="quantity"></lightning-input>
+						</template>
+					</div>
+
+				</lightning-layout-item>
+
+				<lightning-layout-item padding="horizontal-small" size="6">
+					<div>
+						<template if:false={isAdmin}>
+							<template if:true={hasServiceEnrollmentList}>
+								<c-searchable-combobox picklist-ordered={serviceEnrollmentList} required="true"
+									selected-data-id={selectedCharge.Service_Enrollment__c}
+									label="Select Service Enrollment" onselect={handleServiceChange}>
+								</c-searchable-combobox>
+							</template>
+						</template>
+
+						<lightning-input type="date" class="date-format-hide" lwc:ref="chargeDate" variant="standard"
+							value={today} label="Select Date">
+						</lightning-input>
+						<template if:true={isTime}>
+							<br>
+							<lightning-button variant="brand" label="Stop Timer" onclick={stopTimer}
+								disabled={disableStop}></lightning-button>
+							<span class="slds-m-horizontal--medium slds-m-top--x-small">{formattedTime}</span>
+							</br>
+							<lightning-combobox label="Minutes" disabled={disableStart} lwc:ref="minutes"
+								value={selectedCharge.Minutes__c} onchange={handleMinutesChange}
+								placeholder="Select Minute" options={minsOptions}>
+							</lightning-combobox>
+
+						</template>
+						<br>
+							Unit Price: <b> <lightning-formatted-number value={unitPrice} format-style="currency"
+								currency-code="USD"> 
+							</lightning-formatted-number> </b>
+						<template if:false={isTime}>
+							<lightning-input type="number" label="Amount" scale="0.01"
+								value={selectedCharge.Unit_Price__c} lwc:ref="amount"></lightning-input>
+						</template>
+						<lightning-input type="checkbox" label="Non-Billable" checked={selectedCharge.billable}
+							lwc:ref="billable"></lightning-input>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+			</br>
+			<!-- <div class="slds-col slds-align_absolute-center">
+				<lightning-button class="slds-align_absolute-center" style="float:right;" variant="brand" label="Save" onclick={saveCharge}>
+				</lightning-button>
+				<lightning-button variant="brand" class="slds-align_absolute-center" label="Update" style="float:left;"
+					onclick={updateCharge}>
+				</lightning-button>
+			</div> -->
+			</br>
+			<template if:true={chargesList}>
+				<h3 class="slds-section__title slds-theme_shade">
+					<span class="slds-truncate slds-p-horizontal_small" title="Filters">Filters</span>
+				</h3>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="2">
+						<lightning-input type="text" variant="standard" label="Filter by Client"
+							placeholder="Start Typing..." onchange={filterByClient}></lightning-input>
+						<lightning-combobox label="Filter By Period" placeholder="Select Period" value={periodSearch}
+							options={periodOptions} onchange={handlePeriodChange}></lightning-combobox>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="2">
+						<lightning-input type="date" class="date-format-hide" variant="standard"
+							label="Select Start Date" onchange={filterByStartDate}></lightning-input>
+						<lightning-input type="text" variant="standard" label="Filter by Created User" lwc:ref="createdByName"
+							placeholder="Enter Full Name" onchange={filterByCreated}></lightning-input>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="2">
+						<lightning-input type="date" variant="standard" class="date-format-hide" label="Select End Date"
+							onchange={filterByEndDate}></lightning-input>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="3">
+						<lightning-combobox name="progress" label="Filter by Billable" value={billableDefault}
+							options={billableOptions} onchange={filterByBillable}></lightning-combobox>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="3">
+						<lightning-combobox name="category" label="Filter by Category Type" value="ALL"
+							options={categoryTypeOptions} onchange={filterByCategory}></lightning-combobox>
+					</lightning-layout-item>
+				</lightning-layout>
+				<center>
+					<lightning-button class="slds-m-around_small" variant="brand" label="Save" type="reset"
+						disabled={checkSaveValidation} onclick={saveCharge}>
+					</lightning-button>
+					<template if:true={allowUpdate}>
+						<lightning-button variant="brand" class="slds-m-around_small" label="Update" type="reset"
+							disabled={checkValidations} onclick={updateCharge}>
+						</lightning-button>
+					</template>
+					<template if:true={isEnableApprovalButton}>
+						<lightning-button variant="brand" class="slds-m-around_small" label="Approve" type="reset"
+							onclick={approveCharge}>
+						</lightning-button>
+					</template>
+					<template if:true={allowUpdate}>
+						<lightning-button class="slds-m-around_small" label="Cancel" type="reset"
+							onclick={handleCancel}>
+						</lightning-button>
+					</template>
+
+				</center>
+				</br>
+				<lightning-tabset>
+					<lightning-tab label="Bulk Edit" onactive={handleActive} data-id="edit">
+						<lightning-datatable max-row-selection="1" key-field="Id" data={chargesList}
+							columns={columnsList} width="100%" default-sort-direction={defaultSortDirection}
+							sorted-direction={sortDirection} sorted-by={sortedBy} onrowselection={handleChargeSelect}
+							onsort={onHandleSort} onrowaction={handleRowAction}>
+						</lightning-datatable>
+					</lightning-tab>
+					<template if:true={isEnableApproval}>
+						<lightning-tab label="Approval" title="Approval Tab" onactive={handleActive} data-id="approve">
+							<lightning-datatable key-field="Id" data={chargesList} columns={columnsList} width="100%"
+								default-sort-direction={defaultSortDirection} sorted-direction={sortDirection}
+								sorted-by={sortedBy} onsort={onHandleSort} onrowaction={handleRowAction}>
+							</lightning-datatable>
+						</lightning-tab>
+					</template>
+				</lightning-tabset>
+
+			</template>
+
+		</div>
+		<!-- <p slot="footer">
+			<lightning-button class="slds-m-around_small" variant="brand" label="Save" type="reset"
+				disabled={checkSaveValidation} onclick={saveCharge}>
+			</lightning-button>
+			<template if:true={allowUpdate}>
+				<lightning-button variant="brand" class="slds-m-around_small" label="Update" type="reset"
+					disabled={checkValidations} onclick={updateCharge}>
+				</lightning-button>
+			</template>
+		</p> -->
+	</lightning-card>
+
+</template>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Missing_Documents_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Checking this box and saving the record will send an email to the client with a list of documents that are currently in &quot;Pending&quot; status. Please ensure the client&apos;s email address is entered before selecting this option.</inlineHelpText>
+    <label>Send Missing Documents Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

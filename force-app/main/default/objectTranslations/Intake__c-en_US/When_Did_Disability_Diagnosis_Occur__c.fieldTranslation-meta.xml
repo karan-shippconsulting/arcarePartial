@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- When Did Disability/Diagnosis Occur --></label>
+    <name>When_Did_Disability_Diagnosis_Occur__c</name>
+</CustomFieldTranslation>

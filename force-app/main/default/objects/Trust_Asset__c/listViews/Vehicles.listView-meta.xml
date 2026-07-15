@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicles</fullName>
+    <columns>NAME</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Asset_Type__c</columns>
+    <columns>Amount_Paid_by_MPT__c</columns>
+    <columns>Value_or_Purchase_Price_if_Prior_to_MPT__c</columns>
+    <columns>Purchase_Date__c</columns>
+    <columns>Approximate_Depreciated_Balance__c</columns>
+    <columns>Monthly_Depreciation_60_Months__c</columns>
+    <columns>VIN__c</columns>
+    <columns>Make__c</columns>
+    <columns>Model__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Asset_Type__c</field>
+        <operation>equals</operation>
+        <value>Vehicle</value>
+    </filters>
+    <filters>
+        <field>Trust_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>Vehicles - Active Trusts</label>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Important: Selecting &quot;Yes&quot; and saving the record will initiate a sync for this onboarding with True Link.
+
+Before syncing to True Link, ensure the Beneficiary Profile is created to populate the Beneficiary ID, which is required for onboarding. -->
+    </help>
+    <label><!-- Enter to True Link now? --></label>
+    <name>Enter_to_TrueLink_now__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

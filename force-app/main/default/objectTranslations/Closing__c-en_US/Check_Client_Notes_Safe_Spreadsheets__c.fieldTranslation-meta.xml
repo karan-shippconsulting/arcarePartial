@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The spreadsheets are located here in OneDrive: CFPD/Electronic Processes/Documents and Cards in Safe. --></help>
+    <label><!-- Check Client Notes/Safe Spreadsheets --></label>
+    <name>Check_Client_Notes_Safe_Spreadsheets__c</name>
+</CustomFieldTranslation>

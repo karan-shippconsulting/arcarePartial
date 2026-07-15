@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time Entries</value>
+    </caseValues>
+    <layouts>
+        <layout>Time Entry Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Only certain users are authorized to approve Time Entries. --></errorMessage>
+        <name>Approval_Restrictions</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not update a Time Entry that has been Approved or Invoiced. --></errorMessage>
+        <name>Can_Not_Update_if_Approved_or_Invoiced</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must have an Attention To on Service Enrollment before Approving Time Entries. --></errorMessage>
+        <name>Must_Have_Invoice_To_To_Approve</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter a Quantity to save a Time Entry. --></errorMessage>
+        <name>Quantity_Can_Not_Be_Blank</name>
+    </validationRules>
+</CustomObjectTranslation>

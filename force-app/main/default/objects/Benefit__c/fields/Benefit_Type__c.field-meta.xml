@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefit_Type__c</fullName>
+    <inlineHelpText>Choose from list of insurance and benefit types</inlineHelpText>
+    <label>Benefit Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medicaid</fullName>
+                <default>false</default>
+                <label>Medicaid</label>
+            </value>
+            <value>
+                <fullName>Medicare</fullName>
+                <default>false</default>
+                <label>Medicare</label>
+            </value>
+            <value>
+                <fullName>MHMR</fullName>
+                <default>false</default>
+                <label>MHMR</label>
+            </value>
+            <value>
+                <fullName>Private health</fullName>
+                <default>false</default>
+                <label>Private health</label>
+            </value>
+            <value>
+                <fullName>Section 8</fullName>
+                <default>false</default>
+                <label>Section 8</label>
+            </value>
+            <value>
+                <fullName>SNAP Benefits</fullName>
+                <default>false</default>
+                <label>SNAP Benefits</label>
+            </value>
+            <value>
+                <fullName>SSA</fullName>
+                <default>false</default>
+                <label>SSA</label>
+            </value>
+            <value>
+                <fullName>SSDI</fullName>
+                <default>false</default>
+                <label>SSDI</label>
+            </value>
+            <value>
+                <fullName>SSI</fullName>
+                <default>false</default>
+                <label>SSI</label>
+            </value>
+            <value>
+                <fullName>Veterans Affairs Benefits</fullName>
+                <default>false</default>
+                <label>Veterans Affairs Benefits</label>
+            </value>
+            <value>
+                <fullName>Wages</fullName>
+                <default>false</default>
+                <label>Wages</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

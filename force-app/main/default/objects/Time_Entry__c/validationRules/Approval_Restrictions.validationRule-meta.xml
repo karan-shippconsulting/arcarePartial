@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Restrictions</fullName>
+    <active>true</active>
+    <description>Approval Restrictions</description>
+    <errorConditionFormula>AND(ISCHANGED(Approved__c), Approved__c = TRUE,
+$User.Can_Approve_Invoices__c = FALSE)</errorConditionFormula>
+    <errorMessage>Only certain users are authorized to approve Time Entries.</errorMessage>
+</ValidationRule>

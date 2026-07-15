@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Grant Status --></label>
+    <name>Grant_Status__c</name>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Approved</masterLabel>
+        <translation><!-- Not Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted</masterLabel>
+        <translation><!-- Submitted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Receipts</masterLabel>
+        <translation><!-- Waiting for Receipts --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

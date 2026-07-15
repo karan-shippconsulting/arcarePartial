@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trust</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trusts</value>
+    </caseValues>
+    <layouts>
+        <layout>Trust Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Approval Info/Truelink Integration --></label>
+            <section>Approval Info/Truelink Integration</section>
+        </sections>
+        <sections>
+            <label><!-- Court Information --></label>
+            <section>Court Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Funding Information --></label>
+            <section>Funding Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Representatives/Grantors --></label>
+            <section>Representatives/Grantors</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template EditorOLD --></label>
+        <name>Email_Template_EditorOLD</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Balance --></label>
+        <name>Update_Balance</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Only certain users are authorized to approve trusts. --></errorMessage>
+        <name>Approved_By</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check Enrollment Fee Verified before moving Trust Status to Active or Future Funded --></errorMessage>
+        <name>Enrollment_Fee_Verified_Needed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only certain users can move Trust to Closing. --></errorMessage>
+        <name>Only_Certain_Users_Can_Move_To_Closing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only certain users can activate Trusts which begins the sync with True Link --></errorMessage>
+        <name>Restrict_Activation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are missing True Link Data Required to Create a Beneficiary.- check SSN on Beneficiary and Missing True Link Integration fields on Trust (03dHp000001ErogIAC) --></errorMessage>
+        <name>True_Link_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

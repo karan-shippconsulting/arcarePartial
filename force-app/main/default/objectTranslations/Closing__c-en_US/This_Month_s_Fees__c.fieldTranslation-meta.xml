@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Calculated in a flow --></help>
+    <label><!-- This Month&apos;s Fees --></label>
+    <name>This_Month_s_Fees__c</name>
+</CustomFieldTranslation>

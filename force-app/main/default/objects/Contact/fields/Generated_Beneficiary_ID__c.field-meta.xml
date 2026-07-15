@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generated_Beneficiary_ID__c</fullName>
+    <description>This field is populated by a flow that generates a Beneficiary ID for an Account. It is then used in the Beneficiary ID formula field, which is required for syncing data with True Link.</description>
+    <externalId>false</externalId>
+    <label>Generated Beneficiary ID</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

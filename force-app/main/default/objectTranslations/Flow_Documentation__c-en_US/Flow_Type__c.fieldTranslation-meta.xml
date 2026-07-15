@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Flow Type --></label>
+    <name>Flow_Type__c</name>
+    <picklistValues>
+        <masterLabel>Auto-Launched Flow</masterLabel>
+        <translation><!-- Auto-Launched Flow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Record-Triggered Flow</masterLabel>
+        <translation><!-- Record-Triggered Flow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled Flow</masterLabel>
+        <translation><!-- Scheduled Flow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Screen Flow</masterLabel>
+        <translation><!-- Screen Flow --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

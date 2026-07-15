@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grantor_2_Contact_Lookup__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Grantor #2 Contact Lookup</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Intake (C Donor #2)</relationshipLabel>
+    <relationshipName>Trust_ApplicationsKfs6</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

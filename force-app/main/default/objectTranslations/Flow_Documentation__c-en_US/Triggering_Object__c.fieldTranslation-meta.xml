@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Triggering Object --></label>
+    <name>Triggering_Object__c</name>
+    <picklistValues>
+        <masterLabel>Account</masterLabel>
+        <translation><!-- Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefit</masterLabel>
+        <translation><!-- Benefit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caregiver Transaction</masterLabel>
+        <translation><!-- Caregiver Transaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case</masterLabel>
+        <translation><!-- Case --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Check Log</masterLabel>
+        <translation><!-- Check Log --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closing</masterLabel>
+        <translation><!-- Closing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation><!-- Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Document Checklist Item</masterLabel>
+        <translation><!-- Document Checklist Item --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Record Set</masterLabel>
+        <translation><!-- Duplicate Record Set --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Note</masterLabel>
+        <translation><!-- General Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Historical Transaction</masterLabel>
+        <translation><!-- Historical Transaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intake</masterLabel>
+        <translation><!-- Intake --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationship</masterLabel>
+        <translation><!-- Relationship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remainder Person</masterLabel>
+        <translation><!-- Remainder Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Enrollment</masterLabel>
+        <translation><!-- Service Enrollment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time Entry</masterLabel>
+        <translation><!-- Time Entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transaction</masterLabel>
+        <translation><!-- Transaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust</masterLabel>
+        <translation><!-- Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust Accounting</masterLabel>
+        <translation><!-- Trust Accounting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust Asset</masterLabel>
+        <translation><!-- Trust Asset --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust Coordinator Assignment</masterLabel>
+        <translation><!-- Trust Coordinator Assignment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

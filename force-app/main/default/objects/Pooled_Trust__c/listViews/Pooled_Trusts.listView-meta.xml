@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pooled_Trusts</fullName>
+    <columns>NAME</columns>
+    <columns>Trust_EIN__c</columns>
+    <columns>Trust_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Pooled__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Pooled Trusts</label>
+</ListView>

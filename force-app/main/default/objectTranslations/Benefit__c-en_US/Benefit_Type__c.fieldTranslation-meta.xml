@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose from list of insurance and benefit types --></help>
+    <label><!-- Benefit Type --></label>
+    <name>Benefit_Type__c</name>
+    <picklistValues>
+        <masterLabel>MHMR</masterLabel>
+        <translation><!-- MHMR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medicaid</masterLabel>
+        <translation><!-- Medicaid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medicare</masterLabel>
+        <translation><!-- Medicare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private health</masterLabel>
+        <translation><!-- Private health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SNAP Benefits</masterLabel>
+        <translation><!-- SNAP Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSA</masterLabel>
+        <translation><!-- SSA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSDI</masterLabel>
+        <translation><!-- SSDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSI</masterLabel>
+        <translation><!-- SSI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Section 8</masterLabel>
+        <translation><!-- Section 8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veterans Affairs Benefits</masterLabel>
+        <translation><!-- Veterans Affairs Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wages</masterLabel>
+        <translation><!-- Wages --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

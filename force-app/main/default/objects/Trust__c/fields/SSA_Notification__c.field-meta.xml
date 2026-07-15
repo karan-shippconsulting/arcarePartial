@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSA_Notification__c</fullName>
+    <label>SSA Notification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not on SSI</fullName>
+                <default>false</default>
+                <label>Not on SSI</label>
+            </value>
+            <value>
+                <fullName>On SSI</fullName>
+                <default>false</default>
+                <label>On SSI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

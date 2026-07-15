@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Status__c,
+&quot;Cleared&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6xV&quot;,&quot;Green&quot;,20,20),
+&quot;Approved&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009YKYb&quot;,&quot;Blue&quot;,20,20),
+&quot;Processed&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009YKYb&quot;,&quot;Blue&quot;,20,20),
+&quot;Pending on Hold&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6UU&quot;,&quot;Yellow&quot;,20,20),
+&quot;Pending&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6UU&quot;,&quot;Yellow&quot;,20,20),
+&quot;Additional information needed&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6UU&quot;,&quot;Yellow&quot;,20,20),
+&quot;Denied&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6vt&quot;,&quot;Red&quot;,20,20),
+&quot;Cancelled&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6vt&quot;,&quot;Red&quot;,20,20),
+&quot;Stopped and Redeposited&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015Vt000009X6vt&quot;,&quot;Red&quot;,20,20),
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Transaction Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

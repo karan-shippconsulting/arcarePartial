@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Sent_To_Remainder__c</fullName>
+    <formula>Balance_After_Fees_to_Arcare__c  +  Amount_Retained_by_Trust__c -  Unclaimed_Amount_to_Reserve__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Balance After Fees multiplied by Percent Leaving to The Arc plus the Amount Retained by Trust less the Unclaimed Amount Sent to Reserve</inlineHelpText>
+    <label>Amount Sent To Remainder</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

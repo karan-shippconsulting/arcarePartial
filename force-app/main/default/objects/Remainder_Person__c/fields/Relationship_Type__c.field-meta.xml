@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Type__c</fullName>
+    <label>Relationship Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+                <label>Attorney</label>
+            </value>
+            <value>
+                <fullName>Conservator</fullName>
+                <default>false</default>
+                <label>Conservator</label>
+            </value>
+            <value>
+                <fullName>Family</fullName>
+                <default>false</default>
+                <label>Family</label>
+            </value>
+            <value>
+                <fullName>Friend</fullName>
+                <default>false</default>
+                <label>Friend</label>
+            </value>
+            <value>
+                <fullName>Grantor</fullName>
+                <default>false</default>
+                <label>Grantor</label>
+            </value>
+            <value>
+                <fullName>Other Representative</fullName>
+                <default>false</default>
+                <label>Other Representative</label>
+            </value>
+            <value>
+                <fullName>POA</fullName>
+                <default>false</default>
+                <label>POA</label>
+            </value>
+            <value>
+                <fullName>Rep Payee</fullName>
+                <default>false</default>
+                <label>Rep Payee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

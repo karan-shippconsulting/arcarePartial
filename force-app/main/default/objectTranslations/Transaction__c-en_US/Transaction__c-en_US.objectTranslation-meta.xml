@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transactions</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Bulk Print And Email --></label>
+        <name>Bulk_Print_And_Email</name>
+    </fieldSets>
+    <layouts>
+        <layout>Transaction Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dates --></label>
+            <section>Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Denial Information --></label>
+            <section>Denial Information</section>
+        </sections>
+        <sections>
+            <label><!-- Historical --></label>
+            <section>Historical</section>
+        </sections>
+        <sections>
+            <label><!-- Other --></label>
+            <section>Other</section>
+        </sections>
+        <sections>
+            <label><!-- Payee Information --></label>
+            <section>Payee Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Caregiver Transaction --></label>
+        <name>Add_Caregiver_Transaction</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template EditorOLD --></label>
+        <name>Email_Template_EditorOLD</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Bulk_Email_And_Print --></label>
+        <name>Bulk_Email_And_Print</name>
+    </webLinks>
+</CustomObjectTranslation>

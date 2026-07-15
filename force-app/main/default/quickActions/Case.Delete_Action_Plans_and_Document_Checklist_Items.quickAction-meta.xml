@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowDefinition>SF_Onboarding_Delete_Action_Plans_and_Document_Checklist_Items</flowDefinition>
+    <label>Delete Action Plans and Document Checklist Items</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

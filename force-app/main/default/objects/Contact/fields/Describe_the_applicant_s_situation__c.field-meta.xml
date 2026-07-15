@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Describe_the_applicant_s_situation__c</fullName>
+    <inlineHelpText>Describe the applicant’s situation. Include why the item or support requested above is needed and how it will benefit the recipient.</inlineHelpText>
+    <label>Describe the applicant’s situation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

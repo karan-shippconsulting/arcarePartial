@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Brain/head injury</fullName>
+        <default>false</default>
+        <label>Brain/head injury</label>
+    </customValue>
+    <customValue>
+        <fullName>Cerebral Palsy</fullName>
+        <default>false</default>
+        <label>Cerebral Palsy</label>
+    </customValue>
+    <customValue>
+        <fullName>Autism</fullName>
+        <default>false</default>
+        <label>Autism</label>
+    </customValue>
+    <customValue>
+        <fullName>Intellectual/Cognitive Disability</fullName>
+        <default>false</default>
+        <label>Intellectual/Cognitive Disability</label>
+    </customValue>
+    <customValue>
+        <fullName>Mental Illness</fullName>
+        <default>false</default>
+        <label>Mental Illness</label>
+    </customValue>
+    <customValue>
+        <fullName>Substance Abuse/Addiction</fullName>
+        <default>false</default>
+        <label>Substance Abuse/Addiction</label>
+    </customValue>
+    <customValue>
+        <fullName>Multiple Sclerosis</fullName>
+        <default>false</default>
+        <label>Multiple Sclerosis</label>
+    </customValue>
+    <customValue>
+        <fullName>Spinal Cord Injury</fullName>
+        <default>false</default>
+        <label>Spinal Cord Injury</label>
+    </customValue>
+    <customValue>
+        <fullName>Physical Disability</fullName>
+        <default>false</default>
+        <label>Physical Disability</label>
+    </customValue>
+    <customValue>
+        <fullName>Dementia/Alzheimer’s Disease</fullName>
+        <default>false</default>
+        <label>Dementia/Alzheimer’s Disease</label>
+    </customValue>
+    <customValue>
+        <fullName>Other – please describe</fullName>
+        <default>false</default>
+        <label>Other – please describe</label>
+    </customValue>
+    <masterLabel>Disability</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

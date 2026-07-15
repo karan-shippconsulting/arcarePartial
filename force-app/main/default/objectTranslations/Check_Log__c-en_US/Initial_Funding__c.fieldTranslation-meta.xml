@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do not check if the check is for an enrollment fee --></help>
+    <label><!-- Initial Funding --></label>
+    <name>Initial_Funding__c</name>
+</CustomFieldTranslation>

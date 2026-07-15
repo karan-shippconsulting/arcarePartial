@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Will Trust Be Funded In the Future --></label>
+    <name>Will_Trust_Be_Funded_In_the_Future__c</name>
+</CustomFieldTranslation>

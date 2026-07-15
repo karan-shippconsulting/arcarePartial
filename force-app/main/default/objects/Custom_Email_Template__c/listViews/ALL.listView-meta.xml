@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL</fullName>
+    <columns>NAME</columns>
+    <columns>Active__c</columns>
+    <columns>Parent_Object__c</columns>
+    <columns>Subject__c</columns>
+    <columns>Recipient_Address_Field__c</columns>
+    <columns>Document_Checklist_Category__c</columns>
+    <columns>Document_Checklist_Item_Status__c</columns>
+    <columns>Document_Checklist_Category_Type__c</columns>
+    <columns>Default_Field_Name_1__c</columns>
+    <columns>Default_Field_Value_1__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>ALL Templates</label>
+</ListView>

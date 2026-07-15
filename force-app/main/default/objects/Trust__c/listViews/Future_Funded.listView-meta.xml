@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_Funded</fullName>
+    <columns>NAME</columns>
+    <columns>Trust_Status__c</columns>
+    <columns>Enrollment_Date__c</columns>
+    <columns>Trust_Type__c</columns>
+    <columns>Attorney__c</columns>
+    <columns>Attorney_Email__c</columns>
+    <columns>Attorney_Account__c</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Beneficiary_Status__c</columns>
+    <columns>Distribution_Guidelines__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trust_Status__c</field>
+        <operation>equals</operation>
+        <value>Future Funded</value>
+    </filters>
+    <label>Future Funded</label>
+</ListView>

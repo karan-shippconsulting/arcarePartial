@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Attempt Call #1 - Contacted</fullName>
+        <default>false</default>
+        <label>Attempt Call #1 - Contacted</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #1 - Left a Voicemail</fullName>
+        <default>false</default>
+        <label>Attempt Call #1 - Left a Voicemail</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #1 - Voicemail Full</fullName>
+        <default>false</default>
+        <label>Attempt Call #1 - Voicemail Full</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #2 - Left a Voicemail</fullName>
+        <default>false</default>
+        <label>Attempt Call #2 - Left a Voicemail</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #2 - Voicemail Full</fullName>
+        <default>false</default>
+        <label>Attempt Call #2 - Voicemail Full</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #2 - Contacted</fullName>
+        <default>false</default>
+        <label>Attempt Call #2 - Contacted</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #3 - Voicemail Full</fullName>
+        <default>false</default>
+        <label>Attempt Call #3 - Voicemail Full</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #3 - Left Voicemail</fullName>
+        <default>false</default>
+        <label>Attempt Call #3 - Left Voicemail</label>
+    </customValue>
+    <customValue>
+        <fullName>Attempt Call #3 - Contacted</fullName>
+        <default>false</default>
+        <label>Attempt Call #3 - Contacted</label>
+    </customValue>
+    <masterLabel>Attempt Call</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

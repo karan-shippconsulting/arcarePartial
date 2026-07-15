@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check this box to mark that you received all the document needed/required --></help>
+    <label><!-- All Enrollment Packet Received? --></label>
+    <name>All_Enrollment_Packet_Received__c</name>
+</CustomFieldTranslation>

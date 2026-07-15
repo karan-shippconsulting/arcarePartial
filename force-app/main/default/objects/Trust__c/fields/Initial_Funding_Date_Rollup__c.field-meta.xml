@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Funding_Date_Rollup__c</fullName>
+    <inlineHelpText>Rollup of Date field from Funding record where Type is Initial</inlineHelpText>
+    <label>Initial Funding Date Rollup</label>
+    <summarizedField>Funding__c.Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>Funding__c.Type__c</field>
+        <operation>equals</operation>
+        <value>Initial</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Funding__c.Trust__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

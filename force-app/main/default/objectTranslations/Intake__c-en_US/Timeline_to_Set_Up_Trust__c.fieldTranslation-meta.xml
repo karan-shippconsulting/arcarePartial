@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Timeline to Set Up Trust --></label>
+    <name>Timeline_to_Set_Up_Trust__c</name>
+</CustomFieldTranslation>

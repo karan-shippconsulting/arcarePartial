@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the formula that formats the Amount field. It will not work in templates. Use Amount Formula for Templates field. --></help>
+    <label><!-- Amount Formula --></label>
+    <name>Amount_Formula__c</name>
+</CustomFieldTranslation>

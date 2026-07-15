@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Denied_Needs_Reason</fullName>
+    <active>true</active>
+    <description>Denied Needs Reason</description>
+    <errorConditionFormula>AND(ISCHANGED(Status__c), OR(TEXT(Status__c) = &quot;Denied&quot;, 
+TEXT(Status__c) = &quot;Inactive&quot;),
+ISBLANK(Reason_for_Closing_Denial__c))</errorConditionFormula>
+    <errorMessage>Please enter a Reason for Closing/Denial</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Arcare_Onboarding_Compact_Layout</fullName>
+    <fields>Subject</fields>
+    <fields>Status</fields>
+    <fields>CaseNumber</fields>
+    <fields>Lead__c</fields>
+    <fields>Beneficiary_Profile__c</fields>
+    <fields>Trust_Type__c</fields>
+    <fields>Beneficiary_ID__c</fields>
+    <label>Arcare Onboarding Compact Layout</label>
+</CompactLayout>

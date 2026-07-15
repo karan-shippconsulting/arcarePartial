@@ -1,0 +1,29 @@
+<template>
+    <div>
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <lightning-input label={label} data-id={label} type="search" required={required} onfocus={showPicklistOptions} disabled={disabled} oncommit={handleCommit} onblur={hidePicllistOptions}
+                    onchange={search} value={selectedValue}>
+                </lightning-input>
+                <div if:true={resultClick} class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                    role="listbox">
+                    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                        <template if:true={searchResults} for:each={searchResults} for:item="searchResult">
+                            <li key={searchResult.value} data-value={searchResult.value} role="presentation"
+                                onclick={selectSearchResult} onmousedown={selectSearchResult} class="slds-listbox__item">
+                                <div key={searchResult.value} class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small "
+                                    role="option">
+                                    <span key={searchResult.value} class="slds-media__body">
+                                        <span key={searchResult.value} class="slds-truncate" title={searchResult.label}>
+                                            {searchResult.label}
+                                        </span>
+                                    </span>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

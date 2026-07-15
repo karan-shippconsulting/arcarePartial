@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>2/19/26: Updated to allow for only an Account Name</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>AccountFormula</name>
+        <dataType>String</dataType>
+        <expression>IF(!ISBLANK({!$Record.Remainder_Person_Contact__c}), {!$Record.Remainder_Person_Contact__r.AccountId}, {!$Record.Remainder_Person_Account__c})</expression>
+    </formulas>
+    <formulas>
+        <name>NameFormula</name>
+        <dataType>String</dataType>
+        <expression>IF(!ISBLANK({!$Record.Remainder_Person_Contact__c}), {!$Record.Remainder_Person_Contact__r.FirstName} + &quot; &quot; + {!$Record.Remainder_Person_Contact__r.LastName} + &quot; RP - &quot; + TEXT({!$Record.Percent_of_Remaining_Funds__c}) + &quot;%&quot;,
+{!$Record.Remainder_Person_Account__r.Name} +  &quot; RP - &quot; + TEXT({!$Record.Percent_of_Remaining_Funds__c}) + &quot;%&quot;)</expression>
+    </formulas>
+    <interviewLabel>Remainderperson - Create and Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Remainder Person - Create and Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Remainder_Person</name>
+        <label>Update Remainder Person</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>NameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Remainder_Person_Account__c</field>
+            <value>
+                <elementReference>AccountFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Remainder_Person</targetReference>
+        </connector>
+        <object>Remainder_Person__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

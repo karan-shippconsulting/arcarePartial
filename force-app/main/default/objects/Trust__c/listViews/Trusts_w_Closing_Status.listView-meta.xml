@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trusts_w_Closing_Status</fullName>
+    <columns>NAME</columns>
+    <columns>Trust_Type__c</columns>
+    <columns>Internal_Account_Number__c</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Beneficiary_Status__c</columns>
+    <columns>Trust_Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trust_Status__c</field>
+        <operation>equals</operation>
+        <value>Closing</value>
+    </filters>
+    <label>Trusts w/ Closing Status</label>
+</ListView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_Distribute_Funds_on_Early_Term__c</fullName>
+    <inlineHelpText>How should the funds be distributed upon early termination of the beneficiary&apos;s Sub-Account (3rd party trust)?</inlineHelpText>
+    <label>How Distribute Funds on Early Term</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To the Donor (if then living)</fullName>
+                <default>false</default>
+                <label>To the Donor (if then living)</label>
+            </value>
+            <value>
+                <fullName>To the Primary Remainderpersons/Organizations</fullName>
+                <default>false</default>
+                <label>To the Primary Remainderpersons/Organizations</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

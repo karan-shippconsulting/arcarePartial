@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Expected Trust Type --></label>
+    <name>Expected_Trust_Type__c</name>
+    <picklistValues>
+        <masterLabel>First Party</masterLabel>
+        <translation><!-- First Party --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Third Party</masterLabel>
+        <translation><!-- Third Party --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

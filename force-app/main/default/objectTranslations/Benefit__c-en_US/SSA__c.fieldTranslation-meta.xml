@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SSA --></label>
+    <name>SSA__c</name>
+    <picklistValues>
+        <masterLabel>DAC</masterLabel>
+        <translation><!-- DAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RSDI</masterLabel>
+        <translation><!-- RSDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Survivor Benefits</masterLabel>
+        <translation><!-- Survivor Benefits --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conservator__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Conservator</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Contacts (Conservator)</relationshipLabel>
+    <relationshipName>Contacts5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

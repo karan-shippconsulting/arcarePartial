@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_3_week_reminder__c</fullName>
+    <description>An automatic reminder is sent 3 weeks after a client has received the Joinder Agreement / Enrollment Packet.</description>
+    <formula>IF( Date_of_Enrollment_Packet_Sent__c  &lt;= (TODAY() - 21),
+  TRUE,
+  FALSE
+)</formula>
+    <label>Send 3-week reminder</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

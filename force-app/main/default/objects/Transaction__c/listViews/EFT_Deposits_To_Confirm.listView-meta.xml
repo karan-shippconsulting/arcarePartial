@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EFT_Deposits_To_Confirm</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Do_Not_Acknowledge__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Payee_Name__c</columns>
+    <columns>PaymentId__c</columns>
+    <columns>Payee_PMTID__c</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Status__c</columns>
+    <columns>Transaction_Status__c</columns>
+    <columns>Internal_Notes__c</columns>
+    <columns>Acknowledged_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Deposit</value>
+    </filters>
+    <filters>
+        <field>Payment_Method__c</field>
+        <operation>equals</operation>
+        <value>EFT</value>
+    </filters>
+    <filters>
+        <field>Acknowledged_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Payee_Name__c</field>
+        <operation>notContain</operation>
+        <value>funds returned</value>
+    </filters>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>MPT RESERVE,MPT REMAINDER</value>
+    </filters>
+    <filters>
+        <field>PaymentId__c</field>
+        <operation>notContain</operation>
+        <value>part of,mistakenly,error</value>
+    </filters>
+    <filters>
+        <field>Do_Not_Acknowledge__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>EFT Deposits To Acknowledge</label>
+</ListView>

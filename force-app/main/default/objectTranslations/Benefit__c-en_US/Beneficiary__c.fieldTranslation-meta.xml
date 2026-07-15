@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Connect a benefit to a beneficiary (contact) --></help>
+    <label><!-- Beneficiary --></label>
+    <name>Beneficiary__c</name>
+    <relationshipLabel><!-- Benefits --></relationshipLabel>
+</CustomFieldTranslation>

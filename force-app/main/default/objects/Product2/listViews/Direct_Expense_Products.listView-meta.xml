@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Direct_Expense_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>QuickbooksInternalID__c</columns>
+    <columns>Charge_Type__c</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>QB_Billing_Category__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Charge_Type__c</field>
+        <operation>equals</operation>
+        <value>DIRECT EXPENSE</value>
+    </filters>
+    <label>Direct Expense Products</label>
+</ListView>

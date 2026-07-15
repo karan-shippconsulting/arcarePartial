@@ -1,0 +1,144 @@
+<template>
+    <lightning-card>
+        <div slot="title" class="slds-align_absolute-center">
+            <h3>{recordTitle}</h3>
+        </div>
+        <div if:false={isLoaded}>
+            <lightning-spinner alternative-text="Loading...">
+            </lightning-spinner>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-card>
+                <lightning-record-edit-form record-id={recordId} object-api-name="Batch_Payment__c"
+                    onsuccess={handleSuccess} onload={handleOnLoad} onsubmit={handleSubmit}>
+                    <lightning-messages> </lightning-messages>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input-field name='paymentDate' field-name="Payment_Date__c"
+                                onchange={handleOnChange} disabled={isBatchSynced}> </lightning-input-field>
+                            <lightning-input-field disabled={isBatchSynced} name='paymentAmount'
+                                field-name="Payment_Amount__c" value={paymentAmmount} onchange={handleOnChange}>
+                            </lightning-input-field>
+                            <lightning-input-field disabled={isBatchSynced} field-name="Check_or_Payment_Number__c">
+                            </lightning-input-field>
+                            <lightning-input-field disabled={isBatchSynced} field-name="Paid_By_Field__c">
+                            </lightning-input-field>
+                            <lightning-input-field disabled={isBatchSynced} field-name="Comments__c">
+                            </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input-field field-name="Total_Amount_Selected__c" value={totalAmountSelected}
+                                disabled>
+                            </lightning-input-field>
+                            <lightning-input-field field-name="Total_Invoices_Selected__c" value={totalInvoicesSelected}
+                                disabled> </lightning-input-field>
+                            <lightning-input-field field-name="Variance_Amount__c" value={varianceAmount} disabled>
+                            </lightning-input-field>
+                            <lightning-input-field disabled={isBatchSynced} name='status' field-name="Status__c"
+                                value={status}>
+                            </lightning-input-field>
+                            <!--<lightning-input-field disabled={isBatchSynced} name='Trust Portfolio' field-name="Trust_Portfolio__c">
+                            </lightning-input-field>-->
+                        </div>
+                    </div>
+                    <lightning-button type="submit" class="hidden-submit-button" style="display:none;"></lightning-button>
+                </lightning-record-edit-form>
+            </lightning-card>
+            <div>
+                <lightning-card title="Filters">
+                    <div class="slds-grid slds-gutters slds-p-around_medium slds-border_top slds-border_bottom">
+                        <div class="slds-col">
+                            <lightning-combobox
+                                
+                                label="Opportunity Filter"
+                                value={selectedFilter}
+                                options={filterOptions}
+                                onchange={handleFilterChange}>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input type="number" variant="standard" name="amountFilter" label="Amount (Hit enter to search)"
+                                placeholder="0.00" onchange={handleOnChange} onkeydown={handleAmountFilterChange}
+                                value={amountFilter}>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox name="progress" label="Trust Portfolio" value={trustPortfolio}
+                                placeholder="Select Trust Portfolio" options={trustPortfolioOptions}
+                                onchange={handleTrustPortfolioChange} disabled={isDisabled}>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox name="period" label="Period" value={period} placeholder="Select Period"
+                                options={periodOptions} onchange={handlePeriodChange} disabled={isDisabled}></lightning-combobox>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox name="progress" label="Service Type" value={serviceType}
+                                placeholder="Select Service Type" options={serviceTypeOptions}
+                                onchange={handleServiceTypeChange} disabled={isDisabled}>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </lightning-card>
+            </div>
+            <div class="slds-align_absolute-center">
+                        <template if:true={isApproveBatchEnabled}>
+                            <lightning-button variant="brand" class="slds-m-around_x-small" label="Approve Batch"
+                                title="Approve Batch" onclick={handleApproveBatch}></lightning-button>
+                        </template>
+                        <lightning-button if:false={isBatchSynced} class="slds-m-around_x-small"
+                            variant="brand" label="Save" title="Save" onclick={handleSave}>
+                        </lightning-button>
+                         <lightning-button if:false={isBatchSynced} class="slds-m-around_x-small"
+                            variant="brand" label="Save And Return" title="Save And Return" onclick={handleSaveAndReturn}>
+                        </lightning-button>
+                    </div>
+            <div>
+                <lightning-card title="Invoices" class="slds-m-around_small" if:true={displayOpportunities}>
+                    <div>
+                        <lightning-datatable hide-checkbox-column={isBatchSynced} key-field="Id" data={listOfOpp}
+                            columns={columns} selected-rows={preSeletedOppIds} onrowselection={getSelectedBatch}
+                            default-sort-direction={defaultSortDirection} sorted-direction={sortDirection}
+                            sorted-by={sortedBy} onsort={onHandleSort}>
+                        </lightning-datatable>
+                        <!--<lightning-layout>
+                            <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small"
+                                class="slds-text-align_right slds-m-top_small">
+                                <lightning-button if:true={isPreviousBtnEnabled} class="slds-m-around_small slds-text-align_right"
+                                    label="Previous " title="Previous " onclick={handlePrivous}>
+                                </lightning-button>
+                                <lightning-button if:true={isNextBtnEnabled} class="slds-m-around_small slds-text-align_right" label="Next"
+                                    title="Next" onclick={handleNext}>
+                                </lightning-button>
+                            </lightning-layout-item>
+                        </lightning-layout>-->
+                    </div>
+                </lightning-card>
+                <div if:false={displayOpportunities} class="slds-var-p-top_large" style="font-size: medium;font-weight: bold;text-align: center;">
+                    <p>Please select Period and Service type to view the items</p>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+            <div class="slds-align_absolute-center" if:true={displayOpportunities}>
+                        <template if:true={isApproveBatchEnabled}>
+                            <lightning-button variant="brand" class="slds-m-around_x-small" label="Approve Batch"
+                                title="Approve Batch" onclick={handleApproveBatch}></lightning-button>
+                        </template>
+                        <lightning-button if:false={isBatchSynced} class="slds-m-around_x-small"
+                            variant="brand" label="Save" title="Save" onclick={handleSave}>
+                        </lightning-button>
+                         <lightning-button if:false={isBatchSynced} class="slds-m-around_x-small"
+                            variant="brand" label="Save And Return" title="Save And Return" onclick={handleSaveAndReturn}>
+                        </lightning-button>
+                    </div>
+            <!--<lightning-layout>
+                <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small"
+                    class="slds-text-align_right">-->
+                    
+                <!--</lightning-layout-item>
+            </lightning-layout>-->
+            <lightning-card></lightning-card>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSA__c</fullName>
+    <label>SSA</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DAC</fullName>
+                <default>false</default>
+                <label>DAC</label>
+            </value>
+            <value>
+                <fullName>Survivor Benefits</fullName>
+                <default>false</default>
+                <label>Survivor Benefits</label>
+            </value>
+            <value>
+                <fullName>RSDI</fullName>
+                <default>false</default>
+                <label>RSDI</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

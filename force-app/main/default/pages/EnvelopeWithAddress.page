@@ -1,0 +1,30 @@
+<apex:page showHeader="false" sidebar="false" expires="1" standardStylesheets="false" Controller="summaryTemplateController" applyHtmlTag="false" renderAs="pdf">
+    <head> 
+        <style>
+            @page {
+            size: 9.5in 4.125in;
+            margin: 0;
+            }
+            body {
+                margin: 0;
+            }
+            .address-block {
+                margin-top: 1.5in;
+                left: 3.5in;
+            }
+        </style>
+    </head>
+    <apex:variable var="count" value="{!0}" /> 
+    <apex:repeat value="{!tranxList}" var="trax">
+        <apex:variable var="count" value="{!count+1}" /> 
+        <div class="address-block">
+            <div style="{!IF(tranxList.size!=count,'page-break-after:always;','')}"> 
+                <p style="text-align: center;font-size: 28px;"> 
+                    {!trax.Payee_Name__c}<br /> 
+                    {!trax.Payee_Street_1__c} &nbsp; {!trax.Payee_Street_2__c} <br />
+                    {!trax.Payee_City__c}, {!trax.Payee_State__c} {!trax.Payee_Zip__c}<br /> 
+                </p>
+            </div>
+        </div>
+    </apex:repeat>
+</apex:page>

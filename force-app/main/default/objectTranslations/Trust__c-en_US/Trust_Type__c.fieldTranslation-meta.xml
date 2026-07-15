@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trust Type --></label>
+    <name>Trust_Type__c</name>
+    <picklistValues>
+        <masterLabel>I</masterLabel>
+        <translation><!-- I --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>II</masterLabel>
+        <translation><!-- II --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>III</masterLabel>
+        <translation><!-- III --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IV</masterLabel>
+        <translation><!-- IV --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

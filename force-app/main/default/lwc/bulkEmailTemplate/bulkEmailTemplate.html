@@ -1,0 +1,256 @@
+<template>
+	<div class="content-wrapper" style="position:relative;">
+		<template if:true={isLoading}>
+			<lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+		</template>
+		<template if:false={isShowModal}>
+			<lightning-card variant="Narrow" title="Email Template Editor">
+				<p class="slds-p-horizontal_small">
+					<template if:true={showData}>
+						<div class="slds-grid slds-gutters">
+							<div class="slds-col slds-size_1-of-3">
+								<lightning-combobox label='Select Date Format' placeholder="Select Date Format" options={dateFormatOptions} value={formatString} onchange={handleDateFormatChange}></lightning-combobox>
+							</div>
+							<div class="slds-col slds-size_1-of-3">
+								<lightning-combobox label='Select Currency Format' placeholder="Select Currency Format" options={currencyFormatOptions} value={currencyFormatStringValue} onchange={handleCurrencyFormatChange}></lightning-combobox>
+							</div>
+							<div class="slds-col slds-size_1-of-3">
+								<lightning-combobox label='Select Number/Decimal Format' placeholder="Select Number/Decimal Format" options={decimalOptions} value={decimalFormatStringValue} onchange={handleDecimalFormatChange}></lightning-combobox>
+							</div>
+						</div>
+						<div class="slds-grid slds-gutters">
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-combobox label="Generic Taggers" placeholder="Select General Tags" options={generalTaggerOptions}
+									onchange={handleChange4}></lightning-combobox>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-combobox label='Select Boolean Format' placeholder="Select Boolean Format" options={booleanFormatOptions} value={booleanFormatValue} onchange={handleBooleanFormatChange}></lightning-combobox>
+							</div>
+						</div>
+						<lightning-combobox label="Objects" placeholder="Select Object" options={picklist1}
+							onchange={handleChange}></lightning-combobox>
+					</template>
+					<template if:true={picklist2}>
+						<lightning-layout multiple-rows>
+							<lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+								large-device-size="6" padding="horizontal-small">
+								<div class="custom-box">
+									<lightning-combobox label="Fields" placeholder="Select Field" options={picklist2}
+										onchange={handleChange2}></lightning-combobox>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+					</template>
+					<template if:true={showData}>
+						<lightning-layout multiple-rows>
+							<lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+								large-device-size="6" padding="horizontal-small">
+								<div class="custom-box">
+									<lightning-input type="text" variant="standard" disabled name="name"
+										value={fieldApiName} label="Merge Field"></lightning-input>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+					</template>
+					<template if:true={emailTempOptions}>
+						<lightning-combobox label="Select Email Template Type" placeholder="Select Email Tempalate Type"
+							value={emailType} options={emailTempType} onchange={handleEmailType}></lightning-combobox>
+						<template lwc:if={showFolder}>
+							<lightning-combobox label="Folder" value={value} placeholder="Select Folder"
+								options={folderOptions} onchange={handleFolderChange}></lightning-combobox>
+						</template>
+						<lightning-combobox label="Email Template" placeholder="Select Email Template" value={selectedTemp}
+							options={emailTempOptions} onchange={handleChange3}></lightning-combobox>
+
+					</template>
+					<template if:true={emailBody}>
+						<lightning-combobox label="Select PDF Template" placeholder="Select PDF Template" value={pdfOption}
+							options={pdfOptions} onchange={handlePdfOptionChange}></lightning-combobox>
+						<lightning-input type="text" variant="standard" lwc:ref="subject" label="Email Subject"
+							value={emailSubject}></lightning-input>
+						</br>
+						<lightning-layout multiple-rows>
+							<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+								large-device-size="12" padding="horizontal-small">
+								<div class="custom-box">
+									<lightning-input-rich-text lwc:ref="emailBodyText" label-visible=true
+										placeholder="Type something interesting" label="Email Body" value={emailBody} onchange={emailBodyChange}>
+									</lightning-input-rich-text>
+								</div>
+							</lightning-layout-item>
+							<!--<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+								large-device-size="12" padding="horizontal-small">
+								<div class="custom-box">
+									<lightning-input-rich-text disabled=true label-visible=true label="Preview Email Body"
+										lwc:ref="finalEmail">
+									</lightning-input-rich-text>
+								</div>
+							</lightning-layout-item>-->
+							<template if:true={sperateBody}>
+								<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+									large-device-size="12" padding="horizontal-small">
+									<div class="custom-box">
+										<lightning-input-rich-text lwc:ref="attachmentBodyText" label-visible=true
+											placeholder="Type something interesting" label="Attachment Body"
+											value={attachmentBody}>
+										</lightning-input-rich-text>
+									</div>
+								</lightning-layout-item>
+								<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+									large-device-size="12" padding="horizontal-small">
+									<div class="custom-box">
+										<lightning-input-rich-text disabled=true label-visible=true
+											label="Preview Attachment Body" lwc:ref="finalAttachment">
+										</lightning-input-rich-text>
+									</div>
+								</lightning-layout-item>
+							</template>
+							<lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+								large-device-size="6" padding="horizontal-small">
+								<lightning-combobox label="Select Field 1" lwc:ref="field1" data-id="field1" value={field1}
+									placeholder="Select Field 1" onchange={handleFieldChange} options={currentObjectFields}>
+								</lightning-combobox>
+
+								<lightning-combobox label="Select Field 2" lwc:ref="field2" data-id="field2" value={field2}
+									placeholder="Select Field 2" onchange={handleFieldChange} options={currentObjectFields}>
+								</lightning-combobox>
+
+								<lightning-combobox label="Select Field 3" lwc:ref="field3" data-id="field3" value={field3}
+									placeholder="Select Field 3" onchange={handleFieldChange} options={currentObjectFields}>
+								</lightning-combobox>
+
+							</lightning-layout-item>
+							<lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+								large-device-size="6" padding="horizontal-small">
+								<!---
+						<lightning-input type="text" variant="standard" lwc:ref="field1V" label="Field Value 1" placeholder="Type here..."></lightning-input>
+
+						<lightning-input type="text" variant="standard" lwc:ref="field2V" label="Field Value 2" placeholder="Type here..."></lightning-input>
+
+						<lightning-input type="text" variant="standard" lwc:ref="field3V" label="Field Value 3" placeholder="Type here..."></lightning-input> -->
+								<template if:true={loadRecordEditForm}>
+									<lightning-record-edit-form density="comfy" id="recordViewForm" record-id={recordId}
+										record-type-id={recordTypeId} onerror={handleFormError}
+										object-api-name={objectApiName}>
+										<template if:true={field1}>
+											<lightning-input-field class="slds-form-element_1-col" field-name={field1} value={value1}>
+											</lightning-input-field>
+										</template>
+										<template if:true={field2}>
+											<lightning-input-field class="slds-form-element_1-col" field-name={field2} value={value2}>
+											</lightning-input-field>
+										</template>
+										<template if:true={field3}>
+											<lightning-input-field class="slds-form-element_1-col" field-name={field3} value={value3}>
+											</lightning-input-field>
+										</template>
+									</lightning-record-edit-form>
+								</template>
+							</lightning-layout-item>
+						</lightning-layout>
+						<!-- <lightning-input type="toggle" variant="standard" onchange={handleSperateToggle}
+							lwc:ref="sperateBodyRef" class="slds-m-around_x-small" label="Separate Email Body">
+						</lightning-input> -->
+					</template>
+				</p>
+				<template if:true={emailBody}>
+					<center>
+						<p class="slds-var-p-top_medium" slot="footer">
+							<!--<lightning-button variant="brand" label="Merge Fields" class="slds-m-around_x-small"
+								onclick={handleClick}></lightning-button>
+							<template if:true={showSave}>
+								<lightning-button variant="brand" label="Save Template" class="slds-m-around_x-small"
+									onclick={handleUpdateTemplate}></lightning-button>
+							</template>-->
+							<lightning-button variant="brand" label="Generate PDF" class="slds-m-around_x-small"
+								onclick={generatePDF}>
+							</lightning-button>
+							<template if:true={generatePdfClicked}>
+								<lightning-button variant="brand" label="Save PDF on Record" class="slds-m-around_x-small"
+									onclick={generatePDFOnRecord}>
+								</lightning-button>
+								<lightning-button variant="brand" label="Send Email" class="slds-m-around_x-small"
+									onclick={handlePdf}>
+								</lightning-button>				
+							</template>
+							<lightning-button variant="brand" label="Cancel" class="slds-m-around_x-small"
+								onclick={goBack}>
+							</lightning-button>
+						</p>
+					</center>
+				</template>
+			</lightning-card>
+		</template>
+		<template if:true={isShowModal}>
+			<!-- <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+				aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open"> -->
+				<div class="slds-modal__container" style="width:100%;max-width:80rem">
+					<!-- modal header start -->
+					<!-- <header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+					<lightning-icon icon-name="utility:close"
+					alternative-text="close"
+					variant="inverse"
+					size="small" ></lightning-icon>
+					<span class="slds-assistive-text">Close</span>
+				</button>
+						<h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Send Email</h1>
+					</header> -->
+
+					<!-- modal body start -->
+					<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+						<template if:true={orgWideList}>
+							<lightning-combobox label="Select From Address" lwc:ref="orgWideId" value="0"
+								placeholder="Select From Address" options={orgWideList}></lightning-combobox>
+						</template>
+						<template if:true={contactList}>
+							<lightning-combobox label="Select To Contact" placeholder="Select To Contact"
+								options={contactList} onchange={appendTo}></lightning-combobox>
+						</template>
+						<lightning-input type="text" variant="standard" lwc:ref="toLists"
+							field-level-help="Use ; sperated Values" label="To Email Address"></lightning-input>
+						<template if:true={contactList}>
+							<lightning-combobox label="Select CC Contact" placeholder="Select CC Contact"
+								options={contactList} onchange={appendCC}></lightning-combobox>
+						</template>
+						<lightning-input type="text" variant="standard" lwc:ref="ccLists"
+							field-level-help="Use ; sperated Values" label="CC Email Address"></lightning-input>
+							<div class="custom-box">
+								<lightning-input type="text" variant="standard" lwc:ref="subject" label="Email Subject"
+							value={emailSubject}></lightning-input>
+								<lightning-input-rich-text disabled=true label-visible=true label="Preview Email Body"
+									lwc:ref="finalEmail2" value={emailBody}>
+								</lightning-input-rich-text>
+								
+							</div>
+						<!-- <lightning-input type="toggle" variant="standard" onchange={handlecreateActivity}
+							class="slds-m-around_x-small slds-m-top-medium" label="Create an Activity">
+						</lightning-input> -->
+						<!-- <lightning-input type="toggle" variant="standard" lwc:ref="addPDF" class="slds-m-around_x-small"
+					label="Attach Email Body as PDF"></lightning-input> -->
+						<!-- <lightning-file-upload label="Attach receipt" name="fileUploader" accept=".pdf"
+							record-id={recordId} onuploadfinished={handleUploadFinished} multiple>
+						</lightning-file-upload> -->
+						</br>
+						<div lwc:if={attachments.length}>
+							<lightning-datatable data={attachments} columns={columns} key-field="ContendDocId"
+								selected-rows={selectedAttachmentsIds} width="100%" onrowselection={handleRowSelection}
+								onrowaction={handleRowAction} height="200px">
+							</lightning-datatable>
+						</div>
+					</div>
+
+					<!-- modal footer start-->
+					<footer class="slds-modal__footer">
+						<lightning-button variant="brand" class="slds-m-around_x-small" onclick={sendMail} label="Send">
+						</lightning-button>
+						<button class="slds-button slds-button_neutral slds-m-around_x-small" onclick={hideModalBox}>Cancel</button>
+
+					</footer>
+
+				</div>
+			<!-- </section> -->
+			<!-- <div class="slds-backdrop slds-backdrop_open"></div> -->
+		</template>
+	</div>
+</template>

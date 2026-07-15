@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Docsumo_Folder__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Name of the folder in the docsumo application.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Name of the folder in the docsumo application.</inlineHelpText>
+    <label>Docsumo Folder</label>
+    <length>80</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

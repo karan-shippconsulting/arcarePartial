@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When the Role is changed to REP1 or AltRep1, the Primary Rep or the Alternate Rep on the Trust referenced on this Relationship record will be updated.. --></help>
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>AltRep1</masterLabel>
+        <translation><!-- AltRep1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attorney</masterLabel>
+        <translation><!-- Attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caregiver</masterLabel>
+        <translation><!-- Caregiver --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grantor</masterLabel>
+        <translation><!-- Grantor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guardian</masterLabel>
+        <translation><!-- Guardian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA</masterLabel>
+        <translation><!-- POA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REP1</masterLabel>
+        <translation><!-- REP1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remainder Person</masterLabel>
+        <translation><!-- Remainder Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rep Payee</masterLabel>
+        <translation><!-- Rep Payee --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Disbursement Last Run Datetime --></label>
+    <name>Disbursement_Last_Run_Datetime__c</name>
+</CustomFieldTranslation>

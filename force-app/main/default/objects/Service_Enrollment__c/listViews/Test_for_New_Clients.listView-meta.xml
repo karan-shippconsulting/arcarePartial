@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_for_New_Clients</fullName>
+    <columns>NAME</columns>
+    <columns>Active__c</columns>
+    <columns>Case_Manager__c</columns>
+    <columns>Account_Number__c</columns>
+    <columns>Client__c</columns>
+    <columns>Date_Completed__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Intake__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Enrolled</value>
+    </filters>
+    <label>Test for New Clients</label>
+</ListView>

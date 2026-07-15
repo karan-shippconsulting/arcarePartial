@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Asset Status --></label>
+    <name>Asset_Status__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation><!-- Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disposed</masterLabel>
+        <translation><!-- Disposed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Donated</masterLabel>
+        <translation><!-- Donated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gave Away</masterLabel>
+        <translation><!-- Gave Away --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation><!-- Inactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Own</masterLabel>
+        <translation><!-- Own --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Released</masterLabel>
+        <translation><!-- Released --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

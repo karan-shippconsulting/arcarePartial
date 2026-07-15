@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pooled_1st_Party_Trusts</fullName>
+    <columns>NAME</columns>
+    <columns>Trust_Type__c</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Beneficiary_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trust_Type__c</field>
+        <operation>equals</operation>
+        <value>Pooled 1st Party Trust</value>
+    </filters>
+    <filters>
+        <field>Trust_Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Closing</value>
+    </filters>
+    <label>Pooled 1st Party Trusts</label>
+</ListView>

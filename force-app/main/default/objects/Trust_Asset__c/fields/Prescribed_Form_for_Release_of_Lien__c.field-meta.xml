@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prescribed_Form_for_Release_of_Lien__c</fullName>
+    <externalId>false</externalId>
+    <formula>hyperlink(&quot;https://www.txdmv.gov/sites/default/files/form_files/VTR-266.pdf&quot;, &quot;Link to Texas Lien Form&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Prescribed Form for Release of Lien</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

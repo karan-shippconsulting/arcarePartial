@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deceased</fullName>
+    <columns>NAME</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Trust_Type__c</columns>
+    <columns>Death_Certificate_Requested__c</columns>
+    <columns>Balance_for_Closing__c</columns>
+    <columns>TMHP_Amount_Owed__c</columns>
+    <columns>Enrollment_Date__c</columns>
+    <columns>Date_Closed__c</columns>
+    <columns>Closing_Reason__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Deceased__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Deceased</label>
+</ListView>

@@ -1,0 +1,68 @@
+<apex:page Controller="summaryTemplateController" applyHtmlTag="false" showHeader="false" renderAs="pdf">
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <style>
+            table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 0.2px solid gray;
+        }
+        tbody tr:last-child td{
+            border-top: 0.2px solid gray;
+        }
+        </style>
+    </head>
+    <apex:variable var="count" value="{!0}" /> 
+    <apex:repeat value="{!tranxList}" var="tranx">
+        <apex:variable var="count" value="{!count+1}" /> 
+        <div>
+            <div  style="{!IF(tranxList.size!=count,'page-break-after:always;','')}"> 
+            <div class="columnlogo">
+                <apex:outputPanel rendered="{!!noLetterHead}">
+                        <!--<apex:image id="theImage" value="{!$Resource.Left_logo}" width="100%" height="100%" alt="Description of image here"/>-->
+                    </apex:outputPanel>
+                <!--apex:image id="theImage" value="{!$Resource.Left_logo}" width="100%" height="100%" alt="Description of image here"/>-->
+            </div>
+            <div class="column" >
+                <p>
+                    <apex:outputText value="{0, date, MM'/'dd'/'yyyy}">
+                        <apex:param value="{!tranx.Processed_Date__c}" />
+                    </apex:outputText>
+                </p> <br/>
+                <p>{!tranx.Primary_Rep_Name__c}
+                <p>{!tranx.Primary_Rep_Street__c}  </p>
+                <p>{!tranx.Primary_Rep_City__c} , {!tranx.Primary_Rep_State__c} {!tranx.Primary_Rep_Zip_Code__c} </p>
+                </p> <br/>
+                <p>Dear {!tranx.Primary_Rep_First_Name__c},</p>
+                <p>RE: {!tranx.Beneficiary__r.Full_Name__c}, Acct #{!tranx.Trust__r.Internal_Account_Number__c}</p>
+                <p>We have received your disbursement request on behalf of {!tranx.Beneficiary__r.Full_Name__c}, as follows:</p>
+                <table style="width:100%">
+                <tr>
+                    <td>Payee</td>
+                    <td>Amount</td>
+                    <td>Method</td>
+                    <td>Estimated time to be received</td>
+                </tr>
+                <tr>
+                    <td>{!tranx.Payee_Name__c}</td>
+                    <td>${!tranx.Amount__c}</td>
+                    <td>ACH</td>
+                    <td>In 2-3 days</td>
+                </tr>
+                </table>
+                <p>The Arc of Texas has approved the request(s) and sent it to True Link for processing.</p>
+                <p>Please call (512) 454-6694, toll-free 1-800-252-9729 or email <a data-fr-linked="true" href="mailto:trust@thearcoftexas.org">trust@thearcoftexas.org</a> if you have any<br/>
+                questions.</p>
+                <p>Sincerely,<br/>
+                 THE MASTER POOLED TRUST</p>
+                
+            </div >
+        </div>
+        </div>
+    </apex:repeat>
+</apex:page>

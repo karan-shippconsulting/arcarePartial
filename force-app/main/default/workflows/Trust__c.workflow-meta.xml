@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Annual_Accounting_Required</fullName>
+        <description>Annual Accounting Required</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Annual_Accounting_Required</template>
+    </alerts>
+    <alerts>
+        <fullName>Trust_Status_Moved_to_Active</fullName>
+        <description>Trust Status Moved to Active</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Trust_Moved_to_Active</template>
+    </alerts>
+</Workflow>

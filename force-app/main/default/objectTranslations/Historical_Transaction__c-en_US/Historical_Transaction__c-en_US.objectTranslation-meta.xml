@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Historical Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Historical Transactions</value>
+    </caseValues>
+    <layouts>
+        <layout>Historical Transaction Layout</layout>
+        <sections>
+            <label><!-- Benefits --></label>
+            <section>Benefits</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Disbursement --></label>
+            <section>Disbursement</section>
+        </sections>
+        <sections>
+            <label><!-- Disbursement Details --></label>
+            <section>Disbursement Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other --></label>
+            <section>Other</section>
+        </sections>
+        <sections>
+            <label><!-- Payee Info --></label>
+            <section>Payee Info</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Bulk Print --></label>
+        <name>Bulk_Print</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

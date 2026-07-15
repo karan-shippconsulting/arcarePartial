@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Email_For_Received_Email_Send</fullName>
+    <active>true</active>
+    <description>Prevents users from checking the All Enrollment Packet Received checkbox unless the SuppliedEmail field is filled in. This ensures that the automated email can be sent successfully.</description>
+    <errorConditionFormula>AND(
+    ISBLANK(SuppliedEmail),
+    All_Enrollment_Packet_Received__c = TRUE
+)</errorConditionFormula>
+    <errorDisplayField>All_Enrollment_Packet_Received__c</errorDisplayField>
+    <errorMessage>An email address is required to send the &apos;Arcare Enrollment - Everything Received&apos; email. Please enter a valid email before checking this box.</errorMessage>
+</ValidationRule>

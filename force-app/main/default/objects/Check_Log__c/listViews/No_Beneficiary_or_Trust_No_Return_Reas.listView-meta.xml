@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Beneficiary_or_Trust_No_Return_Reas</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>Log_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Reason_for_Return__c</columns>
+    <columns>Other_Return_Reason__c</columns>
+    <columns>Pulled_From_Safe__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Check_Date__c</columns>
+    <columns>Check_Number__c</columns>
+    <columns>Check_Notes__c</columns>
+    <columns>Enrollment_Fee__c</columns>
+    <columns>Initial_Funding__c</columns>
+    <columns>Out__c</columns>
+    <columns>Payor__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Beneficiary__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Trust__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Reason_for_Return__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>No Beneficiary or Trust - No Return Reas</label>
+</ListView>

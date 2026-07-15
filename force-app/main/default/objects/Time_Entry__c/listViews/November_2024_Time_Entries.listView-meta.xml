@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>November_2024_Time_Entries</fullName>
+    <columns>Entry_Date__c</columns>
+    <columns>Period__c</columns>
+    <columns>NAME</columns>
+    <columns>Approved__c</columns>
+    <columns>Status__c</columns>
+    <columns>Service_Enrollment__c</columns>
+    <columns>Client__c</columns>
+    <columns>Case_Manager__c</columns>
+    <columns>Description__c</columns>
+    <columns>Approved_By__c</columns>
+    <columns>Charge_Date__c</columns>
+    <columns>Non_billable__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>Total__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>APPROVED</value>
+    </filters>
+    <filters>
+        <field>Entry_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_MONTH</value>
+    </filters>
+    <label>Time Entries Not Invoiced</label>
+</ListView>

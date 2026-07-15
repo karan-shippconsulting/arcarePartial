@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_to_Process_New_Intakes</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Intake_Status__c</columns>
+    <columns>Bene_First_Name__c</columns>
+    <columns>Bene_Middle_Name__c</columns>
+    <columns>Bene_Last_Name__c</columns>
+    <columns>Bene_Birthdate__c</columns>
+    <columns>Bene_Living_City__c</columns>
+    <columns>Bene_Living_Zip__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Status__c</field>
+        <operation>equals</operation>
+        <value>Inquiry,Materials Sent,Intake Meeting,Materials Received - Incomplete,Materials Received - Complete,Ready to Process</value>
+    </filters>
+    <label>Ready to Process/New Intakes</label>
+</ListView>

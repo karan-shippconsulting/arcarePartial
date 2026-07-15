@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trust Taxability --></label>
+    <name>Trust_Taxability__c</name>
+    <picklistValues>
+        <masterLabel>Grantor</masterLabel>
+        <translation><!-- Grantor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QDT Complex</masterLabel>
+        <translation><!-- QDT Complex --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

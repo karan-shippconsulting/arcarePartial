@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+                <label>Attorney</label>
+            </value>
+            <value>
+                <fullName>Case Manager</fullName>
+                <default>false</default>
+                <label>Case Manager</label>
+            </value>
+            <value>
+                <fullName>Client: Non-Pooled</fullName>
+                <default>false</default>
+                <label>Client: Non-Pooled</label>
+            </value>
+            <value>
+                <fullName>Client: Pooled 3d Party</fullName>
+                <default>false</default>
+                <label>Client: Pooled 3d Party</label>
+            </value>
+            <value>
+                <fullName>Client: Pooled 3d Party FF</fullName>
+                <default>false</default>
+                <label>Client: Pooled 3d Party FF</label>
+            </value>
+            <value>
+                <fullName>Client: Pooled MARC</fullName>
+                <default>false</default>
+                <label>Client: Pooled MARC</label>
+            </value>
+            <value>
+                <fullName>Client: Pooled MARC FF</fullName>
+                <default>false</default>
+                <label>Client: Pooled MARC FF</label>
+            </value>
+            <value>
+                <fullName>Conservator</fullName>
+                <default>false</default>
+                <label>Conservator</label>
+            </value>
+            <value>
+                <fullName>Donor</fullName>
+                <default>false</default>
+                <label>Donor</label>
+            </value>
+            <value>
+                <fullName>Family Member</fullName>
+                <default>false</default>
+                <label>Family Member</label>
+            </value>
+            <value>
+                <fullName>Financial Professional</fullName>
+                <default>false</default>
+                <label>Financial Professional</label>
+            </value>
+            <value>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+                <label>Guardian</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>POA</fullName>
+                <default>false</default>
+                <label>POA</label>
+            </value>
+            <value>
+                <fullName>Rep Payee</fullName>
+                <default>false</default>
+                <label>Rep Payee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

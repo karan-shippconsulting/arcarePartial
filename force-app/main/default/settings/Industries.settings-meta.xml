@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IndustriesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableAccountScoreEnabled>false</enableAccountScoreEnabled>
+    <enableActionableList>false</enableActionableList>
+    <enableBenefitAndGoalSharingPref>true</enableBenefitAndGoalSharingPref>
+    <enableBenefitManagementPreference>true</enableBenefitManagementPreference>
+    <enableCallReportAdminContextPref>false</enableCallReportAdminContextPref>
+    <enableCarePlansPreference>true</enableCarePlansPreference>
+    <enableCaseReferralPref>true</enableCaseReferralPref>
+    <enableCompliantDataSharingForAccount>false</enableCompliantDataSharingForAccount>
+    <enableCompliantDataSharingForCustomObjects>false</enableCompliantDataSharingForCustomObjects>
+    <enableCompliantDataSharingForInteraction>false</enableCompliantDataSharingForInteraction>
+    <enableCompliantDataSharingForInteractionSummary>false</enableCompliantDataSharingForInteractionSummary>
+    <enableCompliantDataSharingForOpportunity>false</enableCompliantDataSharingForOpportunity>
+    <enableCriteriaBasedSearchAndFilter>false</enableCriteriaBasedSearchAndFilter>
+    <enableDiscoveryFrameworkMetadata>false</enableDiscoveryFrameworkMetadata>
+    <enableDisplaySummaryOnTimeline>false</enableDisplaySummaryOnTimeline>
+    <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
+    <enableEnhancedUIForISPref>false</enableEnhancedUIForISPref>
+    <enableFundraising>true</enableFundraising>
+    <enableGroupMembershipPref>true</enableGroupMembershipPref>
+    <enableIndustriesAssessment>false</enableIndustriesAssessment>
+    <enableIndustriesAssessmentPrefill>false</enableIndustriesAssessmentPrefill>
+    <enableIndustriesIntegrationOrchestratorPref>false</enableIndustriesIntegrationOrchestratorPref>
+    <enableIndustriesStageManagementPref>false</enableIndustriesStageManagementPref>
+    <enableInteractionRoleHierarchy>true</enableInteractionRoleHierarchy>
+    <enableInteractionSummaryPref>true</enableInteractionSummaryPref>
+    <enableInteractionSummaryRoleHierarchy>true</enableInteractionSummaryRoleHierarchy>
+    <enableNewTimelineSetupFlow>false</enableNewTimelineSetupFlow>
+    <enableOutcomes>false</enableOutcomes>
+    <enableProgramCohorts>false</enableProgramCohorts>
+    <enableProviderManagementPref>false</enableProviderManagementPref>
+    <enableSyncInteractionsPref>false</enableSyncInteractionsPref>
+    <enableTimelinePref>true</enableTimelinePref>
+    <enableVisitInventoryEnabled>false</enableVisitInventoryEnabled>
+    <rlaEditIfAccHasEdit>false</rlaEditIfAccHasEdit>
+</IndustriesSettings>

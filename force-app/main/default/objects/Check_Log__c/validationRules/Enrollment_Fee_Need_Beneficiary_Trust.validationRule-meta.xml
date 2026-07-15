@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrollment_Fee_Need_Beneficiary_Trust</fullName>
+    <active>true</active>
+    <description>Enrollment Fee Need Beneficiary &amp; Trust before checking Out</description>
+    <errorConditionFormula>AND(ISCHANGED(Out__c), Out__c = TRUE, Enrollment_Fee__c = TRUE,
+OR(ISBLANK(Beneficiary__c), ISBLANK(Trust__c)))</errorConditionFormula>
+    <errorMessage>Please fill in the Beneficiary and the Trust fields before checking Out</errorMessage>
+</ValidationRule>

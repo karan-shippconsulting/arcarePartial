@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Date Signed by the Judge --></label>
+    <name>Date_Signed_by_the_Judge__c</name>
+</CustomFieldTranslation>

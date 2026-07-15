@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Updated by a flow. Will popuplate with the value in This Month&apos;s Fees if Charge Last Month&apos;s Fee is Yes --></help>
+    <label><!-- Last Month&apos;s Fees --></label>
+    <name>Last_Month_s_Fees__c</name>
+</CustomFieldTranslation>

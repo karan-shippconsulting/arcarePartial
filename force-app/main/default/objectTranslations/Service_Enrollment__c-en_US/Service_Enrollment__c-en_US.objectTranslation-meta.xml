@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Enrollment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Enrollments</value>
+    </caseValues>
+    <layouts>
+        <layout>Service Enrollment Layout</layout>
+        <sections>
+            <label><!-- Benefits --></label>
+            <section>Benefits</section>
+        </sections>
+        <sections>
+            <label><!-- Caller Information --></label>
+            <section>Caller Information</section>
+        </sections>
+        <sections>
+            <label><!-- Coordinator Information --></label>
+            <section>Coordinator Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Daily Living --></label>
+            <section>Daily Living</section>
+        </sections>
+        <sections>
+            <label><!-- Disability/Mobility --></label>
+            <section>Disability/Mobility</section>
+        </sections>
+        <sections>
+            <label><!-- Internet Access/Technology --></label>
+            <section>Internet Access/Technology</section>
+        </sections>
+        <sections>
+            <label><!-- Language/Communicaton Style --></label>
+            <section>Language/Communicaton Style</section>
+        </sections>
+        <sections>
+            <label><!-- Living Situation --></label>
+            <section>Living Situation</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Transportation --></label>
+            <section>Transportation</section>
+        </sections>
+        <sections>
+            <label><!-- Work Information --></label>
+            <section>Work Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Bulk Time Entry --></label>
+        <name>Bulk_Time_Entry</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter a Reason for Closing/Denial --></errorMessage>
+        <name>Denied_Needs_Reason</name>
+    </validationRules>
+</CustomObjectTranslation>

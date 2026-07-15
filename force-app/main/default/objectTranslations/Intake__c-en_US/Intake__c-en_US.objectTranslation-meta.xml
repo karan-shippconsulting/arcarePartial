@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Intake</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Intake</value>
+    </caseValues>
+    <layouts>
+        <layout>Intake Layout</layout>
+        <sections>
+            <label><!-- Additonal Contacts --></label>
+            <section>Additonal Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Beneficiary Add&apos;l Info --></label>
+            <section>Beneficiary Add&apos;l Info</section>
+        </sections>
+        <sections>
+            <label><!-- Beneficiary Address Information --></label>
+            <section>Beneficiary Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Beneficiary Information --></label>
+            <section>Beneficiary Information</section>
+        </sections>
+        <sections>
+            <label><!-- Call Information --></label>
+            <section>Call Information</section>
+        </sections>
+        <sections>
+            <label><!-- Care Management --></label>
+            <section>Care Management</section>
+        </sections>
+        <sections>
+            <label><!-- Court Information --></label>
+            <section>Court Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Disability Information --></label>
+            <section>Disability Information</section>
+        </sections>
+        <sections>
+            <label><!-- Funding Information --></label>
+            <section>Funding Information</section>
+        </sections>
+        <sections>
+            <label><!-- Grantor Information --></label>
+            <section>Grantor Information</section>
+        </sections>
+        <sections>
+            <label><!-- Intake Notes --></label>
+            <section>Intake Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Living Information --></label>
+            <section>Living Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mail Information --></label>
+            <section>Mail Information</section>
+        </sections>
+        <sections>
+            <label><!-- Prepaid Funeral Information --></label>
+            <section>Prepaid Funeral Information</section>
+        </sections>
+        <sections>
+            <label><!-- Processing Information --></label>
+            <section>Processing Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Transportation Information --></label>
+            <section>Transportation Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create Account/Contact --></label>
+        <name>Create_Account_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Benefits --></label>
+        <name>Create_Benefits</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template EditorOLD --></label>
+        <name>Email_Template_EditorOLD</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Process Intake --></label>
+        <name>Process_Intake</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- MPT --></label>
+        <name>MPT</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Beneficiary Person Account has already been created. --></errorMessage>
+        <name>Cannot_Check_Create_Bene_Only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Primary Rep Contact and a Grantor Account before moving the Joinder Status to Approved. Make sure to include an email for both. --></errorMessage>
+        <name>Funded_Unfunded_II_or_IV_Need_PR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Grantor before moving the Joinder Status to Joinder Approved on an unfunded I or III trust --></errorMessage>
+        <name>Unfunded_I_or_III_Need_Grantor</name>
+    </validationRules>
+</CustomObjectTranslation>

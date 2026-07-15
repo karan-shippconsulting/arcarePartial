@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Disbursements</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Trust__c</columns>
+    <columns>Date__c</columns>
+    <columns>Type__c</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Payee_Name__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Status__c</columns>
+    <columns>Processed_Date__c</columns>
+    <columns>Cleared_Date__c</columns>
+    <columns>Up_To_Date__c</columns>
+    <columns>Internal_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Disbursement</value>
+    </filters>
+    <filters>
+        <field>Display_Category__c</field>
+        <operation>notEqual</operation>
+        <value>Maintenance Fee</value>
+    </filters>
+    <filters>
+        <field>Display_Category__c</field>
+        <operation>notEqual</operation>
+        <value>IRS Tax Preparation Fee</value>
+    </filters>
+    <label>All Disbursements (minus fees)</label>
+</ListView>

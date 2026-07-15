@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <decisions>
+        <name>Check_Receipts_Outstanding</name>
+        <label>Check Receipts Outstanding</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Receipts_Outstanding_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Receipts_Outstanding__c</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Transaction_Record</targetReference>
+            </connector>
+            <label>Receipts Outstanding &lt;= 0</label>
+        </rules>
+    </decisions>
+    <description>11/13/25: Updated Transaction Name to use Date formula field instead of Delivery Date field</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>PayeeNameFormula</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(ISBLANK({!$Record.Payee_Name__c}), TEXT({!$Record.Type__c}) = &quot;Deposit&quot;), {!$Record.Merchant_Name__c}, {!$Record.Payee_Name__c})</expression>
+    </formulas>
+    <formulas>
+        <name>TransactionDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>IF(ISBLANK({!$Record.Transaction_Date__c}),DATEVALUE({!$Record.CreatedDate}),{!$Record.Transaction_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <name>TransactionNameFormula</name>
+        <dataType>String</dataType>
+        <expression>left({!$Record.Trust__r.Beneficiary__r.Full_Name__c} + &quot; - &quot; + TEXT({!$Record.Type__c}) + &quot; - &quot; + TEXT({!$Record.Date__c}),80)</expression>
+    </formulas>
+    <formulas>
+        <name>TypeDetailFormula</name>
+        <dataType>String</dataType>
+        <expression>if(and(isblank({!$Record.Type_Detail__c}),!isblank(text({!$Record.Type__c}))),text({!$Record.Type__c}),{!$Record.Type_Detail__c})</expression>
+    </formulas>
+    <interviewLabel>Transaction on Create and Edit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Transaction on Create and Edit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Transaction</name>
+        <label>Update Transaction</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Receipts_Outstanding</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Beneficiary__c</field>
+            <value>
+                <elementReference>$Record.Trust__r.Beneficiary__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>TransactionNameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Payee_Name__c</field>
+            <value>
+                <elementReference>PayeeNameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Transaction_Date__c</field>
+            <value>
+                <elementReference>TransactionDateFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type_Detail__c</field>
+            <value>
+                <elementReference>TypeDetailFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Transaction_Record</name>
+        <label>Update Transaction Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Up_To_Date__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Transaction</targetReference>
+        </connector>
+        <object>Transaction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

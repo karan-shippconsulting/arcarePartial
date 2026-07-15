@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(Amount__c &gt; 0, Amount__c &lt; 1000), &quot;$&quot; + TEXT(Amount__c),
+IF(AND(Amount__c &gt;= 1000, Amount__c &lt; 10000),
+&quot;$&quot; + LEFT(TEXT(Amount__c),1) + &quot;,&quot; + MID(TEXT(Amount__c),2,3) + &quot;.&quot; + RIGHT(TEXT(Amount__c),2),
+IF(AND(Amount__c &gt;= 10000, Amount__c &lt; 100000),
+&quot;$&quot; + LEFT(TEXT(Amount__c),2) + &quot;,&quot; + MID(TEXT(Amount__c),3,3) + &quot;.&quot; + RIGHT(TEXT(Amount__c),2),
+IF(AND(Amount__c &gt;= 100000, Amount__c &lt; 1000000),
+&quot;$&quot; + LEFT(TEXT(Amount__c),3) + &quot;,&quot; + MID(TEXT(Amount__c),4,3) + &quot;.&quot; + RIGHT(TEXT(Amount__c),2),
+IF(AND(Amount__c &gt;= 1000000, Amount__c &lt; 10000000),
+&quot;$&quot; + LEFT(TEXT(Amount__c),1) + &quot;,&quot; + MID(TEXT(Amount__c),2,3) + &quot;,&quot; + MID(TEXT(Amount__c),5,3) + &quot;.&quot; + RIGHT(TEXT(Amount__c),2),
+TEXT(Amount__c))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the formula that formats the Amount field. It will not work in templates. Use Amount Formula for Templates field.</inlineHelpText>
+    <label>Amount Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

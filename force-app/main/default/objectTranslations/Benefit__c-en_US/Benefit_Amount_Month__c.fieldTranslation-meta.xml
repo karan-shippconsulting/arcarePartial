@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Optional: enter dollar amount of benefit --></help>
+    <label><!-- Benefit Amount/Month --></label>
+    <name>Benefit_Amount_Month__c</name>
+</CustomFieldTranslation>

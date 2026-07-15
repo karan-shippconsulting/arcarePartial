@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use by DTG ONLY</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Integration User permission set</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>PasswordNeverExpires</name>
+    </userPermissions>
+</PermissionSet>

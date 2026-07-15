@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Billing Do Not Pay Watermark Display --></label>
+    <name>Billing_Do_Not_Pay_Watermark_Display__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>Create a Log a Call or a Follow up task based on Attempt Call value</description>
+    <masterLabel>Onboarding(Case)_RT_Create Log Call and Followup Task</masterLabel>
+</FlowDefinition>

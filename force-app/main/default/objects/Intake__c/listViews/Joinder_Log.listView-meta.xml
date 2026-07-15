@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Joinder_Log</fullName>
+    <columns>NAME</columns>
+    <columns>Joinder_Received_Date__c</columns>
+    <columns>Bene_First_Name__c</columns>
+    <columns>Bene_Last_Name__c</columns>
+    <columns>Grantor_First_Name__c</columns>
+    <columns>GrantorLast_Name__c</columns>
+    <columns>Attorney_First_Name__c</columns>
+    <columns>Attorney_Last_Name__c</columns>
+    <columns>Enrollment_Fee_Amount__c</columns>
+    <columns>Enrollment_Fee_Check_Number__c</columns>
+    <columns>Funding_Amount__c</columns>
+    <columns>Joinder_Status__c</columns>
+    <columns>Joinder_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Processed</value>
+    </filters>
+    <filters>
+        <field>Joinder_Received_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/1994</value>
+    </filters>
+    <filters>
+        <field>Joinder_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Returned,Unestablished,Update Joinder</value>
+    </filters>
+    <label>Joinder Log</label>
+</ListView>

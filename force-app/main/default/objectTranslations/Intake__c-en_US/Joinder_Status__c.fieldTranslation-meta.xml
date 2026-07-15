@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Joinder Status --></label>
+    <name>Joinder_Status__c</name>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Hold</masterLabel>
+        <translation><!-- On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Received</masterLabel>
+        <translation><!-- Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Returned</masterLabel>
+        <translation><!-- Returned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reviewed</masterLabel>
+        <translation><!-- Reviewed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unestablished</masterLabel>
+        <translation><!-- Unestablished --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update Joinder</masterLabel>
+        <translation><!-- Update Joinder --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

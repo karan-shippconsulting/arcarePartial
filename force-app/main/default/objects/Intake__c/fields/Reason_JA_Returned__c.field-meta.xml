@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_JA_Returned__c</fullName>
+    <label>Reason JA Returned</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Supplemental Information Form is missing</fullName>
+                <default>false</default>
+                <label>Supplemental Information Form is missing</label>
+            </value>
+            <value>
+                <fullName>Grantor(s) signatures missing (PAGE 10 of JOINDER AGREEMENT)</fullName>
+                <default>false</default>
+                <label>Grantor(s) signatures missing (PAGE 10 of JOINDER AGREEMENT)</label>
+            </value>
+            <value>
+                <fullName>&quot;Acknowledgement of Grantor’s Signature” (PAGE 10 of JOINDER AGREEMENT) is not signed and/or notarized with Notary&apos;s stamp/seal applied.</fullName>
+                <default>false</default>
+                <label>&quot;Acknowledgement of Grantor’s Signature” (PAGE 10 of JOINDER AGREEMENT) is not signed and/or notarized with Notary&apos;s stamp/seal applied.</label>
+            </value>
+            <value>
+                <fullName>Court Orders are missing</fullName>
+                <default>false</default>
+                <label>Court Orders are missing</label>
+            </value>
+            <value>
+                <fullName>Original Joinder Agreement not sent</fullName>
+                <default>false</default>
+                <label>Original Joinder Agreement not sent</label>
+            </value>
+            <value>
+                <fullName>Wrong Beneficiary</fullName>
+                <default>false</default>
+                <label>Wrong Beneficiary</label>
+            </value>
+            <value>
+                <fullName>Wrong Grantor</fullName>
+                <default>false</default>
+                <label>Wrong Grantor</label>
+            </value>
+            <value>
+                <fullName>Missing Required Information:</fullName>
+                <default>false</default>
+                <label>Missing Required Information:</label>
+            </value>
+            <value>
+                <fullName>Benefits questions not answered</fullName>
+                <default>false</default>
+                <label>Benefits questions not answered</label>
+            </value>
+            <value>
+                <fullName>Social Security Number missing</fullName>
+                <default>false</default>
+                <label>Social Security Number missing</label>
+            </value>
+            <value>
+                <fullName>Date of birth missing</fullName>
+                <default>false</default>
+                <label>Date of birth missing</label>
+            </value>
+            <value>
+                <fullName>The Master Pooled Trust has been unsuccessful in our attempts to reach you.</fullName>
+                <default>false</default>
+                <label>The Master Pooled Trust has been unsuccessful in our attempts to reach you.</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

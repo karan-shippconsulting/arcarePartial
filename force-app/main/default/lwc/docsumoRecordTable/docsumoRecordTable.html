@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Record Table">
+        <template if:true={records}>
+            <lightning-datatable
+                data={records}
+                columns={columns}
+                hide-checkbox-column="true"
+                key-field="Id">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <div>{error}</div>
+        </template>
+    </lightning-card>
+</template>

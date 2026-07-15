@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Satisfaction_of_Medicare_Medicaid_Liens__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>(PI only)</inlineHelpText>
+    <label>Satisfaction of Medicare/Medicaid Liens</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

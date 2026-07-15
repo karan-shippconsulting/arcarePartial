@@ -1,0 +1,102 @@
+<template>
+    <lightning-quick-action-panel title="Truelink Transactions">
+        <div style="background-color: #f6f7f9;">
+        <!-- Internal heading bar -->
+        <div class="tl-heading slds-p-around_small">
+            <h2 class="slds-text-heading_medium" style="font-weight:bold">Truelink Transactions</h2>
+        </div>
+
+        <div class="slds-p-around_medium tl-form">
+            <template if:true={isLoading}>
+                <div class="overlay">
+                    <lightning-spinner alternative-text="Loading transactions…" size="medium"></lightning-spinner>
+                </div>
+            </template>
+            <div class="tl-row slds-grid slds-wrap">
+                <div class="tl-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label">Beneficiary Name</label>
+                        <div class="slds-form-element__control">
+                            <span class="tl-value">{beneficiaryName}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label">Card Name</label>
+                        <div class="slds-form-element__control">
+                            <span class="tl-value">{cardName}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-row slds-grid slds-wrap">
+                <div class="tl-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label">Current Balance</label>
+                        <div class="slds-form-element__control">
+                            <span class="tl-value">{formattedBalance}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label">Current Pending</label>
+                        <div class="slds-form-element__control">
+                            <span class="tl-value">{formattedPending}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-row slds-grid slds-wrap">
+                <div class="tl-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label">Effective Balance</label>
+                        <div class="slds-form-element__control">
+                            <span class="tl-value">{formattedEffective}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label">Card Status</label>
+                        <div class="slds-form-element__control">
+                            <span class="tl-value">{cardStatus}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Filters -->
+        <div class="slds-p-horizontal_medium slds-p-bottom_small">
+            <lightning-combobox
+                name="filter"
+                label="Filter"
+                value={filterValue}
+                variant="label-hidden"
+                placeholder="Select filter"
+                options={filterOptions}
+                onchange={handleFilterChange}>
+            </lightning-combobox>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="slds-p-around_medium">
+            <lightning-datatable
+                key-field="id"
+                data={rows}
+                columns={columns}
+                hide-checkbox-column
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                onsort={handleSort}
+                show-row-number>
+            </lightning-datatable>
+        </div>
+        </div>
+    </lightning-quick-action-panel>
+</template>

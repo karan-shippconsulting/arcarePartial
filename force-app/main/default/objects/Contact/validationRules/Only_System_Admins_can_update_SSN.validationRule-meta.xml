@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_System_Admins_can_update_SSN</fullName>
+    <active>true</active>
+    <description>Only System Admins can update SSN</description>
+    <errorConditionFormula>AND($User.ProfileId != /*System Admin*/&quot;00eHp000003fzMZ&quot;, 
+!ISBLANK(PRIORVALUE(Social_Security_Number__c)), ISCHANGED(Social_Security_Number__c))</errorConditionFormula>
+    <errorMessage>Only System Administrators can modify a Social Security Number</errorMessage>
+</ValidationRule>

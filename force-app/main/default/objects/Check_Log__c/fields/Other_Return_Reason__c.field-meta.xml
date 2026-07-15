@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Return_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is pulled into the Returned Check template if the Reason for Return is Other.</inlineHelpText>
+    <label>Other Return Reason</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

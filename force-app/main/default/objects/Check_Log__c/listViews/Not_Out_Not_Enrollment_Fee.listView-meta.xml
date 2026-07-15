@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Out_Not_Enrollment_Fee</fullName>
+    <columns>NAME</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Potential_Beneficiary__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Trust_Status__c</columns>
+    <columns>Payor__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Check_Number__c</columns>
+    <columns>Check_Date__c</columns>
+    <columns>Log_Date__c</columns>
+    <columns>Deposit_Scan_Date__c</columns>
+    <columns>Out__c</columns>
+    <columns>Initial_Funding__c</columns>
+    <columns>Enrollment_Fee__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Out__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Enrollment_Fee__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Check_Date__c</field>
+        <operation>lessThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Not Out - Not Enrollment Fee</label>
+</ListView>

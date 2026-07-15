@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Distribution Status --></label>
+    <name>Distribution_Status__c</name>
+    <picklistValues>
+        <masterLabel>Fully Distributed</masterLabel>
+        <translation><!-- Fully Distributed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partially Distributed</masterLabel>
+        <translation><!-- Partially Distributed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Integration Status --></label>
+    <name>Integration_Status__c</name>
+    <picklistValues>
+        <masterLabel>Pending</masterLabel>
+        <translation><!-- Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready To Sync</masterLabel>
+        <translation><!-- Ready To Sync --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sync Error</masterLabel>
+        <translation><!-- Sync Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Synced</masterLabel>
+        <translation><!-- Synced --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

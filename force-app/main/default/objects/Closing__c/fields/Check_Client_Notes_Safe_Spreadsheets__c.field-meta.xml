@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Client_Notes_Safe_Spreadsheets__c</fullName>
+    <inlineHelpText>The spreadsheets are located here in OneDrive: CFPD/Electronic Processes/Documents and Cards in Safe.</inlineHelpText>
+    <label>Check Client Notes/Safe Spreadsheets</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

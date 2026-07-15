@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Funeral Plan Purchased By The Arc --></label>
+    <name>Funeral_Plan_Purchased_By_The_ARC__c</name>
+</CustomFieldTranslation>

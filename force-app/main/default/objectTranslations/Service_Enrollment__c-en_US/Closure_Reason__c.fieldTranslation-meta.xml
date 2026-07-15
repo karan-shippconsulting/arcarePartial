@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Closure Reason --></label>
+    <name>Closure_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Deceased</masterLabel>
+        <translation><!-- Deceased --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Funds Exhausted</masterLabel>
+        <translation><!-- Funds Exhausted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Successor</masterLabel>
+        <translation><!-- Successor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

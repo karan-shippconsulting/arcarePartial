@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paid_By_Field__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Paid By Field</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Batch Payments</relationshipLabel>
+    <relationshipName>Batch_Payments</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

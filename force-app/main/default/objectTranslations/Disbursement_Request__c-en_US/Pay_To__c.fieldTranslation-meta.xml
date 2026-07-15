@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Create an Organization if needed to reference --></help>
+    <label><!-- Pay To --></label>
+    <name>Pay_To__c</name>
+    <relationshipLabel><!-- Disbursement Requests --></relationshipLabel>
+</CustomFieldTranslation>

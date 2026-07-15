@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Return__c</fullName>
+    <description>Reason for returning check</description>
+    <label>Reason for Return</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>The Beneficiary’s Trust sub-account is closed.</fullName>
+                <default>false</default>
+                <label>The Beneficiary’s Trust sub-account is closed.</label>
+            </value>
+            <value>
+                <fullName>A completed Joinder Agreement – the application to enroll in the Master Pooled Trust - has not been received.</fullName>
+                <default>false</default>
+                <label>A completed Joinder Agreement – the application to enroll in the Master Pooled Trust - has not been received.</label>
+            </value>
+            <value>
+                <fullName>The check is not signed or is incomplete.</fullName>
+                <default>false</default>
+                <label>The check is not signed or is incomplete.</label>
+            </value>
+            <value>
+                <fullName>The check has passed the “void after” or &quot;void by&quot; date.</fullName>
+                <default>false</default>
+                <label>The check has passed the “void after” or &quot;void by&quot; date.</label>
+            </value>
+            <value>
+                <fullName>The check was issued “payable to” incorrectly.</fullName>
+                <default>false</default>
+                <label>The check was issued “payable to” incorrectly.</label>
+            </value>
+            <value>
+                <fullName>Attempts to reach you have been unsuccessful.</fullName>
+                <default>false</default>
+                <label>Attempts to reach you have been unsuccessful.</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

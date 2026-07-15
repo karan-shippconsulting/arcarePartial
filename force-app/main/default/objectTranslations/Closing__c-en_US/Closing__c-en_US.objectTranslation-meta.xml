@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Closing</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Closings</value>
+    </caseValues>
+    <layouts>
+        <layout>Closing Layout</layout>
+        <sections>
+            <label><!-- Beneficiary Details --></label>
+            <section>Beneficiary Details</section>
+        </sections>
+        <sections>
+            <label><!-- Close Out/Balance Details --></label>
+            <section>Close Out/Balance Details</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Comments --></label>
+            <section>Closing Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Death Certificate Details --></label>
+            <section>Death Certificate Details</section>
+        </sections>
+        <sections>
+            <label><!-- Expense and Remainder Details --></label>
+            <section>Expense and Remainder Details</section>
+        </sections>
+        <sections>
+            <label><!-- Final Closing Checkpoints --></label>
+            <section>Final Closing Checkpoints</section>
+        </sections>
+        <sections>
+            <label><!-- Medicaid Details --></label>
+            <section>Medicaid Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Third Party Trust Information --></label>
+            <section>Third Party Trust Information</section>
+        </sections>
+        <sections>
+            <label><!-- True Link Card Information --></label>
+            <section>True Link Card Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Depletion/Resignation Layout</layout>
+        <sections>
+            <label><!-- Analyst &amp; Auditor - COORDINATORS DO NOT COMPLETE --></label>
+            <section>Analyst &amp; Auditor - COORDINATORS DO NOT COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Comments --></label>
+            <section>Closing Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Fees Calculations - COORDINATORS COMPLETE --></label>
+            <section>Closing Fees Calculations - COORDINATORS COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Depletion - COORDINATORS COMPLETE --></label>
+            <section>Depletion - COORDINATORS COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Final Closing Details --></label>
+            <section>Final Closing Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>I &amp; III Death Layout</layout>
+        <sections>
+            <label><!-- Analyst &amp; Auditor - DO NOT COMPLETE --></label>
+            <section>Analyst &amp; Auditor - DO NOT COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Comments --></label>
+            <section>Closing Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Due to Death --></label>
+            <section>Closing Due to Death</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Fees Calculations --></label>
+            <section>Closing Fees Calculations</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Final Closing Details --></label>
+            <section>Final Closing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Final Remainders --></label>
+            <section>Final Remainders</section>
+        </sections>
+        <sections>
+            <label><!-- Prepaid Funeral Information --></label>
+            <section>Prepaid Funeral Information</section>
+        </sections>
+        <sections>
+            <label><!-- Remainder Funds --></label>
+            <section>Remainder Funds</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>II &amp; IV Death Layout</layout>
+        <sections>
+            <label><!-- Analyst &amp; Auditor - COORDINATORS DO NOT COMPLETE --></label>
+            <section>Analyst &amp; Auditor - COORDINATORS DO NOT COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Comments --></label>
+            <section>Closing Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Due to Death - COORDINATORS COMPLETE --></label>
+            <section>Closing Due to Death - COORDINATORS COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Closing Fees Calculations - COORDINATORS COMPLETE --></label>
+            <section>Closing Fees Calculations - COORDINATORS COMPLETE</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Final Closing Details --></label>
+            <section>Final Closing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Final Remainders --></label>
+            <section>Final Remainders</section>
+        </sections>
+        <sections>
+            <label><!-- Prepaid Funeral Information --></label>
+            <section>Prepaid Funeral Information</section>
+        </sections>
+        <sections>
+            <label><!-- Remainder Funds --></label>
+            <section>Remainder Funds</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- TMHP Information - Administrative Coordinator --></label>
+            <section>TMHP Information - Administrative Coordinator</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create Remainder Person Records --></label>
+        <name>Create_Remainder_Person_Records</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template EditorOLD --></label>
+        <name>Email_Template_EditorOLD</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Depletion/Resignation --></description>
+        <label><!-- Depletion/Resignation --></label>
+        <name>Depletion_Resignation</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- II &amp; IV Death --></description>
+        <label><!-- II &amp; IV Death --></label>
+        <name>II_IV_Death</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- I &amp; III Death --></description>
+        <label><!-- I &amp; III Death --></label>
+        <name>I_III_Death</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

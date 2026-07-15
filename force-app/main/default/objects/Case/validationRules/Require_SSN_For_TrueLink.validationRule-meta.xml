@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_SSN_For_TrueLink</fullName>
+    <active>true</active>
+    <description>Ensures SSN is provided when &apos;Enter to True Link now&apos;? is set to &quot;Yes&quot;.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Enter_to_TrueLink_now__c, &quot;Yes&quot;),
+    ISBLANK(SSN__c)
+)</errorConditionFormula>
+    <errorDisplayField>SSN__c</errorDisplayField>
+    <errorMessage>SSN is a required field for True Link. Please provide the SSN when &apos;Enter to True Link now?&apos; is set to Yes.</errorMessage>
+</ValidationRule>

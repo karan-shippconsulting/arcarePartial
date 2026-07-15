@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disbursement_Status__c</fullName>
+    <label>Disbursement Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Authorized</fullName>
+                <default>false</default>
+                <label>Authorized</label>
+            </value>
+            <value>
+                <fullName>Not Authorized</fullName>
+                <default>false</default>
+                <label>Not Authorized</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

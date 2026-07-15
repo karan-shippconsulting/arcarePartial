@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>TrustAccountingNameFormula</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Trust__r.Beneficiary__r.FirstName}+&quot; &quot;+{!$Record.Trust__r.Beneficiary__r.LastName}+&quot; (&quot;+text(Month({!$Record.Date_Range_End__c}))+&quot;/&quot;+text(Day({!$Record.Date_Range_End__c}))+&quot;/&quot;+text(year({!$Record.Date_Range_End__c}))+&quot;)&quot;</expression>
+    </formulas>
+    <interviewLabel>Trust Accounting on Create and Edit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Trust Accounting on Create and Edit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Trust_Accounting</name>
+        <label>Update Trust Accounting</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Beneficiary__c</field>
+            <value>
+                <elementReference>$Record.Trust__r.Beneficiary__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>TrustAccountingNameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Trust_Accounting</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Beneficiary__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Trust_Accounting__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

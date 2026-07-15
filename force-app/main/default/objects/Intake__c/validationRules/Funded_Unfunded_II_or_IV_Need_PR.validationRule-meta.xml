@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funded_Unfunded_II_or_IV_Need_PR</fullName>
+    <active>false</active>
+    <description>Funded Unfunded II or IV Need Primary Rep</description>
+    <errorConditionFormula>AND(ISCHANGED(Joinder_Status__c), TEXT(Joinder_Status__c) = &quot;Approved&quot;, OR(ISBLANK(Primary_Rep_Contact_Lookup__c),
+ISBLANK(Grantor_Account_Lookup__c)))</errorConditionFormula>
+    <errorMessage>Please enter a Primary Rep Contact and a Grantor Account before moving the Joinder Status to Approved. Make sure to include an email for both.</errorMessage>
+</ValidationRule>

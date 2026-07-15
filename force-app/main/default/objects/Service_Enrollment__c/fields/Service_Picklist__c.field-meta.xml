@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Picklist__c</fullName>
+    <label>Service</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ABLE</fullName>
+                <default>false</default>
+                <label>ABLE</label>
+            </value>
+            <value>
+                <fullName>Care Management</fullName>
+                <default>false</default>
+                <label>Care Management</label>
+            </value>
+            <value>
+                <fullName>Conservatorship</fullName>
+                <default>false</default>
+                <label>Conservatorship</label>
+            </value>
+            <value>
+                <fullName>Co-Trustee</fullName>
+                <default>false</default>
+                <label>Co-Trustee</label>
+            </value>
+            <value>
+                <fullName>Delegated Trust</fullName>
+                <default>false</default>
+                <label>Delegated Trust</label>
+            </value>
+            <value>
+                <fullName>Directed Trust</fullName>
+                <default>false</default>
+                <label>Directed Trust</label>
+            </value>
+            <value>
+                <fullName>EX-Personal Representative</fullName>
+                <default>false</default>
+                <label>EX-Personal Representative</label>
+            </value>
+            <value>
+                <fullName>Income Trust</fullName>
+                <default>false</default>
+                <label>Income Trust</label>
+            </value>
+            <value>
+                <fullName>MSA</fullName>
+                <default>false</default>
+                <label>MSA</label>
+            </value>
+            <value>
+                <fullName>Pooled 1st Party Trust</fullName>
+                <default>false</default>
+                <label>Pooled 1st Party Trust</label>
+            </value>
+            <value>
+                <fullName>Pooled 3rd Party Trust</fullName>
+                <default>false</default>
+                <label>Pooled 3rd Party Trust</label>
+            </value>
+            <value>
+                <fullName>Private Trust Advisory</fullName>
+                <default>false</default>
+                <label>Private Trust Advisory</label>
+            </value>
+            <value>
+                <fullName>Rep Payee</fullName>
+                <default>false</default>
+                <label>Rep Payee</label>
+            </value>
+            <value>
+                <fullName>Sole Trustee 1st Party Trust</fullName>
+                <default>false</default>
+                <label>Sole Trustee 1st Party Trust</label>
+            </value>
+            <value>
+                <fullName>Sole Trustee 3rd Party Trust</fullName>
+                <default>false</default>
+                <label>Sole Trustee 3rd Party Trust</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

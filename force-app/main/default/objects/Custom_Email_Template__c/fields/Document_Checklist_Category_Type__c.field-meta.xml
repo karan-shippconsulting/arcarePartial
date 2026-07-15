@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Checklist_Category_Type__c</fullName>
+    <label>Document Checklist Category Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1099</fullName>
+                <default>false</default>
+                <label>1099</label>
+            </value>
+            <value>
+                <fullName>Annual Accounting</fullName>
+                <default>false</default>
+                <label>Annual Accounting</label>
+            </value>
+            <value>
+                <fullName>Bene DRF Request</fullName>
+                <default>false</default>
+                <label>Bene DRF Request</label>
+            </value>
+            <value>
+                <fullName>Beneficiary Contact</fullName>
+                <default>false</default>
+                <label>Beneficiary Contact</label>
+            </value>
+            <value>
+                <fullName>Change of PR</fullName>
+                <default>false</default>
+                <label>Change of PR</label>
+            </value>
+            <value>
+                <fullName>CM Reports</fullName>
+                <default>false</default>
+                <label>CM Reports</label>
+            </value>
+            <value>
+                <fullName>Correspondence</fullName>
+                <default>false</default>
+                <label>Correspondence</label>
+            </value>
+            <value>
+                <fullName>Court Order</fullName>
+                <default>false</default>
+                <label>Court Order</label>
+            </value>
+            <value>
+                <fullName>Death Certificate</fullName>
+                <default>false</default>
+                <label>Death Certificate</label>
+            </value>
+            <value>
+                <fullName>Disbursements (on the D. Ober TL card)</fullName>
+                <default>false</default>
+                <label>Disbursements (on the D. Ober TL card)</label>
+            </value>
+            <value>
+                <fullName>Grantor Letter</fullName>
+                <default>false</default>
+                <label>Grantor Letter</label>
+            </value>
+            <value>
+                <fullName>House Deed</fullName>
+                <default>false</default>
+                <label>House Deed</label>
+            </value>
+            <value>
+                <fullName>Important information/documents</fullName>
+                <default>false</default>
+                <label>Important information/documents</label>
+            </value>
+            <value>
+                <fullName>Incoming</fullName>
+                <default>false</default>
+                <label>Incoming</label>
+            </value>
+            <value>
+                <fullName>Joinder Agreement</fullName>
+                <default>false</default>
+                <label>Joinder Agreement</label>
+            </value>
+            <value>
+                <fullName>Letter of Guardianship</fullName>
+                <default>false</default>
+                <label>Letter of Guardianship</label>
+            </value>
+            <value>
+                <fullName>Lost Receipt Form</fullName>
+                <default>false</default>
+                <label>Lost Receipt Form</label>
+            </value>
+            <value>
+                <fullName>Outgoing</fullName>
+                <default>false</default>
+                <label>Outgoing</label>
+            </value>
+            <value>
+                <fullName>POA</fullName>
+                <default>false</default>
+                <label>POA</label>
+            </value>
+            <value>
+                <fullName>PR Contact</fullName>
+                <default>false</default>
+                <label>PR Contact</label>
+            </value>
+            <value>
+                <fullName>Prepaid Funeral</fullName>
+                <default>false</default>
+                <label>Prepaid Funeral</label>
+            </value>
+            <value>
+                <fullName>TMHP Death Verification</fullName>
+                <default>false</default>
+                <label>TMHP Death Verification</label>
+            </value>
+            <value>
+                <fullName>Vehicle Title</fullName>
+                <default>false</default>
+                <label>Vehicle Title</label>
+            </value>
+            <value>
+                <fullName>Other Contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

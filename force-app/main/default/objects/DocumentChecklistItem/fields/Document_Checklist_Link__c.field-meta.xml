@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Checklist_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>LEFT($Api.Partner_Server_URL_290, FIND(&quot;/services&quot;, $Api.Partner_Server_URL_290))
+&amp;&quot;/&quot;&amp;Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Document Checklist Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

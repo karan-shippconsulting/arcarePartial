@@ -1,0 +1,64 @@
+.slds-quick-action-panel__body {
+    padding-top: 0.25rem;
+}
+
+
+.slds-modal__header {
+  display: block !important;
+  visibility: visible !important;
+}
+
+
+.tl-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.tl-row {
+    margin: 0;
+}
+
+.tl-col {
+    padding-right: 0.75rem;
+}
+
+.slds-form-element_horizontal .slds-form-element__label {
+    width: 12rem;
+    margin-right: 0.5rem;
+    color: #3e3e3c;
+    font-weight: 600;
+}
+
+.slds-form-element_horizontal .slds-form-element__control {
+    display: inline-block;
+    width: calc(100% - 12rem - 0.5rem);
+    vertical-align: middle;
+}
+
+.tl-value {
+    display: inline-block;
+    color: #1f1f1f;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-left: 0.25rem; /* slight gap from label */
+}
+
+@media only screen and (max-width: 48rem) {
+    .slds-form-element_horizontal .slds-form-element__label {
+        width: 9rem;
+    }
+    .slds-form-element_horizontal .slds-form-element__control {
+        width: calc(100% - 9rem - 0.5rem);
+    }
+    .tl-col {
+        padding-right: 0;
+    }
+}
+
+.qa-bg {
+    background: #f6f7f9;               /* SLDS-ish gray (neutral-1 feel) */
+    border: 1px solid #e5e7ea;         /* subtle border to frame content */
+    border-radius: 0.375rem;           /* gentle rounding */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); /* very light shadow */
+}

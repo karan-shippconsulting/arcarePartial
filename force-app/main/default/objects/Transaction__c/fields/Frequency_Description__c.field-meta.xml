@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Basic_Frequency_Description__c,
+&quot;every 1 weeks&quot;, &quot;Every Week&quot;,
+&quot;every 2 weeks&quot;, &quot;Every 2 Weeks&quot;,
+&quot;every 3 weeks&quot;, &quot;Every 3 Weeks&quot;,
+&quot;every 1 months&quot;, &quot;Every Month&quot;,
+&quot;every 2 months&quot;, &quot;Every 2 Months&quot;,
+&quot;every 3 months&quot;, &quot;Every 3 Months&quot;,
+&quot;every 9 months&quot;, &quot;Every 6 Months&quot;, 
+&quot;every 12 months&quot;, &quot;Every 12 Months&quot;,
+&quot;twice_monthly_every 1 months&quot;, &quot;Twice Monthly&quot;,
+NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Frequency Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

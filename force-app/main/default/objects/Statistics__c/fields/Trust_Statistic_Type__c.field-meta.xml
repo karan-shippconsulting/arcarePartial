@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trust_Statistic_Type__c</fullName>
+    <label>Trust Statistic Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activated This Month</fullName>
+                <default>false</default>
+                <label>Activated This Month</label>
+            </value>
+            <value>
+                <fullName>Already Active</fullName>
+                <default>false</default>
+                <label>Already Active</label>
+            </value>
+            <value>
+                <fullName>Closing Started</fullName>
+                <default>false</default>
+                <label>Closing Started</label>
+            </value>
+            <value>
+                <fullName>Closing Completed</fullName>
+                <default>false</default>
+                <label>Closing Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

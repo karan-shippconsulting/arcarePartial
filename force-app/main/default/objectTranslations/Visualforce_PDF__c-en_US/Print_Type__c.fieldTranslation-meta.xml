@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Print Type --></label>
+    <name>Print_Type__c</name>
+    <picklistValues>
+        <masterLabel>Bulk</masterLabel>
+        <translation><!-- Bulk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Individual Record</masterLabel>
+        <translation><!-- Individual Record --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

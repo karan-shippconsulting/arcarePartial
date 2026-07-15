@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trust_Not_Linked_to_Service_Enrollment</fullName>
+    <columns>NAME</columns>
+    <columns>Trust_Type__c</columns>
+    <columns>Service_Enrollment__c</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Beneficiary_Status__c</columns>
+    <columns>Distribution_Guidelines__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Service_Enrollment__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Trust Not Linked to Service Enrollment</label>
+</ListView>

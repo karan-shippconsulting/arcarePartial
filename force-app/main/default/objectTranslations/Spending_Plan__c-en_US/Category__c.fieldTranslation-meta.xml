@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>Annual Fees</masterLabel>
+        <translation><!-- Annual Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attorney Fees</masterLabel>
+        <translation><!-- Attorney Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto/Transportation</masterLabel>
+        <translation><!-- Auto/Transportation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Fees</masterLabel>
+        <translation><!-- Bank Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CFPD Case Management Fees</masterLabel>
+        <translation><!-- CFPD Case Management Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CFPD Conservatorship Fees</masterLabel>
+        <translation><!-- CFPD Conservatorship Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CFPD Personal Representative Fees</masterLabel>
+        <translation><!-- CFPD Personal Representative Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cable/Internet/Phone</masterLabel>
+        <translation><!-- Cable/Internet/Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caregiving</masterLabel>
+        <translation><!-- Caregiving --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Management Fees</masterLabel>
+        <translation><!-- Case Management Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child Care Expenses</masterLabel>
+        <translation><!-- Child Care Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child Support</masterLabel>
+        <translation><!-- Child Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Companion Services</masterLabel>
+        <translation><!-- Companion Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conservator Fees</masterLabel>
+        <translation><!-- Conservator Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Court Fees</masterLabel>
+        <translation><!-- Court Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Damages/Property Management</masterLabel>
+        <translation><!-- Damages/Property Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Day Program</masterLabel>
+        <translation><!-- Day Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Debt Balance Payoff</masterLabel>
+        <translation><!-- Debt Balance Payoff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dental Expense</masterLabel>
+        <translation><!-- Dental Expense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Distribution to ABLE Account</masterLabel>
+        <translation><!-- Distribution to ABLE Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education Expenses</masterLabel>
+        <translation><!-- Education Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electronics/Computers</masterLabel>
+        <translation><!-- Electronics/Computers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entertainment/Recreation/Memberships</masterLabel>
+        <translation><!-- Entertainment/Recreation/Memberships --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Establishment/Set-Up Fees</masterLabel>
+        <translation><!-- Establishment/Set-Up Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Groceries/Food</masterLabel>
+        <translation><!-- Groceries/Food --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guardianship Services</masterLabel>
+        <translation><!-- Guardianship Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOA Expenses</masterLabel>
+        <translation><!-- HOA Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hair/Nail/Hygiene Services</masterLabel>
+        <translation><!-- Hair/Nail/Hygiene Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Furnishings/Appliances</masterLabel>
+        <translation><!-- Home Furnishings/Appliances --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Maintenance/Repairs/Modifications</masterLabel>
+        <translation><!-- Home Maintenance/Repairs/Modifications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Purchase and Associated Fees</masterLabel>
+        <translation><!-- Home Purchase and Associated Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income Trust Fees</masterLabel>
+        <translation><!-- Income Trust Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance</masterLabel>
+        <translation><!-- Insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance - Auto</masterLabel>
+        <translation><!-- Insurance - Auto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance - Homeowners</masterLabel>
+        <translation><!-- Insurance - Homeowners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance - Renter&apos;s</masterLabel>
+        <translation><!-- Insurance - Renter&apos;s --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laundry Expenses</masterLabel>
+        <translation><!-- Laundry Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Equipment/Hospital Grade Equipment</masterLabel>
+        <translation><!-- Medical Equipment/Hospital Grade Equipment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Expenses</masterLabel>
+        <translation><!-- Medical Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Support Animal</masterLabel>
+        <translation><!-- Medical Support Animal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miscellaneous/Other Expenses</masterLabel>
+        <translation><!-- Miscellaneous/Other Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moving Expenses</masterLabel>
+        <translation><!-- Moving Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA Expenses</masterLabel>
+        <translation><!-- POA Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parole/Probation/Restitution/Fees/Fines</masterLabel>
+        <translation><!-- Parole/Probation/Restitution/Fees/Fines --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Needs</masterLabel>
+        <translation><!-- Personal Needs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal/Household/Clothing Expenses</masterLabel>
+        <translation><!-- Personal/Household/Clothing Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pet Expenses</masterLabel>
+        <translation><!-- Pet Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Need Burial/Cremation Expense</masterLabel>
+        <translation><!-- Pre-Need Burial/Cremation Expense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Room Differential</masterLabel>
+        <translation><!-- Private Room Differential --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rent including Utilities and Insurance</masterLabel>
+        <translation><!-- Rent including Utilities and Insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rent/Mortgage/Shelter</masterLabel>
+        <translation><!-- Rent/Mortgage/Shelter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rep Payee Fees</masterLabel>
+        <translation><!-- Rep Payee Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Fees</masterLabel>
+        <translation><!-- Service Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storage Rent</masterLabel>
+        <translation><!-- Storage Rent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supervised Visitation of Children</masterLabel>
+        <translation><!-- Supervised Visitation of Children --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taxes-Federal</masterLabel>
+        <translation><!-- Taxes-Federal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taxes-Property</masterLabel>
+        <translation><!-- Taxes-Property --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taxes-State</masterLabel>
+        <translation><!-- Taxes-State --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tobacco</masterLabel>
+        <translation><!-- Tobacco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Travel</masterLabel>
+        <translation><!-- Travel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trustee Fees</masterLabel>
+        <translation><!-- Trustee Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utilities-Electricity and Gas</masterLabel>
+        <translation><!-- Utilities-Electricity and Gas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utilities-Other</masterLabel>
+        <translation><!-- Utilities-Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utilities-Trash</masterLabel>
+        <translation><!-- Utilities-Trash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utilities-Water</masterLabel>
+        <translation><!-- Utilities-Water --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vision Expenses</masterLabel>
+        <translation><!-- Vision Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wellness</masterLabel>
+        <translation><!-- Wellness --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

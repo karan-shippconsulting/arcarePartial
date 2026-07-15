@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bene Gender --></label>
+    <name>Bene_Gender__c</name>
+    <picklistValues>
+        <masterLabel>Female</masterLabel>
+        <translation><!-- Female --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gender Non-Conforming</masterLabel>
+        <translation><!-- Gender Non-Conforming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genderfluid</masterLabel>
+        <translation><!-- Genderfluid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Male</masterLabel>
+        <translation><!-- Male --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Binary</masterLabel>
+        <translation><!-- Non-Binary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

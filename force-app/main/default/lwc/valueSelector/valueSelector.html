@@ -1,0 +1,31 @@
+<template>
+	<template if:true={isTextField}>
+		<lightning-input label={label} onchange={handleFieldValueChange}>
+		</lightning-input>
+	</template>
+	<template if:true={isDefault}>
+		<lightning-input label={label} onchange={handleFieldValueChange}>
+		</lightning-input>
+	</template>
+	<template if:true={isTextArea}>
+		<lightning-textarea label={label} placeholder="type here..." onchange={handleFieldValueChange}>
+		</lightning-textarea>
+	</template>
+	<template if:true={isNumberField}>
+		<lightning-input label={label} type="number" onchange={handleFieldValueChange}>
+		</lightning-input>
+	</template>
+	<template if:true={isBooleanField}>
+		<lightning-input label={label} type="checkbox" onchange={handleFieldValueChange}>
+		</lightning-input>
+	</template>
+	<template if:true={isDateField}>
+		<lightning-input label={label} type="date" onchange={handleFieldValueChange}>
+		</lightning-input>
+	</template>
+	<template if:true={isPicklistField}>
+		<lightning-combobox name="picklistValue" label={label} placeholder="Select Value" options={picklistOptions}
+			onchange={handleFieldValueChange}>
+		</lightning-combobox>
+	</template>
+</template>

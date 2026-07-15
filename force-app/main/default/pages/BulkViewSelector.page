@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-01-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:page standardController="Opportunity" recordSetVar="opp" extensions="BulkViewSelectorController" >
+    
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+     document.addEventListener('lightning__showtoast', event => {
+        sforce.one.showToast(event.toastAttributes);
+    });
+        $Lightning.use("c:listViewSelectorApp", function() {
+            $Lightning.createComponent("c:listViewActions",
+                { 
+                    "selectedOpportunity" : "{!opportunityIds}"
+                },
+                "lightning",
+                function(cmp) {
+                    console.log("button was created");
+                    // do some stuff
+                }
+            );
+        });
+    </script>
+</apex:page>

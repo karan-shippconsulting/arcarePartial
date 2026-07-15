@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Activation</fullName>
+    <active>false</active>
+    <description>Restrict Activation</description>
+    <errorConditionFormula>AND(ISCHANGED(Trust_Status__c),
+$User.Can_Activate_or_Close_a_Trust__c  = FALSE,
+TEXT(Trust_Status__c) = &quot;Active&quot;)</errorConditionFormula>
+    <errorMessage>Only certain users can activate Trusts which begins the sync with True Link</errorMessage>
+</ValidationRule>

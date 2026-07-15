@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Asset Type --></label>
+    <name>Asset_Type__c</name>
+    <picklistValues>
+        <masterLabel>Cell Phone</masterLabel>
+        <translation><!-- Cell Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop Computer</masterLabel>
+        <translation><!-- Desktop Computer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Funeral Plan</masterLabel>
+        <translation><!-- Funeral Plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Furniture</masterLabel>
+        <translation><!-- Furniture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Game Console</masterLabel>
+        <translation><!-- Game Console --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home</masterLabel>
+        <translation><!-- Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IRA</masterLabel>
+        <translation><!-- IRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investment</masterLabel>
+        <translation><!-- Investment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laptop/Tablet</masterLabel>
+        <translation><!-- Laptop/Tablet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Television</masterLabel>
+        <translation><!-- Television --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicle</masterLabel>
+        <translation><!-- Vehicle --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

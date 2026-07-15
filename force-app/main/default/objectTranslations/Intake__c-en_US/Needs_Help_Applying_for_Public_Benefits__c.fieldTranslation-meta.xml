@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Needs Help Applying for Public Benefits --></label>
+    <name>Needs_Help_Applying_for_Public_Benefits__c</name>
+</CustomFieldTranslation>

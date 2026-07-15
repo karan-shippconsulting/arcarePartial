@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Pooled Trust I</fullName>
+        <default>false</default>
+        <label>Pooled Trust I</label>
+    </customValue>
+    <customValue>
+        <fullName>Pooled Trust II</fullName>
+        <default>false</default>
+        <label>Pooled Trust II</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Trust I</fullName>
+        <default>false</default>
+        <label>Private Trust I</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Trust II</fullName>
+        <default>false</default>
+        <label>Private Trust II</label>
+    </customValue>
+    <customValue>
+        <fullName>MSA</fullName>
+        <default>false</default>
+        <label>MSA</label>
+    </customValue>
+    <masterLabel>Trust Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

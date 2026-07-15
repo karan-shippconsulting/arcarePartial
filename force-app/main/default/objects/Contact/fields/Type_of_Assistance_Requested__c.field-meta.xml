@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Assistance_Requested__c</fullName>
+    <label>Type of Assistance Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medical and dental care and equipment</fullName>
+                <default>false</default>
+                <label>Medical and dental care and equipment</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation training, services or devices</fullName>
+                <default>false</default>
+                <label>Rehabilitation training, services or devices</label>
+            </value>
+            <value>
+                <fullName>Supplemental education assistance</fullName>
+                <default>false</default>
+                <label>Supplemental education assistance</label>
+            </value>
+            <value>
+                <fullName>Home repairs and maintenance</fullName>
+                <default>false</default>
+                <label>Home repairs and maintenance</label>
+            </value>
+            <value>
+                <fullName>Transportation/auto repairs and maintenance</fullName>
+                <default>false</default>
+                <label>Transportation/auto repairs and maintenance</label>
+            </value>
+            <value>
+                <fullName>Personal goods and services</fullName>
+                <default>false</default>
+                <label>Personal goods and services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

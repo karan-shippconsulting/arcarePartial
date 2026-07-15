@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Trust_to_Buy_Prepaid_Funeral_Plan__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Use Trust to Buy Prepaid Funeral Plan</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

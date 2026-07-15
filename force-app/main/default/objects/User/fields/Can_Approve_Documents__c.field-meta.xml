@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Approve_Documents__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check this box for Users who can Approve Documents</inlineHelpText>
+    <label>Can Approve Documents</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

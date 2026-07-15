@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This date should be filled in for A&amp;A to close with TL --></help>
+    <label><!-- Ready to Close --></label>
+    <name>Ready_to_Close__c</name>
+</CustomFieldTranslation>

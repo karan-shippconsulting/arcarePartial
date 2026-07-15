@@ -1,0 +1,53 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:isUrlAddressable" access="global" controller="BulkViewSelectorController">
+	<aura:attribute name="selectedOpportunity" type="string"/>
+    <aura:attribute name="actionClicked" type="boolean"/>
+    <aura:attribute name="printMsg" type="String" default="{!$Label.c.BulkSuccessMsgForPrint}"/>
+    <aura:attribute name="emailMsg" type="String" default="{!$Label.c.BulkSuccessMsgForEmail}"/>
+    <aura:attribute name="actionErrorMsg" type="String" default="{!$Label.c.BulkPrintErrorMsg}"/>
+    
+    <lightning:navigation aura:id="navService"/>
+
+    <!-- Modal/Popup Box starts here-->
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" 
+             aria-modal="true" aria-describedby="modal-content-id-1"   
+             class="slds-modal slds-fade-in-open">
+        <aura:if isTrue="{!v.actionClicked}">
+        	<lightning:spinner alternativeText="Loading" size="small" />
+        </aura:if>
+        
+        <div class="slds-modal__container">
+            
+            <!-- Modal/Popup Box Header Starts here-->
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                    Bulk Print Selector
+                </h2>
+            </header>
+            
+            <!--Modal Body Start here-->
+            <div class="slds-modal__content slds-p-around_medium button-alignment" id="modal-content-id-1">
+                 <aura:if isTrue="{!not(empty(v.selectedOpportunity))}">
+                    <lightning:button label="Print Preview" title="Print Preview" name="Print Preview" onclick="{! c.printhandler }"/>
+                
+                    <lightning:button label="Print and Update" title="Print and Update" name="Print and Update" onclick="{! c.emailHandler }" />
+                
+                    <lightning:button label="Email and Update" title="Email and Update" name="Email and Update" onclick="{! c.printWithEmailHandler }" />
+                     <aura:set attribute="else">
+                    	<h1>{!$Label.c.NotSelectingOpportunityMsg}</h1>
+  					</aura:set>
+                </aura:if> 
+            </div>
+            
+            <!--Modal Footer Start here-->
+            <footer class="slds-modal__footer">
+                <lightning:button variant="neutral"
+                                  label="Cancel"
+                                  title="Cancel"
+                                  onclick="{! c.closeModel }"/>
+            </footer>
+        </div>
+        
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    
+</aura:component>

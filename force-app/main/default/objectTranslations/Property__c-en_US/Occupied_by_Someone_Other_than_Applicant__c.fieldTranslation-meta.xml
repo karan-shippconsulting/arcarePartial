@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Occupied by Someone Other than Applicant --></label>
+    <name>Occupied_by_Someone_Other_than_Applicant__c</name>
+</CustomFieldTranslation>

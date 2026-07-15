@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Annuity</fullName>
+        <default>false</default>
+        <label>Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Injury Settlement</fullName>
+        <default>false</default>
+        <label>Personal Injury Settlement</label>
+    </customValue>
+    <customValue>
+        <fullName>Inheritance</fullName>
+        <default>false</default>
+        <label>Inheritance</label>
+    </customValue>
+    <customValue>
+        <fullName>Divorce Settlement</fullName>
+        <default>false</default>
+        <label>Divorce Settlement</label>
+    </customValue>
+    <customValue>
+        <fullName>Sale of Home</fullName>
+        <default>false</default>
+        <label>Sale of Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquidation of Personal Assets</fullName>
+        <default>false</default>
+        <label>Liquidation of Personal Assets</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Security Back Payment</fullName>
+        <default>false</default>
+        <label>Social Security Back Payment</label>
+    </customValue>
+    <customValue>
+        <fullName>Other- please specify</fullName>
+        <default>false</default>
+        <label>Other- please specify</label>
+    </customValue>
+    <customValue>
+        <fullName>gift from father</fullName>
+        <default>false</default>
+        <label>gift from father</label>
+    </customValue>
+    <customValue>
+        <fullName>Decant of Trust per Court Order</fullName>
+        <default>false</default>
+        <label>Decant of Trust per Court Order</label>
+    </customValue>
+    <customValue>
+        <fullName>Transfer of Trust</fullName>
+        <default>false</default>
+        <label>Transfer of Trust</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Support Payments</fullName>
+        <default>false</default>
+        <label>Child Support Payments</label>
+    </customValue>
+    <customValue>
+        <fullName>gift from mother</fullName>
+        <default>false</default>
+        <label>gift from mother</label>
+    </customValue>
+    <customValue>
+        <fullName>Decanted Individual Trust, funded from inheritance</fullName>
+        <default>false</default>
+        <label>Decanted Individual Trust, funded from inheritance</label>
+    </customValue>
+    <customValue>
+        <fullName>gift from aunt</fullName>
+        <default>false</default>
+        <label>gift from aunt</label>
+    </customValue>
+    <customValue>
+        <fullName>Gift from parents</fullName>
+        <default>false</default>
+        <label>Gift from parents</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Security Back-Payment</fullName>
+        <default>false</default>
+        <label>Social Security Back-Payment</label>
+    </customValue>
+    <masterLabel>Funding Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Make sure to enter when creating a Case Note --></help>
+    <label><!-- Service Enrollment --></label>
+    <name>Service_Enrollment__c</name>
+    <relationshipLabel><!-- Case Notes --></relationshipLabel>
+</CustomFieldTranslation>

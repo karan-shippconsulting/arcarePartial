@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_Heard_About_Us__c</fullName>
+    <label>How Heard About Us</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accountant</fullName>
+                <default>false</default>
+                <label>Accountant</label>
+            </value>
+            <value>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+                <label>Attorney</label>
+            </value>
+            <value>
+                <fullName>Brochure/Newsletter about CFPD</fullName>
+                <default>false</default>
+                <label>Brochure/Newsletter about CFPD</label>
+            </value>
+            <value>
+                <fullName>Community Organization</fullName>
+                <default>false</default>
+                <label>Community Organization</label>
+            </value>
+            <value>
+                <fullName>Family/Friend</fullName>
+                <default>false</default>
+                <label>Family/Friend</label>
+            </value>
+            <value>
+                <fullName>Financial Professional</fullName>
+                <default>false</default>
+                <label>Financial Professional</label>
+            </value>
+            <value>
+                <fullName>Internet Search</fullName>
+                <default>false</default>
+                <label>Internet Search</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Presentation/Workshop/Conference</fullName>
+                <default>false</default>
+                <label>Presentation/Workshop/Conference</label>
+            </value>
+            <value>
+                <fullName>Previous Experience with CFPD</fullName>
+                <default>false</default>
+                <label>Previous Experience with CFPD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

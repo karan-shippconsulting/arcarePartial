@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mail Import Document Type --></label>
+    <name>Mail_Import_Document_Type__c</name>
+    <picklistValues>
+        <masterLabel>Check</masterLabel>
+        <translation><!-- Check --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contracts</masterLabel>
+        <translation><!-- Contracts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Court Documents</masterLabel>
+        <translation><!-- Court Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice</masterLabel>
+        <translation><!-- Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Statements - Banks</masterLabel>
+        <translation><!-- Statements - Banks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Statements - SSA</masterLabel>
+        <translation><!-- Statements - SSA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Document</masterLabel>
+        <translation><!-- Tax Document --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

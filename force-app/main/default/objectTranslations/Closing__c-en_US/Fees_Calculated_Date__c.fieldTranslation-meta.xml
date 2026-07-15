@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- COORDINATORS: Enter the date you calculate fees. --></help>
+    <label><!-- Fees Calculated Date --></label>
+    <name>Fees_Calculated_Date__c</name>
+</CustomFieldTranslation>

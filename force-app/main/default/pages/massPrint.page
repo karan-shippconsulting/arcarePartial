@@ -1,0 +1,29 @@
+<apex:page standardController="Transaction__c" lightningStylesheets="true" recordSetVar="recordList" showHeader="false">
+    <apex:includeLightning />    
+      <div id="errorMessage" style="display:none; color: red; font-weight: bold;">
+        No records selected. Please select at least one record.
+    </div>
+    <div id="LwcId" />
+    <apex:variable var="selected" value="{!selected}" />
+    <script>
+    
+    var selectedRecords = '{!selected}';
+    console.log(selectedRecords);
+    
+    if (!selectedRecords || selectedRecords == '' || selectedRecords.length === 0) {
+          document.getElementById('errorMessage').style.display = 'block';
+    }else{ 
+        
+        $Lightning.use("c:visualforceAuraApplications", function() {
+            $Lightning.createComponent("c:dynamicEmailMass",
+                                       {	objectApiName: 'Transaction__c',
+                                        recordIds : '{!selected}'
+                                       },
+                                       "LwcId", // the Id of div tag where your component will be rendered
+                                       function(cmp) {
+                                           console.log('Calling the LWC Component');
+                                       });
+        });
+    }
+    </script>
+</apex:page>

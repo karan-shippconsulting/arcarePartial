@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Document Checklist Category --></label>
+    <name>Document_Checklist_Category__c</name>
+    <picklistValues>
+        <masterLabel>Assets</masterLabel>
+        <translation><!-- Assets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits</masterLabel>
+        <translation><!-- Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care Management</masterLabel>
+        <translation><!-- Care Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caregiver Information</masterLabel>
+        <translation><!-- Caregiver Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Checks</masterLabel>
+        <translation><!-- Checks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information</masterLabel>
+        <translation><!-- Contact Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Correspondence</masterLabel>
+        <translation><!-- Correspondence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Court Documents</masterLabel>
+        <translation><!-- Court Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Death-related Documents</masterLabel>
+        <translation><!-- Death-related Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disbursements</masterLabel>
+        <translation><!-- Disbursements --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End of Life Documents</masterLabel>
+        <translation><!-- End of Life Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miscellaneous Client Documents</masterLabel>
+        <translation><!-- Miscellaneous Client Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miscellaneous/Other</masterLabel>
+        <translation><!-- Miscellaneous/Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal/photos</masterLabel>
+        <translation><!-- Personal/photos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Benefit Correspondance</masterLabel>
+        <translation><!-- Public Benefit Correspondance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Receipts</masterLabel>
+        <translation><!-- Receipts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Documents</masterLabel>
+        <translation><!-- Tax Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust Documents</masterLabel>
+        <translation><!-- Trust Documents --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

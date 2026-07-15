@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Automatically populates when Approved is checked --></help>
+    <label><!-- Approved By --></label>
+    <name>Approved_By__c</name>
+    <relationshipLabel><!-- Time Entries (Approved By) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bene Residence Type --></label>
+    <name>Bene_Residence_Type__c</name>
+    <picklistValues>
+        <masterLabel>Apartment/Duplex</masterLabel>
+        <translation><!-- Apartment/Duplex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assisted Living Center</masterLabel>
+        <translation><!-- Assisted Living Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Group Home</masterLabel>
+        <translation><!-- Group Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HCS Host Home</masterLabel>
+        <translation><!-- HCS Host Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing Home</masterLabel>
+        <translation><!-- Nursing Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other (specify)</masterLabel>
+        <translation><!-- Other (specify) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Home</masterLabel>
+        <translation><!-- Private Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rehab Center/Hospital</masterLabel>
+        <translation><!-- Rehab Center/Hospital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Supported Living Center</masterLabel>
+        <translation><!-- State Supported Living Center --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

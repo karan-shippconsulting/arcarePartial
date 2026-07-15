@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Not_Update_if_Approved_or_Invoiced</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ischanged(Quantity__c ),
+ ischanged(Unit_Price__c )), OR(Approved__c =True, !isblank(Opportunity_Product__c )))</errorConditionFormula>
+    <errorMessage>You can not update a Time Entry that has been Approved or Invoiced.</errorMessage>
+</ValidationRule>

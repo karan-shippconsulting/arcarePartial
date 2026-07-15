@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Line_2__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  CONTAINS(Street, MID($Setup.Global__c.CRLF__c, 3, 1)),
+  MID(
+    Street,
+    FIND(MID($Setup.Global__c.CRLF__c, 3, 1), Street) + 1,
+    LEN(Street)
+  ),
+  &quot;&quot;
+)</formula>
+    <label>Address Line 2</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

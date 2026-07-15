@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EFT_Disbursements_Friday_3_days_ago</fullName>
+    <columns>NAME</columns>
+    <columns>Processed_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Type__c</columns>
+    <columns>Payee_Name__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Trust__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Disbursement</value>
+    </filters>
+    <filters>
+        <field>Processed_Date__c</field>
+        <operation>equals</operation>
+        <value>N_DAYS_AGO:3</value>
+    </filters>
+    <filters>
+        <field>Payment_Method__c</field>
+        <operation>equals</operation>
+        <value>EFT</value>
+    </filters>
+    <filters>
+        <field>Display_Category__c</field>
+        <operation>notContain</operation>
+        <value>Maintenance Fee</value>
+    </filters>
+    <filters>
+        <field>Payee_Name__c</field>
+        <operation>notEqual</operation>
+        <value>True Link Financial Inc</value>
+    </filters>
+    <filters>
+        <field>Payee_Name__c</field>
+        <operation>notEqual</operation>
+        <value>Haley D. Greer</value>
+    </filters>
+    <filters>
+        <field>Payee_Name__c</field>
+        <operation>notEqual</operation>
+        <value>The Arc of TX</value>
+    </filters>
+    <label>ACH Disbursements - Friday (3 days ago)</label>
+</ListView>

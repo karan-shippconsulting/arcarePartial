@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Fair</fullName>
+        <default>false</default>
+        <label>Fair</label>
+    </customValue>
+    <customValue>
+        <fullName>Lifelong</fullName>
+        <default>false</default>
+        <label>Lifelong</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Progressive</fullName>
+        <default>false</default>
+        <label>Progressive</label>
+    </customValue>
+    <customValue>
+        <fullName>Stable</fullName>
+        <default>false</default>
+        <label>Stable</label>
+    </customValue>
+    <masterLabel>Prognosis</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

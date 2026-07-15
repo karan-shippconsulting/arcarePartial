@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Incident Type --></label>
+    <name>Incident_Type__c</name>
+    <picklistValues>
+        <masterLabel>ABLE accounts</masterLabel>
+        <translation><!-- ABLE accounts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APS/CPS</masterLabel>
+        <translation><!-- APS/CPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits</masterLabel>
+        <translation><!-- Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crime</masterLabel>
+        <translation><!-- Crime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drug/Alcohol</masterLabel>
+        <translation><!-- Drug/Alcohol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emergency</masterLabel>
+        <translation><!-- Emergency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exploitation</masterLabel>
+        <translation><!-- Exploitation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food</masterLabel>
+        <translation><!-- Food --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Coordination/Assistance</masterLabel>
+        <translation><!-- General Coordination/Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guardianship</masterLabel>
+        <translation><!-- Guardianship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Housing</masterLabel>
+        <translation><!-- Housing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hygiene (environmental/personal)</masterLabel>
+        <translation><!-- Hygiene (environmental/personal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal issues</masterLabel>
+        <translation><!-- Legal issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical</masterLabel>
+        <translation><!-- Medical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shopping/Budgeting</masterLabel>
+        <translation><!-- Shopping/Budgeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicles</masterLabel>
+        <translation><!-- Vehicles --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Intake Status --></label>
+    <name>Intake_Status__c</name>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation><!-- Inactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intake</masterLabel>
+        <translation><!-- Intake --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Processed</masterLabel>
+        <translation><!-- Processed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready to Process</masterLabel>
+        <translation><!-- Ready to Process --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

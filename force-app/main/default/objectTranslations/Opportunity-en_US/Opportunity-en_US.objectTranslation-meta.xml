@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fund Development</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fund Developments</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Client Invoice --></label>
+        <name>Client_Invoice</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Donation --></label>
+        <name>Donation</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- Bulk_Email_Template_Manager --></label>
+        <name>Bulk_Email_Template_Manager</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bulk_Print_Invoices --></label>
+        <name>Bulk_Print_Invoices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bulk_Template_Manager --></label>
+        <name>Bulk_Template_Manager</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Client_Invoice_Combined --></label>
+        <name>Client_Invoice_Combined</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,19 @@
+<apex:page >
+    <div style="text-align:right; padding:20px">
+        <div>
+            <img class="logo" src="{!$User.Pdf_Signature__c}" title="" alt="Signature" />
+        </div> 
+        <div style="padding-top: 5px">
+            Date: &nbsp;
+            <apex:outputText value="{0,date,medium} ">  
+                <apex:param value="{!NOW()}"/>  
+            </apex:outputText>  
+        </div>
+        <div>
+            {!$User.FirstName}&nbsp;{!$User.LastName}
+        </div>
+        <div>
+            {!$User.Title}
+        </div>
+    </div>
+</apex:page>

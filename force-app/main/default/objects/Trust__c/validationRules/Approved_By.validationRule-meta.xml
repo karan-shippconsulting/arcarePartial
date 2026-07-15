@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_By</fullName>
+    <active>true</active>
+    <description>Approved By Restrictions</description>
+    <errorConditionFormula>AND(ISCHANGED(Approved_By__c),  
+$User.Can_Approve_Trusts__c = FALSE)</errorConditionFormula>
+    <errorMessage>Only certain users are authorized to approve trusts.</errorMessage>
+</ValidationRule>

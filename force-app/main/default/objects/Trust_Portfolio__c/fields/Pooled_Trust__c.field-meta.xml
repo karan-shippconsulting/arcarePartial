@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pooled_Trust__c</fullName>
+    <label>Pooled Trust</label>
+    <referenceTo>Pooled_Trust__c</referenceTo>
+    <relationshipLabel>Trust Portfolios</relationshipLabel>
+    <relationshipName>Trust_Portfolios</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <decisions>
+        <name>Check_Representative_Payee_Account_Type</name>
+        <label>Check Representative Payee Account Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Not Person Account</defaultConnectorLabel>
+        <rules>
+            <name>Representative_Payee_Is_Person_Account</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Representative_Payee__r.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>012Hp000001vI30IAE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Representative_Payee__r.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>012Hp000001vIOmIAM</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Representative_Payee_Contact</targetReference>
+            </connector>
+            <label>Representative Payee Is Person Account</label>
+        </rules>
+    </decisions>
+    <description>3/16/26: Added Representative Payee lookups to populate from Beneficiary</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DisbursementEnabledFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>if(text({!$Record.Disbursement_Status__c})=&quot;Not Authorized&quot;,False,True)</expression>
+    </formulas>
+    <interviewLabel>Trust Create and Edit Before Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Trust Create and Edit Before Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Representative_Payee_Contact</name>
+        <label>Update Representative Payee Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Representative_Payee_Contact__c</field>
+            <value>
+                <elementReference>$Record.Representative_Payee__r.PersonContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Trust</name>
+        <label>Update Trust</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Representative_Payee_Account_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Disbursement_Creation_Enabled__c</field>
+            <value>
+                <elementReference>DisbursementEnabledFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Representative_Payee_Contact__c</field>
+            <value>
+                <elementReference>$Record.Beneficiary__r.Representative_Payee_Contact__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Representative_Payee__c</field>
+            <value>
+                <elementReference>$Record.Beneficiary__r.Representative_Payee__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Trust</targetReference>
+        </connector>
+        <object>Trust__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trigger_60_day_Reminder_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>This box will be automatically checked if the Onboarding record remains in the Pending status for 60 days or more. When checked, this field triggers a reminder automation that sends an email to the record owner, notifying them that the record has been in this status for over 60 days.</inlineHelpText>
+    <label>Trigger 60-day Reminder Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

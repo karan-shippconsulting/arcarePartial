@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payee_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(Payee_City__c ), &quot;&quot;, 
+ (Payee_Street_1__c &amp; br() &amp;
+ IF( ISBLANK(Payee_Street_2__c), &quot;&quot;,  Payee_Street_2__c &amp; br()) &amp; Payee_City__c &amp; &quot;,  &quot; &amp; 
+ Payee_State__c &amp; &quot; &quot; &amp; Payee_Zip__c)
+ )</formula>
+    <label>Payee Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

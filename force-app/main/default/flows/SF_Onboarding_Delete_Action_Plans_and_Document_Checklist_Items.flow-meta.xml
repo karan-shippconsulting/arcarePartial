@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Check_if_Action_Plans_Exist</name>
+        <label>Check if Action Plans Exist</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Check_if_Document_Checklist_Items_Exist</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ac</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Action_Plans</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Action_Plans</targetReference>
+            </connector>
+            <label>Action Plans Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Document_Checklist_Items_Exist</name>
+        <label>Check if Document Checklist Items Exist</label>
+        <locationX>182</locationX>
+        <locationY>866</locationY>
+        <defaultConnector>
+            <targetReference>Clear_Trust_Type_and_MSA_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Document_Checklist_Items_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Document_Checklist_Items</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Document_Checklist_Items</targetReference>
+            </connector>
+            <label>Document Checklist Items Exist</label>
+        </rules>
+    </decisions>
+    <description>This flow deletes all Action Plans and Document Checklist Items associated with an Onboarding (Case). It also removes the values in the Trust Type and MSA Type fields. This is used when a beneficiary&apos;s Trust Type changes, ensuring outdated records are cleared and allowing for the creation of new, relevant Action Plans and Document Checklist Items.</description>
+    <environments>Default</environments>
+    <interviewLabel>SF - Onboarding - Delete Action Plans and Document Checklist Items {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SF - Onboarding - Delete Action Plans and Document Checklist Items</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordDeletes>
+        <name>Delete_Action_Plans</name>
+        <label>Delete Action Plans</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
+        <connector>
+            <targetReference>Check_if_Document_Checklist_Items_Exist</targetReference>
+        </connector>
+        <inputReference>Get_Action_Plans</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <name>Delete_Document_Checklist_Items</name>
+        <label>Delete Document Checklist Items</label>
+        <locationX>50</locationX>
+        <locationY>974</locationY>
+        <connector>
+            <targetReference>Clear_Trust_Type_and_MSA_Type</targetReference>
+        </connector>
+        <inputReference>Get_Document_Checklist_Items</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Get_Action_Plans</name>
+        <label>Get Action Plans</label>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Document_Checklist_Items</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>TargetId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ActionPlan</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Document_Checklist_Items</name>
+        <label>Get Document Checklist Items</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_Action_Plans_Exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentRecordId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>DocumentChecklistItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Clear_Trust_Type_and_MSA_Type</name>
+        <label>Clear Trust Type and MSA Type</label>
+        <locationX>182</locationX>
+        <locationY>1166</locationY>
+        <connector>
+            <targetReference>Confirmation_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MSA_Type__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Trust_Type__c</field>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <screens>
+        <name>Confirm_Deletion</name>
+        <label>Confirm Deletion</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Get_Action_Plans</targetReference>
+        </connector>
+        <fields>
+            <name>Confirm_Deleting_Records</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Are you sure you want to proceed with deleting the Action Plans and Document Checklist Items for this Onboarding? &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;This action cannot be undone.&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Confirm</nextOrFinishButtonLabel>
+        <pauseButtonLabel>Cancel</pauseButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Confirmation_Screen</name>
+        <label>Confirmation Screen</label>
+        <locationX>182</locationX>
+        <locationY>1274</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Deletion_Confirmation</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Success! All related Action Plans and Document Checklist Items for this Onboarding have been successfully deleted.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Warning_Deletion_of_Records</name>
+        <label>Warning - Deletion of Records</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Confirm_Deletion</targetReference>
+        </connector>
+        <fields>
+            <name>Warning_Text</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;⚠️ &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Warning:&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; This automation will &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;delete related records for this Onboarding&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; (Action Plans and Document Checklist Items). It is used in case you need to change the Trust Type of a beneficiary. &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;This action is irreversible.&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; It will also clear the values in the Trust Type and MSA Type fields. Are you sure you want to continue?&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Yes</nextOrFinishButtonLabel>
+        <pauseButtonLabel>No</pauseButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Warning_Deletion_of_Records</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason JA Returned --></label>
+    <name>Reason_JA_Returned__c</name>
+    <picklistValues>
+        <masterLabel>&quot;Acknowledgement of Grantor’s Signature” (PAGE 10 of JOINDER AGREEMENT) is not signed and/or notarized with Notary&apos;s stamp/seal applied.</masterLabel>
+        <translation><!-- &quot;Acknowledgement of Grantor’s Signature” (PAGE 10 of JOINDER AGREEMENT) is not signed and/or notarized with Notary&apos;s stamp/seal applied. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits questions not answered</masterLabel>
+        <translation><!-- Benefits questions not answered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Court Orders are missing</masterLabel>
+        <translation><!-- Court Orders are missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date of birth missing</masterLabel>
+        <translation><!-- Date of birth missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grantor(s) signatures missing (PAGE 10 of JOINDER AGREEMENT)</masterLabel>
+        <translation><!-- Grantor(s) signatures missing (PAGE 10 of JOINDER AGREEMENT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Required Information:</masterLabel>
+        <translation><!-- Missing Required Information: --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Original Joinder Agreement not sent</masterLabel>
+        <translation><!-- Original Joinder Agreement not sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Security Number missing</masterLabel>
+        <translation><!-- Social Security Number missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supplemental Information Form is missing</masterLabel>
+        <translation><!-- Supplemental Information Form is missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Master Pooled Trust has been unsuccessful in our attempts to reach you.</masterLabel>
+        <translation><!-- The Master Pooled Trust has been unsuccessful in our attempts to reach you. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Beneficiary</masterLabel>
+        <translation><!-- Wrong Beneficiary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Grantor</masterLabel>
+        <translation><!-- Wrong Grantor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

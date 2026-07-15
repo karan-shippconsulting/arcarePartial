@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rollup_Amount__c</fullName>
+    <formula>Case(Status__c , 
+&quot;Cancelled&quot;,0,
+&quot;Denied&quot;,0,
+IF(AND(Status__c = &quot;Approved&quot;, fromRecurring__c  = TRUE),0,
+IF(Amount__c &lt;=0, Amount__c, 
+Case(TEXT(Type__c),&quot;Deposit&quot;,1,&quot;Disbursement&quot;,-1,1)*Amount__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Rollup Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

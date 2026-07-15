@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filed_Date_Blank</fullName>
+    <columns>NAME</columns>
+    <columns>Completed_Date__c</columns>
+    <columns>Date_Range_Start__c</columns>
+    <columns>Date_Range_End__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Filing_Not_Required__c</columns>
+    <columns>Trigger_Task__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Completed_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Filing_Not_Required__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Filed Date Blank</label>
+</ListView>

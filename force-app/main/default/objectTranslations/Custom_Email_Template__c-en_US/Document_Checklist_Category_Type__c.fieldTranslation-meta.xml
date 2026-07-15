@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Document Checklist Category Type --></label>
+    <name>Document_Checklist_Category_Type__c</name>
+    <picklistValues>
+        <masterLabel>1099</masterLabel>
+        <translation><!-- 1099 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Annual Accounting</masterLabel>
+        <translation><!-- Annual Accounting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bene DRF Request</masterLabel>
+        <translation><!-- Bene DRF Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beneficiary Contact</masterLabel>
+        <translation><!-- Beneficiary Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CM Reports</masterLabel>
+        <translation><!-- CM Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change of PR</masterLabel>
+        <translation><!-- Change of PR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Correspondence</masterLabel>
+        <translation><!-- Correspondence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Court Order</masterLabel>
+        <translation><!-- Court Order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Death Certificate</masterLabel>
+        <translation><!-- Death Certificate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disbursements (on the D. Ober TL card)</masterLabel>
+        <translation><!-- Disbursements (on the D. Ober TL card) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grantor Letter</masterLabel>
+        <translation><!-- Grantor Letter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>House Deed</masterLabel>
+        <translation><!-- House Deed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Important information/documents</masterLabel>
+        <translation><!-- Important information/documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incoming</masterLabel>
+        <translation><!-- Incoming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joinder Agreement</masterLabel>
+        <translation><!-- Joinder Agreement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Letter of Guardianship</masterLabel>
+        <translation><!-- Letter of Guardianship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost Receipt Form</masterLabel>
+        <translation><!-- Lost Receipt Form --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outgoing</masterLabel>
+        <translation><!-- Outgoing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA</masterLabel>
+        <translation><!-- POA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PR Contact</masterLabel>
+        <translation><!-- PR Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prepaid Funeral</masterLabel>
+        <translation><!-- Prepaid Funeral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TMHP Death Verification</masterLabel>
+        <translation><!-- TMHP Death Verification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicle Title</masterLabel>
+        <translation><!-- Vehicle Title --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

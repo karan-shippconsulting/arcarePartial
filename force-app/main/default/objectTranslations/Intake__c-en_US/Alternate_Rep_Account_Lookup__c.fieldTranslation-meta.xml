@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Alternate Rep Account Lookup --></label>
+    <name>Alternate_Rep_Account_Lookup__c</name>
+    <relationshipLabel><!-- Intake (Alternate Rep Account Lookup) --></relationshipLabel>
+</CustomFieldTranslation>

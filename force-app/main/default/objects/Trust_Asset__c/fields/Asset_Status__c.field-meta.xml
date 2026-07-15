@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Status__c</fullName>
+    <label>Asset Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disposed</fullName>
+                <default>false</default>
+                <label>Disposed</label>
+            </value>
+            <value>
+                <fullName>Donated</fullName>
+                <default>false</default>
+                <label>Donated</label>
+            </value>
+            <value>
+                <fullName>Gave Away</fullName>
+                <default>false</default>
+                <label>Gave Away</label>
+            </value>
+            <value>
+                <fullName>Own</fullName>
+                <default>false</default>
+                <label>Own</label>
+            </value>
+            <value>
+                <fullName>Released</fullName>
+                <default>false</default>
+                <label>Released</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

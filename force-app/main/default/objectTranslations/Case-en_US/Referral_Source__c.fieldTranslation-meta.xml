@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Referral Source --></label>
+    <name>Referral_Source__c</name>
+    <picklistValues>
+        <masterLabel>Advertisement</masterLabel>
+        <translation><!-- Advertisement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Another organization</masterLabel>
+        <translation><!-- Another organization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attorney</masterLabel>
+        <translation><!-- Attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employee Referral</masterLabel>
+        <translation><!-- Employee Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Estate planning attorney</masterLabel>
+        <translation><!-- Estate planning attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>External Referral</masterLabel>
+        <translation><!-- External Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Friends</masterLabel>
+        <translation><!-- Friends --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parents</masterLabel>
+        <translation><!-- Parents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal injury attorney</masterLabel>
+        <translation><!-- Personal injury attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Relations</masterLabel>
+        <translation><!-- Public Relations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seminar - Internal</masterLabel>
+        <translation><!-- Seminar - Internal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seminar - Partner</masterLabel>
+        <translation><!-- Seminar - Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trade Show</masterLabel>
+        <translation><!-- Trade Show --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web</masterLabel>
+        <translation><!-- Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Word of mouth</masterLabel>
+        <translation><!-- Word of mouth --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

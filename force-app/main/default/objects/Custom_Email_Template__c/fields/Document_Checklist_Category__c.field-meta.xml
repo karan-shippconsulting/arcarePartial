@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Checklist_Category__c</fullName>
+    <label>Document Checklist Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assets</fullName>
+                <default>false</default>
+                <label>Assets</label>
+            </value>
+            <value>
+                <fullName>Benefits</fullName>
+                <default>false</default>
+                <label>Benefits</label>
+            </value>
+            <value>
+                <fullName>Caregiver Information</fullName>
+                <default>false</default>
+                <label>Caregiver Information</label>
+            </value>
+            <value>
+                <fullName>Care Management</fullName>
+                <default>false</default>
+                <label>Care Management</label>
+            </value>
+            <value>
+                <fullName>Checks</fullName>
+                <default>false</default>
+                <label>Checks</label>
+            </value>
+            <value>
+                <fullName>Contact Information</fullName>
+                <default>false</default>
+                <label>Contact Information</label>
+            </value>
+            <value>
+                <fullName>Correspondence</fullName>
+                <default>false</default>
+                <label>Correspondence</label>
+            </value>
+            <value>
+                <fullName>Court Documents</fullName>
+                <default>false</default>
+                <label>Court Documents</label>
+            </value>
+            <value>
+                <fullName>Death-related Documents</fullName>
+                <default>false</default>
+                <label>Death-related Documents</label>
+            </value>
+            <value>
+                <fullName>Disbursements</fullName>
+                <default>false</default>
+                <label>Disbursements</label>
+            </value>
+            <value>
+                <fullName>End of Life Documents</fullName>
+                <default>false</default>
+                <label>End of Life Documents</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous/Other</fullName>
+                <default>false</default>
+                <label>Miscellaneous/Other</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous Client Documents</fullName>
+                <default>false</default>
+                <label>Miscellaneous Client Documents</label>
+            </value>
+            <value>
+                <fullName>Personal/photos</fullName>
+                <default>false</default>
+                <label>Personal/photos</label>
+            </value>
+            <value>
+                <fullName>Public Benefit Correspondance</fullName>
+                <default>false</default>
+                <label>Public Benefit Correspondance</label>
+            </value>
+            <value>
+                <fullName>Receipts</fullName>
+                <default>false</default>
+                <label>Receipts</label>
+            </value>
+            <value>
+                <fullName>Tax Documents</fullName>
+                <default>false</default>
+                <label>Tax Documents</label>
+            </value>
+            <value>
+                <fullName>Trust Documents</fullName>
+                <default>false</default>
+                <label>Trust Documents</label>
+            </value>
+            <value>
+                <fullName>Accounting/Statements</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Accounting/Statements</label>
+            </value>
+            <value>
+                <fullName>Assessment and Plan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Assessment and Plan</label>
+            </value>
+            <value>
+                <fullName>Identification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Identification</label>
+            </value>
+            <value>
+                <fullName>Leases</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Leases</label>
+            </value>
+            <value>
+                <fullName>Representative Payee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Representative Payee</label>
+            </value>
+            <value>
+                <fullName>SNRs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SNRs</label>
+            </value>
+            <value>
+                <fullName>Supplemental Needs-Distribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Supplemental Needs-Distribution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

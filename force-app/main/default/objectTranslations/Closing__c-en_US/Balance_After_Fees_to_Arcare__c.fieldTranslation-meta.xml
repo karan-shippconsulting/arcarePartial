@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Balance After Fees multiplied by Percent Leaving to The Arc --></help>
+    <label><!-- Balance After Fees/% to Arcare --></label>
+    <name>Balance_After_Fees_to_Arcare__c</name>
+</CustomFieldTranslation>

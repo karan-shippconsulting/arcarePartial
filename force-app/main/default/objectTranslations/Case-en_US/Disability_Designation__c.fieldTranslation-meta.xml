@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Disability Designation --></label>
+    <name>Disability_Designation__c</name>
+    <picklistValues>
+        <masterLabel>Amputation</masterLabel>
+        <translation><!-- Amputation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attention deficit hyperactivity disorder (ADHD)</masterLabel>
+        <translation><!-- Attention deficit hyperactivity disorder (ADHD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autism spectrum</masterLabel>
+        <translation><!-- Autism spectrum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autoimmune</masterLabel>
+        <translation><!-- Autoimmune --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Behavior disorder</masterLabel>
+        <translation><!-- Behavior disorder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bipolar</masterLabel>
+        <translation><!-- Bipolar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancer</masterLabel>
+        <translation><!-- Cancer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cerebral palsy</masterLabel>
+        <translation><!-- Cerebral palsy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cystic fibrosis</masterLabel>
+        <translation><!-- Cystic fibrosis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deaf or hard of hearing</masterLabel>
+        <translation><!-- Deaf or hard of hearing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Developmental disability</masterLabel>
+        <translation><!-- Developmental disability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Down syndrome</masterLabel>
+        <translation><!-- Down syndrome --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Epilepsy</masterLabel>
+        <translation><!-- Epilepsy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fibromyalgia</masterLabel>
+        <translation><!-- Fibromyalgia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intellectual and developmental disability (IDD)</masterLabel>
+        <translation><!-- Intellectual and developmental disability (IDD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental health</masterLabel>
+        <translation><!-- Mental health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple sclerosis (MS)</masterLabel>
+        <translation><!-- Multiple sclerosis (MS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Muscular dystrophy</masterLabel>
+        <translation><!-- Muscular dystrophy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Musculoskeletal</masterLabel>
+        <translation><!-- Musculoskeletal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neurological</masterLabel>
+        <translation><!-- Neurological --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Obsessive compulsive disorder (OCD)</masterLabel>
+        <translation><!-- Obsessive compulsive disorder (OCD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Physical disability</masterLabel>
+        <translation><!-- Physical disability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post-traumatic stress disorder (PTSD)</masterLabel>
+        <translation><!-- Post-traumatic stress disorder (PTSD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schizophrenia</masterLabel>
+        <translation><!-- Schizophrenia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Speech or language impairment</masterLabel>
+        <translation><!-- Speech or language impairment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spinal cord injury</masterLabel>
+        <translation><!-- Spinal cord injury --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tourette syndrome</masterLabel>
+        <translation><!-- Tourette syndrome --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traumatic brain injury (TBI)</masterLabel>
+        <translation><!-- Traumatic brain injury (TBI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visual impairment</masterLabel>
+        <translation><!-- Visual impairment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

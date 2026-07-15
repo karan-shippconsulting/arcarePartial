@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Display_Category__c</columns>
+    <columns>Distribution_Type__c</columns>
+    <columns>Payee_Name__c</columns>
+    <columns>Frequency_Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Transaction_Status__c</columns>
+    <columns>Rollup_Amount__c</columns>
+    <columns>fromRecurring__c</columns>
+    <columns>Type__c</columns>
+    <columns>Type_Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>fromRecurring__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Recurring</label>
+</ListView>

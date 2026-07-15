@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>USPlatinumGold_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>US - Platinum/Gold</label>
+    <queue>USPlatinumGold</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

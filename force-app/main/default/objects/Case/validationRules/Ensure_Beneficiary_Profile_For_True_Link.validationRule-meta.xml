@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensure_Beneficiary_Profile_For_True_Link</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Enter_to_TrueLink_now__c, &quot;Yes&quot;),
+    ISBLANK(Beneficiary_Profile__c)
+)</errorConditionFormula>
+    <errorMessage>A Beneficiary Profile is required to sync data with True Link. Convert the related Lead to create a Beneficiary Account.</errorMessage>
+</ValidationRule>

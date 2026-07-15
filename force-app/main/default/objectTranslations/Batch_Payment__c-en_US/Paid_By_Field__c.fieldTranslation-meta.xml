@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Paid By Field --></label>
+    <name>Paid_By_Field__c</name>
+    <relationshipLabel><!-- Batch Payments --></relationshipLabel>
+</CustomFieldTranslation>

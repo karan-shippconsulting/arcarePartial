@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Check Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Check Logs</value>
+    </caseValues>
+    <layouts>
+        <layout>Check Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Return Information --></label>
+            <section>Return Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template EditorOLD --></label>
+        <name>Email_Template_EditorOLD</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please fill in the Beneficiary and the Trust fields before checking Out --></errorMessage>
+        <name>Enrollment_Fee_Need_Beneficiary_Trust</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Check_Log --></label>
+        <name>New_Check_Log</name>
+    </webLinks>
+</CustomObjectTranslation>

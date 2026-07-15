@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Balance_After_Fees_to_Arcare__c</fullName>
+    <formula>Balance_After_Fees__c * Percent_Leaving_to_Arcare__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Balance After Fees multiplied by Percent Leaving to The Arc</inlineHelpText>
+    <label>Balance After Fees/% to Arcare</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

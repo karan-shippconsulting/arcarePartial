@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This box is checked if funds are held in set-aside --></help>
+    <label><!-- Funds in Set-Aside --></label>
+    <name>Funds_in_Set_Aside__c</name>
+</CustomFieldTranslation>

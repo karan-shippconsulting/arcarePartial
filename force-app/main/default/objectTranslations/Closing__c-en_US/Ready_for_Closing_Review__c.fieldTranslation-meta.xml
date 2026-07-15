@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This date is used once all aspects of closing have been completed and ready for Deputy Director to review, --></help>
+    <label><!-- Ready for Closing Review --></label>
+    <name>Ready_for_Closing_Review__c</name>
+</CustomFieldTranslation>

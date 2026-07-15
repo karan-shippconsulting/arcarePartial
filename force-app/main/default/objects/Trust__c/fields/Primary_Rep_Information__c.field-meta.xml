@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Rep_Information__c</fullName>
+    <externalId>false</externalId>
+    <formula>Primary_Representative__r.FirstName + &quot; &quot; + Primary_Representative__r.LastName &amp; BR() &amp;
+Primary_Representative__r.BillingStreet &amp;BR() &amp;
+Primary_Representative__r.BillingCity + &quot;,&quot; +  Primary_Representative__r.BillingState &amp; Primary_Representative__r.BillingPostalCode  &amp;BR() &amp;
+Primary_Representative__r.Phone &amp;BR() &amp;
+Primary_Rep_Email_Formula__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Primary Rep Information</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Grantor #2 Account Lookup --></label>
+    <name>Grantor_2_Account_Lookup__c</name>
+    <relationshipLabel><!-- Intake (Grantor #2 Lookup) --></relationshipLabel>
+</CustomFieldTranslation>

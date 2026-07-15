@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- How Heard About Us --></label>
+    <name>How_Heard_About_Us__c</name>
+    <picklistValues>
+        <masterLabel>Accountant</masterLabel>
+        <translation><!-- Accountant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attorney</masterLabel>
+        <translation><!-- Attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brochure/Newsletter about CFPD</masterLabel>
+        <translation><!-- Brochure/Newsletter about CFPD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Community Organization</masterLabel>
+        <translation><!-- Community Organization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Family/Friend</masterLabel>
+        <translation><!-- Family/Friend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Professional</masterLabel>
+        <translation><!-- Financial Professional --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internet Search</masterLabel>
+        <translation><!-- Internet Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presentation/Workshop/Conference</masterLabel>
+        <translation><!-- Presentation/Workshop/Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Previous Experience with CFPD</masterLabel>
+        <translation><!-- Previous Experience with CFPD --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

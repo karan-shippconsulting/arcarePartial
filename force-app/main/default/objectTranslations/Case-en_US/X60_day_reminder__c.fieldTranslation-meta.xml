@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is automatically populated once the 60-day reminder email has been sent to the client, triggered when the Onboarding status has been in Pending for 60 days. --></help>
+    <label><!-- 60-day reminder --></label>
+    <name>X60_day_reminder__c</name>
+</CustomFieldTranslation>

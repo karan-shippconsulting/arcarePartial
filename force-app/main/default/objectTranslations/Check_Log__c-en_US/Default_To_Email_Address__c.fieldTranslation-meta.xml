@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Primary Rep&apos;s Email --></help>
+    <label><!-- Default To Email Address --></label>
+    <name>Default_To_Email_Address__c</name>
+</CustomFieldTranslation>

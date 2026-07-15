@@ -1,0 +1,45 @@
+<apex:page Controller="summaryTemplateController" applyHtmlTag="false" showHeader="false" renderAs="pdf">
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    </head>
+    <apex:variable var="count" value="{!0}" /> 
+    <apex:repeat value="{!tranxList}" var="tranx">
+        <apex:variable var="count" value="{!count+1}" /> 
+        <div>
+            <div  style="{!IF(tranxList.size!=count,'page-break-after:always;','')}"> 
+            <div class="columnlogo">
+                <apex:outputPanel rendered="{!!noLetterHead}">
+                        <!--<apex:image id="theImage" value="{!$Resource.Left_logo}" width="100%" height="100%" alt="Description of image here"/>-->
+                    </apex:outputPanel>
+                <!--apex:image id="theImage" value="{!$Resource.Left_logo}" width="100%" height="100%" alt="Description of image here"/>-->
+            </div>
+            <div class="column" >
+                <p style="margin:0;">{!tranx.Primary_Rep_Name__c}
+                 <hr style="border-bottom: 3px solid #000;margin-bottom:10px;"/>
+                </p>
+                <table>
+                    <tr>
+                        <td style="padding-right: 150px;"><strong>To:</strong></td>
+                        <td>{!tranx.Primary_Rep_Email__c}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 150px;"><strong>Subject:</strong></td>
+                        <td>Disbursement from The Arc of Texas</td>
+                    </tr>
+                </table>
+                <p>Dear {!tranx.Primary_Rep_First_Name__c},</p>
+                <p>RE: {!tranx.Beneficiary__r.Full_Name__c}, Acct #{!tranx.Trust__r.Internal_Account_Number__c}</p>
+                <p>We have received your disbursement request, on behalf of {!tranx.Beneficiary__r.Full_Name__c}, as follows:</p>
+                <p>Payee: {!tranx.Payee_Name__c}
+                   <br />Amount: ${!tranx.Amount__c}
+                   <br />Method: ACH (in 2 - 3 days)
+                </p>
+                <p>The Arc of Texas has approved the request and sent it to True Link for processing.</p>
+                <p>Please call (512) 454-6694, toll-free 1-800-252-9729 or email <a data-fr-linked="true" href="mailto:trust@thearcoftexas.org">trust@thearcoftexas.org</a> if you have any<br />questions.</p>
+                <p>Sincerely,<br/>
+                 THE MASTER POOLED TRUST</p>
+            </div >
+        </div>
+        </div>
+    </apex:repeat>
+</apex:page>

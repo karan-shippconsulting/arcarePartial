@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- If in a supervised living setting --></label>
+    <name>If_in_a_supervised_living_setting__c</name>
+    <picklistValues>
+        <masterLabel>Group Home</masterLabel>
+        <translation><!-- Group Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing Home</masterLabel>
+        <translation><!-- Nursing Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staffed Apartment</masterLabel>
+        <translation><!-- Staffed Apartment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

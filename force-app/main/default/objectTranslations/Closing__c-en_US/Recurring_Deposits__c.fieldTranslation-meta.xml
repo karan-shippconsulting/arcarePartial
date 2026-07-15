@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Yes, please contact the remitter to cease the deposits. --></help>
+    <label><!-- Recurring Deposits --></label>
+    <name>Recurring_Deposits__c</name>
+</CustomFieldTranslation>

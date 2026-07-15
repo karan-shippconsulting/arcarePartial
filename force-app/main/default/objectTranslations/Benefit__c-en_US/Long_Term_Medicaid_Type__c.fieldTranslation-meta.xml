@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Long Term Medicaid Type --></label>
+    <name>Long_Term_Medicaid_Type__c</name>
+    <picklistValues>
+        <masterLabel>CFC (Community First Choice)</masterLabel>
+        <translation><!-- CFC (Community First Choice) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DAHS (Day Activity and Health Services)</masterLabel>
+        <translation><!-- DAHS (Day Activity and Health Services) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing Home</masterLabel>
+        <translation><!-- Nursing Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PHC (Primary Home Care)</masterLabel>
+        <translation><!-- PHC (Primary Home Care) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Will or Revocable Living Trust - Deferred Funding --></help>
+    <label><!-- Will or Revocable Living Trust --></label>
+    <name>Will_or_Revocable_Living_Trust__c</name>
+</CustomFieldTranslation>

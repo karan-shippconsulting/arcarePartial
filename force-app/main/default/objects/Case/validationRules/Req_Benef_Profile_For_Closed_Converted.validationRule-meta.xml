@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Req_Benef_Profile_For_Closed_Converted</fullName>
+    <active>false</active>
+    <description>Validates Beneficiary Profile is populated when Status is Closed - Converted.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Closed - Converted&quot;),
+    ISBLANK(Beneficiary_Profile__c)
+)</errorConditionFormula>
+    <errorDisplayField>Beneficiary_Profile__c</errorDisplayField>
+    <errorMessage>Beneficiary Profile is required when the Status is set to Closed - Converted. This field is populated after the lead has been converted. Make sure to convert the lead before changing the status.</errorMessage>
+</ValidationRule>

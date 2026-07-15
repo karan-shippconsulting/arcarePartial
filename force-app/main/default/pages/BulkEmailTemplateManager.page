@@ -1,0 +1,46 @@
+<apex:page standardController="Opportunity" recordSetVar="opp" extensions="BulkEmailTemplateManagerController" lightningStylesheets="true" showHeader="true" applyHtmlTag="true" applyBodyTag="false" >
+    <apex:includeLightning />
+    <apex:pageMessages id="someMessages" />
+    <style>
+        .lightningContainer{
+        height:100%
+        }
+        
+    </style>
+    <head>
+        <apex:slds />          
+    </head>
+    <body  class="slds-scope" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div id="lightningContainer" />
+    </body>
+    
+    
+    <script>
+    document.addEventListener('lightning__showtoast', event => {
+        sforce.one.showToast(event.toastAttributes);
+    });
+        
+        $Lightning.use("c:bulkEmailContainer", function() {
+        $Lightning.createComponent("c:bulkEmailTemplate",
+        { recordIds:"{!selectedIds}" },
+                              "lightningContainer",
+                              function(cmp) {
+                                  console.log("LWC Loaded Successfully");
+                                  var selectedIds = "{!selectedIds}";
+                                  console.log(selectedIds);
+                                  if(!selectedIds || selectedIds.trim() === ""){
+                                      console.log('No Records selected');
+                                      sforce.one.showToast({
+                                          "title": "Error!",
+                                          "message": "Please select a record to proceed further.",
+                                          "type": "error"
+                                      });
+                                       setTimeout(() => {
+                                        window.history.back();
+                                    }, 1000); 
+                                  }
+                              }
+                             );
+    });
+    </script>
+</apex:page>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Onboarding</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Onboardings</value>
+    </caseValues>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Beneficiary Information --></label>
+            <section>Beneficiary Information</section>
+        </sections>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Attempt Information --></label>
+            <section>Contact Attempt Information</section>
+        </sections>
+        <sections>
+            <label><!-- Document Checklist --></label>
+            <section>Document Checklist</section>
+        </sections>
+        <sections>
+            <label><!-- Mailing Address --></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label><!-- Onboarding --></label>
+            <section>Onboarding</section>
+        </sections>
+        <sections>
+            <label><!-- Onboarding - Automated Fields --></label>
+            <section>Onboarding - Automated Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Other Contact Information --></label>
+            <section>Other Contact Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Action Plan --></label>
+        <name>Add_Action_Plan</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- CloseCaseLightning --></label>
+        <name>CloseCaseLightning</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Case --></label>
+        <name>Close_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Delete Action Plans and Document Checklist Items --></label>
+        <name>Delete_Action_Plans_and_Document_Checklist_Items</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Template Editor --></label>
+        <name>Email_Template_Editor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Refer Elsewhere --></label>
+        <name>Refer_Elsewhere</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Upload Files --></label>
+        <name>Upload_Files</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This onboarding does not have a value on the Email field. To send the Enrollment Packet to the Beneficiary, a value must be entered. --></errorMessage>
+        <name>Enrollment_Packet_Sent_Email_Alert</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Beneficiary Profile is required to sync data with True Link. Convert the related Lead to create a Beneficiary Account. --></errorMessage>
+        <name>Ensure_Beneficiary_Profile_For_True_Link</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- MSA Type must be empty if Trust Type is not &apos;MSA&apos;. --></errorMessage>
+        <name>Ensure_MSA_Type_Empty_When_Not_MSA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a value for MSA Type when Trust Type is MSA. --></errorMessage>
+        <name>Ensure_MSA_Type_Is_Selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Beneficiary Profile is required when the Status is set to Closed - Converted. This field is populated after the lead has been converted. Make sure to convert the lead before changing the status. --></errorMessage>
+        <name>Req_Benef_Profile_For_Closed_Converted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Beneficiary ID is required before selecting &apos;Yes&apos; for &apos;Enter to True Link now?&apos;. Go to the Lead related to this Onboarding and click the Convert button so the Lead becomes a Beneficiary (Account). The Beneficiary ID will be automatically generated. --></errorMessage>
+        <name>Require_Beneficiary_ID_for_TrueLink</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An email address is required to send the &apos;Arcare Enrollment - Everything Received&apos; email. Please enter a valid email before checking this box. --></errorMessage>
+        <name>Require_Email_For_Received_Email_Send</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- SSN is a required field for True Link. Please provide the SSN when &apos;Enter to True Link now?&apos; is set to Yes. --></errorMessage>
+        <name>Require_SSN_For_TrueLink</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trust_Templates</fullName>
+    <columns>NAME</columns>
+    <columns>Parent_Object__c</columns>
+    <columns>Subject__c</columns>
+    <columns>Folder__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Parent_Object__c</field>
+        <operation>equals</operation>
+        <value>Trust__c</value>
+    </filters>
+    <label>Trust Templates</label>
+</ListView>

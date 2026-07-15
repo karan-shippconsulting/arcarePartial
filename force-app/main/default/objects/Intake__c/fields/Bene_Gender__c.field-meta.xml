@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bene_Gender__c</fullName>
+    <label>Bene Gender</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Female</fullName>
+                <default>false</default>
+                <label>Female</label>
+            </value>
+            <value>
+                <fullName>Male</fullName>
+                <default>false</default>
+                <label>Male</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Non-Binary</fullName>
+                <default>false</default>
+                <label>Non-Binary</label>
+            </value>
+            <value>
+                <fullName>Genderfluid</fullName>
+                <default>false</default>
+                <label>Genderfluid</label>
+            </value>
+            <value>
+                <fullName>Gender Non-Conforming</fullName>
+                <default>false</default>
+                <label>Gender Non-Conforming</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

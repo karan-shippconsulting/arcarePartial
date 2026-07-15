@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- To modify the Primary Representative, change the Role field on the Relationship record associated with this Trust. --></help>
+    <label><!-- Primary Representative Contact --></label>
+    <name>Primary_Representative_Contact__c</name>
+    <relationshipLabel><!-- Trusts (Primary Representative) --></relationshipLabel>
+</CustomFieldTranslation>

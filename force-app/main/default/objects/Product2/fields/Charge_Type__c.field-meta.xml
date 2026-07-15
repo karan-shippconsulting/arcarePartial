@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_Type__c</fullName>
+    <label>Charge Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CREDIT</fullName>
+                <default>false</default>
+                <label>CREDIT</label>
+            </value>
+            <value>
+                <fullName>DIRECT EXPENSE</fullName>
+                <default>false</default>
+                <label>DIRECT EXPENSE</label>
+            </value>
+            <value>
+                <fullName>HOURLY SERVICE</fullName>
+                <default>false</default>
+                <label>HOURLY SERVICE</label>
+            </value>
+            <value>
+                <fullName>FEES</fullName>
+                <default>false</default>
+                <label>FEES</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

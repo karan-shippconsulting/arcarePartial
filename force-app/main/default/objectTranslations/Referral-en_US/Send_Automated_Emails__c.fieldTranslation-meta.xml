@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When checked, Salesforce automatically emails Referrer --></help>
+    <label><!-- Send Automated Emails --></label>
+    <name>Send_Automated_Emails__c</name>
+</CustomFieldTranslation>

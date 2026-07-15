@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Power of Attorney Account Lookup --></label>
+    <name>Power_of_Attorney_Account_Lookup__c</name>
+    <relationshipLabel><!-- Intake (Power of Attorney Account Lookup) --></relationshipLabel>
+</CustomFieldTranslation>

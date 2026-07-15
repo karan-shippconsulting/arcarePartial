@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Enrollment Fee --></label>
+    <name>Enrollment_Fee__c</name>
+    <picklistValues>
+        <masterLabel>1000</masterLabel>
+        <translation><!-- 1000 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1250</masterLabel>
+        <translation><!-- 1250 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1500</masterLabel>
+        <translation><!-- 1500 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>250</masterLabel>
+        <translation><!-- 250 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>500</masterLabel>
+        <translation><!-- 500 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>750</masterLabel>
+        <translation><!-- 750 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

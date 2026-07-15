@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Quality of Life Goal --></label>
+    <name>Quality_of_Life_Goal__c</name>
+    <picklistValues>
+        <masterLabel>Dignity/Privacy</masterLabel>
+        <translation><!-- Dignity/Privacy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emotional Well-Being</masterLabel>
+        <translation><!-- Emotional Well-Being --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enjoyment</masterLabel>
+        <translation><!-- Enjoyment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Material Well-Being</masterLabel>
+        <translation><!-- Material Well-Being --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Development/Meaningful Activity</masterLabel>
+        <translation><!-- Personal Development/Meaningful Activity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Physical Comfort/Well-Being</masterLabel>
+        <translation><!-- Physical Comfort/Well-Being --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationships/Social Inclusion</masterLabel>
+        <translation><!-- Relationships/Social Inclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safety/Security/Order</masterLabel>
+        <translation><!-- Safety/Security/Order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self-Determination/Autonomy/Rights</masterLabel>
+        <translation><!-- Self-Determination/Autonomy/Rights --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spiritual Well-Being</masterLabel>
+        <translation><!-- Spiritual Well-Being --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tax Prep Fee is calculated in a flow. Use this field to adjust the amount, if needed. To decrease the Tax Prep Fee, enter a negative number here. --></help>
+    <label><!-- Adjustment to Tax Prep Fees --></label>
+    <name>Adjustment_to_Tax_Prep_Fees__c</name>
+</CustomFieldTranslation>

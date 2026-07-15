@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Denial Reason --></label>
+    <name>Denial_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paying for this expense would cause loss of government benefits</masterLabel>
+        <translation><!-- Paying for this expense would cause loss of government benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Receipts for purchases and services are required</masterLabel>
+        <translation><!-- Receipts for purchases and services are required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Disbursement Requests Form must be signed</masterLabel>
+        <translation><!-- The Disbursement Requests Form must be signed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

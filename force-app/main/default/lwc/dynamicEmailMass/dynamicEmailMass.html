@@ -1,0 +1,46 @@
+<template>
+     <template if:true={isToast}>
+        <c-toastout></c-toastout>
+     </template>
+     <!--<template if:true={isLoading}>
+        <lightning-spinner
+                alternative-text="Loading..." variant="brand">
+        </lightning-spinner>
+     </template>-->
+    <lightning-card title="Bulk Email And Print" variant="narrow" >
+    <h1 slot="title">Bulk Email And Print</h1>
+    <template if:true={hasPDFData}>
+        <div style="height:800px;" class="slds-p-around_medium">
+             <lightning-combobox label="Select Type" placeholder="Select Type" options={typeOptions}
+                onchange={handleTypeChange}></lightning-combobox>
+            <template if:true={isEmail}>
+                <lightning-combobox label="Select Template" placeholder="Select Template" options={templateListOptions}
+                onchange={handleTemplateChange}></lightning-combobox>    
+                <lightning-input type="text" variant="standard" label="From Email" disabled value={fromEmail}></lightning-input>
+                <lightning-input type="text" variant="standard" label="Email Subject" disabled value={emailSubject}></lightning-input>
+                <lightning-input-rich-text disabled=true  lwc:ref="emailBodyText" label-visible=true
+                    placeholder="Type something interesting" label="Email Body">
+                </lightning-input-rich-text>
+                </br>
+                 <template if:false={isLoaded}>
+                    <lightning-button variant="brand" style="margin:4px" label="Bulk Email" onclick={handleEmail}></lightning-button>
+                 </template>
+                <lightning-button variant="brand" style="margin:4px" label="Return to List View" onclick={handleCancel}></lightning-button>
+            </template>
+            <template if:true={isPDF}>
+                <lightning-combobox label="Select Template" placeholder="Select Template" options={templateListOptions}
+                onchange={handleTemplateChange}></lightning-combobox>    
+                </br>
+                <lightning-button variant="brand" label="Bulk Print" style="margin:4px" onclick={handlePDF}></lightning-button>
+                <lightning-button variant="brand" label="Bulk Print and Update" style="margin:4px" onclick={handlePDFAndUpdate}></lightning-button>
+                <lightning-button variant="brand" style="margin:4px" label="Return to List View" onclick={handleCancel}></lightning-button>
+                <!--<div style="height:100%;margin-top:4px">
+                    <template if:true={showIframe}>
+                        <iframe src={iframeURL} width="100%" height="100%"></iframe>
+                    </template>
+                </div>-->
+            </template>
+        </div>
+    </template>
+    </lightning-card>
+</template>

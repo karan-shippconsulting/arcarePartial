@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_Arc_of_Texas_Trust_Data</fullName>
+    <fields>View_in_True_Link__c</fields>
+    <fields>Internal_Account_Number__c</fields>
+    <fields>True_Link_Balance__c</fields>
+    <fields>Trust_Status__c</fields>
+    <fields>Annual_Accounting_Required__c</fields>
+    <fields>Acko_Policies_Received__c</fields>
+    <label>The Arc of Texas Trust Data</label>
+</CompactLayout>

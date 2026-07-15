@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Service --></label>
+    <name>Service_Picklist__c</name>
+    <picklistValues>
+        <masterLabel>ABLE</masterLabel>
+        <translation><!-- ABLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Care Management</masterLabel>
+        <translation><!-- Care Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Co-Trustee</masterLabel>
+        <translation><!-- Co-Trustee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conservatorship</masterLabel>
+        <translation><!-- Conservatorship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delegated Trust</masterLabel>
+        <translation><!-- Delegated Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Directed Trust</masterLabel>
+        <translation><!-- Directed Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EX-Personal Representative</masterLabel>
+        <translation><!-- EX-Personal Representative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income Trust</masterLabel>
+        <translation><!-- Income Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MSA</masterLabel>
+        <translation><!-- MSA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pooled 1st Party Trust</masterLabel>
+        <translation><!-- Pooled 1st Party Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pooled 3rd Party Trust</masterLabel>
+        <translation><!-- Pooled 3rd Party Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Trust Advisory</masterLabel>
+        <translation><!-- Private Trust Advisory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rep Payee</masterLabel>
+        <translation><!-- Rep Payee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sole Trustee 1st Party Trust</masterLabel>
+        <translation><!-- Sole Trustee 1st Party Trust --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sole Trustee 3rd Party Trust</masterLabel>
+        <translation><!-- Sole Trustee 3rd Party Trust --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

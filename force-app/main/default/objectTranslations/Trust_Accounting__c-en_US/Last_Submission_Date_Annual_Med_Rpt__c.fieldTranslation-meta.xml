@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Last Submission Date - Annual Med Rpt --></label>
+    <name>Last_Submission_Date_Annual_Med_Rpt__c</name>
+</CustomFieldTranslation>

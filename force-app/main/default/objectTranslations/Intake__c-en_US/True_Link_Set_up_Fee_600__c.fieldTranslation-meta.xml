@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- True Link Set-up Fee ($600) --></label>
+    <name>True_Link_Set_up_Fee_600__c</name>
+</CustomFieldTranslation>

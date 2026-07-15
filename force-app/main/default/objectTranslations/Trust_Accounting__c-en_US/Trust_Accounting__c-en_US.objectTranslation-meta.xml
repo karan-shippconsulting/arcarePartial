@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trust Accounting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trust Accountings</value>
+    </caseValues>
+    <layouts>
+        <layout>Trust Accounting Layout</layout>
+        <sections>
+            <label><!-- Court Information --></label>
+            <section>Court Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

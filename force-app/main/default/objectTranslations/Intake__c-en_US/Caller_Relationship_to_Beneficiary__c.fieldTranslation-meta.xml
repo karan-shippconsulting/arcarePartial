@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Caller Relationship to Beneficiary --></label>
+    <name>Caller_Relationship_to_Beneficiary__c</name>
+    <picklistValues>
+        <masterLabel>Attorney</masterLabel>
+        <translation><!-- Attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Family Member</masterLabel>
+        <translation><!-- Other Family Member --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parent</masterLabel>
+        <translation><!-- Parent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sibling</masterLabel>
+        <translation><!-- Sibling --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

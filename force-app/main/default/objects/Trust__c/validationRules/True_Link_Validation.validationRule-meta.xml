@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>True_Link_Validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(ischanged(Trust_Status__c),or(ispickval(Trust_Status__c,&quot;Active&quot;),ispickval(Trust_Status__c,&quot;Active-Pending&quot;),ispickval(Trust_Status__c,&quot;Closing&quot;))
+,isblank(TrueLink_ID__c)
+,OR(
+isblank(Pooled_Trust__c)
+,isblank(Trust_Portfolio__c)
+,isblank(Beneficiary__r.FirstName)
+,isblank(Beneficiary__r.LastName)
+,isblank(Beneficiary__r.Living_Street_1__c)
+,isblank(Beneficiary__r.Living_City__c)
+,isblank(text(Beneficiary__r.Living_State__c))
+,isblank(Beneficiary__r.Living_Zip_Code__c)
+,isblank(text(Tax_Id_Number_Type__c))
+,isblank(Beneficiary__r.Social_Security_Number__c)
+,isblank(Initial_Funding_Date__c)
+,isblank(Initial_Deposit__c)
+))</errorConditionFormula>
+    <errorMessage>You are missing True Link Data Required to Create a Beneficiary.- check SSN on Beneficiary and Missing True Link Integration fields on Trust (03dHp000001ErogIAC)</errorMessage>
+</ValidationRule>

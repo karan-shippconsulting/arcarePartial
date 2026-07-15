@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ODWI</fullName>
+        <default>false</default>
+        <label>ODWI</label>
+    </customValue>
+    <customValue>
+        <fullName>QLI</fullName>
+        <default>false</default>
+        <label>QLI</label>
+    </customValue>
+    <customValue>
+        <fullName>QMB</fullName>
+        <default>false</default>
+        <label>QMB</label>
+    </customValue>
+    <customValue>
+        <fullName>SLMB</fullName>
+        <default>false</default>
+        <label>SLMB</label>
+    </customValue>
+    <masterLabel>Medicare Savings Program Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

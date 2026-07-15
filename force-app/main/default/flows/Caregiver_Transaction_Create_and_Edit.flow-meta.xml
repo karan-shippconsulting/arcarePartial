@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>2/18/26: Changed name formula to use Transaction date</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NameFormula</name>
+        <dataType>String</dataType>
+        <expression>text(month({!$Record.Transaction__r.Date__c}))+&quot;/&quot;+text(Day({!$Record.Transaction__r.Date__c}))+&quot;/&quot;+text(Year({!$Record.Transaction__r.Date__c})) +&quot; - &quot;+IF({!$Record.Caregiver__r.RecordTypeId} = &quot;012Hp000001vIUHIA2&quot;, {!$Record.Caregiver__r.Account_Name_Formula__c,}{!$Record.Caregiver__r.Full_Name__pc})</expression>
+    </formulas>
+    <interviewLabel>Caregiver Transaction - Create and Edit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Caregiver Transaction - Create and Edit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Caregiver_Transaction</name>
+        <label>Update Caregiver Transaction</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>NameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Caregiver_Transaction</targetReference>
+        </connector>
+        <object>Caregiver_Transactions__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

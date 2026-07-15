@@ -1,0 +1,12 @@
+.toast {
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .toast_hide {
+    opacity: 0;
+  }
+  
+  .toast_show {
+    opacity: 1;
+  }

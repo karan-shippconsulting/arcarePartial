@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata"
+                          fqn="redirectAfterFlow">
+    <apiVersion>62.0</apiVersion> <!-- Use the API version you're working with -->
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId" type="String" label="Record ID" required="true"/>
+            <property name="documentType" type="String" label="Document Type"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

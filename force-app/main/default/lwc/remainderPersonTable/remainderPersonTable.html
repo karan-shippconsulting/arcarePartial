@@ -1,0 +1,90 @@
+<template>
+    <lightning-card title="Remainder Persons">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>% Remaining Funds</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <template if:true={rows}>
+                    <template for:each={rows} for:item="row">
+                        <tr key={row.Id} style={row.rowStyle}>
+
+                            <!-- Single-select radio -->
+                            <td>
+                                <lightning-input
+                                    type="radio"
+                                    name="remainderPersonSelect"
+                                    data-id={row.Id}
+                                    checked={row.isSelected}
+                                    onchange={handleSelectRow}>
+                                </lightning-input>
+                            </td>
+
+                            <!-- Output-only -->
+                            <td>{row.Remainder_Person_First_Name__c}</td>
+                            <td>{row.Remainder_Person_Last_Name__c}</td>
+                            <td>{row.Remainder_Person_Phone__c}</td>
+                            <td>{row.Remainder_Person_Email__c}</td>
+
+                            <!-- Address (output-only, word wrap) -->
+                            <td class="wrapCell">
+                                <lightning-formatted-rich-text
+                                    value={row.Remainder_Person_Address__c}>
+                                </lightning-formatted-rich-text>
+                            </td>
+
+
+
+                            <!-- % Remaining Funds -->
+                            <td>
+                                <lightning-input
+                                    type="number"
+                                    step="0.01"
+                                    value={row.Percent_of_Remaining_Funds__c}
+                                    name="Percent_of_Remaining_Funds__c"
+                                    data-id={row.Id}
+                                    onchange={handleInputChange}>
+                                </lightning-input>
+                            </td>
+
+                            <!-- Status (Picklist) -->
+                            <td>
+                                <lightning-combobox
+                                    value={row.Status__c}
+                                    name="Status__c"
+                                    data-id={row.Id}
+                                    options={statusOptions}
+                                    placeholder="Select…"
+                                    onchange={handleInputChange}>
+                                </lightning-combobox>
+                            </td>
+
+                            <!-- Action -->
+                            <td>
+                                <lightning-button
+                                    label="Save"
+                                    variant="brand"
+                                    data-id={row.Id}
+                                    onclick={handleSave}
+                                    disabled={row.saveDisabled}>
+                                </lightning-button>
+                            </td>
+
+                        </tr>
+                    </template>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

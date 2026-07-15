@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Age when Disability/Diagnosis --></label>
+    <name>Age_when_Disability_Diagnosis__c</name>
+    <picklistValues>
+        <masterLabel>At age 46 or after</masterLabel>
+        <translation><!-- At age 46 or after --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Between 27 and 45</masterLabel>
+        <translation><!-- Between 27 and 45 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prior to age 26</masterLabel>
+        <translation><!-- Prior to age 26 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

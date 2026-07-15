@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Check_Onboarding_Status</name>
+        <label>Check Onboarding Status</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Close_Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Converted</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Related_Account_Is_Beneficiary_is_True</targetReference>
+            </connector>
+            <label>Close Won</label>
+        </rules>
+        <rules>
+            <name>Unqualified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Unqualified</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Related_Account_Is_Beneficiary_is_False</targetReference>
+            </connector>
+            <label>Unqualified</label>
+        </rules>
+    </decisions>
+    <description>This flow updates the &apos;Is Beneficiary&apos; checkbox on the Account linked to an Onboarding. When an Onboarding&apos;s status is Closed, the checkbox is checked. For any other status, it’s unchecked.</description>
+    <environments>Default</environments>
+    <interviewLabel>RT - Onboarding - Update Account &apos;Is Beneficiary&apos; field when Onboarding is Closed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RT - Onboarding - Update Account &apos;Is Beneficiary&apos; field when Onboarding is Closed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Related_Account_Is_Beneficiary_is_False</name>
+        <label>Update Related Account (Is Beneficiary is False)</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Is_Beneficiary__pc</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Related_Account_Is_Beneficiary_is_True</name>
+        <label>Update Related Account (Is Beneficiary is True)</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Is_Beneficiary__pc</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Onboarding_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

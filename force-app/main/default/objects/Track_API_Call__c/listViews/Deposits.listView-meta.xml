@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposits</fullName>
+    <columns>NAME</columns>
+    <columns>Request_URL__c</columns>
+    <columns>Status__c</columns>
+    <columns>StatusCode__c</columns>
+    <columns>Http_Method__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_URL__c</field>
+        <operation>contains</operation>
+        <value>deposit</value>
+    </filters>
+    <label>Deposits</label>
+</ListView>

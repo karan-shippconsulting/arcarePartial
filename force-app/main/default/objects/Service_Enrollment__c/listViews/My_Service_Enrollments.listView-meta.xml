@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Service_Enrollments</fullName>
+    <columns>NAME</columns>
+    <columns>Case_Manager__c</columns>
+    <columns>Status__c</columns>
+    <columns>Total_Time__c</columns>
+    <columns>Reason_for_Closing_Denial__c</columns>
+    <columns>Care_Manager_Account__c</columns>
+    <columns>Care_Manager_Contact__c</columns>
+    <columns>Notes__c</columns>
+    <columns>Service_Picklist__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>My Approved Service Enrollments</label>
+</ListView>

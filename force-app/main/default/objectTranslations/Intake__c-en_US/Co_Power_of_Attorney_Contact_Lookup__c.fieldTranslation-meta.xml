@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Co-Power of Attorney Contact Lookup --></label>
+    <name>Co_Power_of_Attorney_Contact_Lookup__c</name>
+    <relationshipLabel><!-- Intake (Co-Power of Attorney) --></relationshipLabel>
+</CustomFieldTranslation>

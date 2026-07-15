@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Living_Situation__c</fullName>
+    <label>Living Situation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Independent</fullName>
+                <default>false</default>
+                <label>Independent</label>
+            </value>
+            <value>
+                <fullName>Someone else&apos;s household</fullName>
+                <default>false</default>
+                <label>Someone else&apos;s household</label>
+            </value>
+            <value>
+                <fullName>Group care facility</fullName>
+                <default>false</default>
+                <label>Group care facility</label>
+            </value>
+            <value>
+                <fullName>Skilled nursing facility</fullName>
+                <default>false</default>
+                <label>Skilled nursing facility</label>
+            </value>
+            <value>
+                <fullName>Assisted living facility</fullName>
+                <default>false</default>
+                <label>Assisted living facility</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Institution, hospital, or nursing home</fullName>
+                <default>false</default>
+                <label>Institution, hospital, or nursing home</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Lives in a supervised living setting (24-hour supported care)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lives in a supervised living setting (24-hour supported care)</label>
+            </value>
+            <value>
+                <fullName>Lives in a supported living setting (&lt;24-hour supported care)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lives in a supported living setting (&lt;24-hour supported care)</label>
+            </value>
+            <value>
+                <fullName>Lives independently in own home or apartment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lives independently in own home or apartment</label>
+            </value>
+            <value>
+                <fullName>Lives with family</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lives with family</label>
+            </value>
+            <value>
+                <fullName>Lives with foster family</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lives with foster family</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

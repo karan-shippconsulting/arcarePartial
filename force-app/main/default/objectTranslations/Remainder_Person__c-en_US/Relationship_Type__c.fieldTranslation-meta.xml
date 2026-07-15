@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Relationship Type --></label>
+    <name>Relationship_Type__c</name>
+    <picklistValues>
+        <masterLabel>Attorney</masterLabel>
+        <translation><!-- Attorney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conservator</masterLabel>
+        <translation><!-- Conservator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Family</masterLabel>
+        <translation><!-- Family --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Friend</masterLabel>
+        <translation><!-- Friend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grantor</masterLabel>
+        <translation><!-- Grantor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Representative</masterLabel>
+        <translation><!-- Other Representative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA</masterLabel>
+        <translation><!-- POA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rep Payee</masterLabel>
+        <translation><!-- Rep Payee --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

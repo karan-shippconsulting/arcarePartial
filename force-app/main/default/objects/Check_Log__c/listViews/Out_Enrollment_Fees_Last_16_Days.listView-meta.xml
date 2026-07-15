@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Out_Enrollment_Fees_Last_16_Days</fullName>
+    <columns>NAME</columns>
+    <columns>Pulled_From_Safe__c</columns>
+    <columns>Enrollment_Fee_Paid_Date__c</columns>
+    <columns>Payor__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Enrollment_Fee__c</columns>
+    <columns>Out__c</columns>
+    <columns>Check_Number__c</columns>
+    <columns>Check_Date__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Out__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Enrollment_Fee__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Enrollment_Fee_Paid_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:16</value>
+    </filters>
+    <filters>
+        <field>Pulled_From_Safe__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Kyle - Enrollment Fees Out- Last 16 Days</label>
+</ListView>

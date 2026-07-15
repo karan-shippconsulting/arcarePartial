@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupied_by_Someone_Other_than_Applicant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Occupied by Someone Other than Applicant</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

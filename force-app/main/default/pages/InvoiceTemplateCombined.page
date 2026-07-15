@@ -1,0 +1,85 @@
+<!--
+@description       : 
+@author            : ChangeMeIn@UserSettingsUnder.SFDoc
+@group             : 
+@last modified on  : 09-09-2024
+@last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:page renderAs="pdf" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" showHeader="false"
+           controller="InvoiceTemplateCombinedController">
+    <head>
+        <style type="text/css">
+            
+            @page {
+            padding-top:100px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-left {
+            content: element(footer);
+            }
+            }
+            div.header {
+            margin-top: 5px;
+            position: running(header);
+            }
+            
+            thead{
+            display: table-header-group;
+            }
+            table {
+            page-break-inside: avoid;
+            -fs-table-paginate: paginate;
+            }
+            tr.noBorder td {
+            border: 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <apex:variable var="cnt" value="{!0}" /> 
+        <apex:repeat value="{!opportunities}" var="Opportunity">
+            <apex:variable var="cnt" value="{!cnt+1}"/>
+            
+            <!--<c:InvoiceTemplate_Component opportunity_record="{!Opportunity}" lineItem="{!Opportunity.OpportunityLineItems}" oppCount="{!cnt}"></c:InvoiceTemplate_Component>-->
+            <apex:outputPanel rendered="{!Opportunity.Service_Enrollment__r.Billing_Attention_To__c!=null}">
+                <c:InvoiceTemplateBillToCmp opportunity_record="{!Opportunity}" lineItem="{!Opportunity.OpportunityLineItems}" oppCount="{!cnt}"
+                                            doNotPay="{!Opportunity.Service_Enrollment__r.Billing_Do_Not_Pay_Watermark_Display__c}"></c:InvoiceTemplateBillToCmp>
+                
+                <apex:outputPanel rendered="{!cnt == 1}">
+                    <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:outputPanel>
+                
+            </apex:outputPanel>
+            
+            
+            <apex:outputPanel rendered="{!Opportunity.Service_Enrollment__r.Copy1_Attention_To__c!=null}">
+            	<c:InvoiceTemplateCopy1Cmp opportunity_record="{!Opportunity}" lineItem="{!Opportunity.OpportunityLineItems}" oppCount="{!cnt}"
+                                       doNotPay="{!Opportunity.Service_Enrollment__r.Copy_1_Do_Not_Pay_Watermark_Display__c}"></c:InvoiceTemplateCopy1Cmp>
+            	<apex:outputPanel rendered="{!cnt == 1}">
+                    <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+            
+            <apex:outputPanel rendered="{!Opportunity.Service_Enrollment__r.Copy2_Attention_To__c!=null}">
+            	<c:InvoiceTemplateCopy2Cmp opportunity_record="{!Opportunity}" lineItem="{!Opportunity.OpportunityLineItems}" oppCount="{!cnt}"
+                                       doNotPay="{!Opportunity.Service_Enrollment__r.Copy_2_Do_Not_Pay_Watermark_Display__c}"></c:InvoiceTemplateCopy2Cmp>
+            	<apex:outputPanel rendered="{!cnt == 1}">
+                    <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+            
+            <apex:outputPanel rendered="{!Opportunity.Service_Enrollment__r.Mail_To_Attention__c!=null}">
+            	<c:InvoiceTemplateMailToCmp opportunity_record="{!Opportunity}" lineItem="{!Opportunity.OpportunityLineItems}" oppCount="{!cnt}"
+                                       doNotPay="{!Opportunity.Service_Enrollment__r.Mail_To_Do_Not_Pay_Watermark_Display__c}"></c:InvoiceTemplateMailToCmp>
+            	<apex:outputPanel rendered="{!cnt == 1}">
+                    <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+
+        </apex:repeat>
+    </body>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Escrow_Disbursements__c</fullName>
+    <label>Total Escrow Disbursements</label>
+    <summarizedField>Escrow_Disbursement__c.Amount__c</summarizedField>
+    <summaryForeignKey>Escrow_Disbursement__c.Closing__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

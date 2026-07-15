@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Budget Category --></label>
+    <name>Budget_Category__c</name>
+    <picklistValues>
+        <masterLabel>Clothing</masterLabel>
+        <translation><!-- Clothing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education/Training</masterLabel>
+        <translation><!-- Education/Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Funeral-Related</masterLabel>
+        <translation><!-- Funeral-Related --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household</masterLabel>
+        <translation><!-- Household --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical/Dental</masterLabel>
+        <translation><!-- Medical/Dental --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Needs</masterLabel>
+        <translation><!-- Personal Needs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professional (Legal, Financial, etc.)</masterLabel>
+        <translation><!-- Professional (Legal, Financial, etc.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recreation/Cultural</masterLabel>
+        <translation><!-- Recreation/Cultural --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Services</masterLabel>
+        <translation><!-- Social Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telecommunications</masterLabel>
+        <translation><!-- Telecommunications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transportation</masterLabel>
+        <translation><!-- Transportation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,4 @@
+<aura:component implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForAllPageTypes,force:appHostable,force:lightningQuickAction" >
+    <ltng:require styles="{!$Resource.quickActionModalWidthIncrease}"/>
+	<c:dynamicEmailGenerator recordId="{!v.recordId}" objectApiName="{!v.sObjectName}"></c:dynamicEmailGenerator>
+</aura:component>

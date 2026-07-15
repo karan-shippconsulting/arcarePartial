@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Teri_Test</fullName>
+    <columns>NAME</columns>
+    <columns>Trust__c</columns>
+    <columns>Date__c</columns>
+    <columns>Type__c</columns>
+    <columns>Display_Category__c</columns>
+    <columns>Payee_Name__c</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Total_of_Receipts__c</columns>
+    <columns>Status__c</columns>
+    <columns>Processed_Date__c</columns>
+    <columns>Cleared_Date__c</columns>
+    <columns>Up_To_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Deposit</value>
+    </filters>
+    <filters>
+        <field>Payment_Method__c</field>
+        <operation>equals</operation>
+        <value>EFT</value>
+    </filters>
+    <label>Test</label>
+</ListView>

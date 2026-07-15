@@ -1,0 +1,468 @@
+<apex:component controller="InvoiceTemplate_Extension">
+    <apex:attribute name="opportunity_record" type="Opportunity" description="opportunity." required="required" assignTo="{!controllerValue}"/>
+    <apex:attribute name="lineItem" type="OpportunityLineItem[]" description="opportunity_lineitem_list" />
+    <apex:attribute name="oppCount" type="integer" description="count" required="required"/>
+    <apex:attribute name="doNotPay" type="string" description="doNotPay" required="required"/>
+    
+    <head>
+        <style type="text/css" media="print">
+            
+            @page {
+                padding-top:100px;
+                @top-center {
+                content: element(header);
+                }
+                @bottom-left {
+                content: element(footer);
+                }
+            
+            }
+            div.header {
+                margin-top: 5px;
+                position: running(header);
+            }
+            thead{
+                display: table-header-group;
+            }
+            table {
+                page-break-inside: avoid;
+                -fs-table-paginate: paginate;
+            }
+            tr.noBorder td {
+                border: 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+    </body>
+    <apex:outputPanel rendered="{!controllerValue.Service_Enrollment__r.Copy2_Attention_To__c!=null}">
+            <apex:outputPanel rendered="{!oppCount != 1}">
+                <div style="page-break-before: always;"></div>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!controllerValue.Service_Enrollment__r.Copy_2_Do_Not_Pay_Watermark_Display__c=='Yes'}">
+                <img src="{!URLFOR($Resource.Do_Not_Pay_Image)}" width="100%" height="100%" 
+                         style="position: absolute;z-index:1; "/>
+            </apex:outputPanel> 
+            
+            <div class="header">
+                <table style="width:100%">
+                    <tr style="width:100%">
+                        <td style="width:60%">
+                            <img src="{!$Resource.Arcare_INVOICE_LOGO}" width="175px" height="120px"/>
+                        </td>
+                        <td style="width:40%;text-align: left;">
+                            <apex:outputText value="{!$Label.Invoice_Address}" escape="false" />
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div class="main">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:70%;text-align: left;">
+                            <table style="width:78%;float:left;">
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"><b>Copy2: </b></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;text-align:left;">{!controllerValue.Service_Enrollment__r.Copy2_Attention_To__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;">{!controllerValue.Service_Enrollment__r.Copy2_Street_1__c}
+                                        {!controllerValue.Service_Enrollment__r.Copy2_Street_2__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;">
+                                        {!controllerValue.Service_Enrollment__r.Copy2_City__c},
+                                        {!controllerValue.Service_Enrollment__r.Copy2_State__c}
+                                        {!controllerValue.Service_Enrollment__r.Copy2_Zip_Code__c}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width:30%;text-align: right;vertical-align:top;">
+                            <p>
+                                Invoice #: {!controllerValue.Invoice_Number2__c}
+                            </p>
+                            <p>
+                                DATE: &nbsp;
+                                <apex:outputText value="{0,date,MM/dd/yyyy}" >
+                                    <apex:param value="{!controllerValue.CloseDate}"></apex:param>
+                                </apex:outputText>
+                            </p>
+                        </td> 
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            
+            <table style="width:100%">
+                <tr>
+                    <td> <b>Invoice for Services Provided</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <table  style="width:100%">
+                            <!--<tr>
+                                <td>
+                                    <b>Invoice:</b>
+                                </td>
+                                <td>
+                                    {!controllerValue.Service_Enrollment__r.Name}
+                                </td>
+                            </tr>-->
+                            <tr>
+                                <td>
+                                    <b>Provided to:</b>
+                                </td>
+                                <td>
+                                    {!controllerValue.Account.Name} 
+                                </td>
+                            </tr>
+                            <!--<tr>
+                                <td>
+                                    <b>Billing Reference:</b>
+                                </td>
+                                <td>
+                                    {!controllerValue.Account.Name} 
+                                </td>
+                            </tr>-->
+                            <tr>
+                                <td>
+                                    <b>Client Number:</b>
+                                </td>
+                                <td style="text-align: left;">
+                                    {!controllerValue.Service_enrollment__r.Account_Number__c} 
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <apex:outputPanel rendered="{! hourlyServiceSubtotalPrice > 0 }">
+                <b>{!controllerValue.Service_Enrollment__r.Name} - Hourly Service</b>
+                
+                <table style="width:100%;" border="1" cellspacing="0">
+                    <thead>
+                        <tr style="width:100%;">
+                            <th style="text-align:center;width:15%;">
+                                ServiceDate
+                            </th>
+                            <th  style="text-align:center;width:53%;">
+                                Description
+                            </th>
+                            <th style="text-align:center;width:8%;">
+                                Hours
+                            </th>
+                            <th style="text-align:center;width:12%;">
+                                UnitPrice
+                            </th>
+                            <th style="text-align:center;width:12%;">
+                                TotalPrice
+                            </th>
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        <apex:repeat var="opplineitem" value="{!lineItem}">
+                            <apex:outputText rendered="{!opplineitem.Product2.Time_Entry_Category__c == 'HOURLY SERVICE'}">
+                                <tr>
+                                    <td><apex:outputText value="{0,date,MM/dd/yyyy}" >
+                                        <apex:param value="{!opplineitem.Time_Entry__r.Entry_Date__c}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                    <td>{!opplineitem.Time_Entry__r.CreatedBy.Initials__c} - {!opplineitem.Service_Description__c}</td>
+                                    <td>
+                                        <apex:outputText value="{0,Number,0.00}" >
+                                            <apex:param value="{!opplineitem.Quantity}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                    <td>
+                                        <apex:outputText value="{0,Number,Currency}" >
+                                            <apex:param value="{!opplineitem.UnitPrice}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                    <td>
+                                        <apex:outputText value="{0,Number,Currency}" >
+                                            <apex:param value="{!opplineitem.TotalPrice}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                </tr>
+                            </apex:outputText> 
+                        </apex:repeat>
+                        <tr class="noBorder">
+                            <td ></td>
+                            <td ><b>SubTotal</b></td>
+                            <td >
+                                <apex:outputText value="{0,Number,0.00}" >
+                                    <apex:param value="{!hourlyServiceSubtotalQuantity}"></apex:param>
+                                </apex:outputText>
+                            </td>
+                            <td > &nbsp;</td>
+                            <td >
+                                <apex:outputText value="{0,Number,Currency}" >
+                                    <apex:param value="{!hourlyServiceSubtotalPrice}"></apex:param>
+                                </apex:outputText>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+            <br/>
+            
+            <apex:outputPanel rendered="{! directExpenseSubtotalPrice > 0}">
+                <b>{!controllerValue.Service_Enrollment__r.Name} - Direct Service</b>
+                <table style="width:100%;" border="1" cellspacing="0">
+                    <tr style="width:100%;">
+                        <th style="text-align:center;width:15%;">
+                            ServiceDate
+                        </th>
+                        <th  style="text-align:center;width:53%;">
+                            Description
+                        </th>
+                        <th  style="text-align:center;width:8%;">
+                            Hours
+                        </th>
+                        <th  style="text-align:center;width:12%;">
+                            UnitPrice
+                        </th>
+                        <th  style="text-align:center;width:12%;">
+                            TotalPrice
+                        </th>
+                    </tr>
+                    <apex:repeat var="opplineitem" value="{!lineItem}">
+                        <apex:outputText rendered="{!opplineitem.Product2.Time_Entry_Category__c == 'DIRECT EXPENSE'}">
+                            <tr>
+                                <td ><apex:outputText value="{0,date,MM/dd/yyyy}" >
+                                    <apex:param value="{!opplineitem.Time_Entry__r.Entry_Date__c}"></apex:param>
+                                    </apex:outputText></td>
+                                <td>{!opplineitem.Time_Entry__r.CreatedBy.Initials__c} - {!opplineitem.Service_Description__c}</td>
+                                <td >
+                                    <apex:outputText value="{0,Number,0.00}" >
+                                        <apex:param value="{!opplineitem.Quantity}"></apex:param>
+                                    </apex:outputText>
+                                </td>
+                                <td >
+                                    <apex:outputText value="{0,Number,Currency}" >
+                                        <apex:param value="{!opplineitem.UnitPrice}"></apex:param>
+                                    </apex:outputText>
+                                </td>
+                                <td >
+                                    <apex:outputText value="{0,Number,Currency}" >
+                                        <apex:param value="{!opplineitem.TotalPrice}"></apex:param>
+                                    </apex:outputText>
+                                </td>
+                            </tr>
+                        </apex:outputText>    
+                    </apex:repeat> 
+                    <tr class="noBorder">
+                        <td ></td>
+                        <td ><b>SubTotal (Expenses)</b></td>
+                        <td >
+                            <apex:outputText value="{0,Number,0.00}" >
+                                <apex:param value="{!directExpenseSubtotalQuantity}"></apex:param>
+                            </apex:outputText>
+                        </td>
+                        <td >&nbsp; </td>
+                        <td >
+                            <apex:outputText value="{0,Number,Currency}" >
+                                <apex:param value="{!directExpenseSubtotalPrice}"></apex:param>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+            <br/>
+            <apex:outputPanel rendered="{! feesSubtotalPrice > 0}">
+                <b>{!controllerValue.Service_Enrollment__r.Name} - Fees</b>
+                <table style="width:100%;" border="1" cellspacing="0">
+                    <thead>
+                        <tr style="width:100%;">
+                            <th  style="text-align:center;width:15%;">
+                                ServiceDate
+                            </th>
+                            <th  style="text-align:center;width:53%;">
+                                Description
+                            </th>
+                            <th style="text-align:center;width:8%;">
+                                Hours
+                            </th>
+                            <th style="text-align:center;width:12%;">
+                                UnitPrice
+                            </th>
+                            <th style="text-align:center;width:12%;">
+                                TotalPrice
+                            </th>
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        <apex:repeat var="opplineitem" value="{!lineItem}">
+                            <apex:outputText rendered="{!opplineitem.Product2.Time_Entry_Category__c == 'FEES'}">
+                                <tr>
+                                    <td><apex:outputText value="{0,date,MM/dd/yyyy}" >
+                                        <apex:param value="{!opplineitem.Time_Entry__r.Entry_Date__c}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                    <td>{!opplineitem.Time_Entry__r.CreatedBy.Initials__c} - {!opplineitem.Service_Description__c}</td>
+                                    <td>
+                                        <apex:outputText value="{0,Number,0.00}" >
+                                            <apex:param value="{!opplineitem.Quantity}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                    <td>
+                                        <apex:outputText value="{0,Number,Currency}" >
+                                            <apex:param value="{!opplineitem.UnitPrice}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                    <td>
+                                        <apex:outputText value="{0,Number,Currency}" >
+                                            <apex:param value="{!opplineitem.TotalPrice}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                </tr>
+                            </apex:outputText> 
+                        </apex:repeat>
+                        <tr class="noBorder">
+                            <td ></td>
+                            <td ><b>SubTotal</b></td>
+                            <td >
+                                <apex:outputText value="{0,Number,0.00}" >
+                                    <apex:param value="{!feesSubtotalQuantity}"></apex:param>
+                                </apex:outputText>
+                            </td>
+                            <td > &nbsp;</td>
+                            <td >
+                                <apex:outputText value="{0,Number,Currency}" >
+                                    <apex:param value="{!feesSubtotalPrice}"></apex:param>
+                                </apex:outputText>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+            <br/>
+            <table style="width:100%;" border="1" cellspacing="0">
+                <tr>
+                    <th style="text-align:left;">
+                        Total
+                    </th>
+                    <th  style="text-align:right;">
+                        <apex:outputText value="{0,Number,Currency}" >
+                            <apex:param value="{!totalFinalPrice}"></apex:param>
+                        </apex:outputText>
+                        
+                    </th>
+                </tr>
+            </table>
+            <br/>
+            <div>
+                <table style="width:100%;">
+                    <tr style="width:100%;">
+                        <td style="width:78%;">
+                            <b>COPY of Invoices sent to:</b>
+                            <table >
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"><b>Billing: </b></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;text-align:left;">{!controllerValue.Service_Enrollment__r.Billing_Attention_To__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;">{!controllerValue.Service_Enrollment__r.Billing_Street_1__c}
+                                        {!controllerValue.Service_Enrollment__r.Billing_Street_2__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;">
+                                        {!controllerValue.Service_Enrollment__r.Billing_City__c}
+                                        {!controllerValue.Service_Enrollment__r.Billing_State__c}
+                                        {!controllerValue.Service_Enrollment__r.Billing_Zip_Code__c}
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <table >
+                                <tr style="width:100%;">
+                                    <td style="width:12%;"><b>Mailing: </b></td>
+                                    <td style="width:8%;"></td>
+                                    <td style="width:80%;text-align:left;">{!controllerValue.Service_Enrollment__r.Mail_To_Attention__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:12%;"></td>
+                                    <td style="width:8%;"></td>
+                                    <td style="width:80%;">{!controllerValue.Service_Enrollment__r.Mail_To_Street_1__c}
+                                        {!controllerValue.Service_Enrollment__r.Mail_To_Street_2__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:12%;"></td>
+                                    <td style="width:8%;"></td>
+                                    <td style="width:80%;">
+                                        {!controllerValue.Service_Enrollment__r.Mail_To_City__c}
+                                        {!controllerValue.Service_Enrollment__r.Mail_To_State__c}
+                                        {!controllerValue.Service_Enrollment__r.Mail_To_Zip_Code__c}
+                                    </td>
+                                </tr>
+                            </table>
+                            <table >
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"><b>Copy1: </b></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;text-align:left;">{!controllerValue.Service_Enrollment__r.Copy1_Attention_To__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;">{!controllerValue.Service_Enrollment__r.Copy1_Street_1__c}
+                                        {!controllerValue.Service_Enrollment__r.Copy1_Street_2__c}</td>
+                                </tr>
+                                <tr style="width:100%;">
+                                    <td style="width:10%;"></td>
+                                    <td style="width:10%;"></td>
+                                    <td style="width:80%;">
+                                        {!controllerValue.Service_Enrollment__r.Copy1_City__c}
+                                        {!controllerValue.Service_Enrollment__r.Copy1_State__c}
+                                        {!controllerValue.Service_Enrollment__r.Copy1_Zip_Code__c}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width:22%;">
+                            <table border="1" cellspacing="1" style="text-align:center;" >
+                                <thead>
+                                    <th style="text-align:center" colspan="2">Aging Summary</th>
+                                </thead>
+                                <apex:repeat value="{!agging}" var="item" >
+                                    <tr>
+                                        <td style="text-align:center;padding:2px;">{!item}</td>
+                                        <td  style="text-align:center;padding:2px;">
+                                            <apex:outputText value="{0,Number,Currency}" >
+                                                <apex:param value="{!agging[item]}"></apex:param>
+                                            </apex:outputText>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>  
+                                <tr>
+                                    <td  style="text-align:center"><b>Total</b></td>
+                                    <td  style="text-align:center">
+                                        <apex:outputText value="{0,Number,Currency}" >
+                                            <apex:param value="{!aggigingTotal}"></apex:param>
+                                        </apex:outputText>
+                                    </td>
+                                </tr> 
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </apex:outputPanel>
+        
+</apex:component>

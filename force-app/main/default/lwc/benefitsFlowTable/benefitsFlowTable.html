@@ -1,0 +1,89 @@
+<template>
+    <lightning-card title="Benefits">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                    <th>Benefit Type</th>
+                    <th>Benefit Status</th>
+                    <th>Benefit Amount / Month</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <template if:true={benefits}>
+                    <template for:each={benefits} for:item="row">
+                        <tr key={row.Id} style={row.rowStyle}>
+
+                            <!-- Benefit Type -->
+                            <td>
+                                <template if:true={row.isSample}>
+                                    {row.Benefit_Type__c}
+                                </template>
+                                <template if:false={row.isSample}>
+                                    <lightning-combobox
+                                        value={row.Benefit_Type__c}
+                                        name="Benefit_Type__c"
+                                        data-id={row.Id}
+                                        options={benefitTypeOptions}
+                                        placeholder="Select…"
+                                        onchange={handleInputChange}>
+                                    </lightning-combobox>
+                                </template>
+                            </td>
+
+                            <!-- Benefit Status -->
+                            <td>
+                                <template if:true={row.isSample}>
+                                    {row.Benefit_Status__c}
+                                </template>
+                                <template if:false={row.isSample}>
+                                    <lightning-combobox
+                                        value={row.Benefit_Status__c}
+                                        name="Benefit_Status__c"
+                                        data-id={row.Id}
+                                        options={benefitStatusOptions}
+                                        placeholder="Select…"
+                                        onchange={handleInputChange}>
+                                    </lightning-combobox>
+                                </template>
+                            </td>
+
+                            <!-- Benefit Amount -->
+                            <td>
+                                <template if:true={row.isSample}>
+                                    {row.Benefit_Amount_Month__c}
+                                </template>
+                                <template if:false={row.isSample}>
+                                    <lightning-input
+                                        type="number"
+                                        step="0.01"
+                                        value={row.Benefit_Amount_Month__c}
+                                        name="Benefit_Amount_Month__c"
+                                        data-id={row.Id}
+                                        onchange={handleInputChange}>
+                                    </lightning-input>
+                                </template>
+                            </td>
+
+                            <!-- Action -->
+                            <td>
+                                <template if:true={row.isSample}></template>
+                                <template if:false={row.isSample}>
+                                    <lightning-button
+                                        label="Save"
+                                        variant="brand"
+                                        data-id={row.Id}
+                                        onclick={handleSave}
+                                        disabled={row.saveDisabled}>
+                                    </lightning-button>
+                                </template>
+                            </td>
+
+                        </tr>
+                    </template>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

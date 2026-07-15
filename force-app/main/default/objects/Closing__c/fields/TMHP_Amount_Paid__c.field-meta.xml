@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TMHP_Amount_Paid__c</fullName>
+    <formula>IF(AND(OR(Trust_Type__c = &quot;II&quot;, Trust_Type__c = &quot;IV&quot;), Trust__r.Enrollment_Date__c &lt; DATE(2023, 10, 1)),
+MIN(TMHP_Amount_Owed__c, Balance_After_Fees__c - Balance_After_Fees_to_Arcare__c),
+IF(AND(OR(Trust_Type__c = &quot;II&quot;, Trust_Type__c = &quot;IV&quot;), Trust__r.Enrollment_Date__c &gt;= DATE(2023, 10, 1),  TMHP_Amount_Owed__c &lt;= Balance_After_Fees__c - Balance_After_Fees_to_Arcare__c),TMHP_Amount_Owed__c,
+0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TMHP Amount to be Paid</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

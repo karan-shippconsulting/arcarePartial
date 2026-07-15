@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Copy1 Street 2 --></label>
+    <name>Copy1_Street_2__c</name>
+</CustomFieldTranslation>

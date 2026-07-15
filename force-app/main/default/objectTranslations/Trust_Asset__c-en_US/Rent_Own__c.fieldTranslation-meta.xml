@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rent/Own --></label>
+    <name>Rent_Own__c</name>
+    <picklistValues>
+        <masterLabel>Own</masterLabel>
+        <translation><!-- Own --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rent</masterLabel>
+        <translation><!-- Rent --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

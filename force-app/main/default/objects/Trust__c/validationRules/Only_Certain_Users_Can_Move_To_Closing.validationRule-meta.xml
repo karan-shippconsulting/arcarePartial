@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Certain_Users_Can_Move_To_Closing</fullName>
+    <active>true</active>
+    <description>Only certain users can move to closing</description>
+    <errorConditionFormula>AND(ischanged( Trust_Status__c ),text(Trust_Status__c)=&quot;Closing&quot;, $User.Can_Activate_or_Close_a_Trust__c =False)</errorConditionFormula>
+    <errorMessage>Only certain users can move Trust to Closing.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Enrollments</fullName>
+    <columns>NAME</columns>
+    <columns>Account_Number__c</columns>
+    <columns>Client__c</columns>
+    <columns>Status__c</columns>
+    <columns>Intake__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Date_Started__c</columns>
+    <columns>Date_Closed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Pending</value>
+    </filters>
+    <label>Pending</label>
+</ListView>

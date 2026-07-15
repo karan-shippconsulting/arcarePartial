@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSA_Type__c</fullName>
+    <inlineHelpText>MSA Type should only be filled if &apos;MSA&apos; is selected in the Trust Type field. Leave this field blank for all other Trust Types.</inlineHelpText>
+    <label>MSA Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pooled Trust II</fullName>
+                <default>false</default>
+                <label>Pooled Trust II</label>
+            </value>
+            <value>
+                <fullName>Private Trust II</fullName>
+                <default>false</default>
+                <label>Private Trust II</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

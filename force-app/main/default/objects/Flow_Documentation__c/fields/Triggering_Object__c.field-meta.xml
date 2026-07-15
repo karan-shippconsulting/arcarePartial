@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Triggering_Object__c</fullName>
+    <label>Triggering Object</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Benefit</fullName>
+                <default>false</default>
+                <label>Benefit</label>
+            </value>
+            <value>
+                <fullName>Caregiver Transaction</fullName>
+                <default>false</default>
+                <label>Caregiver Transaction</label>
+            </value>
+            <value>
+                <fullName>Case</fullName>
+                <default>false</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>Check Log</fullName>
+                <default>false</default>
+                <label>Check Log</label>
+            </value>
+            <value>
+                <fullName>Closing</fullName>
+                <default>false</default>
+                <label>Closing</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Document Checklist Item</fullName>
+                <default>false</default>
+                <label>Document Checklist Item</label>
+            </value>
+            <value>
+                <fullName>Duplicate Record Set</fullName>
+                <default>false</default>
+                <label>Duplicate Record Set</label>
+            </value>
+            <value>
+                <fullName>General Note</fullName>
+                <default>false</default>
+                <label>General Note</label>
+            </value>
+            <value>
+                <fullName>Historical Transaction</fullName>
+                <default>false</default>
+                <label>Historical Transaction</label>
+            </value>
+            <value>
+                <fullName>Intake</fullName>
+                <default>false</default>
+                <label>Intake</label>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>Remainder Person</fullName>
+                <default>false</default>
+                <label>Remainder Person</label>
+            </value>
+            <value>
+                <fullName>Service Enrollment</fullName>
+                <default>false</default>
+                <label>Service Enrollment</label>
+            </value>
+            <value>
+                <fullName>Time Entry</fullName>
+                <default>false</default>
+                <label>Time Entry</label>
+            </value>
+            <value>
+                <fullName>Transaction</fullName>
+                <default>false</default>
+                <label>Transaction</label>
+            </value>
+            <value>
+                <fullName>Trust</fullName>
+                <default>false</default>
+                <label>Trust</label>
+            </value>
+            <value>
+                <fullName>Trust Accounting</fullName>
+                <default>false</default>
+                <label>Trust Accounting</label>
+            </value>
+            <value>
+                <fullName>Trust Asset</fullName>
+                <default>false</default>
+                <label>Trust Asset</label>
+            </value>
+            <value>
+                <fullName>Trust Coordinator Assignment</fullName>
+                <default>false</default>
+                <label>Trust Coordinator Assignment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

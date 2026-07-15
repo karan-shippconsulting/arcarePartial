@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yesterday_s_Deposits</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Type__c</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Trust__c</columns>
+    <columns>Processed_Date__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Deposit</value>
+    </filters>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <label>Deposits-Yesterday</label>
+</ListView>

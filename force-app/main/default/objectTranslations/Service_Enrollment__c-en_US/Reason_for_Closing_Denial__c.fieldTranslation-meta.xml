@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please enter a reason for closing or denial before changing the Status field. --></help>
+    <label><!-- Reason for Closing/Denial --></label>
+    <name>Reason_for_Closing_Denial__c</name>
+</CustomFieldTranslation>

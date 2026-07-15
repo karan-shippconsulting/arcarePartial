@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the fee paid to The Arc of Texas for preparing the Annual Accounting.  $150 for standard. --></help>
+    <label><!-- AA Prep Fee --></label>
+    <name>AA_Prep_Fee__c</name>
+</CustomFieldTranslation>

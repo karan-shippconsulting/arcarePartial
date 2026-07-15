@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Distribution Process Letter Relationshp --></label>
+    <name>Distribution_Process_Letter_Relationshp__c</name>
+    <picklistValues>
+        <masterLabel>Family Member</masterLabel>
+        <translation><!-- Family Member --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lawyer</masterLabel>
+        <translation><!-- Lawyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POA</masterLabel>
+        <translation><!-- POA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

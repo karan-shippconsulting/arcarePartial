@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <!-- Inputs -->
+            <property name="objectApiName" type="String" label="Object API Name"/>
+            <property name="fieldApiName" type="String" label="Field API Name"/>
+            <property name="operator" type="String" label="Operator (=, Contains, StartsWith)" default="Contains"/>
+            <property name="searchValue" type="String" label="Search Value"/>
+            <property name="displayFieldApiName" type="String" label="Display Field API Name" default="Name"/>
+            <property name="label" type="String" label="Picklist Label" default="Select Record"/>
+
+            <!-- Outputs -->
+            <property name="value" type="String" role="outputOnly" label="Selected Record Id"/>
+            <property name="displayNameOutput" type="String" role="outputOnly" label="Display Name Output"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

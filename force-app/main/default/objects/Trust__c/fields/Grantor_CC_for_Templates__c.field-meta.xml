@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grantor_CC_for_Templates__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Primary_Representative__c !=  Grantor__c, &quot;CC: &quot; + Grantor__r.PersonContact.Full_Name__c + &quot;, Grantor&quot;,
+NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Grantor CC for Templates</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

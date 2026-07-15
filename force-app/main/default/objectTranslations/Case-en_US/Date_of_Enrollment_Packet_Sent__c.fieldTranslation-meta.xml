@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the date when you sent the Joinder Agreement / Enrollment Packet --></help>
+    <label><!-- Date of Enrollment Packet Sent --></label>
+    <name>Date_of_Enrollment_Packet_Sent__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caution_Notes__c</fullName>
+    <inlineHelpText>The Caution Notes do not appear in the banner at the top of the page. Use the Caution Summary if you want this informaton to appear at the top of the page. This field allows more characters if you need to add more details beyond the Caution Summary field.</inlineHelpText>
+    <label>Caution Notes</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

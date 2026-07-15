@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Doc Checklist Item Lookup Field API --></label>
+    <name>Doc_Checklist_Item_Lookup_Field_API__c</name>
+</CustomFieldTranslation>

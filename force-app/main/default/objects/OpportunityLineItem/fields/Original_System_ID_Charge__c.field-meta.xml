@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_System_ID_Charge__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <externalId>true</externalId>
+    <label>Original System ID Charge</label>
+    <length>60</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposits</fullName>
+    <columns>NAME</columns>
+    <columns>Beneficiary__c</columns>
+    <columns>Payee_Name__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Type__c</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Delivery_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Processed_Date__c</columns>
+    <columns>Cleared_Date__c</columns>
+    <columns>Internal_Notes__c</columns>
+    <columns>Up_To_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Deposit</value>
+    </filters>
+    <label>Deposits</label>
+</ListView>

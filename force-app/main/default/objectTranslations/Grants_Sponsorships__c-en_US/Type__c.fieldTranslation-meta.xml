@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Event</masterLabel>
+        <translation><!-- Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grant</masterLabel>
+        <translation><!-- Grant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Membership</masterLabel>
+        <translation><!-- Membership --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

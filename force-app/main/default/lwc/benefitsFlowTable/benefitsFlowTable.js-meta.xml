@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="contactId" type="String" label="Contact Id" description="Parent Contact (Beneficiary) Id"/>
+            <property name="filterLogic" type="String" label="Filter Logic" description="Additional SOQL conditions, e.g. Benefit_Type__c = 'SSI'" />
+
+            <property name="benefitTypeSample" type="String" label="Benefit Type Sample" />
+            <property name="benefitAmountMonthSample" type="String" label="Benefit Amount/Month Sample" />
+
+            <property name="sampleBackgroundColor" type="String" label="Sample Background Color" default="#f0f0f0"/>
+            <property name="displaySampleRow" type="Boolean" label="Display Sample Row"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

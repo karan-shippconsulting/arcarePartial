@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>1/23/26: Added updates to lookups for Primary Contact Account and Related Contact Account</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NameFormula</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Primary_Contact__r.FirstName}+&quot; &quot;+{!$Record.Primary_Contact__r.LastName}+ &quot; &quot; + {!$Record.Primary_Contact__r.Suffix} +&quot;/ &quot;+{!$Record.RelatedContact__r.FirstName}+&quot; &quot;+{!$Record.RelatedContact__r.LastName}+ &quot; &quot; + {!$Record.RelatedContact__r.Suffix} +  &quot;(&quot;+TEXT({!$Record.Personal_Relationship__c}) + &quot;/&quot;+TEXT({!$Record.Role__c})+&quot;)&quot;,80)</expression>
+    </formulas>
+    <interviewLabel>Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Relationship - Update on Create and Edit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Relationship</name>
+        <label>Update Relationship</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>NameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Contact_Account__c</field>
+            <value>
+                <elementReference>$Record.Primary_Contact__r.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Related_Contact_Account__c</field>
+            <value>
+                <elementReference>$Record.RelatedContact__r.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Relationship</targetReference>
+        </connector>
+        <object>Relationships__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

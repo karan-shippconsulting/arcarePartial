@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary Rep Contact Lookup --></label>
+    <name>Primary_Rep_Contact_Lookup__c</name>
+    <relationshipLabel><!-- Intake (Primary Rep Contact Lookup) --></relationshipLabel>
+</CustomFieldTranslation>

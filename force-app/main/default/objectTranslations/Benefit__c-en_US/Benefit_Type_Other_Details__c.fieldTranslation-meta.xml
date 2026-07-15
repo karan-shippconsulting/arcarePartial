@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If benefit type is &quot;other,&quot; please specify. --></help>
+    <label><!-- Benefit Type Other Details --></label>
+    <name>Benefit_Type_Other_Details__c</name>
+</CustomFieldTranslation>

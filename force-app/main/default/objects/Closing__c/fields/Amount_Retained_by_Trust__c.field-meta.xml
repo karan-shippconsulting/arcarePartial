@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Retained_by_Trust__c</fullName>
+    <formula>IF(AND(Trust__r.Enrollment_Date__c &lt; DATE(2023,10,1), 
+TMHP_Amount_Owed__c &gt; (Balance_After_Fees__c -  Balance_After_Fees_to_Arcare__c)), 0,
+IF(AND(Trust__r.Enrollment_Date__c &gt;= DATE(2023,10,1), 
+TMHP_Amount_Owed__c &gt; (Balance_After_Fees__c -  Balance_After_Fees_to_Arcare__c)), Balance_After_Fees__c -  Balance_After_Fees_to_Arcare__c,
+0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>For Trusts with Enrollment Dates on or after 10/1/2023, where the TMHP Amount Owed is greater than the balance after The Arc receives its percentage, this is the balance. If the Enrollment Date is before 10/1/2023 and the TMHP Amount Owed is greater than what is left, this value is $0.</inlineHelpText>
+    <label>Amount Retained by Trust</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,29 @@
+<template>
+	<template if:true={isLoading}>
+		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+	</template>
+	<template if:false={isLoading}>
+		<lightning-card variant="Narrow" >
+			<p class="slds-p-horizontal_small">
+				<template if:false={hasAccess}>
+					<div class="slds-text-heading_large slds-text-align_center slds-text-color_error">You are not authorized to create invoices.</div>
+				</template>
+				<template if:true={hasAccess}>
+					<div class="slds-text-heading_large slds-text-align_center slds-text-color_error">Please make sure that all charges are approved prior to running the invoicing process.</div>
+					<lightning-combobox
+						label="Periods"
+						value={value}
+						placeholder="Select Period"
+						options={picklistOptions}
+						onchange={handlePeriodChange} ></lightning-combobox>
+				</template>
+			</p>
+			<p slot="footer">
+                <template if:true={hasAccess}>
+                    <lightning-button class="slds-p-horizontal_small" variant="success" label="Create Invoices" onclick={handleRun}></lightning-button>
+                    <lightning-button variant="destructive" class="slds-p-horizontal_small" label="Cancel" onclick={handleCancel}></lightning-button>
+                </template>
+            </p>
+		</lightning-card>
+	</template>
+</template>

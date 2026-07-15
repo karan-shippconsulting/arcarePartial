@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Arcare_Business_Account_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Type</fields>
+    <fields>Website</fields>
+    <fields>Organization_Email__c</fields>
+    <label>Arcare Business Account Compact Layout</label>
+</CompactLayout>

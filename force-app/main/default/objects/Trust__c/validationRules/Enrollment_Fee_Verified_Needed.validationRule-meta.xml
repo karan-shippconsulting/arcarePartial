@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrollment_Fee_Verified_Needed</fullName>
+    <active>true</active>
+    <description>Enrollment Fee Verified Needed before moving Trust Status to Approved or Future Funded</description>
+    <errorConditionFormula>AND(ISCHANGED(Trust_Status__c), 
+OR(TEXT(Trust_Status__c) = &quot;Active&quot;, 
+TEXT(Trust_Status__c) = &quot;Future Funded&quot;), Enrollment_Fee_Verified__c = FALSE)</errorConditionFormula>
+    <errorMessage>Please check Enrollment Fee Verified before moving Trust Status to Active or Future Funded</errorMessage>
+</ValidationRule>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_of_Life_Goal__c</fullName>
+    <label>Quality of Life Goal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dignity/Privacy</fullName>
+                <default>false</default>
+                <label>Dignity/Privacy</label>
+            </value>
+            <value>
+                <fullName>Emotional Well-Being</fullName>
+                <default>false</default>
+                <label>Emotional Well-Being</label>
+            </value>
+            <value>
+                <fullName>Enjoyment</fullName>
+                <default>false</default>
+                <label>Enjoyment</label>
+            </value>
+            <value>
+                <fullName>Material Well-Being</fullName>
+                <default>false</default>
+                <label>Material Well-Being</label>
+            </value>
+            <value>
+                <fullName>Personal Development/Meaningful Activity</fullName>
+                <default>false</default>
+                <label>Personal Development/Meaningful Activity</label>
+            </value>
+            <value>
+                <fullName>Physical Comfort/Well-Being</fullName>
+                <default>false</default>
+                <label>Physical Comfort/Well-Being</label>
+            </value>
+            <value>
+                <fullName>Relationships/Social Inclusion</fullName>
+                <default>false</default>
+                <label>Relationships/Social Inclusion</label>
+            </value>
+            <value>
+                <fullName>Safety/Security/Order</fullName>
+                <default>false</default>
+                <label>Safety/Security/Order</label>
+            </value>
+            <value>
+                <fullName>Self-Determination/Autonomy/Rights</fullName>
+                <default>false</default>
+                <label>Self-Determination/Autonomy/Rights</label>
+            </value>
+            <value>
+                <fullName>Spiritual Well-Being</fullName>
+                <default>false</default>
+                <label>Spiritual Well-Being</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

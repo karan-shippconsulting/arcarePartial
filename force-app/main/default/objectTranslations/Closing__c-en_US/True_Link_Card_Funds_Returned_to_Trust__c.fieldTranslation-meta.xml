@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- True Link Card Funds Returned to Trust --></label>
+    <name>True_Link_Card_Funds_Returned_to_Trust__c</name>
+</CustomFieldTranslation>

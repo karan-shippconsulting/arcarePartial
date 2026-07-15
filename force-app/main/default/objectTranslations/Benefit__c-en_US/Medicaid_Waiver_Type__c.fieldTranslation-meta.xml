@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Medicaid Waiver/Type --></label>
+    <name>Medicaid_Waiver_Type__c</name>
+    <picklistValues>
+        <masterLabel>CBA</masterLabel>
+        <translation><!-- CBA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHIP</masterLabel>
+        <translation><!-- CHIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CLASS</masterLabel>
+        <translation><!-- CLASS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DBMD</masterLabel>
+        <translation><!-- DBMD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HCS</masterLabel>
+        <translation><!-- HCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICF-IDD</masterLabel>
+        <translation><!-- ICF-IDD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MDCP</masterLabel>
+        <translation><!-- MDCP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QDWI</masterLabel>
+        <translation><!-- QDWI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QMB</masterLabel>
+        <translation><!-- QMB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLMB</masterLabel>
+        <translation><!-- SLMB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAR</masterLabel>
+        <translation><!-- STAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAR HEALTH</masterLabel>
+        <translation><!-- STAR HEALTH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAR KIDS</masterLabel>
+        <translation><!-- STAR KIDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAR PLUS</masterLabel>
+        <translation><!-- STAR PLUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAR+PLUS/HCBS</masterLabel>
+        <translation><!-- STAR+PLUS/HCBS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traditional</masterLabel>
+        <translation><!-- Traditional --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TxHmL</masterLabel>
+        <translation><!-- TxHmL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YES</masterLabel>
+        <translation><!-- YES --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

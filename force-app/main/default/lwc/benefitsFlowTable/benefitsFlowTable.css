@@ -1,0 +1,25 @@
+/* Allow combobox dropdowns to escape table clipping */
+:host {
+    display: block;
+}
+
+/* Table + cells must allow overflow for dropdowns */
+.slds-table,
+.slds-table tbody,
+.slds-table tr,
+.slds-table td {
+    overflow: visible !important;
+}
+
+/* Lightning card containers can clip dropdowns */
+.slds-card,
+.slds-card__body,
+.slds-card__body_inner {
+    overflow: visible !important;
+}
+
+/* Flow screens often add an extra scrolling wrapper */
+.slds-modal__content,
+.flowruntime-body {
+    overflow: visible !important;
+}
