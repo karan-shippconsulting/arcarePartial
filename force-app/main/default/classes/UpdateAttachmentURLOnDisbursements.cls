@@ -1,5 +1,6 @@
 public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.AllowsCallouts {
     @TestVisible private static Integer BATCH_SIZE = 10;
+    @TestVisible private static Integer MAX_ATTEMPTS = 3;
     private String trustId;
 
     public UpdateAttachmentURLOnDisbursements(String trustId) {
@@ -18,12 +19,34 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
             LIMIT :fetchLimit
         ];
 
-        List<Transaction__c> toProcess = new List<Transaction__c>();
+        List<Transaction__c> unresolved = new List<Transaction__c>();
+        Set<String> attachmentIds = new Set<String>();
         for (Transaction__c t : candidates) {
             if (String.isBlank(t.Attachment_URL__c)) {
-                toProcess.add(t);
-                if (toProcess.size() >= BATCH_SIZE) break;
+                unresolved.add(t);
+                attachmentIds.add(t.Attachment_Id__c);
             }
+        }
+
+        Map<String, Integer> attachmentIdToErrorCount = new Map<String, Integer>();
+        if (!attachmentIds.isEmpty()) {
+            for (AggregateResult ar : [
+                SELECT Parent_Record_Id__c parentId, COUNT(Id) errCount
+                FROM Track_API_Call__c
+                WHERE Parent_Record_Id__c IN :attachmentIds
+                AND Status__c = 'Error'
+                GROUP BY Parent_Record_Id__c
+            ]) {
+                attachmentIdToErrorCount.put((String) ar.get('parentId'), (Integer) ar.get('errCount'));
+            }
+        }
+
+        List<Transaction__c> toProcess = new List<Transaction__c>();
+        for (Transaction__c t : unresolved) {
+            Integer errorCount = attachmentIdToErrorCount.get(t.Attachment_Id__c);
+            if (errorCount != null && errorCount >= MAX_ATTEMPTS) continue;
+            toProcess.add(t);
+            if (toProcess.size() >= BATCH_SIZE) break;
         }
 
         if (toProcess.isEmpty()) return;
@@ -33,6 +56,7 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
 
         for (Transaction__c tranx : toProcess) {
             Track_API_Call__c track = new Track_API_Call__c();
+            track.Parent_Record_Id__c = tranx.Attachment_Id__c;
             try {
                 Http http = new Http();
                 HttpRequest req = new HttpRequest();
@@ -42,14 +66,35 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
                 req.setHeader('Content-Type', 'application/json');
                 req.setHeader('Accept', 'application/json');
                 HttpResponse res = http.send(req);
+
+                track.Http_Method__c = req.getMethod();
+                track.Request_URL__c = req.getEndpoint();
+                track.StatusCode__c = res.getStatusCode();
+                String responseBody = res.getBody();
+                if (responseBody != null) {
+                    Integer responseBdyLength = Math.min(responseBody.length(), 13107);
+                    track.Response__c = responseBody.substring(0, responseBdyLength);
+                }
+
                 String contentType = res.getHeader('Content-Type');
                 if (contentType == null || !contentType.containsIgnoreCase('application/json')) {
                     throw new CalloutException('Non-JSON response (Content-Type: ' + contentType + '). Check endpoint URL.');
                 }
-                String responseBody = res.getBody();
+                if (res.getStatusCode() < 200 || res.getStatusCode() >= 300) {
+                    throw new CalloutException('Non-success status code: ' + res.getStatusCode());
+                }
+
                 Map<String, Object> resMap = (Map<String, Object>) JSON.deserializeUntyped(responseBody);
-                Map<String, Object> data = (Map<String, Object>) resMap.get('data');
-                Map<String, Object> attributes = (Map<String, Object>) data.get('attributes');
+                Object dataValue = resMap.get('data');
+                if (!(dataValue instanceof Map<String, Object>)) {
+                    throw new CalloutException('Response is missing a "data" object.');
+                }
+                Map<String, Object> data = (Map<String, Object>) dataValue;
+                Object attributesValue = data.get('attributes');
+                if (!(attributesValue instanceof Map<String, Object>)) {
+                    throw new CalloutException('Response "data" is missing an "attributes" object.');
+                }
+                Map<String, Object> attributes = (Map<String, Object>) attributesValue;
                 String url = (String) attributes.get('url');
 
                 track.Http_Method__c = req.getMethod();
@@ -67,7 +112,6 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
                 track.Error_Message__c = 'Error While Parsing Response. => ' + ex.getMessage() + '=>' + ex.getStackTraceString();
                 track.Status__c = 'Error';
             }
-            track.Parent_Record_Id__c = tranx.Attachment_Id__c;
             trackApiCallList.add(track);
         }
 

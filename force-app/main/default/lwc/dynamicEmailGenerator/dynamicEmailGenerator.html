@@ -152,7 +152,7 @@
 							</template>
 						</lightning-layout-item>
 					</lightning-layout>
-					<lightning-input type="toggle" variant="standard" onchange={handleSperateToggle}
+					<lightning-input type="toggle" variant="standard" checked={sperateBody} onchange={handleSperateToggle}
 						lwc:ref="sperateBodyRef" class="slds-m-around_x-small" label="Separate Email Body">
 					</lightning-input>
 				</template>
@@ -214,6 +214,9 @@
 						<lightning-input type="toggle" variant="standard" onchange={handlecreateActivity}
 							class="slds-m-around_x-small slds-m-top-medium" label="Create an Activity">
 						</lightning-input>
+						<lightning-input type="toggle" variant="standard" onchange={handleEmailOnlyToggle}
+							class="slds-m-around_x-small slds-m-top-medium" label="Send without attachment">
+							</lightning-input>
 						<!-- <lightning-input type="toggle" variant="standard" lwc:ref="addPDF" class="slds-m-around_x-small"
 					label="Attach Email Body as PDF"></lightning-input> -->
 						<lightning-file-upload label="Attach Document" name="fileUploader" accept=".pdf"

@@ -182,11 +182,43 @@ public class SchemaUtilTest {
     @isTest
     static void testUpsertEmailTemp() {
         Test.startTest();
-        SchemaUtil.upsertEmailTemp(null, 'Test Body', 'Test Subject', 'Contact','default','Test','Test','Test','Test','Test','Test', 'Test','Test','Test','Test');
+        SchemaUtil.upsertEmailTemp(null, 'Test Body', 'Test Subject', 'Contact','default','Test','Test','Test','Test','Test','Test', 'Test','Test','Test','Test', null, null);
         List<Custom_Email_Template__c> templates = [SELECT Id, Body__c, Subject__c FROM Custom_Email_Template__c WHERE Subject__c = 'Test Subject'];
         System.assertEquals(3, templates.size());
         System.assertEquals('Test Body', templates[0].Body__c);
         Test.stopTest();
+    }
+
+    @isTest
+    static void testUpsertEmailTempWithSeparateEmailBody() {
+        Test.startTest();
+        SchemaUtil.upsertEmailTemp(null, 'Attachment Body', 'Separate Email Body Test', 'Contact', 'default', null, null, null, null, null, null, null, null, null, null, 'Email Body Content', null);
+        Test.stopTest();
+
+        Custom_Email_Template__c result = [SELECT Body__c, Email_Body__c FROM Custom_Email_Template__c WHERE Subject__c = 'Separate Email Body Test' LIMIT 1];
+        System.assertEquals('Attachment Body', result.Body__c);
+        System.assertEquals('Email Body Content', result.Email_Body__c);
+    }
+
+    @isTest
+    static void testUpsertEmailTempNullSeparateEmailBodyDoesNotClear() {
+        Custom_Email_Template__c template = new Custom_Email_Template__c(
+            Name = 'Template',
+            Parent_Object__c = 'Contact',
+            Body__c = 'Old Body',
+            Email_Body__c = 'Existing Email Body',
+            Subject__c = 'Subject',
+            Active__c = true
+        );
+        insert template;
+
+        Test.startTest();
+        SchemaUtil.upsertEmailTemp(template.Id, 'Updated Body', 'Subject', 'Contact', 'default', null, null, null, null, null, null, null, null, null, null, null, null);
+        Test.stopTest();
+
+        Custom_Email_Template__c result = [SELECT Body__c, Email_Body__c FROM Custom_Email_Template__c WHERE Id = :template.Id];
+        System.assertEquals('Updated Body', result.Body__c);
+        System.assertEquals('Existing Email Body', result.Email_Body__c);
     }
 
     @isTest

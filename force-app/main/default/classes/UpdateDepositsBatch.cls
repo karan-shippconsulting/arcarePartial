@@ -1,22 +1,33 @@
 public class UpdateDepositsBatch implements Database.Batchable<sObject>,Database.AllowsCallouts {
+    @TestVisible private Boolean hadErrors = false;
+
     public Database.QueryLocator start(Database.BatchableContext bc){
-        return Database.getQueryLocator([Select Id,TrueLink_ID__c,True_Link_Balance__c from trust__c where TrueLink_ID__c!=null]);
+        return Database.getQueryLocator([Select Id,TrueLink_ID__c,True_Link_Balance__c from trust__c where TrueLink_ID__c!=null and Trust_Status__c IN ('Closing','Active')]);
     }
 
-    public void execute(Database.BatchableContext ctx,List<trust__c> records){   
-        List<trust__c> newRecords = new List<trust__c>();
+    public void execute(Database.BatchableContext ctx,List<trust__c> records){
         for(trust__c trust:records){
-            TrueLinkApiHandler.updateDeposit(trust.Id);
+            try{
+                TrueLinkApiHandler.updateDeposit(trust.Id);
+            } catch(Exception e){
+                hadErrors = true;
+                insert new Track_API_Call__c(
+                    Parent_Record_Id__c = trust.Id,
+                    Status__c = 'Error',
+                    Error_Message__c = 'Error While Updating Deposits. => ' + e.getMessage() + '=>' + e.getStackTraceString()
+                );
+            }
         }
     }
 
     public void finish(Database.BatchableContext ctx){
-        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
-        feature.Deposit_Last_Run_Datetime__c = system.now();
-        if(!Test.isRunningTest())
-        	update feature;
-        
-        Database.executeBatch(new UpdateDisbursementsBatch(),1);
+        if(!hadErrors){
+            Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+            feature.Deposit_Last_Run_Datetime__c = system.now();
+            if(!Test.isRunningTest())
+                update feature;
+        }
 
+        Database.executeBatch(new UpdateDisbursementsBatch(),1);
     }
 }

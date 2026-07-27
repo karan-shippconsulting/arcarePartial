@@ -23,8 +23,10 @@ export default class GenerateMergeFields extends LightningElement {
     fieldByType;
     pdfOptions = [];
     pdfOption;
+    pdfFileName = '';
     objectApiName;
     dateFormatString;
+    emailBodySeparate;
 
     width = 100;
     height = 100;
@@ -127,12 +129,14 @@ export default class GenerateMergeFields extends LightningElement {
             if (this.recordId) {
                 const data = await getCustomEmailById({ Id: this.recordId });
                 this.refs.emailBodyText.value = data.Body__c;
+                this.refs.emailBodySeparate.value = data.Email_Body__c || '';
                 this.refs.subject.value = data.Subject__c;
                 this.objectApiName = data.Parent_Object__c;
                 this.fieldName1 = data.Default_Field_Name_1__c;
                 this.fieldName2 = data.Default_Field_Name_2__c;
                 this.fieldName3 = data.Default_Field_Name_3__c;
                 this.pdfOption = data.Pdf_Template__c;
+                this.pdfFileName = data.PDF_File_Name__c || '';
                 this.decimalFormatStringValue = data.Default_Decimal_Format__c;
                 this.currencyFormatStringValue = data.Default_Currency_Format__c;
                 this.dateFormatString = data.Default_Date_Format__c;
@@ -312,6 +316,7 @@ export default class GenerateMergeFields extends LightningElement {
         upsertEmailTemp({
             tempId: this.recordId,
             emailBody: this.refs.emailBodyText.value,
+            separateEmailBody: this.refs.emailBodySeparate.value,
             subject: this.refs.subject.value,
             objectName: this.objectApiName,
             pdfTemplate : this.pdfOption,
@@ -324,7 +329,8 @@ export default class GenerateMergeFields extends LightningElement {
             Default_DateFormat: this.dateFormatString,
             Default_CurrencyFormat: this.currencyFormatStringValue,
             Default_DecimalFormat: this.decimalFormatStringValue,
-            Default_BooleanFormat: this.booleanFormatValue
+            Default_BooleanFormat: this.booleanFormatValue,
+            pdfFileName: this.refs.pdfFileName.value
         })
             .then(() => {
                 const event = new ShowToastEvent({
@@ -335,6 +341,8 @@ export default class GenerateMergeFields extends LightningElement {
                 this.dispatchEvent(event);
                 this.dispatchEvent(new RefreshEvent());
 
+            }).catch((error)=>{
+                console.log('error at 364---' + JSON.stringify(error));
             });
     }
 

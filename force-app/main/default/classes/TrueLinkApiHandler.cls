@@ -187,7 +187,7 @@ public class TrueLinkApiHandler {
         trust__c trust = [Select Id,TrueLink_ID__c,Beneficiary__c,True_Link_Balance__c,Trust_Status__c,Trust_Portfolio__c, Trust_Portfolio__r.True_Link_Portfolio_ID__c from trust__c where Id =: trustId limit 1];
         Set<String> allowedTrustStatus = new Set<String>{'Closing','Active'};
             if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-                throw new AuraHandledException('Trust Status should be Active or Closing');
+                throw new ApiException('Trust Status should be Active or Closing');
             }/*else if(trust.RecordType.Name != 'Trust'){
                 throw new AuraHandledException('Record Type is not Trust');
             }*/
@@ -308,7 +308,7 @@ public class TrueLinkApiHandler {
         trust__c trust = [Select Id,TrueLink_ID__c,True_Link_Balance__c,Trust_Status__c,Trust_Portfolio__c, Trust_Portfolio__r.True_Link_Portfolio_ID__c from trust__c where Id =: trustId limit 1];
         Set<String> allowedTrustStatus = new Set<String>{'Closing','Active'};
         if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-            throw new AuraHandledException('Trust Status should be Active or Closing');
+            throw new ApiException('Trust Status should be Active or Closing');
         }
         if(String.isNotEmpty(trust.TrueLink_ID__c)){
             TruelinkTransactionResponseWrapper response = new TruelinkTransactionResponseWrapper();
@@ -397,7 +397,7 @@ public class TrueLinkApiHandler {
         Set<String> disbursementTruelinkTransactionIdsSet = new Set<String>();
         Map<String, String> disbursementIdToAttachmentIdMap = new Map<String, String>(); 
         if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-            throw new AuraHandledException('Trust Status should be Active or Closing');
+            throw new ApiException('Trust Status should be Active or Closing');
         }
         if(String.isNotEmpty(trust.TrueLink_ID__c)){
             TruelinkTransactionResponseWrapper response = new TruelinkTransactionResponseWrapper();
@@ -514,8 +514,26 @@ public class TrueLinkApiHandler {
                     tranxList.add(tranx);
                 }
                 system.debug('Disbursement tranxList'+tranxList);
-                if(!tranxList.isEmpty())
-                    upsert tranxList True_Link_Transaction_ID__c;
+                if(!tranxList.isEmpty()){
+                    List<Database.UpsertResult> upsertResults = Database.upsert(tranxList, Transaction__c.True_Link_Transaction_ID__c, false);
+                    List<Track_API_Call__c> failureLogs = new List<Track_API_Call__c>();
+                    for(Integer i = 0; i < upsertResults.size(); i++){
+                        if(!upsertResults[i].isSuccess()){
+                            List<String> errorMessages = new List<String>();
+                            for(Database.Error err : upsertResults[i].getErrors()){
+                                errorMessages.add(err.getStatusCode() + ': ' + err.getMessage());
+                            }
+                            failureLogs.add(new Track_API_Call__c(
+                                Parent_Record_Id__c = trust.Id,
+                                Status__c = 'Error',
+                                Error_Message__c = 'Error While Upserting Disbursement Transaction (True_Link_Transaction_ID__c=' + tranxList[i].True_Link_Transaction_ID__c + '). => ' + String.join(errorMessages, ' | ')
+                            ));
+                        }
+                    }
+                    if(!failureLogs.isEmpty()){
+                        insert failureLogs;
+                    }
+                }
                 System.enqueueJob(new UpdateAttachmentURLOnDisbursements(trust.Id));
             }
         }  

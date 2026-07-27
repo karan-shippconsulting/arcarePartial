@@ -1,0 +1,6 @@
+.custom-modal {
+    height: 90vh !important;
+    width: 90vw !important;
+    max-height: 90vh !important;
+    max-width: 90vw !important;
+}

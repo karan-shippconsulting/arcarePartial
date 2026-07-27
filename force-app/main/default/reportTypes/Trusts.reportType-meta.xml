@@ -1061,6 +1061,16 @@
             <field>TL_EID__c</field>
             <table>Trust__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>True_Link_Status__c</field>
+            <table>Trust__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>taxDocRecipientConnectionId__c</field>
+            <table>Trust__c</table>
+        </columns>
         <masterLabel>Trusts</masterLabel>
     </sections>
 </ReportType>

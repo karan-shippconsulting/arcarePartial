@@ -467,6 +467,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ProcessBulkCustomEmailsBatch</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProcessBulkCustomEmailsBatchTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>RemoteSiteHelperController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1580,6 +1588,11 @@
         <editable>false</editable>
         <field>Case.Benefit_Award_Letters__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Birthdate__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3328,6 +3341,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Connections__c.Update_True_Link__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Connections__c.Zip__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -4848,6 +4866,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Custom_Email_Template__c.Email_Body__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Custom_Email_Template__c.Final_Body__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -4859,6 +4882,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Custom_Email_Template__c.Organization_Wide_Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Custom_Email_Template__c.PDF_File_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8439,6 +8467,31 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>PricebookEntry.Original_System_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Process_Bulk_Custom_Emails__c.Custom_Email_Template_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Process_Bulk_Custom_Emails__c.Error_Message__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Process_Bulk_Custom_Emails__c.Merged_Body__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Process_Bulk_Custom_Emails__c.Parent_Record_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Process_Bulk_Custom_Emails__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12123,6 +12176,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Trust__c.True_Link_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Trust__c.Truelink_Account_Id__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -12249,6 +12307,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Trust__c.X18_Digit_Trust_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trust__c.taxDocRecipientConnectionId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13317,6 +13380,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>ProcessException-Process Exception Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Process_Bulk_Custom_Emails__c-Process Bulk Custom Emails Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Product2-Product Layout</layout>

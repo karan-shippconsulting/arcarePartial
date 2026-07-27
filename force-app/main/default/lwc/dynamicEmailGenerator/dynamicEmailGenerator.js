@@ -97,6 +97,7 @@ export default class DynamicEmailGenerator extends LightningElement {
     attachmentBody;
     matches = [];
     selectedObj;
+    pdfFileName = '';
 
     createActivity = false;
 
@@ -275,7 +276,8 @@ export default class DynamicEmailGenerator extends LightningElement {
                     label: item.Name, value: item.Id, body: item.Body__c, subject: item.Subject__c, Default_Field_Name_1__c: item.Default_Field_Name_1__c, Default_Field_Name_2__c: item.Default_Field_Name_2__c, Default_Field_Name_3__c: item.Default_Field_Name_3__c,
                     Default_Field_Value_1__c: item.Default_Field_Value_1__c, Default_Field_Value_2__c: item.Default_Field_Value_2__c, Default_Field_Value_3__c: item.Default_Field_Value_3__c, 
                     Pdf_Template__c : item.Pdf_Template__c,recpField:item.Recipient_Address_Field__c,defaultOrg:item.Organization_Wide_Email__c, Default_Date_Format__c : item.Default_Date_Format__c, Default_Currency_Format__c : item.Default_Currency_Format__c,
-                    Default_Decimal_Format__c : item.Default_Decimal_Format__c, Default_Boolean_Format__c : item.Default_Boolean_Format__c 
+                    Default_Decimal_Format__c : item.Default_Decimal_Format__c, Default_Boolean_Format__c : item.Default_Boolean_Format__c,
+                    pdfFileName: item.PDF_File_Name__c || ''
                 };
             });
             // this.emailTempsCustom.unshift({label:'Create New',value:'new'});
@@ -556,10 +558,18 @@ export default class DynamicEmailGenerator extends LightningElement {
         this.selectedTemp = event.target.value;
         this.allowSave = this.emailType == 'custom' ? await checkEditPermission({ recordId: this.selectedTemp }) : null;
         let customTemplates = await getCustomEmailById({ Id: this.selectedTemp });
-        this.emailBody = this.emailType == 'custom' ? customTemplates.Body__c : await generateStringBody({ recordId: this.recordId, tempId: this.selectedTemp });
+        const hasEmailBody = this.emailType == 'custom' && !!customTemplates.Email_Body__c;
+        if (hasEmailBody) {
+            this.emailBody = customTemplates.Email_Body__c;
+            this.attachmentBody = customTemplates.Body__c;
+            this.sperateBody = true;
+        } else {
+            this.emailBody = this.emailType == 'custom' ? customTemplates.Body__c : await generateStringBody({ recordId: this.recordId, tempId: this.selectedTemp });
+            this.attachmentBody = this.emailBody;
+        }
         this.emailSubject = this.emailType == 'custom' ? this.emailTempsCustom.find(emailTemp => emailTemp.value == this.selectedTemp).subject : this.emailTemps.find(emailTemp => emailTemp.value == this.selectedTemp).subject;
-        this.attachmentBody = this.emailBody;
-        this.emailType == 'custom' && this.checkFields(this.emailBody, true);
+        this.emailType == 'custom' && this.checkFields(this.emailBody, false);
+        this.emailType == 'custom' && hasEmailBody && this.checkFields(this.attachmentBody, false);
         this.emailType == 'custom' && this.checkFields(this.emailSubject, true);
 
         this.field1 = this.emailType == 'custom' ? this.emailTempsCustom.find(emailTemp => emailTemp.value == this.selectedTemp).Default_Field_Name_1__c : null;
@@ -570,6 +580,7 @@ export default class DynamicEmailGenerator extends LightningElement {
         this.value2 = this.emailType == 'custom' ? this.emailTempsCustom.find(emailTemp => emailTemp.value == this.selectedTemp).Default_Field_Value_2__c : null;
         this.value3 = this.emailType == 'custom' ? this.emailTempsCustom.find(emailTemp => emailTemp.value == this.selectedTemp).Default_Field_Value_3__c : null;
         this.pdfOption = this.emailTempsCustom.find(emailTemp => emailTemp.value == this.selectedTemp).Pdf_Template__c;
+        this.pdfFileName = this.emailTempsCustom.find(emailTemp => emailTemp.value == this.selectedTemp)?.pdfFileName || '';
 
         let convertDate = (field, value) => {
             return (this.fieldByType.find(aa => aa.name == field)?.type == 'DATE' || this.fieldByType.find(aa => aa.name == field)?.type == 'DATETIME') && !value ? new Date().toISOString() : value;
@@ -674,6 +685,7 @@ export default class DynamicEmailGenerator extends LightningElement {
     }
 
     replaceGenericTaggersValue(body) {
+        if (!body) return body ?? '';
         let keyForToday = 'TODAY()';
         const regex3ForToday = /\{TODAY\(\)\}:[^}]*\}/g;
         let matches = [...body.matchAll(regex3ForToday)];
@@ -761,8 +773,8 @@ export default class DynamicEmailGenerator extends LightningElement {
             let sObject = sObjectList[0];
             
             this.recordTypeId = sObject.RecordTypeId;
-            let body = this.refs.emailBodyText.value;
-            let attachmentBOdy = this.refs.attachmentBodyText?.value || this.attachmentBody;
+            let body = this.refs.emailBodyText?.value || '';
+            let attachmentBOdy = this.refs.attachmentBodyText?.value || this.attachmentBody || '';
             body = this.replaceGenericTaggersValue(body);
             attachmentBOdy = this.replaceGenericTaggersValue(attachmentBOdy);
 
@@ -775,18 +787,21 @@ export default class DynamicEmailGenerator extends LightningElement {
                             let newKey = key + '.' + key2.toLowerCase();
                             if(this.fieldTypeMap[newKey] == 'DATETIME' || this.fieldTypeMap[newKey] == 'DATE' 
                                 || this.fieldTypeMap[newKey] == 'CURRENCY' || this.fieldTypeMap[newKey] == 'DOUBLE'
-                                || (this.fieldTypeMap[newKey] == 'TEXTAREA' && sObject2[key2].includes('img'))
+                                || (this.fieldTypeMap[newKey] == 'TEXTAREA' && sObject2[key2]?.includes('img'))
                                 || this.fieldTypeMap[newKey] == 'BOOLEAN') {
                                 const normalizedKey = newKey.replace(/_/g, '_?').toLowerCase();
                                 const regexPattern = `\\{(${normalizedKey})\\}:([^}]+)\\}`;
                                 const regex3 = new RegExp(regexPattern, 'gi');
 
-                                let matches = [...body.matchAll(regex3)];
+                                let matches = [...body.matchAll(regex3), ...attachmentBOdy.matchAll(new RegExp(regexPattern, 'gi'))];
+                                let processedTags = new Set();
                                 for (const match of matches) {
+                                    if (processedTags.has(match[0])) continue;
+                                    processedTags.add(match[0]);
                                     let tempFormatedValue = this.replaceTagWithRespectiveValue(newKey, match, sObject2[key2], false);
-                                    body = body.replace(match[0], tempFormatedValue);
-                                    attachmentBOdy = attachmentBOdy.replace(match[0], tempFormatedValue);
-                                    this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + sObject2[key2]);
+                                    body = body.replaceAll(match[0], tempFormatedValue);
+                                    attachmentBOdy = attachmentBOdy.replaceAll(match[0], tempFormatedValue);
+                                    this.refs.subject.value = this.refs.subject.value.replaceAll(match[0], '' + (sObject2[key2] ?? ''));
                                 }
                             } else{
                                 let newKey = key + '.' + key2.toLowerCase();
@@ -802,14 +817,14 @@ export default class DynamicEmailGenerator extends LightningElement {
                                     };
                                     tempValue = this.formatAddress(address);
                                 } else {
-                                    tempValue = this.formatedValue(newKey, '' + sObject2[key2]);
+                                    tempValue = this.formatedValue(newKey, '' + (sObject2[key2] ?? ''));
                                 }
                                 if(tempValue.includes('\n')) {
                                     tempValue = (tempValue || '').replace(/\r?\n/g, '<br/>');
                                 }
                                 body = body.replaceAll(regex2, tempValue);
                                 attachmentBOdy = attachmentBOdy?.replaceAll(regex2, tempValue);
-                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + sObject2[key2]);
+                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + (sObject2[key2] ?? ''));
                             }
                         }
                     }
@@ -818,19 +833,22 @@ export default class DynamicEmailGenerator extends LightningElement {
                     if (Object.hasOwnProperty.call(sObject, key)) {
                         if(this.fieldTypeMap[key.toLowerCase()] == 'DATETIME' || this.fieldTypeMap[key.toLowerCase()] == 'DATE' 
                          || this.fieldTypeMap[key.toLowerCase()] == 'CURRENCY' || this.fieldTypeMap[key.toLowerCase()] == 'DOUBLE'
-                         || (this.fieldTypeMap[key.toLowerCase()] == 'TEXTAREA' && sObject[key].includes('img'))
+                         || (this.fieldTypeMap[key.toLowerCase()] == 'TEXTAREA' && sObject[key]?.includes('img'))
                          || this.fieldTypeMap[key.toLowerCase()] == 'BOOLEAN') {
                             const normalizedKey = key.replace(/_/g, '_?').toLowerCase();
                            
                             const regexPattern = `\\{(${normalizedKey})\\}:([^}]+)\\}`;
                             const regex3 = new RegExp(regexPattern, 'gi');
 
-                            let matches = [...body.matchAll(regex3)];
+                            let matches = [...body.matchAll(regex3), ...attachmentBOdy.matchAll(new RegExp(regexPattern, 'gi'))];
+                            let processedTags = new Set();
                             for (const match of matches) {
+                                if (processedTags.has(match[0])) continue;
+                                processedTags.add(match[0]);
                                 let tempFormatedValue = this.replaceTagWithRespectiveValue(key, match, sObject[key], true);
-                                body = body.replace(match[0], tempFormatedValue);
-                                attachmentBOdy = attachmentBOdy.replace(match[0], tempFormatedValue);
-                                this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + sObject[key]);
+                                body = body.replaceAll(match[0], tempFormatedValue);
+                                attachmentBOdy = attachmentBOdy.replaceAll(match[0], tempFormatedValue);
+                                this.refs.subject.value = this.refs.subject.value.replaceAll(match[0], '' + (sObject[key] ?? ''));
                             }
                         } else {
                             const regex = new RegExp(`{${key.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
@@ -845,14 +863,14 @@ export default class DynamicEmailGenerator extends LightningElement {
                                 };
                                 tempValue = this.formatAddress(address);
                             } else {
-                                tempValue = this.formatedValue(key, '' + sObject[key]);
+                                tempValue = this.formatedValue(key, '' + (sObject[key] ?? ''));
                             }
                             if(tempValue.includes('\n')) {
                                 tempValue = (tempValue || '').replace(/\r?\n/g, '<br/>');
                             }
                             body = body.replaceAll(regex, tempValue);
                             attachmentBOdy = attachmentBOdy?.replaceAll(regex, tempValue);
-                            this.refs.subject.value = this.refs.subject.value.replace(regex, '' + sObject[key]);
+                            this.refs.subject.value = this.refs.subject.value.replace(regex, '' + (sObject[key] ?? ''));
                         }
                         
                     }
@@ -866,9 +884,9 @@ export default class DynamicEmailGenerator extends LightningElement {
                             if (Object.hasOwnProperty.call(sObjectList[1], key)) {
                                 let newKey = key + '.' + key2.toLowerCase();
                                 const regex2 = new RegExp(`{${newKey.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
-                                body = body.replaceAll(regex2, this.formatedValue(newKey, '' + sObject2[key2]));
-                                attachmentBOdy = attachmentBOdy?.replaceAll(regex2, this.formatedValue(newKey, '' + sObject2[key2]));
-                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + sObject2[key2]);
+                                body = body.replaceAll(regex2, this.formatedValue(newKey, '' + (sObject2[key2] ?? '')));
+                                attachmentBOdy = attachmentBOdy?.replaceAll(regex2, this.formatedValue(newKey, '' + (sObject2[key2] ?? '')));
+                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + (sObject2[key2] ?? ''));
                             }
                         }
                     }
@@ -878,16 +896,18 @@ export default class DynamicEmailGenerator extends LightningElement {
                             let fieldTypeMapKey = 'CreatedBy.' + key.toLowerCase();
                             if(this.fieldTypeMap[fieldTypeMapKey] == 'DATETIME' || this.fieldTypeMap[fieldTypeMapKey] == 'DATE' 
                             || this.fieldTypeMap[fieldTypeMapKey] == 'CURRENCY' || this.fieldTypeMap[fieldTypeMapKey] == 'DOUBLE'
-                            || (this.fieldTypeMap[fieldTypeMapKey] == 'TEXTAREA' && sObjectList[1][key].includes('img'))
+                            || (this.fieldTypeMap[fieldTypeMapKey] == 'TEXTAREA' && sObjectList[1][key]?.includes('img'))
                             || this.fieldTypeMap[fieldTypeMapKey] == 'BOOLEAN') {
                                 const normalizedKey = newKey.replace(/_/g, '_?').toLowerCase();
                             
                                 const regexPattern = `\\{(${normalizedKey})\\}:([^}]+)\\}`;
                                 const regex3 = new RegExp(regexPattern, 'gi');
 
-                                let matches = [...body.matchAll(regex3)];
-                                
+                                let matches = [...body.matchAll(regex3), ...attachmentBOdy.matchAll(new RegExp(regexPattern, 'gi'))];
+                                let processedTags = new Set();
                                 for (const match of matches) {
+                                    if (processedTags.has(match[0])) continue;
+                                    processedTags.add(match[0]);
                                     let imageValue;
                                     let booleanFormatParts;
                                     const fieldKey = match[1];
@@ -917,19 +937,19 @@ export default class DynamicEmailGenerator extends LightningElement {
                                     } else if(booleanFormatParts) {
                                         tempFormatedValue = sObjectList[1][key] ? booleanFormatParts[0] : booleanFormatParts[1];
                                     } else {
-                                        tempFormatedValue = this.formatedValue('Owner.' + key.toLowerCase(), '' + sObjectList[1][key]);
+                                        tempFormatedValue = this.formatedValue('Owner.' + key.toLowerCase(), '' + (sObjectList[1][key] ?? ''));
                                     }
-                                    
-                                    body = body.replace(match[0], tempFormatedValue);
-                                    attachmentBOdy = attachmentBOdy.replace(match[0], tempFormatedValue);
-                                    this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + sObjectList[1][key]);  
+
+                                    body = body.replaceAll(match[0], tempFormatedValue);
+                                    attachmentBOdy = attachmentBOdy.replaceAll(match[0], tempFormatedValue);
+                                    this.refs.subject.value = this.refs.subject.value.replaceAll(match[0], '' + (sObjectList[1][key] ?? ''));
                                 }
                             } else {
                                 let newKey = 'CurrentUser.' + key;
                                 const regex = new RegExp(`{${newKey.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
-                                body = body.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + sObjectList[1][key]));
-                                attachmentBOdy = attachmentBOdy?.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + sObjectList[1][key]));
-                                this.refs.subject.value = this.refs.subject.value.replace(regex, '' + sObjectList[1][key]);
+                                body = body.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + (sObjectList[1][key] ?? '')));
+                                attachmentBOdy = attachmentBOdy?.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + (sObjectList[1][key] ?? '')));
+                                this.refs.subject.value = this.refs.subject.value.replace(regex, '' + (sObjectList[1][key] ?? ''));
                             }
                             
                         }
@@ -946,12 +966,12 @@ export default class DynamicEmailGenerator extends LightningElement {
                 this.refs.finalAttachment.value = attachmentBOdy;
         }
         catch (err) {
-            this.refs.finalEmail.value = this.refs.emailBodyText.value;
+            this.refs.finalEmail.value = this.refs.emailBodyText?.value;
             if (this.sperateBody)
                 this.refs.finalAttachment.value = this.refs.attachmentBodyText?.value;
             const event = new ShowToastEvent({
                 title: 'Error',
-                message: err.body.message,
+                message: err.body?.message || err.message,
                 variant: 'error'
             });
             this.dispatchEvent(event);
@@ -1066,7 +1086,7 @@ export default class DynamicEmailGenerator extends LightningElement {
         let blobData = await generatePDF({ recordId: this.selectedTemp, vfPageId: this.pdfOption });
         this.isLoading = false;
         var a = document.createElement("a");
-        a.setAttribute("download", 'Test');
+        a.setAttribute("download", (this.pdfFileName || 'email') + '.pdf');
         a.setAttribute("href", `data:application/pdf;base64,${blobData}`);
         document.body.appendChild(a);
         a.click();

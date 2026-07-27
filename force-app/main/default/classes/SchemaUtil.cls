@@ -278,7 +278,7 @@ public without sharing class SchemaUtil {
         }
         Blob pdfBlob = Test.isRunningTest() ? Blob.valueOf('Test') : pdfContent ?? pdfPage.getContentAsPDF();
         
-        Custom_Email_Template__c template = [Select Id,Name,Parent_Object__c, Document_Checklist_Category__c, Document_Checklist_Item_Status__c from Custom_Email_Template__c where Id =:recordId];
+        Custom_Email_Template__c template = [Select Id,Name,PDF_File_Name__c,Parent_Object__c, Document_Checklist_Category__c, Document_Checklist_Item_Status__c from Custom_Email_Template__c where Id =:recordId];
         
         /*
 ContentVersion contentVersion = new ContentVersion();
@@ -346,10 +346,10 @@ insert documentLink; */
                 
                 
                 ContentVersion contentVersion = new ContentVersion();
-                contentVersion.Title = template.Name +'.pdf';
+                contentVersion.Title = (String.isNotBlank(template.PDF_File_Name__c) ? template.PDF_File_Name__c : template.Name) + '.pdf';
                 contentVersion.PathOnClient = 'Record_' + currentRecord + '.pdf';
                 contentVersion.VersionData = pdfBlob;
-                contentVersion.FirstPublishLocationId = doclist.Id;
+                //contentVersion.FirstPublishLocationId = doclist.Id;
                 contentVersion.Origin = 'H';
                 if(!Test.isRunningTest()){
                     insert contentVersion;
@@ -518,7 +518,7 @@ insert documentLink; */
         String currentUserName = UserInfo.getUserName();
         for(String recordId:bodyMap.keySet()){
             Bulk_Custom_Email_Template__c bulkTemp = new Bulk_Custom_Email_Template__c(Custom_Email_Template__c = customEmailTempId,Final_Email_Body__c = bodyMap.get(recordId), Record_Id__c = recordId); 
-            bulkTemp.Name = currentUserName + recordId;
+            bulkTemp.Name = currentUserName.substring(0, 20) + recordId;
             toInsert.add(bulkTemp);
         }
         insert toInsert;
@@ -561,13 +561,13 @@ insert documentLink; */
     @AuraEnabled(cacheable=true)
     public static List<Custom_Email_Template__c> getAllEmailTempsCustom(String folder,String objectApiName){
         if(String.isNotBlank(folder) && String.isNotEmpty(folder))
-            return [Select Id,Body__c,Subject__c,Name,Default_Field_Name_1__c,Default_Field_Name_2__c,Default_Field_Name_3__c,Default_Field_Value_1__c,Default_Field_Value_2__c,Default_Field_Value_3__c,Pdf_Template__c, Default_Currency_Format__c, Default_Date_Format__c, Default_Decimal_Format__c, Default_Boolean_Format__c,Recipient_Address_Field__c,Organization_Wide_Email__c from Custom_Email_Template__c where Active__c = true AND Folder__c =:folder AND Parent_Object__c =:objectApiName ORDER BY Name];
-        return [Select Id,Body__c,Subject__c,Name,Default_Field_Name_1__c,Default_Field_Name_2__c,Default_Field_Name_3__c,Default_Field_Value_1__c,Default_Field_Value_2__c,Default_Field_Value_3__c,Pdf_Template__c, Default_Currency_Format__c, Default_Date_Format__c, Default_Decimal_Format__c, Default_Boolean_Format__c,Recipient_Address_Field__c,Organization_Wide_Email__c from Custom_Email_Template__c where Active__c = true AND Parent_Object__c =:objectApiName ORDER BY Name];
+            return [Select Id,Body__c,Email_Body__c,Subject__c,Name,Default_Field_Name_1__c,Default_Field_Name_2__c,Default_Field_Name_3__c,Default_Field_Value_1__c,Default_Field_Value_2__c,Default_Field_Value_3__c,Pdf_Template__c, Default_Currency_Format__c, Default_Date_Format__c, Default_Decimal_Format__c, Default_Boolean_Format__c,Recipient_Address_Field__c,Organization_Wide_Email__c from Custom_Email_Template__c where Active__c = true AND Folder__c =:folder AND Parent_Object__c =:objectApiName ORDER BY Name];
+        return [Select Id,Body__c,Email_Body__c,Subject__c,Name,Default_Field_Name_1__c,Default_Field_Name_2__c,Default_Field_Name_3__c,Default_Field_Value_1__c,Default_Field_Value_2__c,Default_Field_Value_3__c,Pdf_Template__c, Default_Currency_Format__c, Default_Date_Format__c, Default_Decimal_Format__c, Default_Boolean_Format__c,Recipient_Address_Field__c,Organization_Wide_Email__c from Custom_Email_Template__c where Active__c = true AND Parent_Object__c =:objectApiName ORDER BY Name];
     }
     
     @AuraEnabled 
     public static Custom_Email_Template__c getCustomEmailById(String Id){ 
-        return [Select Id,Body__c,Subject__c,Name,Default_Field_Name_1__c,Default_Field_Name_2__c,Default_Field_Name_3__c,Default_Field_Value_1__c,Default_Field_Value_2__c,Default_Field_Value_3__c ,Parent_Object__c, Pdf_Template__c, Default_Currency_Format__c, Default_Date_Format__c, Default_Decimal_Format__c, Default_Boolean_Format__c from Custom_Email_Template__c where Active__c = true AND Id =:Id limit 1];
+        return [Select Id,Body__c,Email_Body__c,Subject__c,Name,Default_Field_Name_1__c,Default_Field_Name_2__c,Default_Field_Name_3__c,Default_Field_Value_1__c,Default_Field_Value_2__c,Default_Field_Value_3__c ,Parent_Object__c, Pdf_Template__c, Default_Currency_Format__c, Default_Date_Format__c, Default_Decimal_Format__c, Default_Boolean_Format__c from Custom_Email_Template__c where Active__c = true AND Id =:Id limit 1];
     }
     
     @AuraEnabled(cacheable=true)
@@ -675,7 +675,7 @@ insert documentLink; */
         }
         
         if(attachAsPdf){
-            Custom_Email_Template__c temp = [Select Id,Name from Custom_Email_Template__c where Id =:recordId];
+            Custom_Email_Template__c temp = [Select Id,Name,PDF_File_Name__c from Custom_Email_Template__c where Id =:recordId];
             Messaging.EmailFileAttachment efa = new Messaging.EmailFileAttachment();     
             PageReference pdfPage;
             if(String.isNotEmpty(vfPageId) && vfPageId!='default'){
@@ -700,7 +700,7 @@ insert documentLink; */
                 SchemaUtil.generatePDFOnRecord(recordId,null,recordId2,Test.isRunningTest() ? Blob.valueOf('Test') : pdfPage.getContentaspdf());
             }
             
-            efa.setFileName(temp.Name+'.pdf');
+            efa.setFileName((String.isNotBlank(temp.PDF_File_Name__c) ? temp.PDF_File_Name__c : temp.Name) + '.pdf');
             efa.setContentType('application/pdf');
             emailAttachments.add(efa);
         }
@@ -742,8 +742,11 @@ insert documentLink; */
     @AuraEnabled
     public static void upsertEmailTemp(String tempId,String emailBody,String subject,String objectName, String pdfTemplate, String Default_Field1,String Default_Field2,String Default_Field3,
         String Default_FieldValue1,String Default_FieldValue2,String Default_FieldValue3,
-        String Default_CurrencyFormat, String Default_DateFormat, String Default_DecimalFormat, String Default_BooleanFormat){
+        String Default_CurrencyFormat, String Default_DateFormat, String Default_DecimalFormat, String Default_BooleanFormat, String separateEmailBody, String pdfFileName){
         Custom_Email_Template__c temp = new Custom_Email_Template__c(Id=tempId,Body__c = emailBody,Subject__c = subject,Active__c = true,Parent_Object__c = objectName);
+        if(separateEmailBody != null) {
+            temp.Email_Body__c = separateEmailBody;
+        }
         if(String.isNotEmpty(Default_Field1)){
             temp.put('Default_Field_Name_1__c',Default_Field1);
         }
@@ -764,7 +767,10 @@ insert documentLink; */
         temp.put('Default_Date_Format__c',Default_DateFormat);
         temp.put('Default_Decimal_Format__c',Default_DecimalFormat);
         temp.put('Default_Boolean_Format__c',Default_BooleanFormat);
-        
+        if(String.isNotEmpty(pdfFileName)){
+            temp.put('PDF_File_Name__c',pdfFileName);
+        }
+
         upsert temp;
     }
     
@@ -836,6 +842,33 @@ insert documentLink; */
         //Role__c role = (Role__c) Database.query(query);
         /**/
      return false;
+    }
+
+    @AuraEnabled
+    public static void createQueueAndStartBatch(String customEmailTemplateId, List<String> parentRecordIds, 
+        Map<String, String> mergedBodyByRecord) {
+
+        System.debug('customEmailTemplateId -- ' + customEmailTemplateId);
+        System.debug('parentRecordIds -- ' + parentRecordIds);
+        System.debug('parentRecordIds.isEmpty -- ' + (parentRecordIds == null ? null : parentRecordIds.isEmpty()));
+
+        if (String.isBlank(customEmailTemplateId) || parentRecordIds == null || parentRecordIds.isEmpty()) {
+            throw new AuraHandledException('Missing template id or parent record ids.');
+        }
+
+        List<Process_Bulk_Custom_Emails__c> toInsert = new List<Process_Bulk_Custom_Emails__c>();
+
+        for (String prId : parentRecordIds) {
+            Process_Bulk_Custom_Emails__c p = new Process_Bulk_Custom_Emails__c();
+            p.Custom_Email_Template_Id__c = customEmailTemplateId;
+            p.Parent_Record_Id__c = prId;
+            p.Merged_Body__c = mergedBodyByRecord != null ? mergedBodyByRecord.get(prId) : null;
+            p.Status__c = 'Pending';
+            toInsert.add(p);
+        }
+        insert toInsert;
+
+        Database.executeBatch(new ProcessBulkCustomEmailsBatch(), 1);
     }
 
 }

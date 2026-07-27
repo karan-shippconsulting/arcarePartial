@@ -1,13 +1,13 @@
 <template>
 	<lightning-card variant="Narrow">
 		<p class="slds-p-horizontal_small">
-			<!-- <lightning-input type="text" variant="standard" lwc:ref="objectApiName" label="Enter Object Api Name"
-				placeholder="type here..."></lightning-input> -->
 			<c-searchable-combobox label="Select Parent Object" picklist-ordered={objectList} lwc:ref="objectApiName"
 				onselect={getMetaData} selected-value={objectApiName}></c-searchable-combobox>
 				<lightning-combobox label="Select PDF Template" placeholder="Select PDF Template" value={pdfOption}
 						options={pdfOptions} onchange={handlePdfOptionChange}></lightning-combobox>
-			<!-- <lightning-button variant="brand" label="Get Object Meta Data" onclick={getMetaData}></lightning-button> -->
+				<lightning-input lwc:ref="pdfFileName" type="text" label="PDF File Name"
+					value={pdfFileName} placeholder="Leave blank to use template name">
+				</lightning-input>
 			
 			<template if:true={showData}>
 				<div class="slds-grid slds-gutters">
@@ -61,8 +61,12 @@
 				value={emailSubject}>
 			</lightning-input>
 			<br>
-			<lightning-input-rich-text lwc:ref="emailBodyText" placeholder="Type something interesting"
-				label="Email Body" value={emailBody} field-level-help="Use TODAY() keyword to replace with today's date on object page">
+			<lightning-input-rich-text lwc:ref="emailBodySeparate" label-visible=true placeholder="Type something interesting"
+				label="Email Body" value={emailBodySeparate} field-level-help="Displayed in the email itself. Leave blank if you do not need a separate email body.">
+			</lightning-input-rich-text>
+			<br>
+			<lightning-input-rich-text lwc:ref="emailBodyText" label-visible=true placeholder="Type something interesting"
+				label="Attachment Body" value={emailBody} field-level-help="Use TODAY() keyword to replace with today's date on object page">
 			</lightning-input-rich-text>
 			<br>
 			<template if:true={showData}>
@@ -159,36 +163,6 @@
 						</lightning-layout>
 					</lightning-layout-item>
 				</lightning-layout>
-				<!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6"
-						padding="horizontal-small">
-						<lightning-combobox label="Select Field 1" lwc:ref="field1" data-id="field1" value={fieldName1}
-							placeholder="Select Field 1" onchange={handleFieldChange1} options={currentObjectFields}>
-						</lightning-combobox>
-
-						<lightning-combobox label="Select Field 2" lwc:ref="field2" data-id="field2" value={fieldName2}
-							placeholder="Select Field 2" onchange={handleFieldChange2} options={currentObjectFields}>
-						</lightning-combobox>
-
-						<lightning-combobox label="Select Field 3" lwc:ref="field3" data-id="field3" value={fieldName3}
-							placeholder="Select Field 3" onchange={handleFieldChange3} options={currentObjectFields}>
-						</lightning-combobox>
-
-					</lightning-layout-item>
-					<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6"
-						padding="horizontal-small">
-						<div>
-							<template if:true={fieldType1}>
-								<c-value-selector lwc:ref="fieldValue1" object-api-name={objectApiName} field-name={fieldName1} selected-field-type={fieldType1}></c-value-selector>
-							</template>				
-							<template if:true={fieldType2}>	
-								<c-value-selector lwc:ref="fieldValue2" object-api-name={objectApiName} field-name={fieldName2} selected-field-type={fieldType2}></c-value-selector>
-							</template>
-							<template if:true={fieldType3}>	
-								<c-value-selector lwc:ref="fieldValue3" object-api-name={objectApiName} field-name={fieldName3} selected-field-type={fieldType3}></c-value-selector>
-							</template>
-						</div>
-					</lightning-layout-item>
-				</lightning-layout> -->
 			</template>
 		</p>
 		<p slot="footer">

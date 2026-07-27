@@ -3,6 +3,13 @@
 		<template if:true={isLoading}>
 			<lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
 		</template>
+		<template if:true={noRecordsSelected}>
+			<div class="slds-notify slds-notify_alert slds-alert_error slds-m-around_medium" role="alert">
+				<span class="slds-assistive-text">error</span>
+				<lightning-icon icon-name="utility:error" alternative-text="Error" size="small" class="slds-m-right_x-small"></lightning-icon>
+				<p>No records selected. Please select at least one record before using Bulk Email Templates.</p>
+			</div>
+		</template>
 		<template if:false={isShowModal}>
 			<lightning-card variant="Narrow" title="Email Template Editor">
 				<p class="slds-p-horizontal_small">
@@ -203,6 +210,7 @@
 							<lightning-combobox label="Select From Address" lwc:ref="orgWideId" value="0"
 								placeholder="Select From Address" options={orgWideList}></lightning-combobox>
 						</template>
+						<!--
 						<template if:true={contactList}>
 							<lightning-combobox label="Select To Contact" placeholder="Select To Contact"
 								options={contactList} onchange={appendTo}></lightning-combobox>
@@ -215,6 +223,7 @@
 						</template>
 						<lightning-input type="text" variant="standard" lwc:ref="ccLists"
 							field-level-help="Use ; sperated Values" label="CC Email Address"></lightning-input>
+							-->
 							<div class="custom-box">
 								<lightning-input type="text" variant="standard" lwc:ref="subject" label="Email Subject"
 							value={emailSubject}></lightning-input>

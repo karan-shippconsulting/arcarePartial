@@ -25,12 +25,14 @@ import deleteAttachment from '@salesforce/apex/SchemaUtil.deleteAttachment';
 import FOLDER_FIELD from "@salesforce/schema/Custom_Email_Template__c.Folder__c";
 import getCustomEmailById from '@salesforce/apex/SchemaUtil.getCustomEmailById';
 import getObjectNameFromId from '@salesforce/apex/SchemaUtil.getObjectNameFromId';
+import createQueueAndStartBatch from '@salesforce/apex/SchemaUtil.createQueueAndStartBatch';
 
 export default class BulkEmailTemplate extends LightningElement {
     @api recordIds = '';
     objectApiName;
     contactList = [];
     isLoading = true;
+    noRecordsSelected = false;
     recordTypeId = '';
     pdfOptions = [];
 
@@ -747,6 +749,7 @@ export default class BulkEmailTemplate extends LightningElement {
     }
 
     replaceGenericTaggersValue(body) {
+        if (!body) return body ?? '';
         let keyForToday = 'TODAY()';
         const regex3ForToday = /\{TODAY\(\)\}:[^}]*\}/g;
         console.log('body at 718 -- ' + body);
@@ -890,10 +893,12 @@ export default class BulkEmailTemplate extends LightningElement {
             }
             let sObject = sObjectList[0];
             this.recordTypeId = sObjectList[0].RecordTypeId;
+            console.log('recordTypeId : ' + this.recordTypeId);
 
-
-            let body = this.refs.emailBodyText.value;
-            let attachmentBOdy = this.refs.attachmentBodyText?.value || this.attachmentBody;
+            let body = this.emailBody || '';//this.refs.emailBodyText.value;
+            console.log('body at 897 -- ' + body);
+            let attachmentBOdy = this.refs.attachmentBodyText?.value || this.attachmentBody || '';
+            console.log('attachmentBOdy at 899 -- ' + attachmentBOdy);
             //let attachmentBOdy = this.sperateBody ? this.refs.attachmentBodyText?.value || this.attachmentBody : null;
             body = this.replaceGenericTaggersValue(body);
             console.log('body at 1052 -- ' + body);
@@ -922,7 +927,7 @@ export default class BulkEmailTemplate extends LightningElement {
                                     let tempFormatedValue = this.replaceTagWithRespectiveValue(newKey, match, sObject2[key2], false);
                                     body = body.replace(match[0], tempFormatedValue);
                                     attachmentBOdy = attachmentBOdy.replace(match[0], tempFormatedValue);
-                                    this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + sObject2[key2]);
+                                    this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + (sObject2[key2] ?? ''));
                                 }
                             } else{
                                 console.log('at line no. 1100');
@@ -931,7 +936,6 @@ export default class BulkEmailTemplate extends LightningElement {
                                 const regex2 = new RegExp(`{${newKey.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
                                 let tempValue;
                                 console.log('this.fieldTypeMap[newKey] -- ' + this.fieldTypeMap[newKey]);
-                                //console.log('this.fieldTypeMap[key2] -- ' + this.fieldTypeMap[key2]);
                                 if(this.fieldTypeMap[newKey] == 'ADDRESS') {
                                     console.log()
                                     const address = {
@@ -944,7 +948,7 @@ export default class BulkEmailTemplate extends LightningElement {
                                     tempValue = this.formatAddress(address);
                                 } else {
                                     console.log('at 1120');
-                                    tempValue = this.formatedValue(newKey, '' + sObject2[key2]);
+                                    tempValue = this.formatedValue(newKey, '' + (sObject2[key2] ?? ''));
                                     console.log('at 1122');
                                 }
                                 if(tempValue.includes('\n')) {
@@ -954,7 +958,7 @@ export default class BulkEmailTemplate extends LightningElement {
                                 body = body.replaceAll(regex2, tempValue);
                                 console.log('body at 1129--- '+body);
                                 attachmentBOdy = attachmentBOdy?.replaceAll(regex2, tempValue);
-                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + sObject2[key2]);
+                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + (sObject2[key2] ?? ''));
                             }
                         }
                     }
@@ -978,7 +982,7 @@ export default class BulkEmailTemplate extends LightningElement {
                                 let tempFormatedValue = this.replaceTagWithRespectiveValue(key, match, sObject[key], true);
                                 body = body.replace(match[0], tempFormatedValue);
                                 attachmentBOdy = attachmentBOdy.replace(match[0], tempFormatedValue);
-                                this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + sObject[key]);
+                                this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + (sObject[key] ?? ''));
                             }
                         } else {
                             const regex = new RegExp(`{${key.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
@@ -993,14 +997,14 @@ export default class BulkEmailTemplate extends LightningElement {
                                 };
                                 tempValue = this.formatAddress(address);
                             } else {
-                                tempValue = this.formatedValue(key, '' + sObject[key]);
+                                tempValue = this.formatedValue(key, '' + (sObject[key] ?? ''));
                             }
                             if(tempValue.includes('\n')) {
                                 tempValue = (tempValue || '').replace(/\r?\n/g, '<br/>');
                             }
                             body = body.replaceAll(regex, tempValue);
                             attachmentBOdy = attachmentBOdy?.replaceAll(regex, tempValue);
-                            this.refs.subject.value = this.refs.subject.value.replace(regex, '' + sObject[key]);
+                            this.refs.subject.value = this.refs.subject.value.replace(regex, '' + (sObject[key] ?? ''));
                         }
                         
                     }
@@ -1016,9 +1020,9 @@ export default class BulkEmailTemplate extends LightningElement {
                             if (Object.hasOwnProperty.call(sObjectList[1], key)) {
                                 let newKey = key + '.' + key2.toLowerCase();
                                 const regex2 = new RegExp(`{${newKey.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
-                                body = body.replaceAll(regex2, this.formatedValue(newKey, '' + sObject2[key2]));
-                                attachmentBOdy = attachmentBOdy?.replaceAll(regex2, this.formatedValue(newKey, '' + sObject2[key2]));
-                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + sObject2[key2]);
+                                body = body.replaceAll(regex2, this.formatedValue(newKey, '' + (sObject2[key2] ?? '')));
+                                attachmentBOdy = attachmentBOdy?.replaceAll(regex2, this.formatedValue(newKey, '' + (sObject2[key2] ?? '')));
+                                this.refs.subject.value = this.refs.subject.value.replace(regex2, '' + (sObject2[key2] ?? ''));
                             }
                         }
                     }
@@ -1068,19 +1072,19 @@ export default class BulkEmailTemplate extends LightningElement {
                                     } else if(booleanFormatParts) {
                                         tempFormatedValue = sObjectList[1][key] ? booleanFormatParts[0] : booleanFormatParts[1];
                                     } else {
-                                        tempFormatedValue = this.formatedValue('Owner.' + key.toLowerCase(), '' + sObjectList[1][key]);
+                                        tempFormatedValue = this.formatedValue('Owner.' + key.toLowerCase(), '' + (sObjectList[1][key] ?? ''));
                                     }
-                                    
+
                                     body = body.replace(match[0], tempFormatedValue);
                                     attachmentBOdy = attachmentBOdy.replace(match[0], tempFormatedValue);
-                                    this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + sObjectList[1][key]);  
+                                    this.refs.subject.value = this.refs.subject.value.replace(match[0], '' + (sObjectList[1][key] ?? ''));
                                 }
                             } else {
                                 let newKey = 'CurrentUser.' + key;
                                 const regex = new RegExp(`{${newKey.replace(/_/g, '_?').toLowerCase()}}`, 'gi');
-                                body = body.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + sObjectList[1][key]));
-                                attachmentBOdy = attachmentBOdy?.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + sObjectList[1][key]));
-                                this.refs.subject.value = this.refs.subject.value.replace(regex, '' + sObjectList[1][key]);
+                                body = body.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + (sObjectList[1][key] ?? '')));
+                                attachmentBOdy = attachmentBOdy?.replaceAll(regex, this.formatedValue('Owner.' + key.toLowerCase(), '' + (sObjectList[1][key] ?? '')));
+                                this.refs.subject.value = this.refs.subject.value.replace(regex, '' + (sObjectList[1][key] ?? ''));
                             }
                             
                         }
@@ -1094,8 +1098,8 @@ export default class BulkEmailTemplate extends LightningElement {
             this.refs.subject.value = this.refs.subject.value.replaceAll(regex, '');
             finalAttachmentBody = isEmail ? body.replaceAll(regex, '') : (this.sperateBody && !isEmail ? attachmentBody.replaceAll(regex, '') : body.replaceAll(regex, ''));
         } catch (err) {
-            console.error("Error in generateAttachmentBody:", err);
-            finalAttachmentBody = isEmail ? this.refs.emailBodyText.value : (this.sperateBody && !isEmail ? this.refs.attachmentBodyText?.value : this.refs.emailBodyText.value);
+            console.error("Error in generateAttachmentBody:", JSON.stringify(err));
+            finalAttachmentBody = isEmail ? this.refs.emailBodyText?.value : (this.sperateBody && !isEmail ? this.refs.attachmentBodyText?.value : this.refs.emailBodyText?.value);
 
             this.dispatchEvent(new ShowToastEvent({
                 title: "Error",
@@ -1115,7 +1119,7 @@ export default class BulkEmailTemplate extends LightningElement {
         if (this.sperateBody) {
             this.checkFields(this.refs.attachmentBodyText?.value || this.attachmentBody, false);
         }
-        this.checkFields(this.refs.subject.value, false);
+        this.checkFields(this.refs.subject?.value, false);
     }
 
     replaceTodayPlaceholder(text) {
@@ -1176,6 +1180,11 @@ export default class BulkEmailTemplate extends LightningElement {
 
     async connectedCallback() {
         console.log('recordIds: ', this.recordIds);
+        if (this.selectedRecords.length === 0) {
+            this.isLoading = false;
+            this.noRecordsSelected = true;
+            return;
+        }
         let idArray = this.recordIds.replace('[', '').replace(']', '').split(',');
         let firstId = idArray[0].trim();
         console.log('firstId: ', firstId);
@@ -1189,77 +1198,121 @@ export default class BulkEmailTemplate extends LightningElement {
     }
 
     async sendMail() {
-        //await deleteBulkCustomTemplateRecords({ customEmailTempId: this.selectedTemp });
-        if (this.refs.toLists.value == '' || this.refs.toLists.value.trim().split(';').length == 0) {
-            const event = new ShowToastEvent({
-                title: 'Error',
-                message: 'Provide To Email Address List',
-                variant: 'error'
-            });
-            this.dispatchEvent(event);
+        // No TO/CC validation anymore — recipient will be auto-resolved in batch.
+        if (!this.selectedTemp) {
+            this.dispatchEvent(new ShowToastEvent({ title: 'Error', message: 'Select a template', variant: 'error' }));
             return;
         }
-        console.log('this.refs.toLists:', this.refs.toLists);
+        if (this.refs.subject.value.trim().length === 0) {
+            this.dispatchEvent(new ShowToastEvent({ title: 'Error', message: 'Provide Subject', variant: 'error' }));
+            return;
+        }
+        if (this.refs.finalEmail2.value.trim().length === 0) {
+            this.dispatchEvent(new ShowToastEvent({ title: 'Error', message: 'Provide Email Body', variant: 'error' }));
+            return;
+        }
 
-        if (this.refs.subject.value.trim().length == 0) {
-            const event = new ShowToastEvent({
-                title: 'Error',
-                message: 'Provide Subject',
-                variant: 'error'
-            });
-            this.dispatchEvent(event);
-            return;
-        }
-        console.log('this.refs.subject:', this.refs.subject);
-
-        if (this.refs.finalEmail2.value.trim().length == 0) {
-            const event = new ShowToastEvent({
-                title: 'Error',
-                message: 'Provide Email Body',
-                variant: 'error'
-            });
-            this.dispatchEvent(event);
-            return;
-        }
         this.isLoading = true;
-        console.log('this.refs.finalEmail2:', this.refs.finalEmail2);
-
-        let hasError = false;
-        let bodyMap = await this.generateFinalBodyMap(true);
-        console.log('FinalBodyMap=>' + JSON.stringify(bodyMap));
-        await massUpdateFinalBodyOnBulkCustomTemplateRecords({ customEmailTempId: this.selectedTemp, bodyMap: bodyMap });
-        sendEmail({
-            toList: this.refs.toLists.value.trim().split(';'),
-            ccList: this.refs.ccLists.value.trim().length > 1 ? this.refs.ccLists.value.split(';') : null,
-            subject: this.refs.subject.value,
-            emailBody: this.refs.finalEmail2.value.replaceAll('<br>', '<br/>').replaceAll('<p>', '<div>').replaceAll('</p>', '</div>'),
-            orgWideId: this.refs.orgWideId.value,
-            attachAsPdf: true,
-            recordId: this.selectedTemp,
-            vfPageId: this.pdfOption,
-            contendDocIds: this.selectedAttachments,
-            createActivity: this.createActivity,
-            selectedRecords: this.selectedRecords,
-            isBulk: false
-        }).then(result => {
-            hasError = !result;
-            if (!hasError) {
-                this.template.querySelector('lightning-record-edit-form')?.submit();
-            }
-        }).catch(err => {
-            hasError = true;
-            console.log('line no 1438 ---' + err);
-        }).finally(() => {
-            this.isLoading = false;
-            const event = new ShowToastEvent({
-                title: hasError ? 'Error' : 'Success!',
-                message: hasError ? 'Error While Sending Email' : 'Email Sent!',
-                variant: hasError ? 'error' : 'success'
+        try {
+            // Build merged bodies per record (you already have generateFinalBodyMap(true))
+            const bodyMap = await this.generateFinalBodyMap(true);
+            console.log('this.selectedTemp -- ' + this.selectedTemp);
+            console.log('this.selectedRecords -- ' + JSON.stringify(this.selectedRecords));
+            // Create 1 queue record per selected parent record and start the batch
+            
+            await createQueueAndStartBatch({
+                customEmailTemplateId: this.selectedTemp,
+                parentRecordIds: this.selectedRecords,
+                mergedBodyByRecord: bodyMap
             });
+
+            this.dispatchEvent(new ShowToastEvent({
+            title: 'Queued',
+            message: 'Emails are being processed and sent.',
+            variant: 'success'
+            }));
             this.isShowModal = false;
-            this.dispatchEvent(event);
-        });
+
+        } catch (e) {
+            this.dispatchEvent(new ShowToastEvent({ title: 'Error', message: e.body?.message || e.message, variant: 'error' }));
+        } finally {
+            this.isLoading = false;
+        }
     }
+
+
+    // async sendMail() {
+    //     //await deleteBulkCustomTemplateRecords({ customEmailTempId: this.selectedTemp });
+    //     if (this.refs.toLists.value == '' || this.refs.toLists.value.trim().split(';').length == 0) {
+    //         const event = new ShowToastEvent({
+    //             title: 'Error',
+    //             message: 'Provide To Email Address List',
+    //             variant: 'error'
+    //         });
+    //         this.dispatchEvent(event);
+    //         return;
+    //     }
+    //     console.log('this.refs.toLists:', this.refs.toLists);
+
+    //     if (this.refs.subject.value.trim().length == 0) {
+    //         const event = new ShowToastEvent({
+    //             title: 'Error',
+    //             message: 'Provide Subject',
+    //             variant: 'error'
+    //         });
+    //         this.dispatchEvent(event);
+    //         return;
+    //     }
+    //     console.log('this.refs.subject:', this.refs.subject);
+
+    //     if (this.refs.finalEmail2.value.trim().length == 0) {
+    //         const event = new ShowToastEvent({
+    //             title: 'Error',
+    //             message: 'Provide Email Body',
+    //             variant: 'error'
+    //         });
+    //         this.dispatchEvent(event);
+    //         return;
+    //     }
+    //     this.isLoading = true;
+    //     console.log('this.refs.finalEmail2:', this.refs.finalEmail2);
+
+    //     let hasError = false;
+    //     let bodyMap = await this.generateFinalBodyMap(true);
+    //     console.log('FinalBodyMap=>' + JSON.stringify(bodyMap));
+    //     await massUpdateFinalBodyOnBulkCustomTemplateRecords({ customEmailTempId: this.selectedTemp, bodyMap: bodyMap });
+    //     sendEmail({
+    //         toList: this.refs.toLists.value.trim().split(';'),
+    //         ccList: this.refs.ccLists.value.trim().length > 1 ? this.refs.ccLists.value.split(';') : null,
+    //         subject: this.refs.subject.value,
+    //         emailBody: this.refs.finalEmail2.value.replaceAll('<br>', '<br/>').replaceAll('<p>', '<div>').replaceAll('</p>', '</div>'),
+    //         orgWideId: this.refs.orgWideId.value,
+    //         attachAsPdf: true,
+    //         recordId: this.selectedTemp,
+    //         vfPageId: this.pdfOption,
+    //         contendDocIds: this.selectedAttachments,
+    //         createActivity: this.createActivity,
+    //         selectedRecords: this.selectedRecords,
+    //         isBulk: false
+    //     }).then(result => {
+    //         hasError = !result;
+    //         if (!hasError) {
+    //             this.template.querySelector('lightning-record-edit-form')?.submit();
+    //         }
+    //     }).catch(err => {
+    //         hasError = true;
+    //         console.log('line no 1438 ---' + err);
+    //     }).finally(() => {
+    //         this.isLoading = false;
+    //         const event = new ShowToastEvent({
+    //             title: hasError ? 'Error' : 'Success!',
+    //             message: hasError ? 'Error While Sending Email' : 'Email Sent!',
+    //             variant: hasError ? 'error' : 'success'
+    //         });
+    //         this.isShowModal = false;
+    //         this.dispatchEvent(event);
+    //     });
+    // }
 
     handleFormError(err) {
         const event = new ShowToastEvent({
@@ -1293,25 +1346,26 @@ export default class BulkEmailTemplate extends LightningElement {
         console.log('in fetchAttachments:', JSON.stringify(this.selectedRecords));
         this.attachments = [];
         let data = await getAttachmentsBulk({ selectedRecords: this.selectedRecords });
-        let Localattachments = data.map(record => {
-            return {
-                id: record.Id,
-                ContendDocId: record.ContentDocument.Id,
-                Title: record.ContentDocument.Title + '.' + record.ContentDocument.FileType,
-                FileType: record.ContentDocument.FileType,
-                ContentSize: record.ContentDocument.ContentSize,
-                CreatedDate: record.ContentDocument.CreatedDate,
-                Source: 'Object Record',
-                allowDelete: true
-            };
-        });
+        let Localattachments;
+        // let Localattachments = data.map(record => {
+        //     return {
+        //         id: record.Id,
+        //         ContendDocId: record.ContentDocument.Id,
+        //         Title: record.ContentDocument.Title + '.' + record.ContentDocument.FileType,
+        //         FileType: record.ContentDocument.FileType,
+        //         ContentSize: record.ContentDocument.ContentSize,
+        //         CreatedDate: record.ContentDocument.CreatedDate,
+        //         Source: 'Object Record',
+        //         allowDelete: true
+        //     };
+        // });
         if (!this.isCustom)
             return;
 
         let data2 = await getAttachments({ recordId: this.selectedTemp });
         if (data2.length == 0)
             return;
-        Localattachments = [...Localattachments, ...data2.map(record => {
+        Localattachments = data2.map(record => {
             this.selectedAttachmentsIds.push(record.ContentDocument.Id);
             this.selectedAttachments.push(record.ContentDocument.Id);
             return {
@@ -1324,7 +1378,7 @@ export default class BulkEmailTemplate extends LightningElement {
                 Source: 'Email Template',
                 allowDelete: false
             };
-        })];
+        });
 
         console.log('line no. 1516 --' + this.selectedAttachmentsIds);
         console.log(JSON.stringify(Localattachments));
