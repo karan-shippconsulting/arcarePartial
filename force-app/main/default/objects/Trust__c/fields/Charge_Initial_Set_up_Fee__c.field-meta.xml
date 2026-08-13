@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_Initial_Set_up_Fee__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Charge Initial Set-up Fee</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

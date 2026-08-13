@@ -2,8 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TL_EID__c</fullName>
     <externalId>false</externalId>
+    <formula>TL_EID_Conversion__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>TL EID</label>
-    <length>30</length>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

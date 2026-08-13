@@ -42,5 +42,151 @@ public class TruelinkBeneficiaryRequestBuilderTest {
         TruelinkBeneficiaryAddressRequestWrapper wrapper4 = builder.buildAddress(party.id,trust.TrueLink_ID__c);
         System.assertNotEquals(null, wrapper);
     }
-    
+
+    @isTest
+    public static void testBuildSyncsAttributesWhenTogglesOn() {
+        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+        feature.Sync_Marital_Status__c = true;
+        feature.Sync_Living_Situation__c = true;
+        upsert feature;
+
+        Contact party = createTestData();
+        party.Marital_Status__c = 'Married';
+        party.Living_Situation__c = 'Other';
+        update party;
+
+        trust__c trust = [select id from trust__c limit 1];
+        TruelinkBeneficiaryRequestBuilder builder = new TruelinkBeneficiaryRequestBuilder();
+        TruelinkBeneficiaryRequestWrapper wrapper = builder.build(party.Id, trust.Id, null, false);
+
+        System.assertEquals('Married', wrapper.data.attributes.maritalStatus, 'Expected maritalStatus to be synced when the toggle is on');
+        System.assertEquals('Other', wrapper.data.attributes.livingSituation, 'Expected livingSituation to be synced when the toggle is on');
+    }
+
+    @isTest
+    public static void testBuildOmitsAttributesWhenTogglesOff() {
+        // NOTE: DML on a custom setting's org defaults record is NOT rolled back at the end of a
+        // test method (unlike ordinary sObject DML), so this must restore the toggles to their
+        // Sync_On default in a finally block or it will permanently flip live org data to false.
+        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+        feature.Sync_Marital_Status__c = false;
+        feature.Sync_Living_Situation__c = false;
+        upsert feature;
+
+        try {
+            Contact party = createTestData();
+            party.Marital_Status__c = 'Married';
+            party.Living_Situation__c = 'Other';
+            update party;
+
+            trust__c trust = [select id from trust__c limit 1];
+            TruelinkBeneficiaryRequestBuilder builder = new TruelinkBeneficiaryRequestBuilder();
+            TruelinkBeneficiaryRequestWrapper wrapper = builder.build(party.Id, trust.Id, null, false);
+
+            System.assertEquals(null, wrapper.data.attributes.maritalStatus, 'Expected maritalStatus to be omitted when the toggle is off');
+            System.assertEquals(null, wrapper.data.attributes.livingSituation, 'Expected livingSituation to be omitted when the toggle is off');
+        } finally {
+            feature.Sync_Marital_Status__c = true;
+            feature.Sync_Living_Situation__c = true;
+            upsert feature;
+        }
+    }
+
+    private static Contact createTestDataWithDisabilityDesignation() {
+        Contact party = createTestData();
+
+        Truelink_Disability_Designation__c designation = new Truelink_Disability_Designation__c(
+            Name = 'Test Designation',
+            Truelink_Internal_ID__c = 'TD1'
+        );
+        insert designation;
+
+        party.Truelink_Disability_Designation__c = designation.Id;
+        update party;
+
+        return party;
+    }
+
+    @isTest
+    public static void testBuildSyncsDisabilityDesignationOnCreateWhenToggleOn() {
+        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+        feature.Sync_Disability_Designation__c = true;
+        upsert feature;
+
+        Contact party = createTestDataWithDisabilityDesignation();
+        trust__c trust = [select id from trust__c limit 1];
+
+        TruelinkBeneficiaryRequestBuilder builder = new TruelinkBeneficiaryRequestBuilder();
+        TruelinkBeneficiaryRequestWrapper wrapper = builder.build(party.Id, trust.Id, null, false);
+
+        System.assertNotEquals(null, wrapper.data.relationships.disabilityDesignation, 'disabilityDesignation should be set on create when the toggle is on');
+        System.assertEquals('disability_designation', wrapper.data.relationships.disabilityDesignation.data.type);
+        System.assertEquals('TD1', wrapper.data.relationships.disabilityDesignation.data.id);
+    }
+
+    @isTest
+    public static void testBuildSyncsDisabilityDesignationOnUpdateWhenToggleOn() {
+        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+        feature.Sync_Disability_Designation__c = true;
+        upsert feature;
+
+        Contact party = createTestDataWithDisabilityDesignation();
+        trust__c trust = [select id from trust__c limit 1];
+
+        TruelinkBeneficiaryRequestBuilder builder = new TruelinkBeneficiaryRequestBuilder();
+        TruelinkBeneficiaryRequestWrapper wrapper = builder.build(party.Id, trust.Id, 'test-beneficiary-id', true);
+
+        System.assertNotEquals(null, wrapper.data.relationships, 'relationships should be initialized on update so disabilityDesignation can be carried');
+        System.assertNotEquals(null, wrapper.data.relationships.disabilityDesignation, 'disabilityDesignation should be set on update when the toggle is on');
+        System.assertEquals('disability_designation', wrapper.data.relationships.disabilityDesignation.data.type);
+        System.assertEquals('TD1', wrapper.data.relationships.disabilityDesignation.data.id);
+        // Update payloads shouldn't pick up address/activePortfolio just because relationships had to be initialized.
+        System.assertEquals(null, wrapper.data.relationships.address);
+        System.assertEquals(null, wrapper.data.relationships.activePortfolio);
+    }
+
+    @isTest
+    public static void testBuildOmitsDisabilityDesignationOnCreateWhenToggleOff() {
+        // NOTE: DML on a custom setting's org defaults record is NOT rolled back at the end of a
+        // test method (unlike ordinary sObject DML), so this must restore the toggle to its
+        // Sync_On default in a finally block or it will permanently flip live org data to false.
+        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+        feature.Sync_Disability_Designation__c = false;
+        upsert feature;
+
+        try {
+            Contact party = createTestDataWithDisabilityDesignation();
+            trust__c trust = [select id from trust__c limit 1];
+
+            TruelinkBeneficiaryRequestBuilder builder = new TruelinkBeneficiaryRequestBuilder();
+            TruelinkBeneficiaryRequestWrapper wrapper = builder.build(party.Id, trust.Id, null, false);
+
+            System.assertEquals(null, wrapper.data.relationships.disabilityDesignation, 'disabilityDesignation should be explicitly nulled on create when the toggle is off');
+        } finally {
+            feature.Sync_Disability_Designation__c = true;
+            upsert feature;
+        }
+    }
+
+    @isTest
+    public static void testBuildOmitsDisabilityDesignationOnUpdateWhenToggleOff() {
+        Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
+        feature.Sync_Disability_Designation__c = false;
+        upsert feature;
+
+        try {
+            Contact party = createTestDataWithDisabilityDesignation();
+            trust__c trust = [select id from trust__c limit 1];
+
+            TruelinkBeneficiaryRequestBuilder builder = new TruelinkBeneficiaryRequestBuilder();
+            TruelinkBeneficiaryRequestWrapper wrapper = builder.build(party.Id, trust.Id, 'test-beneficiary-id', true);
+
+            System.assertNotEquals(null, wrapper.data.relationships, 'relationships should still be initialized on update even when the toggle is off');
+            System.assertEquals(null, wrapper.data.relationships.disabilityDesignation, 'disabilityDesignation should be explicitly nulled on update when the toggle is off');
+        } finally {
+            feature.Sync_Disability_Designation__c = true;
+            upsert feature;
+        }
+    }
+
 }

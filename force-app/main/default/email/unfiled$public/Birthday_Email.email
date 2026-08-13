@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[We would like to wish {!Account.Full_Name__pc}&nbsp;a very happy birthday. May {!Account.FirstName}’s day be filled with kindness, happiness and moments that feel truly special. We are thinking of {!Account.FirstName} today and sending warm wishes their way.]]></td>
+</tr>
+</table>

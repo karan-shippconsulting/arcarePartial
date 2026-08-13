@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PersonAccount</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Arcare_Person_Account_Compact_Layout</compactLayoutAssignment>
+    <label>Person Account</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attorney %28other%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estate planning attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event%2FPresentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friends</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal injury attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Source__pc</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Age_when_Disability_Diagnosis__pc</picklist>
+        <values>
+            <fullName>At age 46 or after</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Between 27 and 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prior to age 26</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Applicant_Benefits__pc</picklist>
+        <values>
+            <fullName>Applicant receives no public benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Stamps%2FVision Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid or Working Healthy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Security Disability Insurance %28SSDI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplemental Security Income %28SSI%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Applied_for_Arcare_Charitable_Fund_grant__pc</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Type__pc</picklist>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%3A Non-Pooled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%3A Pooled 3d Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%3A Pooled 3d Party FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%3A Pooled MARC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%3A Pooled MARC FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rep Payee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disability_Designation__pc</picklist>
+        <values>
+            <fullName>Amputation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attention deficit hyperactivity disorder %28ADHD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autism spectrum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autoimmune</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Behavior Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bipolar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerebral palsy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cystic fibrosis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deaf or hard hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developmental disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Down Syndrome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epilepsy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibromyalgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intellectual and developmental disability %28IDD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple sclerosis %28MS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muscular dystrophy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Musculoskeletal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neurological</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obsessive compulsive disorder %28OCD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-traumatic stress disorder %28PTSD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schizophrenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speech or language impairment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spinal cord injury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourette syndrome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traumatic brain injury %28TBI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual impairment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Frequency_of_contact__c</picklist>
+        <values>
+            <fullName>Contacted before</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gender_Pronouns__pc</picklist>
+        <values>
+            <fullName>He%2FHis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FHer%2FHers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They%2FTheir</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_Heard_About_Us__pc</picklist>
+        <values>
+            <fullName>Accountant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brochure%2FNewsletter about PLAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family%2FFriend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation%2FWorkshop%2FConference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Previous Experience with PLAN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_in_a_supervised_living_setting__pc</picklist>
+        <values>
+            <fullName>Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staffed Apartment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_yes_please_list_the_provider__pc</picklist>
+        <values>
+            <fullName>Arcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Living_Situation__pc</picklist>
+        <values>
+            <fullName>Assisted living facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group care facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Institution%2C hospital%2C or nursing home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skilled nursing facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Someone else%27s household</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MSA_Type__pc</picklist>
+        <values>
+            <fullName>Pooled Trust II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Trust II</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marital_Status__pc</picklist>
+        <values>
+            <fullName>Divorced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Never married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widowed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobility_Affected_By_Disability__pc</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rent_Own__pc</picklist>
+        <values>
+            <fullName>Own</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Representative_Payee__pc</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requests_Disbursements__pc</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Residence_Type__pc</picklist>
+        <values>
+            <fullName>Apartment%2FDuplex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted Living Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCS Host Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rehab Center%2FHospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Supported Living Center</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salutation__pc</picklist>
+        <values>
+            <fullName>CDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capt%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Col%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hon%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Judge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rev%2C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secured_funds_from_other_sources__pc</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__pc</picklist>
+        <values>
+            <fullName>Active Beneficiary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Non-Beneficiary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Referral Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant%3A Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant%3A Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed-Deceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed-Insufficient Funds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future-Funded Beneficiary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future-Funded Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive Non-Beneficiary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive Referral Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive-Deceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive-Insufficient Funds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_of_Real_Property__pc</picklist>
+        <values>
+            <fullName>Other %28please explain%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The property is being used as rental income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The property is currently occupied by someone other than the applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The property is vacant pending its sale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Terms__c</picklist>
+        <values>
+            <fullName>Net 30</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grantmaking Organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referring Organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Assistance_Requested__pc</picklist>
+        <values>
+            <fullName>Home repairs and maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical and dental care and equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal goods and services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rehabilitation training%2C services or devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplemental education assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation%2Fauto repairs and maintenance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Firm__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>XPersonal_Relationship_to_Beneficiary__pc</picklist>
+        <values>
+            <fullName>Adoptive Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cousin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daughter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandparent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Family Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remainder Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Son</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>XProfessional_Relationship_to_Bene__pc</picklist>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power of Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Representative Payee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

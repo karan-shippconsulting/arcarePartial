@@ -97,6 +97,29 @@ public class UpdateTruelinkBatchesTest {
     }
 
     @isTest
+    static void testUpdateDepositsBatchExcludesIneligibleStatus() {
+        Test.setMock(HttpCalloutMock.class, new TrueLinkTransactionMock());
+        trust__c eligibleTrust = getSetupTrust();
+        TruelinkStaticUtils.stopRecursionOnTrustUpdate = true;
+
+        Pooled_Trust__c pc = [SELECT Id FROM Pooled_Trust__c LIMIT 1];
+        Trust_Portfolio__c tp = [SELECT Id FROM Trust_Portfolio__c LIMIT 1];
+        Contact party = [SELECT Id FROM Contact LIMIT 1];
+        trust__c ineligibleTrust = new trust__c(Pooled_Trust__c = pc.Id, Trust_Portfolio__c = tp.Id, Beneficiary__c = party.Id, TrueLink_ID__c = 'ineligible-conn', Trust_Status__c = 'Intake');
+        insert ineligibleTrust;
+
+        Test.startTest();
+        Database.executeBatch(new UpdateDepositsBatch(), 1);
+        Test.stopTest();
+
+        List<Transaction__c> ineligibleDeposits = [SELECT Id FROM Transaction__c WHERE Trust__c = :ineligibleTrust.Id];
+        System.assert(ineligibleDeposits.isEmpty(), 'Deposits batch should not process a trust with an ineligible status');
+
+        List<Transaction__c> eligibleDeposits = [SELECT Id FROM Transaction__c WHERE Trust__c = :eligibleTrust.Id];
+        System.assert(!eligibleDeposits.isEmpty(), 'Deposits batch should still process the eligible trust');
+    }
+
+    @isTest
     static void testUpdateDisbursementsBatchSuccess() {
         Test.setMock(HttpCalloutMock.class, new TrueLinkTransactionMock());
         trust__c trust = getSetupTrust();

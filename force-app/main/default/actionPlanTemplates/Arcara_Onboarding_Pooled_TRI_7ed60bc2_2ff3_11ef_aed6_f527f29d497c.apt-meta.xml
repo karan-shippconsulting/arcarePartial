@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActionPlanTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Funding</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Funding</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>3</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Funding</name>
+        <uniqueName>Funding_7ee6115a_2ff3_11ef_aed6_65701f877933</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Medicaid</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>15</displayOrder>
+        <isRequired>false</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Medicaid</name>
+        <uniqueName>Medicaid_7eebb6d7_2ff3_11ef_aed6_3794b3153e00</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Guardianship/Conservatorship</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Guardianship/Conservatorship doc</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>11</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Guardianship/Conservatorship</name>
+        <uniqueName>Guardianship_Conservatprship_7eec7a2d_2ff3_11ef_aed6_d9d0dd88694c</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Donor&apos;s Intent</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Donor&apos;s Intent</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>13</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Donor&apos;s Intent</name>
+        <uniqueName>Donor_s_Intent_7eec2c0b_2ff3_11ef_aed6_2bf7292cd9da</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Medicare</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>16</displayOrder>
+        <isRequired>false</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Medicare</name>
+        <uniqueName>Medicare_7ee79806_2ff3_11ef_aed6_c37a6916454e</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Auth for Exchange of Info</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Auth for Exchange of Info</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>6</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Auth for Exchange of Info</name>
+        <uniqueName>Auth_for_Exchange_of_Info_7eeb68b5_2ff3_11ef_aed6_23d61cb1160b</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>HCBS</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>17</displayOrder>
+        <isRequired>false</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>HCBS</name>
+        <uniqueName>HCBS_7ee770f4_2ff3_11ef_aed6_3583332f9015</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 60 - 0 + 09:00:00.000</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>true</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Description</name>
+            <valueLiteral>Ensure that all the following required documents are uploaded in Salesforce:
+Joinder
+Profile
+Funding
+Fee Schedule
+SSA Release
+Auth for Exchange of Info
+Satisfaction of Personal Debits
+Bene&apos;s ID
+Benefit Award Letters
+Medical Cards
+Guardianship/Conservatorship
+Will or Revocable Living Trust - Deferred Funding
+Donor&apos;s Intent
+Appendix A</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 60</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>If Pooled TRI</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>3</displayOrder>
+        <isRequired>false</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>If Pooled TRI</name>
+        <uniqueName>If_Pooled_TRI_7ee6d4b0_2ff3_11ef_aed6_b71b78312344</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Description</name>
+            <valueLiteral>Create an Onboarding record either from the Referral, the Lead Object or directly from the Onboarding Object. Ensure that all the information required are populated.</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 0</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Start your Onboarding Process</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 0 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <displayOrder>1</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Start your Onboarding Process</name>
+        <uniqueName>Start_your_Onboarding_Process_7ee54e04_2ff3_11ef_aed6_cf02756fee88</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload the Joinder document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Joinder</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>1</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Joinder</name>
+        <uniqueName>Joinder_7ee57516_2ff3_11ef_aed6_b77c61744fa8</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Bene&apos;s ID</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>Picture/Photo</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Bene&apos;s ID</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>8</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Bene&apos;s ID</name>
+        <uniqueName>Bene_s_ID_7ee5c338_2ff3_11ef_aed6_f95d2a1b3a6b</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 1 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Description</name>
+            <valueLiteral>Please indicate the trust type the Beneficiary falls under (one option only): 
+- Pooled TRI
+- Pooled TRII
+- Private TRI
+- Private TRII
+-  MSA</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 1</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Select the TRUST TYPE</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>2</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Select the TRUST TYPE</name>
+        <uniqueName>Select_the_TRUST_TYPE_7ee6386c_2ff3_11ef_aed6_eb75ab47f592</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Profile</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Profile</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>2</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Profile</name>
+        <uniqueName>Profile_7ee6ad9e_2ff3_11ef_aed6_17ce713cfe94</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Fee Schedule</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Fee Schedule</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>4</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Fee Schedule</name>
+        <uniqueName>Fee_Schedule_7ee8f7a0_2ff3_11ef_aed6_a5c733232a77</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 45 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Description</name>
+            <valueLiteral>Ensure that all required documents are uploaded in Salesforce. Mark the Task Completed. I</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 45</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Upload all required Docs</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>4</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Upload all required Docs</name>
+        <uniqueName>Upload_all_required_Docs_7ee945c3_2ff3_11ef_aed6_51f7075f18ed</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 60 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 60</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Review all uploaded documents</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>5</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Review all uploaded documents</name>
+        <uniqueName>Review_all_uploaded_documents_7ee8a97e_2ff3_11ef_aed6_cdd2005e1eb0</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Will or Revocable Living Trust - Deferred Funding</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Will or Revocable Living Trust</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>12</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Will or Revocable Living Trust - Deferred Funding</name>
+        <uniqueName>Will_or_Revocable_Living_Trust_Deferred_F_7ee85b5c_2ff3_11ef_aed6_494e233a5572</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Appendix A</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Appendix A</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>14</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Appendix A</name>
+        <uniqueName>Appendix_A_7eea7e4d_2ff3_11ef_aed6_05f52366026b</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Make your final decision - Approve or not Beneficiary&apos;s request</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 60 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 60</valueFormula>
+        </actionPlanTemplateItemValue>
+        <displayOrder>6</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Make your final decision - Approve or not Beneficiary&apos;s request</name>
+        <uniqueName>Make_your_final_decision_Approve_or_not_B_7ee9baf7_2ff3_11ef_aed6_89efae3ab965</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>SSA Release</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload SSA Release</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>5</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>SSA Release</name>
+        <uniqueName>SSA_Release_7ee96cd5_2ff3_11ef_aed6_158f97d5594c</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Benefit Award Letters</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Benefit Award Letters</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>9</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Benefit Award Letters</name>
+        <uniqueName>Benefit_Award_Letters_7eeaf381_2ff3_11ef_aed6_d3aea4b745ec</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>PDF or Word document</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Satisfaction of Personal Debits</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload Satisfaction of Personal Debits</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>7</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Satisfaction of Personal Debits</name>
+        <uniqueName>Satisfaction_of_Personal_Debits_7eeb41a3_2ff3_11ef_aed6_75c14225158c</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>DocumentTypeId</name>
+            <valueLiteral>Picture/Photo</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Name</name>
+            <valueLiteral>Medical Cards</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>DocumentChecklistItem</itemEntityType>
+            <name>Instruction</name>
+            <valueLiteral>Upload a copy of Medical Cards</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <displayOrder>10</displayOrder>
+        <isRequired>true</isRequired>
+        <itemEntityType>DocumentChecklistItem</itemEntityType>
+        <name>Medical Cards</name>
+        <uniqueName>Medical_Cards_7eeaa55f_2ff3_11ef_aed6_5f2d43cf503c</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItemDependencies>
+        <creationType>OnPreviousItemCompleted</creationType>
+        <name>name</name>
+        <previousTemplateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Description</name>
+                <valueLiteral>Create an Onboarding record either from the Referral, the Lead Object or directly from the Onboarding Object. Ensure that all the information required are populated.</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 0</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Start your Onboarding Process</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 0 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <displayOrder>1</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Start your Onboarding Process</name>
+            <uniqueName>Start_your_Onboarding_Process_7ee54e04_2ff3_11ef_aed6_cf02756fee88</uniqueName>
+        </previousTemplateItem>
+        <templateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 1 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Description</name>
+                <valueLiteral>Please indicate the trust type the Beneficiary falls under (one option only): 
+- Pooled TRI
+- Pooled TRII
+- Private TRI
+- Private TRII
+-  MSA</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 1</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Select the TRUST TYPE</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <displayOrder>2</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Select the TRUST TYPE</name>
+            <uniqueName>Select_the_TRUST_TYPE_7ee6386c_2ff3_11ef_aed6_eb75ab47f592</uniqueName>
+        </templateItem>
+    </actionPlanTemplateItemDependencies>
+    <actionPlanTemplateItemDependencies>
+        <creationType>OnPreviousItemCompleted</creationType>
+        <name>name</name>
+        <previousTemplateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 1 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Description</name>
+                <valueLiteral>Please indicate the trust type the Beneficiary falls under (one option only): 
+- Pooled TRI
+- Pooled TRII
+- Private TRI
+- Private TRII
+-  MSA</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 1</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Select the TRUST TYPE</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <displayOrder>2</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Select the TRUST TYPE</name>
+            <uniqueName>Select_the_TRUST_TYPE_7ee6386c_2ff3_11ef_aed6_eb75ab47f592</uniqueName>
+        </previousTemplateItem>
+        <templateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 60 - 0 + 09:00:00.000</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>true</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Description</name>
+                <valueLiteral>Ensure that all the following required documents are uploaded in Salesforce:
+Joinder
+Profile
+Funding
+Fee Schedule
+SSA Release
+Auth for Exchange of Info
+Satisfaction of Personal Debits
+Bene&apos;s ID
+Benefit Award Letters
+Medical Cards
+Guardianship/Conservatorship
+Will or Revocable Living Trust - Deferred Funding
+Donor&apos;s Intent
+Appendix A</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 60</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>If Pooled TRI</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <displayOrder>3</displayOrder>
+            <isRequired>false</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>If Pooled TRI</name>
+            <uniqueName>If_Pooled_TRI_7ee6d4b0_2ff3_11ef_aed6_b71b78312344</uniqueName>
+        </templateItem>
+    </actionPlanTemplateItemDependencies>
+    <actionPlanTemplateItemDependencies>
+        <creationType>OnPreviousItemCompleted</creationType>
+        <name>name</name>
+        <previousTemplateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 60 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 60</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Review all uploaded documents</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <displayOrder>5</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Review all uploaded documents</name>
+            <uniqueName>Review_all_uploaded_documents_7ee8a97e_2ff3_11ef_aed6_cdd2005e1eb0</uniqueName>
+        </previousTemplateItem>
+        <templateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Make your final decision - Approve or not Beneficiary&apos;s request</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 60 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 60</valueFormula>
+            </actionPlanTemplateItemValue>
+            <displayOrder>6</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Make your final decision - Approve or not Beneficiary&apos;s request</name>
+            <uniqueName>Make_your_final_decision_Approve_or_not_B_7ee9baf7_2ff3_11ef_aed6_89efae3ab965</uniqueName>
+        </templateItem>
+    </actionPlanTemplateItemDependencies>
+    <actionPlanTemplateItemDependencies>
+        <creationType>OnPreviousItemCompleted</creationType>
+        <name>name</name>
+        <previousTemplateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 45 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Description</name>
+                <valueLiteral>Ensure that all required documents are uploaded in Salesforce. Mark the Task Completed. I</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 45</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Upload all required Docs</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <displayOrder>4</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Upload all required Docs</name>
+            <uniqueName>Upload_all_required_Docs_7ee945c3_2ff3_11ef_aed6_51f7075f18ed</uniqueName>
+        </previousTemplateItem>
+        <templateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 60 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 60</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>High</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Review all uploaded documents</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <displayOrder>5</displayOrder>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Review all uploaded documents</name>
+            <uniqueName>Review_all_uploaded_documents_7ee8a97e_2ff3_11ef_aed6_cdd2005e1eb0</uniqueName>
+        </templateItem>
+    </actionPlanTemplateItemDependencies>
+    <description>Action Plan Template used to streamline the Onboarding process</description>
+    <isAdHocItemCreationEnabled>true</isAdHocItemCreationEnabled>
+    <name>Arcara Onboarding  Pooled TRI</name>
+    <targetEntityType>Case</targetEntityType>
+    <uniqueName>Arcara_Onboarding_Pooled_TRI_7ed60bc2_2ff3_11ef_aed6_f527f29d497c</uniqueName>
+</ActionPlanTemplate>

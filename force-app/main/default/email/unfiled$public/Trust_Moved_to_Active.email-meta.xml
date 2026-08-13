@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Trust Moved to Active</name>
+    <style>none</style>
+    <subject>Trust Status Moved to Active for {!Trust__c.Beneficiary_Full_Name__c}</subject>
+    <textOnly>The Trust Status for {!Trust__c.Beneficiary_Full_Name__c} , Sub-Account Number {!Trust__c.Internal_Account_Number__c}, has been changed to Active as of {!Trust__c.Initial_Funding_Date__c}, with an initial deposit of {!Trust__c.Initial_Deposit__c}.  Link to Trust record: {!Trust__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

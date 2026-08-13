@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Service Enrollment Approved</name>
+    <style>none</style>
+    <subject>Approved Service Enrollment for {!Service_Enrollment__c.Client__c}</subject>
+    <textOnly>The Service Enrollment to provide care management services has been approved for {!Service_Enrollment__c.Client__c}, Trust Sub-Account #{!Service_Enrollment__c.Internal_Account_Number__c}.  Link to Service Enrollment: {!Service_Enrollment__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

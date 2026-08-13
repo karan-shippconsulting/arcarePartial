@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body class="vsc-initialized" style="height: auto; min-height: auto;">
+<p style="line-height:1.3900000000000001; margin-bottom:11px"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Aptos"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Hello {{{Recipient.FirstName}}},</span></span></span></span></span></span></p>
+
+<p style="line-height:1.3900000000000001; margin-bottom:11px">&nbsp;</p>
+
+<p style="line-height:1.2"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Aptos"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Thank you for allowing Arcare to serve as your Trustee.&nbsp;We have received all the documentation necessary to establish your Special Needs Trust. A welcome packet will be mailed and should arrive to you within 7-10 business days. Included in that packet will be distribution forms that will need to be completed when requesting access to your trust. Additionally, it will include the direct contact information for your Trustee who will be able to assist with any questions and/or concerns you may have.<br />
+<br />
+We look forward to working with you.<br />
+<br />
+<br />
+Kindly,<br />
+<br />
+<br />
+{{{Sender.Signature}}}</span></span></span></span></span></span></p>
+</body>
+</html>

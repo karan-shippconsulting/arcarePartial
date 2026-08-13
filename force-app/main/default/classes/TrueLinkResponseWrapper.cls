@@ -49,6 +49,7 @@ public class TrueLinkResponseWrapper {
 		public String trustBeneficiaryInternalId;
 		public String maritalStatus;
 		public String livingSituation;
+		public String status;
         Boolean chargeSetupFee;
         public Boolean disallowDisbursementRequests;
 	}

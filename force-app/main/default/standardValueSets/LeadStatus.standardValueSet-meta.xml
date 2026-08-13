@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+        <label>Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Enrollment Packet Sent</fullName>
+        <default>false</default>
+        <label>Enrollment Packet Sent</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Enrollment Packet Received - Missing Documents</fullName>
+        <default>false</default>
+        <label>Enrollment Packet Received - Missing Documents</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting Funding</fullName>
+        <default>false</default>
+        <label>Awaiting Funding</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting Signed Joinder</fullName>
+        <default>false</default>
+        <label>Awaiting Signed Joinder</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Converted</fullName>
+        <color>#009900</color>
+        <default>false</default>
+        <label>Closed - Converted</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Unqualified</fullName>
+        <color>#CC0000</color>
+        <default>false</default>
+        <label>Closed - Unqualified</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

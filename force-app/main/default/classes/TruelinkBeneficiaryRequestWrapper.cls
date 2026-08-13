@@ -34,6 +34,8 @@ public class TruelinkBeneficiaryRequestWrapper {
         public Boolean mailStatement;
         public String beneficiaryId;
         public String trustBeneficiaryInternalId;
+        public String taxDocRecipientConnectionId;
+        public String status;
     }
     
     public class Meta{

@@ -1,0 +1,3 @@
+The Service Enrollment to provide care management services has been approved for {!Service_Enrollment__c.Client__c}, Trust Sub-Account #{!Service_Enrollment__c.Internal_Account_Number__c}.
+
+Link to Service Enrollment: {!Service_Enrollment__c.Link}

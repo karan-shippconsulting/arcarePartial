@@ -1053,12 +1053,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>TL_BID__c</field>
+            <field>TL_BID_Conversion__c</field>
             <table>Trust__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>TL_EID__c</field>
+            <field>TL_EID_Conversion__c</field>
             <table>Trust__c</table>
         </columns>
         <columns>
@@ -1069,6 +1069,26 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>taxDocRecipientConnectionId__c</field>
+            <table>Trust__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TL_BID__c</field>
+            <table>Trust__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TL_EID__c</field>
+            <table>Trust__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Charge_Initial_Set_up_Fee__c</field>
+            <table>Trust__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>True_Link_First_Name_Suffix__c</field>
             <table>Trust__c</table>
         </columns>
         <masterLabel>Trusts</masterLabel>

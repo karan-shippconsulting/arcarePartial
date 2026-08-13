@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hello&nbsp;{{{Case.Beneficiary_First_Name__c}}},<br />
+<br />
+We received your Enrollment packet, however it looks like the following documents are missing:
+<ul>
+	<li>A</li>
+	<li>B</li>
+	<li>C</li>
+	<li>D</li>
+</ul>
+<br />
+Please email those documents to nicoles@arcare.org.&nbsp; If the missing documents include a signature, please mail the original signature page to the below address:<br />
+<br />
+Arcare, Inc.<br />
+Attn: Nicole Gallinger<br />
+PO Box 12890<br />
+Overland Park, KS 66282<br />
+<br />
+Please don't hesitate to reach out if you have any questions&nbsp;and/or concerns.<br />
+<br />
+Kindly,<br />
+<br />
+<br />
+{{{Sender.Signature}}}</body>
+</html>

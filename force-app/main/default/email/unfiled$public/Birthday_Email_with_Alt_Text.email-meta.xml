@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Birthday Email with Alt Text</name>
+    <style>none</style>
+    <subject>{!Account.Full_Name__pc}&apos;s Birthday</subject>
+    <textOnly>We would like to wish {!Account.Full_Name__pc} a very happy birthday. May {!Account.FirstName}’s day be filled with kindness, happiness and moments that feel truly special. We are thinking of {!Account.FirstName} today and sending warm wishes their way.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

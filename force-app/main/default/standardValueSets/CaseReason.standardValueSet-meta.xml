@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Grant Application</fullName>
+        <default>false</default>
+        <label>Grant Application</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Trust Administration Request</fullName>
+        <default>false</default>
+        <label>Trust Administration Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Referral</fullName>
+        <default>false</default>
+        <label>New Referral</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

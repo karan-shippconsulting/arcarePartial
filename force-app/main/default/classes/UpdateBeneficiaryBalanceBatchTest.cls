@@ -47,6 +47,40 @@ public class UpdateBeneficiaryBalanceBatchTest {
         catch(exception e){}
     }
     
+    @isTest
+    static void testStartExcludesIneligibleTrustStatus() {
+        TruelinkData__c setting = new TruelinkData__c();
+        setting.ApiKey__c = 'Apikey test';
+        setting.Endpoint__c = 'test';
+        insert setting;
+
+        Pooled_Trust__c pc = new Pooled_Trust__c(Trust_Id__c = 'AB1234');
+        insert pc;
+
+        Trust_Portfolio__c tp = new Trust_Portfolio__c(name='test', Is_Default__c=true, True_Link_Portfolio_ID__c='test', Type__c='Portfolio', Pooled_Trust__c=pc.id);
+        insert tp;
+
+        Contact party = new Contact(lastname = 'Test Account');
+        insert party;
+
+        trust__c eligible = new trust__c(Pooled_Trust__c = pc.Id, Trust_Portfolio__c = tp.id, Trust_Status__c = 'Active', TrueLink_ID__c = 'eligible-1', Beneficiary__c = party.id);
+        insert eligible;
+
+        trust__c ineligible = new trust__c(Pooled_Trust__c = pc.Id, Trust_Portfolio__c = tp.id, Trust_Status__c = 'Intake', TrueLink_ID__c = 'ineligible-1', Beneficiary__c = party.id);
+        insert ineligible;
+
+        UpdateBeneficiaryBalanceBatch cb = new UpdateBeneficiaryBalanceBatch();
+        Database.QueryLocator ql = cb.start(null);
+        Set<Id> resultIds = new Set<Id>();
+        Database.QueryLocatorIterator it = ql.iterator();
+        while (it.hasNext()) {
+            resultIds.add(((trust__c) it.next()).Id);
+        }
+
+        System.assert(resultIds.contains(eligible.Id), 'Eligible trust should be included');
+        System.assert(!resultIds.contains(ineligible.Id), 'Ineligible trust should be excluded');
+    }
+
     // Mock class for successful callout
     public class TrueLinkApiHandlerMock implements HttpCalloutMock {
         public HTTPResponse respond(HTTPRequest req) {

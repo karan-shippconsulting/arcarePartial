@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body class="vsc-initialized" style="height: auto; min-height: auto;">
+<p style="line-height:1.3900000000000001; margin-bottom:11px"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant: normal; white-space: pre-wrap;"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Hello {{{Recipient.FirstName}}},</span></span></span></span></span><br />
+<br />
+<span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">It was a pleasure speaking with you.&nbsp; As you already know, a Special Needs trust is a resource used to preserve the beneficiary’s eligibility for means tested benefits such as Medicaid and SSI.&nbsp; A few key points to pass along prior to enrolling:</span></span></span></p>
+
+<ul>
+	<li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><b>Irrevocable</b>&nbsp;– Once the joinder is signed, the trust cannot be revoked, amended, or terminated.</span></span></span></li>
+	<li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><b>Sole-benefit</b>&nbsp;– The funds in the Special Needs trust can only be used for the sole-benefit of the beneficiary</span></span></span></li>
+	<li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><b>State Recovery </b>- A Medicaid payback provision is attached to the first-party, Pooled Trust II.&nbsp; This means that upon the death of the beneficiary, as required by law, the state can be reimbursed/recover assets remaining in the beneficiary's trust account for medical assistance paid on their behalf.</span></span></span>
+	<ul>
+		<li><strong><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">It is important to note&nbsp;that after the death of the beneficiary, trust funds cannot be used to pay for funeral/final expenses.&nbsp; It is highly recommended to purchase a preneed/funeral plan prior to the death of the beneficiary.</span></span></span></strong></li>
+	</ul>
+	</li>
+</ul>
+
+<p style="line-height:1.3900000000000001; margin-bottom:11px"><br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">With what you shared, you would be enrolled in our Pooled First-Party Trust.&nbsp; Our pooled trust operates under a master trust document that is preapproved by Medicaid and Social Security. To open a pooled trust with us, we require that an enrollment&nbsp;packet and joinder agreement be completed. There is no need to draft a separate trust document, as the joinder agreement is the legal document that the beneficiary would sign saying they wish to join the&nbsp;Arcare&nbsp;Pooled Trust.&nbsp;</span></span><br />
+<br />
+<span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">Attached is that Enrollment&nbsp;packet along with a budget questionnaire – if you choose to move forward, please complete both documents and return to me along with the supporting documentation listed on page 1 of the Enrollment Packet. &nbsp;</span><br />
+<br />
+<b>**Please note if the beneficiary is under guardianship or conservatorship, court approval is required to establish the Special Needs Trust.</b></span></span><br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">If you have any questions and/or concerns, please do not hesitate to reach out to me directly.</span><br />
+<br />
+<span style="color:black">Kindly,</span><br />
+<br />
+<span style="font-variant: normal; white-space: pre-wrap;"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">{{{Sender.Name}}}</span></span></span></span></span></span></p>
+</body>
+</html>

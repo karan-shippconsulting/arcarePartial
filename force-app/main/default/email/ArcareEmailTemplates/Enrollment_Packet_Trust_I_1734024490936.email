@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body class="vsc-initialized" style="height: auto; min-height: auto;"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hello&nbsp;{{{Recipient.FirstName}}},<br />
+<br />
+<span style="color:black">It was a pleasure speaking with you regarding&nbsp;Arcare&nbsp;and the services we provide.&nbsp;&nbsp;As you are already aware, a Special Needs Trust is a resource used to preserve the beneficiary’s eligibility for means tested benefits such as Medicaid and SSI.</span><br />
+&nbsp;<br />
+<span style="color:black">From what you shared, you are interested in establishing a Third-Party Pooled Trust.&nbsp; Our pooled trust operates under a master trust document that is preapproved by Medicaid and Social Security.&nbsp; To open a pooled trust with us, we require that an enrollment&nbsp;packet and joinder agreement be completed.&nbsp; There is no need to draft a separate trust document, as the joinder agreement is the legal document that the beneficiary would sign saying they wish to join the&nbsp;Arcare&nbsp;Pooled Trust.&nbsp;</span><br />
+&nbsp;<br />
+<span style="color:black">Attached is that Enrollment&nbsp;packet – if you choose to move forward, please complete and return to me along with the supporting documentation listed on page 1.&nbsp;&nbsp;</span><br />
+&nbsp;<br />
+<span style="color:black">Please don’t hesitate to reach out if you have any questions and/or concerns.<br />
+<br />
+Kindly,<br />
+<br />
+{{{Sender.Signature}}}</span></span></span><br />
+&nbsp;</body>
+</html>

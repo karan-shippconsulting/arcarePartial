@@ -162,9 +162,123 @@ public class TrueLinkApiHandlerTest {
         Test.startTest();
             TrueLinkApiHandler.updateAccountBalance(acc1.Id);
         Test.stopTest();
-        
+
     }
-    
+
+    @isTest
+    static void testFetchAccountBalanceCapturesTaxDocRecipientConnectionId() {
+        Test.setMock(HttpCalloutMock.class, new TruelinkRestUtilMock2());
+
+        Pooled_Trust__c pc = new Pooled_Trust__c(Trust_Id__c = 'AB123');
+        insert pc;
+
+        Trust_Portfolio__c tp = new Trust_Portfolio__c(name='test', Is_Default__c=true, True_Link_Portfolio_ID__c='test', Type__c='Portfolio', Pooled_Trust__c=pc.id);
+        insert tp;
+
+        contact con = new contact(lastname='Account VALUE NEW');
+        insert con;
+
+        trust__c acc1 = new trust__c(Name='Test Trust Account', beneficiary__c=con.id, Trust_Portfolio__c=tp.id, Pooled_Trust__c=pc.id, TrueLink_Id__c='TestTrustId1', Trust_Status__c='Active');
+        insert acc1;
+
+        TruelinkBeneficiaryRequestWrapper response;
+        Test.startTest();
+            response = TrueLinkApiHandler.fetchAccountBalance(acc1.Id, acc1.TrueLink_Id__c);
+        Test.stopTest();
+
+        System.assertEquals('conn-tax-123', response?.data?.attributes?.taxDocRecipientConnectionId, 'taxDocRecipientConnectionId should be parsed from the Get Balance response attributes');
+    }
+
+    @isTest
+    static void testFetchAccountBalanceCapturesStatus() {
+        Test.setMock(HttpCalloutMock.class, new TruelinkRestUtilMock2());
+
+        Pooled_Trust__c pc = new Pooled_Trust__c(Trust_Id__c = 'AB123');
+        insert pc;
+
+        Trust_Portfolio__c tp = new Trust_Portfolio__c(name='test', Is_Default__c=true, True_Link_Portfolio_ID__c='test', Type__c='Portfolio', Pooled_Trust__c=pc.id);
+        insert tp;
+
+        contact con = new contact(lastname='Account VALUE NEW');
+        insert con;
+
+        trust__c acc1 = new trust__c(Name='Test Trust Account', beneficiary__c=con.id, Trust_Portfolio__c=tp.id, Pooled_Trust__c=pc.id, TrueLink_Id__c='TestTrustId1', Trust_Status__c='Active');
+        insert acc1;
+
+        TruelinkBeneficiaryRequestWrapper response;
+        Test.startTest();
+            response = TrueLinkApiHandler.fetchAccountBalance(acc1.Id, acc1.TrueLink_Id__c);
+        Test.stopTest();
+
+        System.assertEquals('Active', response?.data?.attributes?.status, 'status should be parsed from the Get Balance response attributes');
+    }
+
+    @isTest
+    static void testGetEligibleTrustStatuses() {
+        Set<String> statuses = TrueLinkApiHandler.getEligibleTrustStatuses();
+
+        System.assertEquals(3, statuses.size(), 'Expected exactly the 3 metadata-driven eligible statuses: ' + statuses);
+        System.assert(statuses.contains('Active'), 'Active should be eligible: ' + statuses);
+        System.assert(statuses.contains('Future Funded'), 'Future Funded should be eligible: ' + statuses);
+        System.assert(statuses.contains('Closing'), 'Closing should be eligible: ' + statuses);
+    }
+
+    @isTest
+    static void testUpdateAccountBalanceThrowsForIneligibleStatusWithDynamicMessage() {
+        contact con = new contact(lastname='Ineligible Trust Contact');
+        insert con;
+
+        Pooled_Trust__c pc = new Pooled_Trust__c(Trust_Id__c = 'AB999');
+        insert pc;
+
+        Trust_Portfolio__c tp = new Trust_Portfolio__c(name='test', Is_Default__c=true, True_Link_Portfolio_ID__c='test', Type__c='Portfolio', Pooled_Trust__c=pc.id);
+        insert tp;
+
+        trust__c trust = new trust__c(Name='Ineligible Trust', Beneficiary__c=con.id, Trust_Portfolio__c=tp.id, Pooled_Trust__c=pc.id, TrueLink_Id__c='ineligible-1', Trust_Status__c='Intake');
+        insert trust;
+
+        Boolean threw = false;
+        try {
+            TrueLinkApiHandler.updateAccountBalance(trust.Id);
+        } catch (TrueLinkApiHandler.ApiException e) {
+            threw = true;
+            System.assert(e.getMessage().contains('Active'), 'Message should list Active: ' + e.getMessage());
+            System.assert(e.getMessage().contains('Future Funded'), 'Message should list Future Funded: ' + e.getMessage());
+            System.assert(e.getMessage().contains('Closing'), 'Message should list Closing: ' + e.getMessage());
+        }
+        System.assert(threw, 'updateAccountBalance should throw ApiException for an ineligible trust status');
+    }
+
+    @isTest
+    static void testCreateTrustBeneficiaryCapturesStatus() {
+        Test.setMock(HttpCalloutMock.class, new TrueLinkCreateBeneficiaryMock());
+
+        Contact party = TruelinkBeneficiaryRequestBuilderTest.createTestData();
+        trust__c trust = [SELECT Id FROM trust__c WHERE Beneficiary__c = :party.Id LIMIT 1];
+
+        Test.startTest();
+            TrueLinkApiHandler.createTrustBeneficiary(party.Id, trust.Id);
+        Test.stopTest();
+
+        trust__c updated = [SELECT True_Link_Status__c FROM trust__c WHERE Id = :trust.Id];
+        System.assertEquals('Active', updated.True_Link_Status__c, 'True_Link_Status__c should be captured from the create beneficiary response');
+    }
+
+    @isTest
+    static void testUpdateTrustBeneficiaryCapturesStatus() {
+        Test.setMock(HttpCalloutMock.class, new TrueLinkCreateBeneficiaryMock());
+
+        Contact party = TruelinkBeneficiaryRequestBuilderTest.createTestData();
+        trust__c trust = [SELECT Id FROM trust__c WHERE Beneficiary__c = :party.Id LIMIT 1];
+
+        Test.startTest();
+            TrueLinkApiHandler.updateTrustBeneficiary(party.Id, trust.Id, 'existing-beneficiary-id');
+        Test.stopTest();
+
+        trust__c updated = [SELECT True_Link_Status__c FROM trust__c WHERE Id = :trust.Id];
+        System.assertEquals('Active', updated.True_Link_Status__c, 'True_Link_Status__c should be captured from the update beneficiary response');
+    }
+
     @IsTest
     static void testUpdateDeposit() {
         // Mock the HTTP response
@@ -226,7 +340,18 @@ public class TrueLinkApiHandlerTest {
         }
     }
     
-     private class TruelinkRestUtilMock2 implements HttpCalloutMock { 
+    // Mock class for a successful create-beneficiary callout
+    private class TrueLinkCreateBeneficiaryMock implements HttpCalloutMock {
+        public HTTPResponse respond(HTTPRequest req) {
+            HttpResponse res = new HttpResponse();
+            res.setHeader('Content-Type', 'application/json');
+            res.setStatusCode(200);
+            res.setBody('{"data": {"id": "new-beneficiary-id", "type": "trust_beneficiary", "attributes": {"status": "Active", "trustBeneficiaryInternalId": "832214"}, "relationships": {"address": {"data": {"id": "addr-1"}}}}}');
+            return res;
+        }
+    }
+
+     private class TruelinkRestUtilMock2 implements HttpCalloutMock {
          
         public HTTPResponse respond(HTTPRequest req) {
             String jsonPayload = '{' +
@@ -255,7 +380,7 @@ public class TrueLinkApiHandlerTest {
             '"chargeSetupFee": false,' +
             '"disallowDisbursementRequests": false,' +
             '"mailStatement": true,' +
-            '"taxDocRecipientConnectionId": null,' +
+            '"taxDocRecipientConnectionId": "conn-tax-123",' +
             '"status": "Active"' +
         '},' +
         '"relationships": {' +

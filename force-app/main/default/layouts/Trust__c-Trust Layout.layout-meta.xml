@@ -57,11 +57,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>TL_BID__c</field>
+                <field>TL_BID_Conversion__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>TL_EID__c</field>
+                <field>TL_EID_Conversion__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -70,6 +70,22 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>taxDocRecipientConnectionId__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>TL_BID__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>TL_EID__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Charge_Initial_Set_up_Fee__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>True_Link_First_Name_Suffix__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

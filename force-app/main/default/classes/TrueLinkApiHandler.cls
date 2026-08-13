@@ -22,7 +22,8 @@ public class TrueLinkApiHandler {
                         Trust__c toUpdate = new Trust__c(Id=trustPartyId,TrueLink_ID__c=beneficiaryId);
                         toUpdate.Truelink_Address_Id__c = addressId;
                         toUpdate.True_Link_ID_from_TL_Profile__c = trustBeneficiaryInternalId;
-                        update toUpdate;    
+                        toUpdate.True_Link_Status__c = response?.data?.attributes?.status;
+                        update toUpdate;
                     }
                 }
                 catch(Exception e){
@@ -61,7 +62,57 @@ public class TrueLinkApiHandler {
         }
     }
     
-    public static void updateTrustBeneficiary(String partyId, String trustPartyId, String beneficaryId){  
+    public static void updateConnection(String connectionId){
+        Connections__c con = [Select Id, True_Link_Id__c, First_Name__c, Last_Name__c, Mobile__c, Email__c,
+                               Company_Name__c, Notes__c, Street_1__c, Street_2__c, City__c, State__c, Zip__c,
+                               Relationship_Types__c, Is_Statement_Recipient__c,
+                               Trust__c, Trust__r.TrueLink_ID__c
+                               from Connections__c where Id =: connectionId limit 1];
+        if(String.isBlank(con.True_Link_Id__c) || con.Trust__c == null || String.isBlank(con.Trust__r.TrueLink_ID__c)){
+            throw new ApiException('Missing True_Link_Id__c or Trust TrueLink_ID__c for Connection: ' + connectionId);
+        }
+        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
+        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+        try{
+            TrueLinkConnectionUpdateRequestWrapper reqWrapper = new TrueLinkConnectionUpdateRequestWrapper();
+            reqWrapper.data.id = con.True_Link_Id__c;
+            reqWrapper.data.attributes.firstName = con.First_Name__c;
+            reqWrapper.data.attributes.lastName = con.Last_Name__c;
+            reqWrapper.data.attributes.mobile = con.Mobile__c;
+            reqWrapper.data.attributes.email = con.Email__c;
+            reqWrapper.data.attributes.companyName = con.Company_Name__c;
+            reqWrapper.data.attributes.notes = con.Notes__c;
+            reqWrapper.data.attributes.street1 = con.Street_1__c;
+            reqWrapper.data.attributes.street2 = con.Street_2__c;
+            reqWrapper.data.attributes.city = con.City__c;
+            reqWrapper.data.attributes.state = con.State__c;
+            reqWrapper.data.attributes.zip = con.Zip__c;
+
+            if(String.isNotBlank(con.Relationship_Types__c)){
+                reqWrapper.data.relationships.connectionRelationship.data.attributes.relationshipTypes = con.Relationship_Types__c.split(';');
+            }
+            reqWrapper.data.relationships.connectionRelationship.data.attributes.isStatementRecipient = con.Is_Statement_Recipient__c;
+
+            exec.setEndPoint('/trust_beneficiaries/' + con.Trust__r.TrueLink_ID__c + '/connections/' + con.True_Link_Id__c)
+                .setMethod('PATCH')
+                .setBody(JSON.serialize(reqWrapper, true))
+                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Content-Type','application/json');
+            exec.send();
+            Track_API_Call__c trackObj = exec.getTrackObj();
+            trackObj.Parent_Record_Id__c = con.Id;
+            update trackObj;
+            if(trackObj.Status__c == 'Success'){
+                Connections__c toUpdate = new Connections__c(Id=con.Id, Update_True_Link__c=false);
+                update toUpdate;
+            }
+        }
+        catch(Exception e){
+            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());
+        }
+    }
+
+    public static void updateTrustBeneficiary(String partyId, String trustPartyId, String beneficaryId){
         TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
         TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
         try{
@@ -76,13 +127,16 @@ public class TrueLinkApiHandler {
             update trackObj;
             if(trackObj.Status__c == 'Success'){
                 Contact con = new Contact(Id=partyId,Update_True_Link__c=false);
-                update con;               
+                update con;
+                Trust__c trustToUpdate = new Trust__c(Id=trustPartyId);
+                trustToUpdate.True_Link_Status__c = response?.data?.attributes?.status;
+                update trustToUpdate;
             }
         }
         catch(Exception e){
-            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());            
+            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());
         }
-        
+
     }
     public static void createTrustBeneficiaryAddress(String partyId,String trueLinkID){
         TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
@@ -185,9 +239,9 @@ public class TrueLinkApiHandler {
     public static void updateAccountBalance(String trustId){
         map<string,Beneficiary_Card__c> cardReferenceVsObjectMap = new map<string,Beneficiary_Card__c>();
         trust__c trust = [Select Id,TrueLink_ID__c,Beneficiary__c,True_Link_Balance__c,Trust_Status__c,Trust_Portfolio__c, Trust_Portfolio__r.True_Link_Portfolio_ID__c from trust__c where Id =: trustId limit 1];
-        Set<String> allowedTrustStatus = new Set<String>{'Closing','Active'};
+        Set<String> allowedTrustStatus = getEligibleTrustStatuses();
             if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-                throw new ApiException('Trust Status should be Active or Closing');
+                throw new ApiException('Trust Status should be one of: ' + String.join(new List<String>(allowedTrustStatus), ', '));
             }/*else if(trust.RecordType.Name != 'Trust'){
                 throw new AuraHandledException('Record Type is not Trust');
             }*/
@@ -255,6 +309,8 @@ public class TrueLinkApiHandler {
             if(response?.data?.attributes?.disallowDisbursementRequests!=null){
                 trust.Disbursement_Creation_Enabled__c = !response.data.attributes.disallowDisbursementRequests;
             }
+            trust.taxDocRecipientConnectionId__c = response?.data?.attributes?.taxDocRecipientConnectionId;
+            trust.True_Link_Status__c = response?.data?.attributes?.status;
             if(trust!=null){
                 if(!Test.isRunningTest())
                     update trust;
@@ -306,9 +362,9 @@ public class TrueLinkApiHandler {
     public static void updateDeposit(String trustId){
         system.debug('trustId'+trustId);
         trust__c trust = [Select Id,TrueLink_ID__c,True_Link_Balance__c,Trust_Status__c,Trust_Portfolio__c, Trust_Portfolio__r.True_Link_Portfolio_ID__c from trust__c where Id =: trustId limit 1];
-        Set<String> allowedTrustStatus = new Set<String>{'Closing','Active'};
+        Set<String> allowedTrustStatus = getEligibleTrustStatuses();
         if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-            throw new ApiException('Trust Status should be Active or Closing');
+            throw new ApiException('Trust Status should be one of: ' + String.join(new List<String>(allowedTrustStatus), ', '));
         }
         if(String.isNotEmpty(trust.TrueLink_ID__c)){
             TruelinkTransactionResponseWrapper response = new TruelinkTransactionResponseWrapper();
@@ -393,11 +449,11 @@ public class TrueLinkApiHandler {
     @AuraEnabled
     public static void updateDisbursement(String trustId){
         trust__c trust = [Select Id,TrueLink_ID__c,True_Link_Balance__c,Trust_Status__c,Trust_Portfolio__c, Trust_Portfolio__r.True_Link_Portfolio_ID__c from trust__c where Id =: trustId limit 1];
-        Set<String> allowedTrustStatus = new Set<String>{'Closing','Active'};
+        Set<String> allowedTrustStatus = getEligibleTrustStatuses();
         Set<String> disbursementTruelinkTransactionIdsSet = new Set<String>();
-        Map<String, String> disbursementIdToAttachmentIdMap = new Map<String, String>(); 
+        Map<String, String> disbursementIdToAttachmentIdMap = new Map<String, String>();
         if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-            throw new ApiException('Trust Status should be Active or Closing');
+            throw new ApiException('Trust Status should be one of: ' + String.join(new List<String>(allowedTrustStatus), ', '));
         }
         if(String.isNotEmpty(trust.TrueLink_ID__c)){
             TruelinkTransactionResponseWrapper response = new TruelinkTransactionResponseWrapper();
@@ -585,6 +641,14 @@ public class TrueLinkApiHandler {
         
     }
     
+    public static Set<String> getEligibleTrustStatuses(){
+        Set<String> statuses = new Set<String>();
+        for(Truelink_Trust_Status__mdt s : Truelink_Trust_Status__mdt.getAll().values()){
+            statuses.add(s.Status_Value__c);
+        }
+        return statuses;
+    }
+
     private static String getTrustId(String trustPartyId){
         List<Pooled_Trust__c> pc = [Select Id,Trust_Id__c from Pooled_Trust__c where Id IN (Select Pooled_Trust__c from Trust__c where Id=:trustPartyId) limit 1];
         if(pc.isEmpty())
