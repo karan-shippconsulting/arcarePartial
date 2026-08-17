@@ -12,12 +12,12 @@ public class UpdateDisbursementsBatch implements Database.Batchable<sObject>,Dat
     public Database.QueryLocator start(Database.BatchableContext bc){
         List<String> eligibleStatuses = new List<String>(TrueLinkApiHandler.getEligibleTrustStatuses());
         if(trustIds != null && !trustIds.isEmpty()){
-            return Database.getQueryLocator('SELECT Id, TrueLink_ID__c, True_Link_Balance__c FROM trust__c WHERE TrueLink_ID__c != null AND Trust_Status__c IN :eligibleStatuses AND Id IN :trustIds');
+            return Database.getQueryLocator([Select Id,TrueLink_ID__c,True_Link_Balance__c from trust__c where TrueLink_ID__c!=null and Trust_Status__c IN :eligibleStatuses and Id IN :trustIds]);
         }
-        return Database.getQueryLocator('SELECT Id, TrueLink_ID__c, True_Link_Balance__c FROM trust__c WHERE TrueLink_ID__c != null AND Trust_Status__c IN :eligibleStatuses');
+        return Database.getQueryLocator([Select Id,TrueLink_ID__c,True_Link_Balance__c from trust__c where TrueLink_ID__c!=null and Trust_Status__c IN :eligibleStatuses]);
     }
 
-    public void execute(Database.BatchableContext ctx,List<trust__c> records){
+    public void execute(Database.BatchableContext ctx,List<trust__c> records){   
         List<trust__c> newRecords = new List<trust__c>();
         for(trust__c trust:records){
             try{

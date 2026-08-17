@@ -1,7 +1,7 @@
 public class UpdateBeneficiaryBalanceBatch implements Database.Batchable<sObject>,Schedulable,Database.AllowsCallouts {
     public Database.QueryLocator start(Database.BatchableContext bc){
         List<String> eligibleStatuses = new List<String>(TrueLinkApiHandler.getEligibleTrustStatuses());
-        return Database.getQueryLocator('SELECT Id, TrueLink_ID__c, True_Link_Balance__c FROM trust__c WHERE TrueLink_ID__c != null AND Trust_Status__c IN :eligibleStatuses');
+        return Database.getQueryLocator([Select Id,TrueLink_ID__c,True_Link_Balance__c from trust__c where TrueLink_ID__c!=null and Trust_Status__c IN :eligibleStatuses]);
     }
 
     public void execute(Database.BatchableContext ctx,List<trust__c> records){   
@@ -12,11 +12,11 @@ public class UpdateBeneficiaryBalanceBatch implements Database.Batchable<sObject
     }
 
     public void finish(Database.BatchableContext ctx){
-        Database.executeBatch(new UpdateDepositsBatch(),1); 
+		Database.executeBatch(new UpdateDepositsBatch(),1); 
         if(!Test.isRunningTest()){
             BatchUtils.rescheduleBatch('UpdateBeneficiaryBalanceBatch',new UpdateBeneficiaryBalanceBatch());
     }
-    }
+    } 
 
     public void execute(SchedulableContext  sc){
         Database.executeBatch(this,1);

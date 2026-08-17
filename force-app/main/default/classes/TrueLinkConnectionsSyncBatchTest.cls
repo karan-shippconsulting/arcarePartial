@@ -6,6 +6,8 @@ public class TrueLinkConnectionsSyncBatchTest {
         TruelinkData__c setting = new TruelinkData__c();
         setting.ApiKey__c = 'Apikey test';
         setting.Endpoint__c = 'https://test.truelinkfinancial.com/api/v2';
+        setting.Sandbox_Apikey__c = 'Apikey test';
+        setting.Sandbox_Endpoint__c = 'https://test.truelinkfinancial.com/api/v2';
         insert setting;
     }
 

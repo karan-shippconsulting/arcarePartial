@@ -18,7 +18,7 @@ public class TrueLinkPartyTriggerHandlerTest {
         Test.startTest();
         TrueLinkPartyTriggerHandler.createTrustBeneficiary(party.id, trust.id);
         TrueLinkPartyTriggerHandler.updateTrustBeneficiary(party.id, trust.id,'test');
-        TrueLinkPartyTriggerHandler.updateAddress(party.id,'test');
+        TrueLinkPartyTriggerHandler.updateAddress(party.id,'test', false);
         Test.stopTest();
 
     }

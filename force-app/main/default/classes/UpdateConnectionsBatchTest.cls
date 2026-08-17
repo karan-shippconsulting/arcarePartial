@@ -6,6 +6,8 @@ public class UpdateConnectionsBatchTest {
         TruelinkData__c setting = new TruelinkData__c();
         setting.ApiKey__c = 'Apikey test';
         setting.Endpoint__c = 'https://test.com';
+        setting.Sandbox_Apikey__c = 'Apikey test';
+        setting.Sandbox_Endpoint__c = 'https://test.com';
         insert setting;
 
         Pooled_Trust__c pc = new Pooled_Trust__c(Trust_Id__c = 'AB1234');

@@ -5,7 +5,7 @@ trigger TrustTrigger on Trust__c (after update) {
          if(Trigger.new.size() == 1){
              Trust__c trust = Trigger.new[0];
              True_Link_Trigger_Switch__c apiSwitch = True_Link_Trigger_Switch__c.getOrgDefaults();
-             Set<String> allowedTrustStatus = new Set<String>{'Pending-Active','Active','Closing'};
+             Set<String> allowedTrustStatus = TrueLinkApiHandler.getEligibleTrustStatuses();
              if((String.isEmpty(trust.TrueLink_ID__c) || String.isBlank(trust.TrueLink_ID__c))  
 				&& allowedTrustStatus.contains(trust.Trust_Status__c) 
 				&& trust.Trust_Status__c != Trigger.oldMap.get(trust.Id).Trust_Status__c

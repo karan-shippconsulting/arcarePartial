@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_All_Address_Fields__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Checking this box will push all address fields and force them to update in Salesforce.</inlineHelpText>
+    <label>Update All Address Fields In True Link</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

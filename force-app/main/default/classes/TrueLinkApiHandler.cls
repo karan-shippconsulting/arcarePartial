@@ -1,13 +1,15 @@
 public class TrueLinkApiHandler {
+    public static string apikey;
+    public static string endpoint;
     public static void createTrustBeneficiary(String partyId, String trustPartyId){
         String trustid = getTrustId(trustPartyId);
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
             exec.setEndpoint('/trusts/'+trustid+'/trust_beneficiaries')
                 .setMethod('POST')
                 .setBody(JSON.serialize(new TruelinkBeneficiaryRequestBuilder().build(partyId, trustPartyId, null, false),true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
             TrueLinkResponseWrapper response = TrueLinkResponseWrapper.parse(exec.send().getBody());      
             Track_API_Call__c trackObj = exec.getTrackObj();
@@ -23,10 +25,6 @@ public class TrueLinkApiHandler {
                         toUpdate.Truelink_Address_Id__c = addressId;
                         toUpdate.True_Link_ID_from_TL_Profile__c = trustBeneficiaryInternalId;
                         toUpdate.True_Link_Status__c = response?.data?.attributes?.status;
-                        // This runs inside the createTrustBeneficiary future job. Populating TrueLink_ID__c
-                        // here makes TrustTrigger's other branches (updateTrust/updateTrustForEinAndBid) go
-                        // live on the resulting re-fire; those call @future methods, which Salesforce forbids
-                        // from within a future context. Set the recursion guard first so TrustTrigger skips them.
                         TruelinkStaticUtils.stopRecursionOnTrustUpdate = true;
                         update toUpdate;
                     }
@@ -42,14 +40,17 @@ public class TrueLinkApiHandler {
         
     }
     
-    public static void updateTrustBeneficiaryAddress(String partyId, String addressId){
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+    public static void updateTrustBeneficiaryAddress(String partyId, String addressId, Boolean updateAllAddressFields){
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
+            String body = updateAllAddressFields
+                ? JSON.serialize(new TruelinkBeneficiaryRequestBuilder().buildAddressAllFields(partyId, addressId))
+                : JSON.serialize(new TruelinkBeneficiaryRequestBuilder().buildAddress(partyId, addressId),true);
             exec.setEndPoint('/addresses/'+addressId)
                 .setMethod('PATCH')
-                .setBody(JSON.serialize(new TruelinkBeneficiaryRequestBuilder().buildAddress(partyId, addressId),true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setBody(body)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
             TrueLinkResponseWrapper response = new TrueLinkResponseWrapper();
            // if(!Test.isRunningTest())
@@ -58,12 +59,17 @@ public class TrueLinkApiHandler {
             trackObj.Parent_Record_Id__c = partyId;
             update trackObj;
             if(trackObj.Status__c == 'Success'){
-                Contact con = new Contact(Id=partyId,Update_True_Link__c=false);
-                update con;   
+                TruelinkStaticUtils.stopRecursionOnAccountUpdate = true;
+                if(!updateAllAddressFields && !String.isBlank(partyId))
+                	update new Contact(Id=partyId,Update_True_Link__c=false);
+                if(updateAllAddressFields && !String.isBlank(partyId)){
+                    update new Contact(Id=partyId,Update_All_Address_Fields__c=false);
+                }
+                    
             }
         }
         catch(Exception e){
-            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());            
+            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());
         }
     }
     
@@ -76,8 +82,8 @@ public class TrueLinkApiHandler {
         if(String.isBlank(con.True_Link_Id__c) || con.Trust__c == null || String.isBlank(con.Trust__r.TrueLink_ID__c)){
             throw new ApiException('Missing True_Link_Id__c or Trust TrueLink_ID__c for Connection: ' + connectionId);
         }
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
             TrueLinkConnectionUpdateRequestWrapper reqWrapper = new TrueLinkConnectionUpdateRequestWrapper();
             reqWrapper.data.id = con.True_Link_Id__c;
@@ -101,7 +107,7 @@ public class TrueLinkApiHandler {
             exec.setEndPoint('/trust_beneficiaries/' + con.Trust__r.TrueLink_ID__c + '/connections/' + con.True_Link_Id__c)
                 .setMethod('PATCH')
                 .setBody(JSON.serialize(reqWrapper, true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
             exec.send();
             Track_API_Call__c trackObj = exec.getTrackObj();
@@ -118,23 +124,25 @@ public class TrueLinkApiHandler {
     }
 
     public static void updateTrustBeneficiary(String partyId, String trustPartyId, String beneficaryId){
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
             exec.setEndPoint('/trust_beneficiaries/'+beneficaryId)
                 .setMethod('PATCH')
                 .setBody(JSON.serialize(new TruelinkBeneficiaryRequestBuilder().build(partyId, trustPartyId, beneficaryId, true), true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
-            TrueLinkResponseWrapper response = TrueLinkResponseWrapper.parse(exec.send().getBody());     
+            TrueLinkResponseWrapper response = TrueLinkResponseWrapper.parse(exec.send().getBody());
             Track_API_Call__c trackObj = exec.getTrackObj();
             trackObj.Parent_Record_Id__c = partyId;
             update trackObj;
             if(trackObj.Status__c == 'Success'){
+                TruelinkStaticUtils.stopRecursionOnAccountUpdate = true;
                 Contact con = new Contact(Id=partyId,Update_True_Link__c=false);
                 update con;
                 Trust__c trustToUpdate = new Trust__c(Id=trustPartyId);
                 trustToUpdate.True_Link_Status__c = response?.data?.attributes?.status;
+                TruelinkStaticUtils.stopRecursionOnTrustUpdate = true;
                 update trustToUpdate;
             }
         }
@@ -144,13 +152,13 @@ public class TrueLinkApiHandler {
 
     }
     public static void createTrustBeneficiaryAddress(String partyId,String trueLinkID){
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
             exec.setEndPoint('/trust_beneficiaries/'+trueLinkID+'/addresses/')
                 .setMethod('POST')
                 .setBody(JSON.serialize(new TruelinkBeneficiaryRequestBuilder().buildAddress(partyId, null),true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
             TrueLinkResponseWrapper response = new TrueLinkResponseWrapper();
            // if(!Test.isRunningTest())
@@ -160,8 +168,9 @@ public class TrueLinkApiHandler {
             trackObj.Parent_Record_Id__c = partyId;
             update trackObj;
             if(trackObj.Status__c == 'Success'){
+                TruelinkStaticUtils.stopRecursionOnAccountUpdate = true;
                 Contact toUpdate = new Contact(Id=partyId,Truelink_Address_Id__c = addressId,Update_True_Link__c = false);
-                update toUpdate;          
+                update toUpdate;
             }
         }
         catch(Exception e){
@@ -169,35 +178,41 @@ public class TrueLinkApiHandler {
         }
     }
     
-    public static void updateTrust(String trustPartyId, String trustTruelinkId){        
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+    public static void updateTrust(String trustPartyId, String trustTruelinkId){
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
             exec.setEndPoint('/trust_beneficiaries/'+trustTruelinkId)
                 .setMethod('PATCH')
                 .setBody(JSON.serialize(new TruelinkBeneficiaryRequestBuilder().buildRequestForTrustDisbursement(trustPartyId),true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
             TrueLinkResponseWrapper response = new TrueLinkResponseWrapper();
                 response = TrueLinkResponseWrapper.parse(exec.send().getBody());
             Track_API_Call__c trackObj = exec.getTrackObj();
             trackObj.Parent_Record_Id__c = trustPartyId;
             update trackObj;
+            if(trackObj.Status__c == 'Success'){
+                Trust__c trust = new Trust__c(Id=trustPartyId);
+                trust.True_Link_Status__c = response?.data?.attributes?.status;
+                TruelinkStaticUtils.stopRecursionOnTrustUpdate = true;
+                update trust;
+            }
         }
         catch(Exception e){
-            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());            
+            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());
         }
-        
+
     }
-    
-    public static void updateTrustForEinAndBid(String trustPartyId, String trustTruelinkId){        
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c);
+
+    public static void updateTrustForEinAndBid(String trustPartyId, String trustTruelinkId){
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint);
         try{
             exec.setEndPoint('/trust_beneficiaries/'+trustTruelinkId)
                 .setMethod('PATCH')
                 .setBody(JSON.serialize(new TruelinkBeneficiaryRequestBuilder().buildRequestForEinBidUpdate(trustPartyId),true))
-                .setHeader('Authorization', tldata.ApiKey__c)
+                .setHeader('Authorization', apikey!='' ? apikey : '')
                 .setHeader('Content-Type','application/json');
             TrueLinkResponseWrapper response = new TrueLinkResponseWrapper();
                 response = TrueLinkResponseWrapper.parse(exec.send().getBody());
@@ -206,50 +221,25 @@ public class TrueLinkApiHandler {
             update trackObj;
             if(trackObj.Status__c == 'Success'){
                 Trust__c trust = new Trust__c(Id=trustPartyId, Update_EIN_and_BID__c = false);
-                update trust;
+                trust.True_Link_Status__c = response?.data?.attributes?.status;
                 TruelinkStaticUtils.stopRecursionOnTrustUpdate = true;
+                update trust;
             }
         }
         catch(Exception e){
-            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());            
+            exec.logData('Error While Constructing Request. => '+ e.getMessage() + '=>' + e.getStackTraceString());
         }
-        
+
     }
-    
-    @AuraEnabled @future(callout=true)
-    public static void updateAccountBalanceAsync(String trustId){
-        //try{
-            updateAccountBalance(trustId);    
-        //}catch(AuraHandledException e){}
-        
-    }
-    
-    @AuraEnabled @future(callout=true)
-    public static void updateDepositAsync(String trustId){
-        //try{
-            updateDeposit(trustId);    
-        //}catch(AuraHandledException e){}
-        
-    }
-    
-    @AuraEnabled @future(callout=true)
-    public static void updateDisbursementAsync(String trustId){
-        //try{
-            updateDisbursement(trustId);    
-        //}catch(AuraHandledException e){}
-        
-    }
-    
+
     @AuraEnabled
     public static void updateAccountBalance(String trustId){
         map<string,Beneficiary_Card__c> cardReferenceVsObjectMap = new map<string,Beneficiary_Card__c>();
         trust__c trust = [Select Id,TrueLink_ID__c,Beneficiary__c,True_Link_Balance__c,Trust_Status__c,Trust_Portfolio__c, Trust_Portfolio__r.True_Link_Portfolio_ID__c from trust__c where Id =: trustId limit 1];
         Set<String> allowedTrustStatus = getEligibleTrustStatuses();
-            if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
-                throw new ApiException('Trust Status should be one of: ' + String.join(new List<String>(allowedTrustStatus), ', '));
-            }/*else if(trust.RecordType.Name != 'Trust'){
-                throw new AuraHandledException('Record Type is not Trust');
-            }*/
+        if(!allowedTrustStatus.contains(trust.Trust_Status__c)){
+            throw new ApiException('Trust Status should be one of: ' + String.join(new List<String>(allowedTrustStatus), ', '));
+        }
         if(String.isNotEmpty(trust.TrueLink_ID__c)){
             TruelinkBeneficiaryRequestWrapper response = new TruelinkBeneficiaryRequestWrapper();
             //try{
@@ -261,6 +251,7 @@ public class TrueLinkApiHandler {
             string portfolioId = response?.data?.relationships?.activePortfolio?.data?.id;
             String addressId = response?.data?.relationships?.address?.data?.id;
             String truelinkAccountId = response?.data?.relationships?.accounts?.data.size()>0 ? response?.data?.relationships?.accounts?.data[0].id : '';
+            String trustBeneficiaryInternalId = (String)response?.data?.attributes?.trustBeneficiaryInternalId;
             system.debug('truelinkAccountId:'+truelinkAccountId);
             if(response!=null && response.data!=null){
                 if(response.included!=null){
@@ -286,7 +277,7 @@ public class TrueLinkApiHandler {
                             beneCard.Card_Id__c = include.id;
                             beneCard.Type__c = include.type;
                             beneCard.Name = include.attributes.cardReference;
-                            String cleaned = include.attributes.balance?.timestamp.replace('T',' ').replace('Z','');
+                            String cleaned = include.attributes.balance?.timestamp?.replace('T',' ')?.replace('Z','');
                             if (cleaned != null && cleaned.contains('.')) {
                                 cleaned = cleaned.substring(0, cleaned.indexOf('.'));
                             }
@@ -305,20 +296,23 @@ public class TrueLinkApiHandler {
             if(!String.isBlank(addressId))
                 trust.Truelink_Address_Id__c = addressId;
             
-            trust.True_Link_Balance__c=balance; 
-            trust.Effective_Balance__c = availableCashSum;
+            trust.True_Link_Balance__c = balance!=null ? balance : 0;
+            trust.Effective_Balance__c = availableCashSum!=null ? availableCashSum : 0;
             trust.Truelink_Account_Id__c = truelinkAccountId;
-           if(response?.data?.attributes?.chargeSetupFee!=null){
-                trust.Charge_Initial_Set_up_Fee_300__c = response?.data?.attributes?.chargeSetupFee;
+            if(response?.data?.attributes?.chargeSetupFee!=null){
+                trust.Charge_Initial_Set_up_Fee__c = response?.data?.attributes?.chargeSetupFee;
             }
             if(response?.data?.attributes?.disallowDisbursementRequests!=null){
                 trust.Disbursement_Creation_Enabled__c = !response.data.attributes.disallowDisbursementRequests;
             }
+            if(response?.data?.attributes?.status!=null){
+                trust.True_Link_Status__c = response?.data?.attributes?.status;
+            }
             trust.taxDocRecipientConnectionId__c = response?.data?.attributes?.taxDocRecipientConnectionId;
-            trust.True_Link_Status__c = response?.data?.attributes?.status;
+            trust.True_Link_ID_from_TL_Profile__c = trustBeneficiaryInternalId;
             if(trust!=null){
                 if(!Test.isRunningTest())
-                    update trust;
+                update trust;
                 if(cardReferenceVsObjectMap!=null && cardReferenceVsObjectMap.size()>0){
                     upsert cardReferenceVsObjectMap.values() Card_Reference__c;
                 }
@@ -328,11 +322,11 @@ public class TrueLinkApiHandler {
     }
     
     public static TruelinkBeneficiaryRequestWrapper fetchAccountBalance(String trustId,String beneficaryId){
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c)
+        getCustomSettingBasedOnSandboxOrProd();
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint)
             .setEndPoint('/trust_beneficiaries/'+beneficaryId)
             .setMethod('GET')
-            .setHeader('Authorization', tldata.ApiKey__c)
+            .setHeader('Authorization', apikey!='' ? apikey : '')
             .setHeader('Content-Type','application/json');
         
         Map<String,String> params = new Map<String,String>();
@@ -409,12 +403,12 @@ public class TrueLinkApiHandler {
     }
     
     public static TruelinkTransactionResponseWrapper fetchDeposits(String trustId,String beneficaryId){
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
+        getCustomSettingBasedOnSandboxOrProd();
         Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c)
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint)
             .setEndPoint('/trust_beneficiaries/'+beneficaryId+'/deposits/')
             .setMethod('GET')
-            .setHeader('Authorization', tldata.ApiKey__c)
+            .setHeader('Authorization', apikey!='' ? apikey : '')
             .setHeader('Content-Type','application/json');
         
         Map<String,String> params = new Map<String,String>();
@@ -522,8 +516,8 @@ public class TrueLinkApiHandler {
                        }
                     system.debug('tranx frequency: '+tranx.Recurring_Type__c + ' ' +  tranx.Frequency__c);
                     if(dta.meta!=null && !String.isBlank(dta.meta.displayCategory) ){
-                           tranx.Display_Category__c = dta.meta.displayCategory;
-                       }
+                        tranx.Display_Category__c = dta.meta.displayCategory;
+                    }
                     
                     
                     tranx.Currency__c = dta.attributes.amount!=null ? dta.attributes.amount.field_currency : '';
@@ -601,12 +595,12 @@ public class TrueLinkApiHandler {
     }
     
     public static TruelinkTransactionResponseWrapper fetchDisbursements(String trustId,String beneficaryId){
-        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
+        getCustomSettingBasedOnSandboxOrProd();
         Truelink_Feature_Management__c feature = Truelink_Feature_Management__c.getOrgDefaults();
-        TruelinkRestUtil exec = new TruelinkRestUtil(tldata.endpoint__c)
+        TruelinkRestUtil exec = new TruelinkRestUtil(endpoint)
             .setEndPoint('/trust_beneficiaries/'+beneficaryId+'/disbursements/')
             .setMethod('GET')
-            .setHeader('Authorization', tldata.ApiKey__c)
+            .setHeader('Authorization', apikey!='' ? apikey : '')
             .setHeader('Content-Type','application/json');
         
         Map<String,String> params = new Map<String,String>();
@@ -660,7 +654,22 @@ public class TrueLinkApiHandler {
             throw new ApiException('No Pool Trust Records Found for Id : '+ trustPartyId);
         return pc[0].Trust_Id__c;
     }
-    
+
+    // Picks the Production_* vs Sandbox_* ApiKey__c/Endpoint__c pair off TruelinkData__c based on
+    // which kind of org this code is currently running in, so the same org defaults record can
+    // hold credentials for both without a sandbox refresh silently pointing at prod (or vice versa).
+    public static void getCustomSettingBasedOnSandboxOrProd() {
+        TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
+        System.Domain domain = System.DomainParser.parse(URL.getOrgDomainUrl());
+        if(domain.getSandboxName() == null){
+            apikey = tldata.Production_Apikey__c;
+            endpoint = tldata.Production_Endpoint__c;
+        } else {
+            apikey = tldata.Sandbox_Apikey__c;
+            endpoint = tldata.Sandbox_Endpoint__c;
+        }
+    }
+
     public class ApiException extends Exception{}
-    
+
 }

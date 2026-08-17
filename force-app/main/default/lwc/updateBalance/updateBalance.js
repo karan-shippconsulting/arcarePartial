@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
-import updateAccountBalanceAsync from '@salesforce/apex/TrueLinkApiHandler.updateAccountBalanceAsync';
-import updateDepositAsync from '@salesforce/apex/TrueLinkApiHandler.updateDepositAsync';
-import updateDisbursementAsync from '@salesforce/apex/TrueLinkApiHandler.updateDisbursementAsync';
+import updateAccountBalance from '@salesforce/apex/TrueLinkApiHandler.updateAccountBalance';
+import updateDeposit from '@salesforce/apex/TrueLinkApiHandler.updateDeposit';
+import updateDisbursement from '@salesforce/apex/TrueLinkApiHandler.updateDisbursement';
 import { NavigationMixin } from "lightning/navigation";
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class UpdateBalance extends NavigationMixin(LightningElement) {
@@ -25,9 +25,9 @@ export default class UpdateBalance extends NavigationMixin(LightningElement) {
 
         this.isExecuting = true;
         try {
-            updateAccountBalanceAsync({ trustId: this.recordId });
-            updateDepositAsync({ trustId: this.recordId });
-            updateDisbursementAsync({ trustId: this.recordId });
+            updateAccountBalance({ trustId: this.recordId });
+            updateDeposit({ trustId: this.recordId });
+            updateDisbursement({ trustId: this.recordId });
             const event = new ShowToastEvent({
                 title: 'Success',
                 message: 'Balance Updated!',

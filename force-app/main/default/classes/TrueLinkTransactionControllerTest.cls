@@ -5,6 +5,8 @@ private class TrueLinkTransactionControllerTest {
         TruelinkData__c setting = new TruelinkData__c();
         setting.ApiKey__c = 'Apikey test';
         setting.Endpoint__c = 'test';
+        setting.Sandbox_Apikey__c = 'Apikey test';
+        setting.Sandbox_Endpoint__c = 'test';
         insert setting;
     }
 

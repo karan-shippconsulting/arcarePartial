@@ -10,8 +10,8 @@ public class TrueLinkPartyTriggerHandler {
     }
     
     @future(callout=true)
-    public static void updateAddress(String partyId,String trustAddressId){ 
-        TrueLinkApiHandler.updateTrustBeneficiaryAddress(partyId,trustAddressId);
+    public static void updateAddress(String partyId, String trustAddressId, Boolean updateAllAddressFields){
+        TrueLinkApiHandler.updateTrustBeneficiaryAddress(partyId,trustAddressId,updateAllAddressFields);
     }
     
     @future(callout=true)

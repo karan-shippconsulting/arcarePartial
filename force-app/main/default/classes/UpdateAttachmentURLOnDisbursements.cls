@@ -9,6 +9,9 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
 
     public void execute(QueueableContext context) {
         TruelinkData__c tldata = TruelinkData__c.getOrgDefaults();
+        System.Domain domain = System.DomainParser.parse(URL.getOrgDomainUrl());
+        String apikey = domain.getSandboxName() == null ? tldata.Production_ApiKey__c : tldata.Sandbox_ApiKey__c;
+        String baseEndpoint = (domain.getSandboxName() == null ? tldata.Production_Endpoint__c : tldata.Sandbox_Endpoint__c).removeEnd('/');
 
         Integer fetchLimit = BATCH_SIZE * 10;
         List<Transaction__c> candidates = [
@@ -60,9 +63,9 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
             try {
                 Http http = new Http();
                 HttpRequest req = new HttpRequest();
-                req.setEndPoint(tldata.endpoint__c.removeEnd('/') + '/attachments/' + tranx.Attachment_Id__c);
+                req.setEndPoint(baseEndpoint + '/attachments/' + tranx.Attachment_Id__c);
                 req.setMethod('GET');
-                req.setHeader('Authorization', tldata.ApiKey__c);
+                req.setHeader('Authorization', apikey);
                 req.setHeader('Content-Type', 'application/json');
                 req.setHeader('Accept', 'application/json');
                 HttpResponse res = http.send(req);
@@ -97,13 +100,7 @@ public class UpdateAttachmentURLOnDisbursements implements Queueable, Database.A
                 Map<String, Object> attributes = (Map<String, Object>) attributesValue;
                 String url = (String) attributes.get('url');
 
-                track.Http_Method__c = req.getMethod();
-                track.Request_URL__c = req.getEndpoint();
-                Integer responseBdyLength = Math.min(responseBody.length(), 13107);
-                track.Response__c = responseBody.substring(0, responseBdyLength);
-                track.StatusCode__c = res.getStatusCode();
                 track.Status__c = (track.StatusCode__c >= 200 && track.StatusCode__c <= 300) ? 'Success' : 'Error';
-
                 if (url != null && url.length() > 32768) {
                     throw new CalloutException('Attachment URL exceeds 32768 chars (' + url.length() + '). Field length may need to be increased.');
                 }

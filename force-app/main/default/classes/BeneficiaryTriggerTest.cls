@@ -5,6 +5,8 @@ public class BeneficiaryTriggerTest {
         TruelinkData__c setting = new TruelinkData__c();
         setting.ApiKey__c = 'Apikey test';
         setting.Endpoint__c = 'test';
+        setting.Sandbox_Apikey__c = 'Apikey test';
+        setting.Sandbox_Endpoint__c = 'test';
         insert setting;
         
         True_Link_Trigger_Switch__c	 apiSwitch = new True_Link_Trigger_Switch__c	();
