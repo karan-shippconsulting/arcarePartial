@@ -8132,6 +8132,126 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>ForecastingItem__hd.AmountWithoutAdjustments__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.AmountWithoutAdjustments__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.AmountWithoutManagerAdjustment__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.AmountWithoutManagerAdjustment__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.ForecastAmount__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.ForecastAmount__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.ForecastQuantity__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.ForecastQuantity__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OverriddenRollupMgrView__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OverriddenRollupMgrView__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OverriddenRollupOwnerView__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OverriddenRollupOwnerView__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OwnerOnlyAmount__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OwnerOnlyAmount__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OwnerOnlyQuantity__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.OwnerOnlyQuantity__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.QuantityWithoutAdjustments__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.QuantityWithoutAdjustments__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.QuantityWithoutManagerAdjustment__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.QuantityWithoutManagerAdjustment__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.RawOwnerOnly__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.RawOwnerOnly__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.RawRollup__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ForecastingItem__hd.RawRollup__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Funding__c.Amount__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -11828,6 +11948,66 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>OpportunityLineItem.TotalPrice</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.Amount__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.Amount__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.CloseDate__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.CloseDate__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.ForecastCategoryName__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.ForecastCategoryName__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.NextStep__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.NextStep__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.Probability__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.Probability__hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.StageName__hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity__hd.StageName__hst</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17241,6 +17421,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Trust__c_hd.True_Link_Balance__c_hpr</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trust__c_hd.True_Link_Balance__c_hst</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>UnitOfMeasure.Description</field>
         <readable>true</readable>
@@ -18143,6 +18333,9 @@
         <layout>Benefit-Benefit Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>BenefitItemCode-Benefit Item Code Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>BenefitType-Benefit Type Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -18174,6 +18367,9 @@
     <layoutAssignments>
         <layout>Closing__c-Closing Layout</layout>
         <recordType>Closing__c.I_III_Death</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ComplaintCase-Complaint Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Connections__c-Connection Layout</layout>
@@ -18224,6 +18420,9 @@
         <layout>DocumentDecisionRequirement-Document Decision Requirement Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>DonorGiftSummary-Donor Gift Summary Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Dynamic_Email_Template_Parent_Object__mdt-Dynamic Email Template Parent Object Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -18231,6 +18430,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>EmpUserProvisioningProcess-Employee User Provisioning Process Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Employee-Employee Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>EnhancedLetterhead-Enhanced Letterhead Layout</layout>
@@ -18272,6 +18474,45 @@
         <layout>General_Notes__c-General Notes Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>GiftBatch-Gift Batch Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftCmtChangeAttrLog-Gift Commitment Change Attribution Log Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftCommitment-Gift Commitment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftCommitmentSchedule-Gift Commitment Schedule Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftDefaultDesignation-Gift Default Designation Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftDefaultSoftCredit-Gift Default Soft Credit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftDesignation-Gift Designation Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftEntry-Gift Entry Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftRefund-Gift Refund Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftSoftCredit-Gift Soft Credit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftTransaction-Gift Transaction Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftTransactionDesignation-Gift Transaction Designation Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GiftTribute-Gift Tribute Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Grant_Application__c-Grant Application Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -18303,6 +18544,9 @@
         <layout>InteractionSummary-Interaction Summary Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>InternalOrganizationUnit-Internal Organization Unit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Location-Location Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -18322,6 +18566,33 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Organization_Referral__c-Organization Referral Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>OutreachSourceCode-Outreach Source Code Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>OutreachSummary-Outreach Summary Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PartyCategory-Party Category Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PartyPhilanthropicAssessment-Party Philanthropic Assessment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PartyPhilanthropicIndicator-Party Philanthropic Indicator Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PartyPhilanthropicMilestone-Party Philanthropic Milestone Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PartyPhilanthropicOccurrence-Party Philanthropic Occurrence Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PartyPhilanthropicRsrchPrfl-Party Philanthropic Research Profile Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PaymentInstrument-Payment Instrument Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Periods__c-Period Layout</layout>
@@ -18348,7 +18619,16 @@
         <layout>Process_Bulk_Custom_Emails__c-Process Bulk Custom Emails Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Program-Program Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ProgramEnrollment-Program Enrollment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Property__c-Property Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PublicComplaint-Public Complaint Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Relationships__c-Relationship Layout</layout>
@@ -18373,6 +18653,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Service__c-Service Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SiqExchangeConnection-Exchange Connection Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Spending_Plan_Details__c-Spending Plan Detail Layout</layout>

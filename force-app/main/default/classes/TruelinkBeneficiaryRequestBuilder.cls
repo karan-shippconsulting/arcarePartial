@@ -51,6 +51,7 @@ public class TruelinkBeneficiaryRequestBuilder {
         if(feature.Sync_Living_Situation__c == true){
             reqWrapper.data.attributes.livingSituation = party.Living_Situation__c;
         }
+        reqWrapper.data.attributes.firstName = party.firstname;
         if(!String.isBlank(trustParty.True_Link_First_Name_Suffix__c)){
             reqWrapper.data.attributes.firstName = reqWrapper.data.attributes.firstName + ' (' + trustParty.True_Link_First_Name_Suffix__c+ ')';
         }
